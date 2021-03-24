@@ -12,7 +12,7 @@ function makeTheHaro()
         type = "Custom_Assetbundle",
         position = {x=30, y=10, z=0},
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {1, 1, 1},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "Haro") end
@@ -28,6 +28,7 @@ function makeTheHaro()
     initializeHaro()
     obj.locked = true
     obj.interactable = false
+    scaler = 1
     MSPos = obj.getPosition()
     MSPos = {MSPos.x-5,MSPos.y-5,MSPos.z-5}
 end
@@ -131,7 +132,7 @@ function FA_78_1()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "FA-78-1") end
@@ -150,7 +151,7 @@ function FA_78_3()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "FA-78-3") end
@@ -168,7 +169,7 @@ function FF_X7()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "FF-X7") end
@@ -186,7 +187,7 @@ function M1A61()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "M1A61") end
@@ -204,7 +205,7 @@ function RGC_80()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RGC-80") end
@@ -222,7 +223,7 @@ function RGM_79D()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RGM-79D") end
@@ -240,7 +241,7 @@ function RGM_79_G_Gs()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RGM-79G/Gs") end
@@ -258,7 +259,7 @@ function RGM_79Sp()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RGM-79Sp") end
@@ -276,7 +277,7 @@ function RX_77_4()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RX-77-4") end
@@ -294,7 +295,7 @@ function RX_77D()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RX-77D") end
@@ -312,7 +313,7 @@ function RX_78_4()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RX-78-4") end
@@ -330,7 +331,7 @@ function RX_78_5()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RX-78-5") end
@@ -348,7 +349,7 @@ function RX_78_6()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RX-78-6") end
@@ -366,7 +367,7 @@ function RX_78NT_1()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "RX-78 NT-1") end
@@ -386,7 +387,7 @@ function Dodai()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "Dodai YS") end
@@ -404,7 +405,7 @@ function HT_01B()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "HT-01B") end
@@ -422,7 +423,7 @@ function MS_06Fz()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MS-06Fz") end
@@ -440,7 +441,7 @@ function MS_09R_2()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MS-09R-2") end
@@ -458,7 +459,7 @@ function MS_14Jg()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MS-14Jg") end
@@ -476,7 +477,7 @@ function MS_18E()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MS-18E") end
@@ -494,7 +495,7 @@ function MSM_03()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MSM-03") end
@@ -512,7 +513,7 @@ function MSM_04()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MSM-04") end
@@ -530,7 +531,7 @@ function MSM_07()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MSM-07") end
@@ -548,7 +549,7 @@ function MSM_07E()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MSM-07E") end
@@ -566,7 +567,7 @@ function MSM_07S()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MSM-07S") end
@@ -584,7 +585,7 @@ function MSM_10()
         type = 'Custom_Assetbundle',
         position = MSPos,
         rotation = {x=0, y=90, z=0},
-        scale = {x=1, y=1, z=1},
+        scale = {scaler, scaler, scaler},
         sound = false,
         snap_to_grid = false,
         callback_function = function(obj) spawn_callback(obj, "MSM-10") end
