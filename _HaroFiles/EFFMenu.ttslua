@@ -1,0 +1,159 @@
+
+function EFF()
+    self.clearButtons()
+    faction = 'EFF'
+    self.createButton({click_function = 'EFF0079', function_owner = self, label = '0079', position = {-4.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'EFFMSV', function_owner = self, label = 'MSV', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'EFF0080', function_owner = self, label = '0080', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'EFF0083', function_owner = self, label = '0083', position = {4.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'UC', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function EFF0079()
+  self.clearButtons()
+  self.createButton({click_function = 'RX_78_2', function_owner = self, label = 'RX-78-2', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_77', function_owner = self, label = 'RX-77', position = {0, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_75', function_owner = self, label = 'RX-75', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'FF_X7', function_owner = self, label = 'FF-X7', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'FF_X7_Bst', function_owner = self, label = 'FF-X7-Bst', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79', function_owner = self, label = 'RGM-79', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'M1A61', function_owner = self, label = 'M1A61', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function EFFMSV()
+  self.clearButtons()
+  self.createButton({click_function = 'FA_78_1', function_owner = self, label = 'FA-78-1', position = {-1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'FA_78_3', function_owner = self, label = 'FA-78-3', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGC_80', function_owner = self, label = 'RGC-80', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_77_4', function_owner = self, label = 'RX-77-4', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78_4', function_owner = self, label = 'RX-78-4', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78_5', function_owner = self, label = 'RX-78-5', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78_6', function_owner = self, label = 'RX-78-6', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function EFF0080()
+  self.clearButtons()
+  self.createButton({click_function = 'RGM_79D', function_owner = self, label = 'RGM-79D', position = {-1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79_G_Gs', function_owner = self, label = 'RGM-79G/Gs', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79Sp', function_owner = self, label = 'RGM-79Sp', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_77D', function_owner = self, label = 'RX-77D', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78NT_1', function_owner = self, label = 'RX-78NT-1', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function EFF0083()
+  self.clearButtons()
+  self.createButton({click_function = 'RGC_83', function_owner = self, label = 'RGC-83', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79C', function_owner = self, label = 'RGM-79C', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79N', function_owner = self, label = 'RGM-79N', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78GP_01', function_owner = self, label = 'RX-78GP-01', position = {-4.5, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78GP_01FB', function_owner = self, label = 'RX-78GP-01FB', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78GP_03S', function_owner = self, label = 'RX-78GP-03S', position = {4.5, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[EFF MS]]-----------------------------------------
+
+function FA_78_1()
+  unit = 'fa-78-1'
+  getThatRobot()
+end
+function FA_78_3()
+  unit = 'fa-78-3'
+  getThatRobot()
+end
+function FF_X7()
+  unit = 'ff-x7'
+  getThatRobot()
+end
+function FF_X7_Bst()
+  unit = 'ff-x7-bst'
+  getThatRobot()
+end
+function FFB_7Bst()
+  unit = 'ffb-7bst'
+  getThatRobot()
+end
+function M1A61()
+  unit = 'type61'
+  getThatRobot()
+end
+function RGC_80()
+  unit = 'rgc-80'
+  getThatRobot()
+end
+function RGC_83()
+  unit = 'rgc-83'
+  getThatRobot()
+end
+function RGM_79()
+  unit = 'rgm-79'
+  getThatRobot()
+end
+function RGM_79C()
+  unit = 'rgm-79c'
+  getThatRobot()
+end
+function RGM_79D()
+  unit = 'rgm-79d'
+  getThatRobot()
+end
+function RGM_79_G_Gs()
+  unit = 'rgm-79g-gs'
+  getThatRobot()
+end
+function RGM_79N()
+  unit = 'rgm-79n'
+  getThatRobot()
+end
+function RGM_79Sp()
+  unit = 'rgm-79sp'
+  getThatRobot()
+end
+function RX_75()
+  unit = 'rx-75'
+  getThatRobot()
+end
+function RX_77()
+  unit = 'rx-77'
+  getThatRobot()
+end
+function RX_77_4()
+  unit = 'rx-77-4'
+  getThatRobot()
+end
+function RX_77D()
+  unit = 'rx-77d'
+  getThatRobot()
+end
+function RX_78_2()
+  unit = 'rx-78-2'
+  getThatRobot()
+end
+function RX_78_4()
+  unit = 'rx-78-4'
+  getThatRobot()
+end
+function RX_78_5()
+  unit = 'rx-78-5'
+  getThatRobot()
+end
+function RX_78_6()
+  unit = 'rx-78-6'
+  getThatRobot()
+end
+function RX_78GP_01()
+  unit = 'rx-78gp-01'
+  getThatRobot()
+end
+function RX_78GP_01FB()
+  unit = 'rx-78gp-01fb'
+  getThatRobot()
+end
+function RX_78GP_03S()
+  unit = 'rx-78gp-03s'
+  getThatRobot()
+end
+function RX_78NT_1()
+  unit = 'rx-78nt-1'
+  getThatRobot()
+end
