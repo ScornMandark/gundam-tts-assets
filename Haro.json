@@ -53,7 +53,7 @@
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomAssetbundle": {
-        "AssetbundleURL": "https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/blob/main/_HaroFiles/haro.unity3d",
+        "AssetbundleURL": "https://github.com/ScornMandark/gundam-tts-assets/blob/main/_HaroFiles/haro.unity3d?raw=true",
         "AssetbundleSecondaryURL": "",
         "MaterialIndex": 2,
         "TypeIndex": 1,
