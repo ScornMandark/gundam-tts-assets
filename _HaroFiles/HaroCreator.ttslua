@@ -132,8 +132,10 @@ function settings()
     self.clearInputs()
     self.createButton({click_function = 'SetScale', function_owner = self, label = 'Scale', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'SetGame', function_owner = self, label = 'Game', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'reinitializeHaro', function_owner = self, label = 'Reinitialize', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
     self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
+
 function SetScale()
     self.clearButtons()
     self.createInput({input_function = 'scaleSetter', function_owner = self, label = 'Scale Factor', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=800, font_size=250, tooltip='Enter desired scale', validation=2 })
@@ -182,29 +184,18 @@ function scaleSetter(obj, color, input, stillEditing)
     end
 end
 
+function reinitializeHaro()
+  function loadHaroUpdate()
+    HaroScripts = [[    ]]
+    WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/HaroConcatenator.ttslua",
+      function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
+    local function ResetHaro()
+      self.setName('Haro')
+      self.setLuaScript(HaroScripts)
+      self.reload()
+      self.locked = true
+      self.interactable = true
+    end
+    Wait.frames(ResetHaro, 60)
+  end
 ----[[ Faction Menus ----]]
-
-function AD()
-    self.clearButtons()
-    universe = 'AnnoDomini'
-    self.createButton({click_function = 'CelestialBeing', function_owner = self, label = 'Celestial Being', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
-    self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-end
-function CE()
-    self.clearButtons()
-    universe = 'CosmicEra'
-    self.createButton({click_function = 'ZAFT', function_owner = self, label = 'ZAFT', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-end
-function UC()
-    self.clearButtons()
-    universe = 'UniversalCentury'
-    self.createButton({click_function = 'EFF', function_owner = self, label = 'EFF', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'Zeon', function_owner = self, label = 'Zeon', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'Titans', function_owner = self, label = 'Titans', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'AEUG', function_owner = self, label = 'AEUG', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'LondoBell', function_owner = self, label = 'Londo Bell', position = {2, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'NeoZeon', function_owner = self, label = 'Neo Zeon', position = {-2, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-end
-----[[ Unit Menus ----]]
