@@ -6,6 +6,7 @@ function onLoad()
   unit = 'fa-78-1'
   game = 'MSSk'
   attached = nil
+  CornerType = 3
   self.locked = true
   SetGame()
 end
@@ -60,7 +61,7 @@ function SpawnUnitCard()
     scale = {tileScale,tileScale,tileScale},
   }
   customParams = {
-    type = 3,
+    type = CornerType,
     image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. game .. '/' .. unit .. '_face.png',
     image_bottom = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. game .. '/' .. unit .. '_back.png',
     thickness = 0.05,
@@ -149,18 +150,22 @@ end
 
 function MSSk()
   game = 'MSSk'
+  CornerType = 3
   initializeHaro()
 end
 function GH40k()
   game = 'GH40k'
+  CornerType = 0
   initializeHaro()
 end
 function GDF()
   game = 'GDF'
+  CornerType = 0
   initializeHaro()
 end
 function UCC()
   game = 'UCC'
+  CornerType = 3
   initializeHaro()
 end
 
@@ -176,6 +181,8 @@ function scaleSetter(obj, color, input, stillEditing)
     print("MS Scale now set to 1/" .. scale .. " scale.")
     end
 end
+
+----[[ Faction Menus ----]]
 
 function AD()
     self.clearButtons()
@@ -200,3 +207,4 @@ function UC()
     self.createButton({click_function = 'NeoZeon', function_owner = self, label = 'Neo Zeon', position = {-2, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
+----[[ Unit Menus ----]]
