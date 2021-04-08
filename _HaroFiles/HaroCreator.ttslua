@@ -185,7 +185,6 @@ function scaleSetter(obj, color, input, stillEditing)
 end
 
 function reinitializeHaro()
-  function loadHaroUpdate()
     HaroScripts = [[    ]]
     WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/HaroConcatenator.ttslua",
       function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
