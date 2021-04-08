@@ -1,0 +1,50 @@
+
+function AEUG()
+  self.clearButtons()
+  faction = 'AEUG'
+  self.createButton({click_function = 'AEUGZeta', function_owner = self, label = 'Zeta', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'UC', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function AEUGZeta()
+  self.clearButtons()
+  self.createButton({click_function = 'BaseJabber', function_owner = self, label = 'Base Jabber', position = {0, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'MSA_003', function_owner = self, label = 'MSA-003', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSA_099', function_owner = self, label = 'MSA-099', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSA_099S', function_owner = self, label = 'MSA-099S', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSN_00100', function_owner = self, label = 'MSN-00100', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSZ_006', function_owner = self, label = 'MSZ-006', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_178', function_owner = self, label = 'RX-178', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'AEUG', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[AEUG MS --]]
+function BaseJabber()
+  unit = 'base-jabber'
+  getThatRobot()
+end
+function MSA_003()
+  unit = 'msa-003'
+  getThatRobot()
+end
+function MSA_099()
+  unit = 'msa-099'
+  getThatRobot()
+end
+function MSA_099S()
+  unit = 'msa-099s'
+  getThatRobot()
+end
+function MSN_00100()
+  unit = 'msn-00100'
+  getThatRobot()
+end
+function MSZ_006()
+  unit = 'msz-006'
+  getThatRobot()
+end
+function RX_178()
+  unit = 'rx-178'
+  getThatRobot()
+end
+
