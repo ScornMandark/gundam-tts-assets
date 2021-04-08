@@ -1,0 +1,49 @@
+
+function ZAFT()
+    self.clearButtons()
+    faction = 'ZAFT'
+    self.createButton({click_function = 'GAT_X103', function_owner = self, label = 'GAT-X103', position = {-2, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'ZGMF_515', function_owner = self, label = 'ZGMF-515', position = {-2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'ZGMF_600', function_owner = self, label = 'ZGMF-600', position = {2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'AMF_101', function_owner = self, label = 'AMF-101', position = {-6, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'TFA_02', function_owner = self, label = 'TFA-02', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'TMF_A_802', function_owner = self, label = 'TMF-A-802', position = {-2, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'TMF_A_803', function_owner = self, label = 'TMF-A-803', position = {2, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'ZGMF_1017', function_owner = self, label = 'ZGMF-1017', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'CE', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[ZAFT MS]]-----------------------------------------
+
+function AMF_101()
+  unit = 'amf-101'
+  getThatRobot()
+end
+function GAT_X103()
+  unit = 'gat-x103'
+  getThatRobot()
+end
+function TFA_02()
+  unit = 'tfa-02'
+  getThatRobot()
+end
+function TMF_A_802()
+  unit = 'tmf-a-802'
+  getThatRobot()
+end
+function TMF_A_803()
+  unit = 'tmf-a-803'
+  getThatRobot()
+end
+function ZGMF_515()
+  unit = 'zgmf-515'
+  getThatRobot()
+end
+function ZGMF_600()
+  unit = 'zgmf-600'
+  getThatRobot()
+end
+function ZGMF_1017()
+  unit = 'zgmf-1017'
+  getThatRobot()
+end
