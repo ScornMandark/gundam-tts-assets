@@ -392,332 +392,332 @@ function NeoZeonCCA()
   self.clearButtons()
   self.createButton({click_function = 'NeoZeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
-
---[[Celestial Being MS ]] --------------------------------
-
-function GN_001()
-  unit = 'gn-001'
-  getThatRobot()
-end
-function GN_0000()
-  unit = 'gn-0000'
-  getThatRobot()
-end
-function GNR_010()
-  unit = 'gnr-010'
-  getThatRobot()
-end
-function GNT_0000()
-  unit = 'gnt-0000'
-  getThatRobot()
-end
-function GN_Bits()
-  unit = 'gn_bits'
-  getThatRobot()
-end
-function GN_0000_GNR_010()
-  unit = 'gn-0000_gnr-010'
-  getThatRobot()
-end
-
---[[ZAFT MS]]-----------------------------------------
-
-function AMF_101()
-  unit = 'amf-101'
-  getThatRobot()
-end
-function GAT_X103()
-  unit = 'gat-x103'
-  getThatRobot()
-end
-function TFA_02()
-  unit = 'tfa-02'
-  getThatRobot()
-end
-function TMF_A_802()
-  unit = 'tmf-a-802'
-  getThatRobot()
-end
-function TMF_A_803()
-  unit = 'tmf-a-803'
-  getThatRobot()
-end
-function ZGMF_515()
-  unit = 'zgmf-515'
-  getThatRobot()
-end
-function ZGMF_600()
-  unit = 'zgmf-600'
-  getThatRobot()
-end
-function ZGMF_1017()
-  unit = 'zgmf-1017'
-  getThatRobot()
-end
-
---[[EFF MS]]-----------------------------------------
-
-function FA_78_1()
-  unit = 'fa-78-1'
-  getThatRobot()
-end
-function FA_78_3()
-  unit = 'fa-78-3'
-  getThatRobot()
-end
-function FF_X7()
-  unit = 'ff-x7'
-  getThatRobot()
-end
-function FF_X7_Bst()
-  unit = 'ff-x7-bst'
-  getThatRobot()
-end
-function FFB_7Bst()
-  unit = 'ffb-7bst'
-  getThatRobot()
-end
-function M1A61()
-  unit = 'type61'
-  getThatRobot()
-end
-function RGC_80()
-  unit = 'rgc-80'
-  getThatRobot()
-end
-function RGC_83()
-  unit = 'rgc-83'
-  getThatRobot()
-end
-function RGM_79()
-  unit = 'rgm-79'
-  getThatRobot()
-end
-function RGM_79C()
-  unit = 'rgm-79c'
-  getThatRobot()
-end
-function RGM_79D()
-  unit = 'rgm-79d'
-  getThatRobot()
-end
-function RGM_79_G_Gs()
-  unit = 'rgm-79g-gs'
-  getThatRobot()
-end
-function RGM_79N()
-  unit = 'rgm-79n'
-  getThatRobot()
-end
-function RGM_79Sp()
-  unit = 'rgm-79sp'
-  getThatRobot()
-end
-function RX_75()
-  unit = 'rx-75'
-  getThatRobot()
-end
-function RX_77()
-  unit = 'rx-77'
-  getThatRobot()
-end
-function RX_77_4()
-  unit = 'rx-77-4'
-  getThatRobot()
-end
-function RX_77D()
-  unit = 'rx-77d'
-  getThatRobot()
-end
-function RX_78_2()
-  unit = 'rx-78-2'
-  getThatRobot()
-end
-function RX_78_4()
-  unit = 'rx-78-4'
-  getThatRobot()
-end
-function RX_78_5()
-  unit = 'rx-78-5'
-  getThatRobot()
-end
-function RX_78_6()
-  unit = 'rx-78-6'
-  getThatRobot()
-end
-function RX_78GP_01()
-  unit = 'rx-78gp-01'
-  getThatRobot()
-end
-function RX_78GP_01FB()
-  unit = 'rx-78gp-01fb'
-  getThatRobot()
-end
-function RX_78GP_03S()
-  unit = 'rx-78gp-03s'
-  getThatRobot()
-end
-function RX_78NT_1()
-  unit = 'rx-78nt-1'
-  getThatRobot()
-end
-
---[[ZEON MS]] --------------------------------------------------
-function AGX_04()
-  unit = 'agx-04'
-  getThatRobot()
-end
-function DFA_03()
-  unit = 'dfa-03'
-  getThatRobot()
-end
-function Dodai()
-  unit = 'dodai'
-  getThatRobot()
-end
-function HT_01B()
-  unit = 'ht-01b'
-  getThatRobot()
-end
-function MS_06()
-  unit = 'ms-06'
-  getThatRobot()
-end
-function MS_06_Missiles()
-  unit = 'ms-06'
-  attached = 'ms-06_missile_pods'
-  getThatRobot()
-end
-function MS_06S()
-  unit = 'ms-06s'
-  getThatRobot()
-end
-function MS_06S_Char()
-  unit = 'ms-06s_char'
-  getThatRobot()
-end
-function MS_06Fz()
-  unit = 'ms-06fz'
-  getThatRobot()
-end
-function MS_09F_trop()
-  unit = 'ms-09f_trop'
-  getThatRobot()
-end
-function MS_09R_2()
-  unit = 'ms-09r-2'
-  getThatRobot()
-end
-function MS_14A()
-  unit = 'ms-14a'
-  getThatRobot()
-end
-function MS_14f()
-  unit = 'ms-14f'
-  getThatRobot()
-end
-function MS_14FS()
-  unit = 'ms-14fs'
-  getThatRobot()
-end
-function MS_14Jg()
-  unit = 'ms-14jg'
-  getThatRobot()
-end
-function MS_18E()
-  unit = 'ms-18e'
-  getThatRobot()
-end
-function MS_21C()
-  unit = 'ms-21c'
-  getThatRobot()
-end
-function MSM_03()
-  unit = 'msm-03'
-  getThatRobot()
-end
-function MSM_03C()
-  unit = 'msm-03c'
-  getThatRobot()
-end
-function MSM_04()
-  unit = 'msm-04'
-  getThatRobot()
-end
-function MSM_07()
-  unit = 'msm-07'
-  getThatRobot()
-end
-function MSM_07E()
-  unit = 'msm-07e'
-  getThatRobot()
-end
-function MSM_07S()
-  unit = 'msm-07s'
-  getThatRobot()
-end
-function MSM_10()
-  unit = 'msm-10'
-  getThatRobot()
-end
-function RX_78GP_02A()
-  unit = 'rx-78gp-02a'
-  getThatRobot()
-end
-function YMS_16M()
-  unit = 'yms-16m'
-  getThatRobot()
-end
-
---[[AEUG MS --]]
-function BaseJabber()
-  unit = 'base-jabber'
-  getThatRobot()
-end
-function MSA_003()
-  unit = 'msa-003'
-  getThatRobot()
-end
-function MSA_099()
-  unit = 'msa-099'
-  getThatRobot()
-end
-function MSA_099S()
-  unit = 'msa-099s'
-  getThatRobot()
-end
-function MSN_00100()
-  unit = 'msn-00100'
-  getThatRobot()
-end
-function MSZ_006()
-  unit = 'msz-006'
-  getThatRobot()
-end
-function RX_178()
-  unit = 'rx-178'
-  getThatRobot()
-end
-
-
---[[Titans MS --]]
-
-function RMS_106()
-  unit = 'rms-106'
-  getThatRobot()
-end
-function RMS_108()
-  unit = 'rms-108'
-  getThatRobot()
-end
-function RMS_117()
-  unit = 'rms-117'
-  getThatRobot()
-end
---[[note - rx-178 is set with the aeug folder as well, but it maps correctly ]]
-
---[[Londo Bell MS --]]
-function RX_0()
-  unit = 'rx-0'
-  getThatRobot()
-end
+-- 
+-- --[[Celestial Being MS ]] --------------------------------
+-- 
+-- function GN_001()
+--   unit = 'gn-001'
+--   getThatRobot()
+-- end
+-- function GN_0000()
+--   unit = 'gn-0000'
+--   getThatRobot()
+-- end
+-- function GNR_010()
+--   unit = 'gnr-010'
+--   getThatRobot()
+-- end
+-- function GNT_0000()
+--   unit = 'gnt-0000'
+--   getThatRobot()
+-- end
+-- function GN_Bits()
+--   unit = 'gn_bits'
+--   getThatRobot()
+-- end
+-- function GN_0000_GNR_010()
+--   unit = 'gn-0000_gnr-010'
+--   getThatRobot()
+-- end
+-- 
+-- --[[ZAFT MS]]-----------------------------------------
+-- 
+-- function AMF_101()
+--   unit = 'amf-101'
+--   getThatRobot()
+-- end
+-- function GAT_X103()
+--   unit = 'gat-x103'
+--   getThatRobot()
+-- end
+-- function TFA_02()
+--   unit = 'tfa-02'
+--   getThatRobot()
+-- end
+-- function TMF_A_802()
+--   unit = 'tmf-a-802'
+--   getThatRobot()
+-- end
+-- function TMF_A_803()
+--   unit = 'tmf-a-803'
+--   getThatRobot()
+-- end
+-- function ZGMF_515()
+--   unit = 'zgmf-515'
+--   getThatRobot()
+-- end
+-- function ZGMF_600()
+--   unit = 'zgmf-600'
+--   getThatRobot()
+-- end
+-- function ZGMF_1017()
+--   unit = 'zgmf-1017'
+--   getThatRobot()
+-- end
+-- 
+-- --[[EFF MS]]-----------------------------------------
+-- 
+-- function FA_78_1()
+--   unit = 'fa-78-1'
+--   getThatRobot()
+-- end
+-- function FA_78_3()
+--   unit = 'fa-78-3'
+--   getThatRobot()
+-- end
+-- function FF_X7()
+--   unit = 'ff-x7'
+--   getThatRobot()
+-- end
+-- function FF_X7_Bst()
+--   unit = 'ff-x7-bst'
+--   getThatRobot()
+-- end
+-- function FFB_7Bst()
+--   unit = 'ffb-7bst'
+--   getThatRobot()
+-- end
+-- function M1A61()
+--   unit = 'type61'
+--   getThatRobot()
+-- end
+-- function RGC_80()
+--   unit = 'rgc-80'
+--   getThatRobot()
+-- end
+-- function RGC_83()
+--   unit = 'rgc-83'
+--   getThatRobot()
+-- end
+-- function RGM_79()
+--   unit = 'rgm-79'
+--   getThatRobot()
+-- end
+-- function RGM_79C()
+--   unit = 'rgm-79c'
+--   getThatRobot()
+-- end
+-- function RGM_79D()
+--   unit = 'rgm-79d'
+--   getThatRobot()
+-- end
+-- function RGM_79_G_Gs()
+--   unit = 'rgm-79g-gs'
+--   getThatRobot()
+-- end
+-- function RGM_79N()
+--   unit = 'rgm-79n'
+--   getThatRobot()
+-- end
+-- function RGM_79Sp()
+--   unit = 'rgm-79sp'
+--   getThatRobot()
+-- end
+-- function RX_75()
+--   unit = 'rx-75'
+--   getThatRobot()
+-- end
+-- function RX_77()
+--   unit = 'rx-77'
+--   getThatRobot()
+-- end
+-- function RX_77_4()
+--   unit = 'rx-77-4'
+--   getThatRobot()
+-- end
+-- function RX_77D()
+--   unit = 'rx-77d'
+--   getThatRobot()
+-- end
+-- function RX_78_2()
+--   unit = 'rx-78-2'
+--   getThatRobot()
+-- end
+-- function RX_78_4()
+--   unit = 'rx-78-4'
+--   getThatRobot()
+-- end
+-- function RX_78_5()
+--   unit = 'rx-78-5'
+--   getThatRobot()
+-- end
+-- function RX_78_6()
+--   unit = 'rx-78-6'
+--   getThatRobot()
+-- end
+-- function RX_78GP_01()
+--   unit = 'rx-78gp-01'
+--   getThatRobot()
+-- end
+-- function RX_78GP_01FB()
+--   unit = 'rx-78gp-01fb'
+--   getThatRobot()
+-- end
+-- function RX_78GP_03S()
+--   unit = 'rx-78gp-03s'
+--   getThatRobot()
+-- end
+-- function RX_78NT_1()
+--   unit = 'rx-78nt-1'
+--   getThatRobot()
+-- end
+-- 
+-- --[[ZEON MS]] --------------------------------------------------
+-- function AGX_04()
+--   unit = 'agx-04'
+--   getThatRobot()
+-- end
+-- function DFA_03()
+--   unit = 'dfa-03'
+--   getThatRobot()
+-- end
+-- function Dodai()
+--   unit = 'dodai'
+--   getThatRobot()
+-- end
+-- function HT_01B()
+--   unit = 'ht-01b'
+--   getThatRobot()
+-- end
+-- function MS_06()
+--   unit = 'ms-06'
+--   getThatRobot()
+-- end
+-- function MS_06_Missiles()
+--   unit = 'ms-06'
+--   attached = 'ms-06_missile_pods'
+--   getThatRobot()
+-- end
+-- function MS_06S()
+--   unit = 'ms-06s'
+--   getThatRobot()
+-- end
+-- function MS_06S_Char()
+--   unit = 'ms-06s_char'
+--   getThatRobot()
+-- end
+-- function MS_06Fz()
+--   unit = 'ms-06fz'
+--   getThatRobot()
+-- end
+-- function MS_09F_trop()
+--   unit = 'ms-09f_trop'
+--   getThatRobot()
+-- end
+-- function MS_09R_2()
+--   unit = 'ms-09r-2'
+--   getThatRobot()
+-- end
+-- function MS_14A()
+--   unit = 'ms-14a'
+--   getThatRobot()
+-- end
+-- function MS_14f()
+--   unit = 'ms-14f'
+--   getThatRobot()
+-- end
+-- function MS_14FS()
+--   unit = 'ms-14fs'
+--   getThatRobot()
+-- end
+-- function MS_14Jg()
+--   unit = 'ms-14jg'
+--   getThatRobot()
+-- end
+-- function MS_18E()
+--   unit = 'ms-18e'
+--   getThatRobot()
+-- end
+-- function MS_21C()
+--   unit = 'ms-21c'
+--   getThatRobot()
+-- end
+-- function MSM_03()
+--   unit = 'msm-03'
+--   getThatRobot()
+-- end
+-- function MSM_03C()
+--   unit = 'msm-03c'
+--   getThatRobot()
+-- end
+-- function MSM_04()
+--   unit = 'msm-04'
+--   getThatRobot()
+-- end
+-- function MSM_07()
+--   unit = 'msm-07'
+--   getThatRobot()
+-- end
+-- function MSM_07E()
+--   unit = 'msm-07e'
+--   getThatRobot()
+-- end
+-- function MSM_07S()
+--   unit = 'msm-07s'
+--   getThatRobot()
+-- end
+-- function MSM_10()
+--   unit = 'msm-10'
+--   getThatRobot()
+-- end
+-- function RX_78GP_02A()
+--   unit = 'rx-78gp-02a'
+--   getThatRobot()
+-- end
+-- function YMS_16M()
+--   unit = 'yms-16m'
+--   getThatRobot()
+-- end
+-- 
+-- --[[AEUG MS --]]
+-- function BaseJabber()
+--   unit = 'base-jabber'
+--   getThatRobot()
+-- end
+-- function MSA_003()
+--   unit = 'msa-003'
+--   getThatRobot()
+-- end
+-- function MSA_099()
+--   unit = 'msa-099'
+--   getThatRobot()
+-- end
+-- function MSA_099S()
+--   unit = 'msa-099s'
+--   getThatRobot()
+-- end
+-- function MSN_00100()
+--   unit = 'msn-00100'
+--   getThatRobot()
+-- end
+-- function MSZ_006()
+--   unit = 'msz-006'
+--   getThatRobot()
+-- end
+-- function RX_178()
+--   unit = 'rx-178'
+--   getThatRobot()
+-- end
+-- 
+-- 
+-- --[[Titans MS --]]
+-- 
+-- function RMS_106()
+--   unit = 'rms-106'
+--   getThatRobot()
+-- end
+-- function RMS_108()
+--   unit = 'rms-108'
+--   getThatRobot()
+-- end
+-- function RMS_117()
+--   unit = 'rms-117'
+--   getThatRobot()
+-- end
+-- --[[note - rx-178 is set with the aeug folder as well, but it maps correctly ]]
+-- 
+-- --[[Londo Bell MS --]]
+-- function RX_0()
+--   unit = 'rx-0'
+--   getThatRobot()
+-- end
