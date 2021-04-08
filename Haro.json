@@ -53,13 +53,13 @@
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomAssetbundle": {
-        "AssetbundleURL": "https://github.com/ScornMandark/gundam-tts-assets/blob/main/haro.unity3d?raw=true",
+        "AssetbundleURL": "https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/blob/main/_HaroFiles/haro.unity3d",
         "AssetbundleSecondaryURL": "",
         "MaterialIndex": 2,
         "TypeIndex": 1,
         "LoopingEffectIndex": 0
       },
-      "LuaScript": "function onLoad()\n  HaroScripts = [[\n  -- nothing\n  -- nothing\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/HaroCreator.ttslua\",\n
+      "LuaScript": "function onLoad()\n  HaroScripts = [[\n  -- nothing\n  -- nothing\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/HaroCreator.ttslua\",\n
           function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         HaroScripts = request.text\n      end\n    end)\n            local function ResetHaro()\n
               self.setName('Haro')\n              self.setLuaScript(HaroScripts)\n              self.reload()\n              self.locked = true\n              self.interactable = true\n
             end\n            Wait.frames(ResetHaro, 60)\n          end\n",
