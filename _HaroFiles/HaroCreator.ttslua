@@ -68,7 +68,7 @@ function SpawnUnitCard()
   local unitCard = spawnObject(tileParams)
   unitCard.setCustomObject(customParams)
   unitCard.setName(unit:upper())
-  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/" .. game .. "CardOverlay.ttslua", function(request)
+  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/" .. game .. "CardOverlay.ttslua", function(request)
     if request.is_error then
       log(request.error)
     else
