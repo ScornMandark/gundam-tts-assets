@@ -66,3 +66,4 @@
   end
   Wait.frames(ResetHaro, 60)
 end
+end
