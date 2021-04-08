@@ -1,4 +1,8 @@
-  function onLoad()
+function onLoad()
+  self.createButton({click_function = 'loadHaroUpdate', function_owner = self, label = 'Get Started', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+end
+
+function loadHaroUpdate()
   HaroScripts = [[    ]]
   WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/HaroCreator.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
@@ -65,5 +69,4 @@
     self.interactable = true
   end
   Wait.frames(ResetHaro, 60)
-end
 end
