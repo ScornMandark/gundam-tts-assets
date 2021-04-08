@@ -1,0 +1,158 @@
+
+function Zeon()
+  self.clearButtons()
+  faction = 'Zeon'
+  self.createButton({click_function = 'Zeon0079', function_owner = self, label = '0079', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Zeon0080', function_owner = self, label = '0080', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Zeon0083', function_owner = self, label = '0083', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'UC', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function Zeon0079()
+  self.clearButtons()
+  self.createButton({click_function = 'MS_14A', function_owner = self, label = 'MS-14A', position = {-6, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_06S_Char', function_owner = self, label = 'MS-06S Char', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=1400, height=400, font_size=250})
+  self.createButton({click_function = 'MS_06S', function_owner = self, label = 'MS-06S', position = {0, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_06', function_owner = self, label = 'MS-06', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
+  self.createButton({click_function = 'MS_06_Missiles', function_owner = self, label = 'MS-06+Missiles', position = {6, 6, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+
+  self.createButton({click_function = 'DFA_03', function_owner = self, label = 'DFA-03', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Dodai', function_owner = self, label = 'Dodai', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'HT_01B', function_owner = self, label = 'HT-01B', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+
+  self.createButton({click_function = 'MSM_03', function_owner = self, label = 'MSM-03', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_04', function_owner = self, label = 'MSM-04', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_07', function_owner = self, label = 'MSM-07', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_07S', function_owner = self, label = 'MSM-07S', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_10', function_owner = self, label = 'MSM-10', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+
+  self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function Zeon0080()
+  self.clearButtons()
+  self.createButton({click_function = 'MS_06Fz', function_owner = self, label = 'MS-06Fz', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_09R_2', function_owner = self, label = 'MS-09R-2', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_14Jg', function_owner = self, label = 'MS-14Jg', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_18E', function_owner = self, label = 'MS-18E', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_03C', function_owner = self, label = 'MSM-03C', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_07E', function_owner = self, label = 'MSM-07E', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function Zeon0083()
+  self.clearButtons()
+  self.createButton({click_function = 'AGX_04', function_owner = self, label = 'AGX-04', position = {-1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_09F_trop', function_owner = self, label = 'MS-09F-trop', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_14F', function_owner = self, label = 'MS-14F', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_14FS', function_owner = self, label = 'MS-14FS', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_21C', function_owner = self, label = 'MS-21C', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78GP_02A', function_owner = self, label = 'RX-78GP-02A', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'YMS_16M', function_owner = self, label = 'YMS-16M', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[ZEON MS]] --------------------------------------------------
+function AGX_04()
+  unit = 'agx-04'
+  getThatRobot()
+end
+function DFA_03()
+  unit = 'dfa-03'
+  getThatRobot()
+end
+function Dodai()
+  unit = 'dodai'
+  getThatRobot()
+end
+function HT_01B()
+  unit = 'ht-01b'
+  getThatRobot()
+end
+function MS_06()
+  unit = 'ms-06'
+  getThatRobot()
+end
+function MS_06_Missiles()
+  unit = 'ms-06'
+  attached = 'ms-06_missile_pods'
+  getThatRobot()
+end
+function MS_06S()
+  unit = 'ms-06s'
+  getThatRobot()
+end
+function MS_06S_Char()
+  unit = 'ms-06s_char'
+  getThatRobot()
+end
+function MS_06Fz()
+  unit = 'ms-06fz'
+  getThatRobot()
+end
+function MS_09F_trop()
+  unit = 'ms-09f_trop'
+  getThatRobot()
+end
+function MS_09R_2()
+  unit = 'ms-09r-2'
+  getThatRobot()
+end
+function MS_14A()
+  unit = 'ms-14a'
+  getThatRobot()
+end
+function MS_14f()
+  unit = 'ms-14f'
+  getThatRobot()
+end
+function MS_14FS()
+  unit = 'ms-14fs'
+  getThatRobot()
+end
+function MS_14Jg()
+  unit = 'ms-14jg'
+  getThatRobot()
+end
+function MS_18E()
+  unit = 'ms-18e'
+  getThatRobot()
+end
+function MS_21C()
+  unit = 'ms-21c'
+  getThatRobot()
+end
+function MSM_03()
+  unit = 'msm-03'
+  getThatRobot()
+end
+function MSM_03C()
+  unit = 'msm-03c'
+  getThatRobot()
+end
+function MSM_04()
+  unit = 'msm-04'
+  getThatRobot()
+end
+function MSM_07()
+  unit = 'msm-07'
+  getThatRobot()
+end
+function MSM_07E()
+  unit = 'msm-07e'
+  getThatRobot()
+end
+function MSM_07S()
+  unit = 'msm-07s'
+  getThatRobot()
+end
+function MSM_10()
+  unit = 'msm-10'
+  getThatRobot()
+end
+function RX_78GP_02A()
+  unit = 'rx-78gp-02a'
+  getThatRobot()
+end
+function YMS_16M()
+  unit = 'yms-16m'
+  getThatRobot()
+end
