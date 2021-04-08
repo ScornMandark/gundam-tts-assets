@@ -148,19 +148,19 @@ function SetGame()
 end
 
 function MSSk()
-  faction = 'MSSk'
+  game = 'MSSk'
   initializeHaro()
 end
 function GH40k()
-  faction = 'GH40k'
+  game = 'GH40k'
   initializeHaro()
 end
 function GDF()
-  faction = 'GDF'
+  game = 'GDF'
   initializeHaro()
 end
 function UCC()
-  faction = 'UCC'
+  game = 'UCC'
   initializeHaro()
 end
 
