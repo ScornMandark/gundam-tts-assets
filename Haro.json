@@ -59,10 +59,51 @@
         "TypeIndex": 1,
         "LoopingEffectIndex": 0
       },
-      "LuaScript": "function onLoad()\n  HaroScripts = [[\n  -- nothing\n  -- nothing\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/HaroCreator.ttslua\",\n
-          function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         HaroScripts = request.text\n      end\n    end)\n            local function ResetHaro()\n
-              self.setName('Haro')\n              self.setLuaScript(HaroScripts)\n              self.reload()\n              self.locked = true\n              self.interactable = true\n
-            end\n            Wait.frames(ResetHaro, 60)\n          end\n",
+      "LuaScript": "function onLoad()\n  HaroScripts = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/HaroCreator.ttslua\",\n
+          function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         HaroScripts = request.text\n      end\n    end)\n
+          \n   EFF = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/EFFMenu.ttslua\",\n
+              function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         EFF = request.text\n      end\n    end)\n
+              \n   Zeon = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/ZeonMenu.ttslua\",\n
+                  function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         Zeon = request.text\n      end\n    end)\n
+                  \n   AEUG = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/AEUGMenu.ttslua\",\n
+                      function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         AEUG = request.text\n      end\n    end)\n
+                      \n   Titans = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/TitansMenu.ttslua\",\n
+                          function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         Titans = request.text\n      end\n    end)\n
+                          \n   LondoBell = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/LondoBellMenu.ttslua\",\n
+                              function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         LondoBell = request.text\n      end\n    end)\n
+                              \n   NeoZeon = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/NeoZeonMenu.ttslua\",\n
+                                  function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         NeoZeon = request.text\n      end\n    end)\n
+                                  \n   CelestialBeing = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/CelestialBeingMenu.ttslua\",\n
+                                      function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         CelestialBeing = request.text\n      end\n    end)\n
+                                      \n   ALAWS = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/ALAWSMenu.ttslua\",\n
+                                          function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         ALAWS = request.text\n      end\n    end)\n
+                                          \n   ZAFT = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/ZAFTMenu.ttslua\",\n
+                                              function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         ZAFT = request.text\n      end\n    end)\n
+                                              \n   OMNI = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/OMNIMenu.ttslua\",\n
+                                                  function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         OMNI = request.text\n      end\n    end)\n
+                                                  \n   ORB = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/ORBMenu.ttslua\",\n
+                                                      function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         ORB = request.text\n      end\n    end)\n
+                                                      \n   GTeam = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/GTeamMenu.ttslua\",\n
+                                                          function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         GTeam = request.text\n      end\n    end)\n
+                                                          \n   OZ = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/OZMenu.ttslua\",\n
+                                                              function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         OZ = request.text\n      end\n    end)\n
+                                                              \n   WhiteFang = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/WhiteFangMenu.ttslua\",\n
+                                                                  function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         WhiteFang = request.text\n      end\n    end)\n
+                                                                  \n   Preventers = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/PreventersMenu.ttslua\",\n
+                                                                      function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         Preventers = request.text\n      end\n    end)\n
+                                                                      \n   Marimea = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/MarimeaMenu.ttslua\",\n
+                                                                          function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         Marimea = request.text\n      end\n    end)\n
+                                                                          \n   Vultures = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/VulturesMenu.ttslua\",\n
+                                                                              function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         Vultures = request.text\n      end\n    end)\n
+                                                                              \n   NewUNE = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/NewUNEMenu.ttslua\",\n
+                                                                                  function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         NewUNE = request.text\n      end\n    end)\n
+                                                                                  \n   UNSpacy = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/UNSpacyMenu.ttslua\",\n
+                                                                                      function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         UNSpacy = request.text\n      end\n    end)\n
+                                                                                      \n   Zentraedi = [[\n  ]]\n  WebRequest.get(\"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/ZentraediMenu.ttslua\",\n
+                                                                                          function(request)\n      if request.is_error then\n        log(request.error)\n      else\n         Zentraedi = request.text\n      end\n    end)\n
+
+                      local function ResetHaro()\n              self.setName('Haro')\n       local MegaScript = [[\n ]] \n MegaScript = HaroScripts .. EFF .. Zeon .. AEUG .. Titans .. LondoBell .. NeoZeon .. CelestialBeing .. ALAWS .. ZAFT .. OMNI .. ORB .. GTeam .. OZ .. WhiteFang .. Preventers .. Marimea .. Vultures .. NewUNE .. UNSpacy .. Zentraedi\n       self.setLuaScript(MegaScript)\n              self.reload()\n
+                      self.locked = true\n              self.interactable = true\n            end\n            Wait.frames(ResetHaro, 60)\n          end\n",
       "LuaScriptState": "",
       "XmlUI": ""
     }
