@@ -1,0 +1,35 @@
+
+function Titans()
+    self.clearButtons()
+    faction = 'Titans'
+    self.createButton({click_function = 'TitansZeta', function_owner = self, label = 'Zeta', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'UC', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function TitansZeta()
+  self.clearButtons()
+  self.createButton({click_function = 'RMS_106', function_owner = self, label = 'RMS-106', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RMS_108', function_owner = self, label = 'RMS-108', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RMS_117', function_owner = self, label = 'RMS-117', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_178T', function_owner = self, label = 'RX-178', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Titans', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[Titans MS --]]
+
+function RMS_106()
+  unit = 'rms-106'
+  getThatRobot()
+end
+function RMS_108()
+  unit = 'rms-108'
+  getThatRobot()
+end
+function RMS_117()
+  unit = 'rms-117'
+  getThatRobot()
+end
+function RX_178T()
+  unit = 'rx-178'
+  getThatRobot()
+end
