@@ -1,0 +1,414 @@
+[[
+  disableSave = false
+  buttonFontColor = {0,0,0}
+  buttonColor = {1,1,1}
+  buttonScale = {1,1,1}
+
+  defaultButtonData = {
+  checkbox = {
+  --First pair of crits
+  {
+      pos={0.5625,0.05,0.63},
+      size=50,
+      state=false
+  },
+  {
+      pos={0.6625,0.05,0.63},
+      size=50,
+      state=false
+  },
+  --Next pair of crits
+  {
+      pos={0.5625,0.05,0.7225},
+      size=50,
+      state=false
+  },
+  {
+      pos={0.6625,0.05,0.7225},
+      size=50,
+      state=false
+  },
+  --Next pair of crits
+  {
+      pos={0.5625,0.05,0.815},
+      size=50,
+      state=false
+  },
+  {
+      pos={0.6625,0.05,0.815},
+      size=50,
+      state=false
+  },
+  --Next pair of crits
+  {
+      pos={0.5625,0.05,0.9075},
+      size=50,
+      state=false
+  },
+  {
+      pos={0.6625,0.05,0.9075},
+      size=50,
+      state=false
+  },
+
+  },
+
+  textbox = {
+  --Unit's integrity
+  {
+      alignment=3,
+      pos={-0.675,0.05,-0.4625},
+      rotation={0,0,0},
+      height=60,
+      width=60,
+      font_size=32,
+      color={1,1,1},
+      font_color={0,0,0},
+      value=""
+  },
+  --Unit's dodge tokens
+  {
+      alignment=3,
+      pos={0.15,0.05,-0.4625},
+      rotation={0,0,0},
+      height=60,
+      width=50,
+      font_size=32,
+      color={1,1,1},
+      font_color={0,0,0},
+      value=""
+  },
+  --Unit's shield integrity
+  {
+      alignment=3,
+      pos={0.15,0.05,-0.7125},
+      rotation={0,0,0},
+      height=60,
+      width=50,
+      font_size=32,
+      color={1,1,1},
+      font_color={0,0,0},
+      value=""
+  },
+  --Unit's cost sum
+  {
+      alignment=3,
+      pos={0.625,0.05,-0.87},
+      rotation={0,0,0},
+      height=55,
+      width=100,
+      font_size=32,
+      color={0.47,0.47,0.47},
+      font_color={0,0,0},
+      value=""
+  },
+  --Unit's label
+  {
+      alignment=3,
+      pos={0,0,-1.10},
+      rotation={0,0,0},
+      height=100,
+      width=200,
+      font_size=75,
+      color={0.15,0.15,0.15},
+      font_color={1,1,1},
+      value=""
+  },
+  --Pilot's name
+  {
+      alignment=2,
+      pos={0.4,-0.005,-0.95},
+      rotation={0,0,180},
+      height=50,
+      width=300,
+      font_size=26,
+      color={0.47,0.47,0.47},
+      font_color={0,0,0},
+      value=""
+  },
+  --Pilot's cost
+  {
+      alignment=2,
+      pos={-0.15,-0.005,-0.90},
+      rotation={0,0,180},
+      height=40,
+      width=80,
+      font_size=16,
+      color={0.47,0.47,0.47},
+      font_color={0,0,0},
+      value=""
+  },
+  --Pilot's XP
+  {
+      alignment=2,
+      pos={0.4875,-0.005,-0.85},
+      rotation={0,0,180},
+      height=40,
+      width=80,
+      font_size=16,
+      color={0.47,0.47,0.47},
+      font_color={0,0,0},
+      value=""
+  },
+  --Pilot's rank
+  {
+      alignment=2,
+      pos={0.4,-0.005,-0.775},
+      rotation={0,0,180},
+      height=40,
+      width=40,
+      font_size=16,
+      color={0.47,0.47,0.47},
+      font_color={0,0,0},
+      value=""
+  },
+  --Pilot's level
+  {
+      alignment=2,
+      pos={0.35,-0.005,-0.7125},
+      rotation={0,0,180},
+      height=40,
+      width=40,
+      font_size=16,
+      color={0.47,0.47,0.47},
+      font_color={0,0,0},
+      value=""
+  },
+  --Pilot's health
+  {
+      alignment=3,
+      pos={-0.02,-0.005,-0.825},
+      rotation={0,0,180},
+      height=40,
+      width=40,
+      font_size=16,
+      color={0.47,0.47,0.47},
+      font_color={0,0,0},
+      value=""
+  },
+  --Pilot's mind
+  {
+      alignment=3,
+      pos={-0.02,-0.005,-0.735},
+      rotation={0,0,180},
+      height=40,
+      width=40,
+      font_size=16,
+      color={0.47,0.47,0.47},
+      font_color={0,0,0},
+      value=""
+  },
+
+  --First pair of traits
+  {
+      alignment=2,
+      pos={0.447,-0.005,-0.63},
+      rotation={0,0,180},
+      height=50,
+      width=205,
+      font_size=25,
+      color={1,1,1},
+      font_color={0,0,0},
+      value=""
+  },
+  {
+      alignment=2,
+      pos={0.017,-0.005,-0.63},
+      rotation={0,0,180},
+      height=50,
+      width=205,
+      font_size=25,
+      color={1,1,1},
+      font_color={0,0,0},
+      value=""
+  },
+  --Next pair of traits
+  {
+      alignment=2,
+      pos={0.447,-0.005,-0.53},
+      rotation={0,0,180},
+      height=50,
+      width=205,
+      font_size=25,
+      color={1,1,1},
+      font_color={0,0,0},
+      value=""
+  },
+  {
+      alignment=2,
+      pos={0.017,-0.005,-0.53},
+      rotation={0,0,180},
+      height=50,
+      width=205,
+      font_size=25,
+      color={0.8,0.8,0.8},
+      font_color={0,0,0},
+      value=""
+  },
+  --Next pair of traits
+  {
+      alignment=2,
+      pos={0.447,-0.005,-0.43},
+      rotation={0,0,180},
+      height=50,
+      width=205,
+      font_size=25,
+      color={1,1,1},
+      font_color={0,0,0},
+      value=""
+  },
+  {
+      alignment=2,
+      pos={0.017,-0.005,-0.43},
+      rotation={0,0,180},
+      height=50,
+      width=205,
+      font_size=25,
+      color={0.8,0.8,0.8},
+      font_color={0,0,0},
+      value=""
+  },
+  --Next pair of traits
+  {
+      alignment=2,
+      pos={0.447,-0.005,-0.33},
+      rotation={0,0,180},
+      height=50,
+      width=205,
+      font_size=25,
+      color={1,1,1},
+      font_color={0,0,0},
+      value=""
+  },
+  {
+      alignment=2,
+      pos={0.017,-0.005,-0.33},
+      rotation={0,0,180},
+      height=50,
+      width=205,
+      font_size=25,
+      color={0.8,0.8,0.8},
+      font_color={0,0,0},
+      value=""
+  },
+  }
+  }
+
+  function updateSave()
+      saved_data = JSON.encode(ref_buttonData)
+      if disableSave==true then saved_data="" end
+      self.script_state = saved_data
+  end
+
+  function onload(saved_data)
+      if disableSave==true then saved_data="" end
+      if saved_data ~= "" then
+          local loaded_data = JSON.decode(saved_data)
+          ref_buttonData = loaded_data
+      else
+          ref_buttonData = defaultButtonData
+  end
+
+  spawnedButtonCount = 3
+  createCheckbox()
+  createTextbox()
+  end
+
+  function onLoad()
+      pos=-0.225
+      num=2
+      self.createButton({click_function="top",
+      function_owner=self, label=">", position={-0.9,0,-1}, rotation={0,-90,0},
+      height=150, width=100, font_size=100, color={0.15,0.15,0.15}, font_color={1,1,1}})
+
+      self.createButton({click_function="down",
+      function_owner=self, label=">", position={-0.9,0,1}, rotation={0,90,0},
+      height=150, width=100, font_size=100, color={0.15,0.15,0.15}, font_color={1,1,1}})
+
+      self.createButton({click_function='nothing',
+      function_owner=self, label=">", position={-0.9,0,pos},
+      height=100, width=100, font_size=100, color={0.15,0.15,0.15}, font_color={1,1,1}})
+  end
+
+  function createCheckbox()
+      for i, data in ipairs(ref_buttonData.checkbox) do
+          local buttonNumber = spawnedButtonCount
+          local funcName = "checkbox"..i
+          local func = function() click_checkbox(i, buttonNumber) end
+      self.setVar(funcName, func)
+          local label = ""
+          if data.state==true then label=string.char(10008) end
+      self.createButton({
+          label=label, click_function=funcName, function_owner=self,
+          position=data.pos, height=data.size, width=data.size,
+          font_size=data.size, scale=buttonScale,
+          color=buttonColor, font_color=buttonFontColor
+          })
+          spawnedButtonCount = spawnedButtonCount + 1
+      end
+  end
+
+  function createTextbox()
+      for i, data in ipairs(ref_buttonData.textbox) do
+          local funcName = "textbox"..i
+          local func = function(_,_,val,sel) click_textbox(i,val,sel) end
+          self.setVar(funcName, func)
+
+          self.createInput({
+              input_function = funcName,
+              function_owner = self,
+              label = "",
+              alignment = data.alignment,
+              position = data.pos,
+              rotation = data.rotation,
+              height = data.height,
+              width = data.width,
+              font_size = data.font_size,
+              color = data.color,
+              font_color = data.font_color,
+              value = data.value,
+              })
+      end
+  end
+
+  function top()
+      if num<2 then
+          pos=pos-0.125
+          num=num+1
+          updateDisplay()
+      end
+  end
+
+  function down()
+      if num>-7 then
+          pos=pos+0.125
+          num=num-1
+          updateDisplay()
+      end
+  end
+
+  function updateDisplay()
+      self.editButton({index=2, position={-0.9,0,pos}})
+  end
+
+  function click_checkbox(tableIndex, buttonIndex)
+      if ref_buttonData.checkbox[tableIndex].state == true then
+          ref_buttonData.checkbox[tableIndex].state = false
+          self.editButton({index=buttonIndex, label=""})
+      else
+          ref_buttonData.checkbox[tableIndex].state = true
+          self.editButton({index=buttonIndex, label=string.char(10008)})
+      end
+      updateSave()
+  end
+
+  function click_textbox(i, value, selected)
+      if selected == false then
+          ref_buttonData.textbox[i].value = value
+          updateSave()
+      end
+  end
+
+  function nothing()
+  end
+  ]]
