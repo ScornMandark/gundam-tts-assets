@@ -1,0 +1,39 @@
+
+function CelestialBeing()
+    self.clearButtons()
+    faction = 'CelestialBeing'
+    self.createButton({click_function = 'GN_001', function_owner = self, label = 'GN-001', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GN_0000', function_owner = self, label = 'GN-0000', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GNR_010', function_owner = self, label = 'GNR-010', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GNT_0000', function_owner = self, label = 'GNT-0000', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GN_Bits', function_owner = self, label = 'GN Bits', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GN_0000_GNR_010', function_owner = self, label = 'GN-0000+GNR-010', position = {4.5, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'AD', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[Celestial Being MS ]] --------------------------------
+
+function GN_001()
+  unit = 'gn-001'
+  getThatRobot()
+end
+function GN_0000()
+  unit = 'gn-0000'
+  getThatRobot()
+end
+function GNR_010()
+  unit = 'gnr-010'
+  getThatRobot()
+end
+function GNT_0000()
+  unit = 'gnt-0000'
+  getThatRobot()
+end
+function GN_Bits()
+  unit = 'gn_bits'
+  getThatRobot()
+end
+function GN_0000_GNR_010()
+  unit = 'gn-0000_gnr-010'
+  getThatRobot()
+end
