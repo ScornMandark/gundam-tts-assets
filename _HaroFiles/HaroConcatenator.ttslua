@@ -1,4 +1,5 @@
 function onLoad()
+  self.clearButtons()
   self.createButton({click_function = 'loadHaroUpdate', function_owner = self, label = 'Get Started', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
 end
 
