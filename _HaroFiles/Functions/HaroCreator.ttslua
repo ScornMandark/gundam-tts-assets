@@ -4,7 +4,7 @@ function onLoad()
   universe = 'UniversalCentury'
   faction = 'EFF'
   unit = 'fa-78-1'
-  game = 'MSSk'
+  wargame = 'MSSk'
   attached = nil
   CornerType = 3
   self.locked = true
@@ -62,15 +62,15 @@ function SpawnUnitCard()
   }
   customParams = {
     type = CornerType,
-    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. game .. '/' .. unit .. '_face.png',
-    image_bottom = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. game .. '/' .. unit .. '_back.png',
+    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_face.png',
+    image_bottom = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
     thickness = 0.05,
   }
   local unitCard = spawnObject(tileParams)
   unitCard.setCustomObject(customParams)
   unitCard.setName(unit:upper())
-  print(game)
-  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/" .. game .. "CardOverlay.ttslua", function(request)
+  print(wargame)
+  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/" .. wargame .. "CardOverlay.ttslua", function(request)
     if request.is_error then
       log(request.error)
     else
@@ -143,27 +143,27 @@ function SetGame()
 end
 
 function MSSk()
-  game = 'MSSk'
+  wargame = 'MSSk'
   CornerType = 3
-  print(game)
+  print(wargame)
   initializeHaro()
 end
 function GH40k()
-  game = 'GH40k'
+  wargame = 'GH40k'
   CornerType = 0
-  print(game)
+  print(wargame)
   initializeHaro()
 end
 function GDF()
-  game = 'GDF'
+  wargame = 'GDF'
   CornerType = 0
-  print(game)
+  print(wargame)
   initializeHaro()
 end
 function UCC()
-  game = 'UCC'
+  wargame = 'UCC'
   CornerType = 3
-  print(game)
+  print(wargame)
   initializeHaro()
 end
 
