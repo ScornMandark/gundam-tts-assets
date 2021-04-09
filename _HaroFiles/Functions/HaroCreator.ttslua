@@ -69,7 +69,7 @@ function SpawnUnitCard()
   local unitCard = spawnObject(tileParams)
   unitCard.setCustomObject(customParams)
   unitCard.setName(unit:upper())
-  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/" .. game .. "CardOverlay.ttslua", function(request)
+  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/" .. game .. "CardOverlay.ttslua", function(request)
     if request.is_error then
       log(request.error)
     else
@@ -178,7 +178,7 @@ end
 function reinitializeHaro()
     self.clearButtons()
     HaroScripts = [[    ]]
-    WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/HaroConcatenator.ttslua",
+    WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroConcatenator.ttslua",
       function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
     local function ResetHaro()
       self.setName('Haro')
