@@ -144,21 +144,25 @@ end
 function MSSk()
   game = 'MSSk'
   CornerType = 3
+  print(game)
   initializeHaro()
 end
 function GH40k()
   game = 'GH40k'
   CornerType = 0
+  print(game)
   initializeHaro()
 end
 function GDF()
   game = 'GDF'
   CornerType = 0
+  print(game)
   initializeHaro()
 end
 function UCC()
   game = 'UCC'
   CornerType = 3
+  print(game)
   initializeHaro()
 end
 
