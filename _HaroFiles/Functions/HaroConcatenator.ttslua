@@ -69,5 +69,5 @@ function loadHaroUpdate()
     self.locked = true
     self.interactable = true
   end
-  Wait.frames(ResetHaro, 60)
+  Wait.frames(ResetHaro, 120)
 end
