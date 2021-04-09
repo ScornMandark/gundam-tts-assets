@@ -5,7 +5,7 @@ end
 
 function loadHaroUpdate()
   HaroScripts = [[    ]]
-  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/HaroCreator.ttslua",
+  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroCreator.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
    EFF = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/EFFMenu.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         EFF = request.text      end    end)
