@@ -118,15 +118,6 @@ function initializeHaro()
     self.createButton({click_function = 'settings',function_owner = self,label = 'Settings',position = {-1.5, 3, 0},rotation = {-60, 0, 0},width = 1200,height = 400,font_size = 340})
 end
 
---[[big ass branching MS selector]]
-
-function createRobot()
-    self.clearButtons()
-    self.createButton({click_function = 'CE', function_owner = self, label = 'CE', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'UC', function_owner = self, label = 'UC', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'AD', function_owner = self, label = 'AD', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-end
 function settings()
     self.clearButtons()
     self.clearInputs()
@@ -199,3 +190,36 @@ function reinitializeHaro()
     Wait.frames(ResetHaro, 60)
   end
 ----[[ Faction Menus ----]]
+--[[big ass branching MS selector]]
+
+function createRobot()
+    self.clearButtons()
+    self.createButton({click_function = 'CE', function_owner = self, label = 'CE', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'UC', function_owner = self, label = 'UC', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'AD', function_owner = self, label = 'AD', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function AD()
+    self.clearButtons()
+    universe = 'AnnoDomini'
+    self.createButton({click_function = 'CelestialBeing', function_owner = self, label = 'Celestial Being', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function CE()
+    self.clearButtons()
+    universe = 'CosmicEra'
+    self.createButton({click_function = 'ZAFT', function_owner = self, label = 'ZAFT', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function UC()
+    self.clearButtons()
+    universe = 'UniversalCentury'
+    self.createButton({click_function = 'EFF', function_owner = self, label = 'EFF', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'Zeon', function_owner = self, label = 'Zeon', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'Titans', function_owner = self, label = 'Titans', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'AEUG', function_owner = self, label = 'AEUG', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'LondoBell', function_owner = self, label = 'Londo Bell', position = {2, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'NeoZeon', function_owner = self, label = 'Neo Zeon', position = {-2, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
