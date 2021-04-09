@@ -77,8 +77,11 @@ function SpawnUnitCard()
       CardCode = request.text
     end
     end)
-  unitCard.setLuaScript(CardCode)
-  unitCard.reload()
+    local function statCardOverlay()
+      unitCard.setLuaScript(CardCode)
+      unitCard.reload()
+    end
+    Wait.frames(statCardOverlay, 60)
   initializeHaro()
 end
 
