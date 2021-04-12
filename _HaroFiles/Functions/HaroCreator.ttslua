@@ -60,7 +60,7 @@ function SpawnBase(ms)
     type = 'Custom_Tile',
     position = {MSPos.x, MSPos.y-.25, MSPos.z},
     rotation = {x=0, y=0, z=0},
-    scale = {baseSize,1,1},
+    scale = {baseSize,1,baseSize},
   }
   customParams = {
     type = 2,
