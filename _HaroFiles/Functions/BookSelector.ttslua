@@ -239,7 +239,7 @@ end
 function GDFBookAC()
     self.clearButtons()
     self.createButton({click_function = 'GDFBookOperationMeteor', function_owner = self, label = 'Operation Meteor', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
-    self.createButton({click_function = 'GDFBookOZ', function_owner = self, label = 'Organization of the Zodiac', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookOZ', function_owner = self, label = 'Organization of the Zodiac', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
     self.createButton({click_function = 'GDFBookWhiteFangs', function_owner = self, label = 'White Fangs', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
     self.createButton({click_function = 'GDFBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
@@ -257,9 +257,9 @@ function GDFBookWhiteFangs()
 end
 function GDFBookCE()
     self.clearButtons()
-    self.createButton({click_function = 'GDFBookOMNI71', function_owner = self, label = 'Omnipresent Federation CE71', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookOMNI71', function_owner = self, label = 'Omnipresent Federation CE71', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
     self.createButton({click_function = 'GDFBookORB71', function_owner = self, label = 'Orbital Neutral CE71', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
-    self.createButton({click_function = 'GDFBookZAFT71', function_owner = self, label = 'Zodiac Freedom Fighters CE71', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookZAFT71', function_owner = self, label = 'Zodiac Freedom Fighters CE71', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
     self.createButton({click_function = 'GDFBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function GDFBookOMNI71()
