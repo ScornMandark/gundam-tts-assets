@@ -71,7 +71,7 @@ function SpawnBase(ms)
   }
   local base = spawnObject(tileParams)
   base.setCustomObject(customParams)
-  base.setColorTint(0,0,0)
+  base.setColorTint({0,0,0})
   ms.addAttachment(base)
 end
 
