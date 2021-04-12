@@ -181,8 +181,8 @@ function UseABase()
   self.createButton({click_function = 'Base80mm', function_owner = self, label = '80mm', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Base100mm', function_owner = self, label = '100mm', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Base120mm', function_owner = self, label = '120mm', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base170mmX', function_owner = self, label = '170mm Wide', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base170mmZ', function_owner = self, label = '170mm Long', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base170mmX', function_owner = self, label = '170mm Wide', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'Base170mmZ', function_owner = self, label = '170mm Long', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
 self.createButton({click_function = 'SetBase', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
