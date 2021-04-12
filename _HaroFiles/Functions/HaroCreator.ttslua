@@ -1,5 +1,6 @@
 function onLoad()
   MSPosOffset = {x = 0, y = 0, z = 10}
+  MSPosAdjustment(MSPosOffset)
   scaler = 1
   universe = 'UniversalCentury'
   faction = 'EFF'
