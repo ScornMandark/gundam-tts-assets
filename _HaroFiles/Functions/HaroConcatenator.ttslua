@@ -5,10 +5,10 @@ end
 
 function loadHaroUpdate()
   self.clearButtons()
-  HaroScripts = [[    ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroCreator.ttslua",
+  HaroScripts = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroCreator.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
   Books = [[  ]] WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/BookSelector.ttslua",
-    function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
+    function(request)      if request.is_error then        log(request.error)      else         Books = request.text      end    end)
   EFF = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/EFFMenu.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         EFF = request.text      end    end)
    Zeon = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/ZeonMenu.ttslua",
