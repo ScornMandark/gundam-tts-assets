@@ -1,8 +1,7 @@
 function createBook()
     self.clearButtons()
     if wargame == 'MSSk' then
-        SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/MSSk%20Version%202.0%20screen.pdf?raw=true", "Mobile Suit Skirmish 2.0", "The Core Rules for Mobile Suit Skirmish")
-        initializeHaro()
+        MSSkBookSelector()
     end
     if wargame == 'GH40k' then
        GH40kBookSelector()
@@ -15,19 +14,76 @@ function createBook()
     end
 end
 
+function MSSkBookSelector()
+  self.clearButtons()
+  self.createButton({click_function = 'MSSkBookEFF', function_owner = self, label = 'EFF', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSSkBookZeon', function_owner = self, label = 'Zeon', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSSkBookAEUG', function_owner = self, label = 'AEUG', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSSkRulebook', function_owner = self, label = 'MSSk Rulebook 2.0', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'MSSkRulebookErrata', function_owner = self, label = '2.01 Errata', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'MSSkRulebook25Test', function_owner = self, label = '2.5 Test Rules', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function MSSkRulebook()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/MSSk%20Version%202.0%20screen.pdf?raw=true", "Mobile Suit Skirmish", "The 2.0 core rules for Mobile Suit Skirmish")
+  initializeHaro()
+end
+function MSSkRulebookErrata()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/MSSk%20revisions%20sheet%20V2.01.pdf?raw=true", "MSSk 2.01 Errata", "The 2.01 errata for Mobile Suit Skirmish")
+  initializeHaro()
+end
+function MSSkRulebook25Test()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/Mobile%20Suit%20Skirmish%202.5%20Playtest%20Packet.pdf?raw=true", "MSSk 2.5 Playtest Packet", "The 2.5 playtest packet for Mobile Suit Skirmish")
+  initializeHaro()
+end
+function MSSkBookEFF()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/UC/Earth%20Federation%20Forces%20Temporary%20Version%202-0%20Stats.pdf?raw=true", "MSSk 2.0 EFF Stats", "The 2.0 stat sheet for Earth Federation Forces units for Mobile Suit Skirmish")
+  initializeHaro()
+end
+function MSSkBookZeon()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/UC/Principality%20of%20Zeon%20Temporary%20Version%202-0%20Stats.pdf?raw=true", "MSSk 2.0 Zeon Stats", "The 2.0 stat sheet for Zeon units for Mobile Suit Skirmish")
+  initializeHaro()
+end
+function MSSkBookAEUG()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/UC/AEUG%20Temporary%20Version%202-0%20Stats.pdf?raw=true", "MSSk 2.0 AEUG Stats", "The 2.0 stat sheet for AEUG units for Mobile Suit Skirmish")
+  initializeHaro()
+end
+
 function GH40kBookSelector()
     self.clearButtons()
-    self.createButton({click_function = 'GH40kBookCE', function_owner = self, label = 'CE', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kBookUC', function_owner = self, label = 'UC', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kBookAC', function_owner = self, label = 'AC', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kRulebook', function_owner = self, label = 'Rulebook', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookMacross', function_owner = self, label = 'Macross', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookCE', function_owner = self, label = 'CE', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookUC', function_owner = self, label = 'UC', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookAC', function_owner = self, label = 'AC', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kRulebook', function_owner = self, label = 'Central Codex', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kCoreRules', function_owner = self, label = 'Core Rules', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
     self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
 function GH40kRulebook()
-  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "GundamHammer40k", "The core codex for GundamHammer 40k units")
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "GundamHammer 40k Codex", "The core codex for GundamHammer 40k units")
   initializeHaro()
 end
+function GH40kCoreRules()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/9eCoreRules.pdf?raw=true", "Warhammer 40k 9th Edition", "The core rules for Warhammer 40k 9th Edition")
+  initializeHaro()
+end
+
+function GH40kBookMacross()
+    self.clearButtons()
+    self.createButton({click_function = 'GH40kBook2009UNSpacy', function_owner = self, label = 'UN Spacy 2009', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook2009Zentraedi', function_owner = self, label = 'Zentraedi 2009', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GH40kBook2009UNSpacy()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Macross/Index%20UN%20Spacy%202009.pdf?raw=true", "Index UN Spacy 2009", "Army List Index for 2009 UN Spacy")
+  initializeHaro()
+end
+function GH40kBook2009Zentraedi()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Macross/Index%20Zentraedi%202009.pdf?raw=true", "Index Zentraedi 2009", "Army List Index for 2009 Zentraedi")
+  initializeHaro()
+end
+
 
 function GH40kBookCE()
     self.clearButtons()
@@ -139,9 +195,9 @@ function GH40kBookAC()
     self.clearButtons()
     self.createButton({click_function = 'GH40kBookPreventers', function_owner = self, label = 'Preventers', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'GH40kBookMarimeia', function_owner = self, label = 'Marimeia', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kBookGundamAllies', function_owner = self, label = 'Gundam Allies', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookGundamAllies', function_owner = self, label = 'Gundam Allies', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'GH40kBookOZ', function_owner = self, label = 'OZ', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kBookWhiteFang', function_owner = self, label = 'White Fang', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookWhiteFang', function_owner = self, label = 'White Fang', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'GH40kBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function GH40kBookPreventers()
@@ -164,6 +220,7 @@ function GH40kBookWhiteFang()
   SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/AC/Index%20White%20Fang%20AC195.pdf?raw=true", "Index White Fang AC195", "Army List Index for AC195 White Fang")
   initializeHaro()
 end
+
 
 function GDFBookSelector()
     self.clearButtons()
