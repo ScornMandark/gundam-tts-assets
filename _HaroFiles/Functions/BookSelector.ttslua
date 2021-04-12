@@ -135,6 +135,35 @@ function GH40kBookNeoZeon()
   initializeHaro()
 end
 
+function GH40kBookAC()
+    self.clearButtons()
+    self.createButton({click_function = 'GH40kBookPreventers', function_owner = self, label = 'Preventers', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookMarimeia', function_owner = self, label = 'Marimeia', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookGundamAllies', function_owner = self, label = 'Gundam Allies', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookOZ', function_owner = self, label = 'OZ', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookWhiteFang', function_owner = self, label = 'White Fang', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GH40kBookPreventers()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/AC/Index%20Preventers%20AC196.pdf?raw=true", "Index Preventers AC196", "Army List Index for AC196 Preventers")
+  initializeHaro()
+end
+function GH40kBookMarimeia()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/AC/Index%20Marimeia%20Army%20AC196.pdf?raw=true", "Index Marimeia Army AC196", "Army List Index for AC196 Marimeia Army")
+  initializeHaro()
+end
+function GH40kBookGundamAllies()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/AC/Index%20Gundam%20Allies%20AC195.pdf?raw=true", "Index Gundam Allies AC195", "Army List Index for AC195 Gundam Allies")
+  initializeHaro()
+end
+function GH40kBookOZ()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/AC/Index%20OZ%20AC195.pdf?raw=true", "Index OZ AC195", "Army List Index for AC195 Organization of the Zodiac")
+  initializeHaro()
+end
+function GH40kBookWhiteFang()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/AC/Index%20White%20Fang%20AC195.pdf?raw=true", "Index White Fang AC195", "Army List Index for AC195 White Fang")
+  initializeHaro()
+end
 
 function GDFBookSelector()
     self.clearButtons()
