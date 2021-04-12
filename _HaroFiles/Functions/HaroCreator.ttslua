@@ -6,9 +6,11 @@ function onLoad()
   unit = 'fa-78-1'
   wargame = 'MSSk'
   useBase = false
-  baseSize = 4
+  baseSizeX = 4
+  baseSizeZ = 4
   attached = nil
   CornerType = 3
+  baseScaleMod = 0.505 --adjust base size to 1.0 units
   self.locked = true
   SetGame()
 end
@@ -60,7 +62,7 @@ function SpawnBase(ms)
     type = 'Custom_Tile',
     position = {MSPos.x, MSPos.y-.25, MSPos.z},
     rotation = {x=0, y=0, z=0},
-    scale = {baseSize,1,baseSize},
+    scale = {baseSizeX*baseScaleMod,1,baseSizeZ*baseScaleMod},
   }
   customParams = {
     type = 2,
@@ -172,37 +174,55 @@ end
 function UseABase()
   useBase = true
   self.clearButtons()
-  self.createButton({click_function = 'Base25mm', function_owner = self, label = '25mm', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base32mm', function_owner = self, label = '32mm', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base60mm', function_owner = self, label = '60mm', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base80mm', function_owner = self, label = '80mm', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base100mm', function_owner = self, label = '100mm', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base120mm', function_owner = self, label = '120mm', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'SetBase', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base25mm', function_owner = self, label = '25mm', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base32mm', function_owner = self, label = '32mm', position = {0, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base60mm', function_owner = self, label = '60mm', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base80mm', function_owner = self, label = '80mm', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base100mm', function_owner = self, label = '100mm', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base120mm', function_owner = self, label = '120mm', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base170mmX', function_owner = self, label = '170mm Wide', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base170mmZ', function_owner = self, label = '170mm Long', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+self.createButton({click_function = 'SetBase', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
 function Base25mm()
-  baseSize = 1
+  baseSizeX = 1
+  baseSizeZ = 1
   initializeHaro()
 end
 function Base32mm()
-  baseSize = 1.3
+  baseSizeX = 1.3
+  baseSizeZ = 1.3
   initializeHaro()
 end
 function Base60mm()
-  baseSize = 2.4
+  baseSizeX = 2.4
+  baseSizeZ = 2.4
   initializeHaro()
 end
 function Base80mm()
-  baseSize = 3.2
+  baseSizeX = 3.2
+  baseSizeZ = 3.2
   initializeHaro()
 end
 function Base100mm()
-  baseSize = 4
+  baseSizeX = 4
+  baseSizeZ = 4
   initializeHaro()
 end
 function Base120mm()
-  baseSize = 4.8
+  baseSizeX = 4.8
+  baseSizeZ = 4.8
+  initializeHaro()
+end
+function Base170mmX()
+  baseSizeX = 6.8
+  baseSizeZ = 4.4
+  initializeHaro()
+end
+function Base170mmZ()
+  baseSizeX = 4.4
+  baseSizeZ = 6.8
   initializeHaro()
 end
 
