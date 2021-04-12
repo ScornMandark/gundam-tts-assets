@@ -1,5 +1,5 @@
 function createBook()
-    SpawnAPDF("http://www.africau.edu/images/default/sample.pdf", "Sample PDF", "A simple sample PDF Manual")
+    SpawnAPDF("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf", "Sample PDF", "A simple sample PDF Manual")
     initializeHaro()
 end
 
