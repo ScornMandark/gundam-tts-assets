@@ -65,7 +65,7 @@ function GH40kBookCE71OMNI()
   initializeHaro()
 end
 
-function GH40kBookCE()
+function GH40kBookUC()
     self.clearButtons()
     self.createButton({click_function = 'GH40kBook0093LondoBell', function_owner = self, label = 'Londo Bell', position = {-3, 8, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
     self.createButton({click_function = 'GH40kBook0093NeoZeon', function_owner = self, label = 'Neo Zeon', position = {3, 8, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
