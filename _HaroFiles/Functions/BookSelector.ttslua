@@ -1,3 +1,4 @@
+--[[Book Selectors]]
 function createBook()
     self.clearButtons()
     if wargame == 'MSSk' then
@@ -53,10 +54,10 @@ function GH40kBookSelector()
     self.clearButtons()
     self.createButton({click_function = 'GH40kBookMacross', function_owner = self, label = 'Macross', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'GH40kBookCE', function_owner = self, label = 'CE', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kBookUC', function_owner = self, label = 'UC', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kBookAC', function_owner = self, label = 'AC', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kRulebook', function_owner = self, label = 'Central Codex', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
-    self.createButton({click_function = 'GH40kCoreRules', function_owner = self, label = 'Core Rules', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookUC', function_owner = self, label = 'UC', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookAC', function_owner = self, label = 'AC', position = {-1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kRulebook', function_owner = self, label = 'Central Codex', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kCoreRules', function_owner = self, label = 'Core Rules', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
     self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
@@ -223,9 +224,83 @@ end
 
 
 function GDFBookSelector()
-    self.clearButtons()
+  self.clearButtons()
+  self.createButton({click_function = 'GDFBookMacross', function_owner = self, label = 'Macross', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'GDFBookCE', function_owner = self, label = 'CE', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'GDFkBookUC', function_owner = self, label = 'UC', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'GDFBookAC', function_owner = self, label = 'AC', position = {-1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'GDFCoreRules', function_owner = self, label = 'GDF Core Rules', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GDFCoreRules()
     SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/GF%20-%20Basic%20Rulebook%20v2.12.pdf?raw=true", "Grimdark Future 2.12", "The core rules for Grimdark Future")
     initializeHaro()
+end
+function GDFBookAC()
+    self.clearButtons()
+    self.createButton({click_function = 'GDFBookOperationMeteor', function_owner = self, label = 'Operation Meteor', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookOZ', function_owner = self, label = 'Organization of the Zodiac', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookWhiteFangs', function_owner = self, label = 'White Fangs', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GDFBookOperationMeteor()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/AC/GF%20-%20Operation%20Meteor%20AC195%201.0.pdf?raw=true", "Operation Meteor AC195", "Army List for Operation Meteor AC195")
+  initializeHaro()
+end
+function GDFBookOZ()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/AC/GF%20-%20Organization%20of%20the%20Zodiac%20AC195%201.0.pdf?raw=true", "Organization of the Zodiac AC195", "Army List for Organization of the Zodiac AC195")
+  initializeHaro()
+end
+function GDFBookWhiteFangs()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/AC/GF%20-%20White%20Fangs%20AC195%201.0.pdf?raw=true", "White Fangs AC195", "Army List for White Fangs AC195")
+  initializeHaro()
+end
+function GDFBookCE()
+    self.clearButtons()
+    self.createButton({click_function = 'GDFBookOMNI71', function_owner = self, label = 'Omnipresent Federation CE71', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookORB71', function_owner = self, label = 'Orbital Neutral CE71', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookZAFT71', function_owner = self, label = 'Zodiac Freedom Fighters CE71', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GDFBookOMNI71()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/CE/GF%20-%20Omnipresent%20Federation%20CE71%202.0.pdf?raw=true", "Omnipresent Federation CE71", "Army List for Omnipresent Federation CE71")
+  initializeHaro()
+end
+function GDFBookORB71()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/CE/GF%20-%20Orbital%20Neutral%20CE71%202.0.pdf?raw=true", "Orbital Neutral CE71", "Army List for Orbital Neutral CE71")
+  initializeHaro()
+end
+function GDFBookZAFT71()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/CE/GF%20-%20Zodiac%20Freedom%20Fighters%20CE71.pdf?raw=true", "Zodiac Freedom Fighters CE71", "Army List for Zodiac Freedom Fighters CE71")
+  initializeHaro()
+end
+function GDFBookUC()
+    self.clearButtons()
+    self.createButton({click_function = 'GDFBookEFSF0079', function_owner = self, label = 'EFSF Mobile Suits 0079', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookZeon0079', function_owner = self, label = 'Mobile Suits of Z 0079', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GDFBookEFSF0079()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/UC/GF%20-%20EFSF%20Mobile%20Suits%20UC0079%202.4.pdf?raw=true", "EFSF Mobile Suits 0079", "Army List for EFSF Mobile Suits 0079")
+  initializeHaro()
+end
+function GDFBookZeon0079()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/UC/GF%20-%20Mobile%20Suits%20of%20Z%200079%20v2.2.pdf?raw=true", "Mobile Suits of Z 0079", "Army List for Mobile Suits of Z 0079")
+  initializeHaro()
+end
+function GDFBookMacross()
+    self.clearButtons()
+    self.createButton({click_function = 'GDFBookUNSpacers2009', function_owner = self, label = 'UN Spacers 2009', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookZentradus2009', function_owner = self, label = 'Zentradus Armada 2009', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GDFBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GDFBookUNSpacers2009()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/Macross/GF%20-%20UN%20Spacers%202009%201.0.pdf?raw=true", "UN Spacers 2009", "Army List for UN Spacers 2009")
+  initializeHaro()
+end
+function GDFBookZentradus2009()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/Macross/GF%20-%20Zentradus%20Armada%202009%201.0.pdf?raw=true", "Zentradus Armada 2009", "Army List for Zentradus Armada 2009")
+  initializeHaro()
 end
 
 function UCCBookSelector()
