@@ -5,6 +5,8 @@ function onLoad()
   faction = 'EFF'
   unit = 'fa-78-1'
   wargame = 'MSSk'
+  useBase = false
+  baseSize = 4
   attached = nil
   CornerType = 3
   self.locked = true
@@ -41,6 +43,9 @@ function getThatRobot()
   robot.setCustomObject(customParams)
   robot.setName(unit:upper())
   robot.measure_movement = true
+  robot.setLock = true
+  if useBase then SpawnBase(robot) end
+  robot.setLock = false
   robot.createButton({click_function="spawnSightArc", function_owner=self, label="Sight Arc", position={0,0.05,-0.65}, rotation={0,180,0}, height=200, width=400, font_size=80, color={0.15,0.15,0.15}, font_color={1,1,1}})
   robot.createInput({input_function = "click_textbox", function_owner = self, label="", alignment=3,pos={0,0.05,-0.35}, rotation={0,180,0}, height=100, width=200, font_size=75, color={0.15,0.15,0.15}, font_color={1,1,1}, value=""})
   CardInput()
@@ -51,6 +56,25 @@ function CardInput()
     self.createButton({click_function = 'SpawnUnitCard', function_owner = self, label = 'Create Unit Card', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
     self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'No Unit Card', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
 end
+
+function SpawnBase(ms)
+  tileParams = {
+    type = 'Custom_Tile',
+    position = {MSPos.x, MSPos.y-.25, MSPos.z},
+    rotation = {x=0, y=0, z=0},
+    scale = {baseSize,1,baseSize},
+  }
+  customParams = {
+    type = 2,
+    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png',
+    thickness = 0.05,
+  }
+  local base = spawnObject(tileParams)
+  base.setCustomObject(customParams)
+  print(getBounds())
+  ms.addAttachment(base)
+end
+
 
 function SpawnUnitCard()
   local tileScale = 3
@@ -124,8 +148,9 @@ end
 function settings()
     self.clearButtons()
     self.clearInputs()
-    self.createButton({click_function = 'SetScale', function_owner = self, label = 'Scale', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'SetGame', function_owner = self, label = 'Game', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'SetScale', function_owner = self, label = 'Scale', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'SetBase', function_owner = self, label = 'Bases', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'SetGame', function_owner = self, label = 'Game', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'reinitializeHaro', function_owner = self, label = 'Reinitialize', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
     self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
@@ -135,6 +160,55 @@ function SetScale()
     self.createInput({input_function = 'scaleSetter', function_owner = self, label = 'Scale Factor', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=800, font_size=250, tooltip='Enter desired scale', validation=2 })
     self.createButton({click_function = 'settings', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
+function SetBase()
+    self.clearButtons()
+    self.createButton({click_function = 'UseABase', function_owner = self, label = 'Use Bases', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+    self.createButton({click_function = 'NoBase', function_owner = self, label = 'No Bases', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+    self.createButton({click_function = 'settings', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function NoBase()
+  useBase = false
+  settings()
+end
+
+function UseABase()
+  useBase = true
+  self.clearButtons()
+  self.createButton({click_function = 'Base25mm', function_owner = self, label = '25mm', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base32mm', function_owner = self, label = '32mm', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base60mm', function_owner = self, label = '60mm', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base80mm', function_owner = self, label = '80mm', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base100mm', function_owner = self, label = '100mm', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base120mm', function_owner = self, label = '120mm', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'SetBase', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})  
+end
+
+function Base25mm()
+  baseSize = 1
+  settings()
+end
+function Base32mm()
+  baseSize = 1.3
+  settings()
+end
+function Base60mm()
+  baseSize = 2.4
+  settings()
+end
+function Base80mm()
+  baseSize = 3.2
+  settings()
+end
+function Base100mm()
+  baseSize = 4
+  settings()
+end
+function Base120mm()
+  baseSize = 4.8
+  settings()
+end
+
 function SetGame()
     self.clearButtons()
     self.createButton({click_function = 'MSSk', function_owner = self, label = 'Mobile Suit Skirmish', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
