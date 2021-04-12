@@ -99,11 +99,11 @@ function GH40kBook0079EFFTB()
   initializeHaro()
 end
 function GH40kBookZeonTheOrigin()
-  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Zeon%20The%20Origin%200079.pdf?raw=true", "Index Zeon 0079 TO", "Army List Index for The Origin 0079 Zeon")
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Zeon%20The%20Origin%200065-0079.pdf?raw=true", "Index Zeon 0079 TO", "Army List Index for The Origin 0079 Zeon")
   initializeHaro()
 end
 function GH40kBookEFFTheOrigin()
-  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20EFF%20The%20Origin%200079.pdf?raw=true", "Index EFF 0079 TO", "Army List Index for The Origin 0079 Earth Federation Forces")
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20EFF%20The%20Origin%200065-0079.pdf?raw=true", "Index EFF 0079 TO", "Army List Index for The Origin 0079 Earth Federation Forces")
   initializeHaro()
 end
 function GH40kBook0081Zeon()
@@ -138,7 +138,7 @@ end
 
 function GDFBookSelector()
     self.clearButtons()
-    SpawnAPDF("https://https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/GF%20-%20Basic%20Rulebook%20v2.12.pdf?raw=true", "Grimdark Future 2.12", "The core rules for Grimdark Future")
+    SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/GF%20-%20Basic%20Rulebook%20v2.12.pdf?raw=true", "Grimdark Future 2.12", "The core rules for Grimdark Future")
     initializeHaro()
 end
 
