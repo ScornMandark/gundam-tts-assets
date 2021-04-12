@@ -1,5 +1,7 @@
 function createBook()
-    SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "Sample PDF", "A simple sample PDF Manual")
+    clearButtons()
+    if faction == 'MSSk' then SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/MSSk%20Version%202.0%20screen.pdf?raw=true", "Mobile Suit Skirmish 2.0", "The Core Rules for Mobile Suit Skirmish") end
+    if faction == 'GH40k' then SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "GundamHammer40k", "The core codex for GundamHammer 40k units") end
     initializeHaro()
 end
 
@@ -8,11 +10,11 @@ function SpawnAPDF(url, name, description)
         {
           "Name": "Custom_PDF",
           "Transform": {
-            "posX": 0.0,
-            "posY": 0.0,
-            "posZ": 0.0,
+            "posX": MSPos.x,
+            "posY": MSPos.y,
+            "posZ": MSPos.z,
             "rotX": 0.0,
-            "rotY": 0.0,
+            "rotY": 180.0,
             "rotZ": 0.0,
             "scaleX": 1.0,
             "scaleY": 1.0,
