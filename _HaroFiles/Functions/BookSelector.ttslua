@@ -1,31 +1,153 @@
 function createBook()
     self.clearButtons()
-    if wargame == 'MSSk' then 
-        SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/MSSk%20Version%202.0%20screen.pdf?raw=true", "Mobile Suit Skirmish 2.0", "The Core Rules for Mobile Suit Skirmish") 
+    if wargame == 'MSSk' then
+        SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/MSSk%20Version%202.0%20screen.pdf?raw=true", "Mobile Suit Skirmish 2.0", "The Core Rules for Mobile Suit Skirmish")
         initializeHaro()
     end
-    if wargame == 'GH40k' then 
+    if wargame == 'GH40k' then
        GH40kBookSelector()
     end
-    if wargame == 'GDF' then 
+    if wargame == 'GDF' then
         GDFBookSelector()
     end
-    if wargame == 'UCC' then 
-        initializeHaro() 
+    if wargame == 'UCC' then
+      UCCBookSelector()
     end
 end
 
 function GH40kBookSelector()
     self.clearButtons()
-    SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "GundamHammer40k", "The core codex for GundamHammer 40k units") 
-    initializeHaro()
+    self.createButton({click_function = 'GH40kBookCE', function_owner = self, label = 'CE', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookUC', function_owner = self, label = 'UC', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookAC', function_owner = self, label = 'AC', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kRulebook', function_owner = self, label = 'Rulebook', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+    self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
+
+function GH40kRulebook()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "GundamHammer40k", "The core codex for GundamHammer 40k units")
+  initializeHaro()
+end
+
+function GH40kBookCE()
+    self.clearButtons()
+    self.createButton({click_function = 'GH40kBookCE71OMNI', function_owner = self, label = 'CE71 OMNI', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookCE71ORB', function_owner = self, label = 'CE71 ORB', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookCE71ZAFT', function_owner = self, label = 'CE71 ZAFT', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookCE73OMNI', function_owner = self, label = 'CE73 OMNI', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookCE73ORB', function_owner = self, label = 'CE73 ORB', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookCE73ZAFT', function_owner = self, label = 'CE73 ZAFT', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function GH40kBookCE71OMNI()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/CE/Index%20OMNI%20CE71.pdf?raw=true", "Index OMNI CE71", "Army List Index for CE71 OMNI")
+  initializeHaro()
+end
+function GH40kBookCE73OMNI()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/CE/Index%20OMNI%20CE73.pdf?raw=true", "Index OMNI CE73", "Army List Index for CE73 OMNI")
+  initializeHaro()
+end
+function GH40kBookCE71ORB()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/CE/Index%20Independents%20CE71.pdf?raw=true", "Index ORB CE71", "Army List Index for CE71 ORB and Independents")
+  initializeHaro()
+end
+function GH40kBookCE73ORB()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/CE/Index%20Independents%20CE73.pdf?raw=true", "Index ORB CE73", "Army List Index for CE73 ORB and Independents")
+  initializeHaro()
+end
+function GH40kBookCE71OMNI()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/CE/Index%20ZAFT%20CE71.pdf?raw=true", "Index ZAFT CE71", "Army List Index for CE71 ZAFT")
+  initializeHaro()
+end
+function GH40kBookCE71OMNI()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/CE/Index%20ZAFT%20CE73.pdf?raw=true", "Index ZAFT CE73", "Army List Index for CE73 ZAFT")
+  initializeHaro()
+end
+
+function GH40kBookCE()
+    self.clearButtons()
+    self.createButton({click_function = 'GH40kBook0093LondoBell', function_owner = self, label = 'Londo Bell', position = {-3, 8, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0093NeoZeon', function_owner = self, label = 'Neo Zeon', position = {3, 8, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0087AEUG', function_owner = self, label = '0087 AEUG', position = {-6, 7, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0087Titans', function_owner = self, label = '0087 Titans', position = {0, 7, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0087Axis', function_owner = self, label = '0087 Axis', position = {6, 7, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0081EFF', function_owner = self, label = 'Postwar EFF', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0081Zeon', function_owner = self, label = 'Postwar Zeon', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0079EFF', function_owner = self, label = '0079 EFF', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookEFFTheOrigin', function_owner = self, label = 'EFF The Origin', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0079EFFTB', function_owner = self, label = '0079 EFF Thunderbolt', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0079ZeonTB', function_owner = self, label = '0079 Zeon Thunderbolt', position = {6, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookZeonTheOrigin', function_owner = self, label = 'Zeon The Origin', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBook0079Zeon', function_owner = self, label = '0079 Zeon', position = {-6, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'GH40kBookSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GH40kBook0079Zeon()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Zeon%200079.pdf?raw=true", "Index Zeon 0079", "Army List Index for 0079 Zeon")
+  initializeHaro()
+end
+function GH40kBook0079EFF()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20EFF%200079.pdf?raw=true", "Index EFF 0079", "Army List Index for 0079 Earth Federation Forces")
+  initializeHaro()
+end
+function GH40kBook0079ZeonTB()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Zeon%20Thunderbolt%200079.pdf?raw=true", "Index Zeon 0079 TB", "Army List Index for Thunderbolt 0079 Zeon")
+  initializeHaro()
+end
+function GH40kBook0079EFFTB()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20EFF%20Thunderbolt%200079.pdf?raw=true", "Index EFF 0079 TB", "Army List Index for Thunderbolt 0079 Earth Federation Forces")
+  initializeHaro()
+end
+function GH40kBookZeonTheOrigin()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Zeon%20The%20Origin%200079.pdf?raw=true", "Index Zeon 0079 TO", "Army List Index for The Origin 0079 Zeon")
+  initializeHaro()
+end
+function GH40kBookEFFTheOrigin()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20EFF%20The%20Origin%200079.pdf?raw=true", "Index EFF 0079 TO", "Army List Index for The Origin 0079 Earth Federation Forces")
+  initializeHaro()
+end
+function GH40kBook0081Zeon()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Zeon%20Remnants%200081-0085.pdf?raw=true", "Index Postwar Zeon", "Army List Index for Postwar Zeon, 0081-0085")
+  initializeHaro()
+end
+function GH40kBook0081EFF()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20EFF%20Post%20War%200081-0085.pdf?raw=true", "Index Postwar EFF", "Army List Index for Postwar Earth Federation Forces, 0081-0085")
+  initializeHaro()
+end
+function GH40kBook0087AEUG()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20AEUG%200087.pdf?raw=true", "Index AEUG 0087", "Army List Index for 0087 AEUG")
+  initializeHaro()
+end
+function GH40kBook0087Titans()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Titans%200087.pdf?raw=true", "Index Titans 0087", "Army List Index for 0087 Titans")
+  initializeHaro()
+end
+function GH40kBook0087Axis()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Axis%200087.pdf?raw=true", "Index Axis Zeon 0087", "Army List Index for 0087 Axis Zeon")
+  initializeHaro()
+end
+function GH40kBookLondoBell()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Londo%20Bell%200093-0096.pdf?raw=true", "Index Londo Bell", "Army List Index for Londo Bell, 0093-0096")
+  initializeHaro()
+end
+function GH40kBookNeoZeon()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/UC/Index%20Neo%20Zeon%200093-0096.pdf?raw=true", "Index Neo Zeon", "Army List Index for Neo Zeon, 0093-0096")
+  initializeHaro()
+end
+
 
 function GDFBookSelector()
     self.clearButtons()
-    SpawnAPDF("https://https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/GF%20-%20Basic%20Rulebook%20v2.12.pdf?raw=true", "Grimdark Future 2.12", "The core rules for Grimdark Future") 
+    SpawnAPDF("https://https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/GF%20-%20Basic%20Rulebook%20v2.12.pdf?raw=true", "Grimdark Future 2.12", "The core rules for Grimdark Future")
     initializeHaro()
 end
+
+function UCCBookSelector()
+    self.clearButtons()
+    SpawnAPDF("https://https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/GF%20-%20Basic%20Rulebook%20v2.12.pdf?raw=true", "Grimdark Future 2.12", "The core rules for Grimdark Future")
+    initializeHaro()
+end
+
 
 function SpawnAPDF(url, name, description)
     local myjson = [[
@@ -76,5 +198,3 @@ function SpawnAPDF(url, name, description)
         position = {0, 5, 0},
     })
 end
-
-
