@@ -10,19 +10,20 @@ function createBook()
     if wargame == 'GDF' then 
         GDFBookSelector()
     end
-    if wargame == 'UCC' then initializeHaro() end
-
+    if wargame == 'UCC' then 
+        initializeHaro() 
+    end
 end
 
 function GH40kBookSelector()
     self.clearButtons()
-    SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "GundamHammer40k", "The core codex for GundamHammer 40k units") end
+    SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "GundamHammer40k", "The core codex for GundamHammer 40k units") 
     initializeHaro()
 end
 
 function GDFBookSelector()
     self.clearButtons()
-    SpawnAPDF("https://https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/GF%20-%20Basic%20Rulebook%20v2.12.pdf?raw=true", "Grimdark Future 2.12", "The core rules for Grimdark Future") end
+    SpawnAPDF("https://https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GDF/GF%20-%20Basic%20Rulebook%20v2.12.pdf?raw=true", "Grimdark Future 2.12", "The core rules for Grimdark Future") 
     initializeHaro()
 end
 
