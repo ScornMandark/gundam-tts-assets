@@ -43,9 +43,7 @@ function getThatRobot()
   robot.setCustomObject(customParams)
   robot.setName(unit:upper())
   robot.measure_movement = true
-  robot.setLock = true
   if useBase then SpawnBase(robot) end
-  robot.setLock = false
   robot.createButton({click_function="spawnSightArc", function_owner=self, label="Sight Arc", position={0,0.05,-0.65}, rotation={0,180,0}, height=200, width=400, font_size=80, color={0.15,0.15,0.15}, font_color={1,1,1}})
   robot.createInput({input_function = "click_textbox", function_owner = self, label="", alignment=3,pos={0,0.05,-0.35}, rotation={0,180,0}, height=100, width=200, font_size=75, color={0.15,0.15,0.15}, font_color={1,1,1}, value=""})
   CardInput()
@@ -71,8 +69,13 @@ function SpawnBase(ms)
   }
   local base = spawnObject(tileParams)
   base.setCustomObject(customParams)
-  print(getBounds())
-  ms.addAttachment(base)
+  local bounder = {}
+  local function GetBaseSize()
+    bounder = base.getBounds()
+  end
+  Wait.frames(GetBaseSize, 60)
+  print(bounder.size)
+--  ms.addAttachment(base)
 end
 
 
@@ -181,32 +184,32 @@ function UseABase()
   self.createButton({click_function = 'Base80mm', function_owner = self, label = '80mm', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Base100mm', function_owner = self, label = '100mm', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Base120mm', function_owner = self, label = '120mm', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'SetBase', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})  
+  self.createButton({click_function = 'SetBase', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
 function Base25mm()
   baseSize = 1
-  settings()
+  initializeHaro()
 end
 function Base32mm()
   baseSize = 1.3
-  settings()
+  initializeHaro()
 end
 function Base60mm()
   baseSize = 2.4
-  settings()
+  initializeHaro()
 end
 function Base80mm()
   baseSize = 3.2
-  settings()
+  initializeHaro()
 end
 function Base100mm()
   baseSize = 4
-  settings()
+  initializeHaro()
 end
 function Base120mm()
   baseSize = 4.8
-  settings()
+  initializeHaro()
 end
 
 function SetGame()
