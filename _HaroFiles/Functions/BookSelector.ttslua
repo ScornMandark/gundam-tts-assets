@@ -1,5 +1,5 @@
 function createBook()
-    clearButtons()
+    self.clearButtons()
     if wargame == 'MSSk' then SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/MSSk/MSSk%20Version%202.0%20screen.pdf?raw=true", "Mobile Suit Skirmish 2.0", "The Core Rules for Mobile Suit Skirmish") end
     if wargame == 'GH40k' then SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/GH40k/Codex%20GundamHammer%2040k.pdf?raw=true", "GundamHammer40k", "The core codex for GundamHammer 40k units") end
     initializeHaro()
