@@ -148,6 +148,8 @@ end
 
 function createSelector()
   self.clearButtons()
+  self.createButton({click_function = 'createMaps',function_owner = self,label = 'Board',position = {-3, 5, 0},rotation = {-60, 0, 0},width = 1800,height = 400,font_size = 340})
+  self.createButton({click_function = 'createScenery',function_owner = self,label = 'Scenery',position = {3, 5, 0},rotation = {-60, 0, 0},width = 1800,height = 400,font_size = 340})
   self.createButton({click_function = 'createRobot',function_owner = self,label = 'Mobile Suit',position = {3, 4, 0},rotation = {-60, 0, 0},width = 1800,height = 400,font_size = 340})
   self.createButton({click_function = 'createBook',function_owner = self,label = 'Documents',position = {-3, 4, 0},rotation = {-60, 0, 0},width = 1800,height = 400,font_size = 340})
   self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
