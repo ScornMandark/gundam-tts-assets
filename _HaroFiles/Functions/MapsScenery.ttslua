@@ -1,2 +1,14 @@
 
 
+--[[Maps and Scenery]]
+
+function createMaps()
+  self.clearButtons()
+  self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function createScenery()
+  self.clearButtons()
+  self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
