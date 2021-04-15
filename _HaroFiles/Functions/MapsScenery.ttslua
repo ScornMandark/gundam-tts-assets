@@ -1,14 +1,106 @@
-
-
 --[[Maps and Scenery]]
 
 function createMaps()
   self.clearButtons()
+  self.createButton({click_function = 'fourByFour', function_owner = self, label = '48 x 48', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'twoByThree', function_owner = self, label = '24 x 36', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'fourBySix', function_owner = self, label = '48 x 72', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'newFourBySix', function_owner = self, label = '44 x 60', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function twoByThree()
+  mapSize = 'twoByThree'
+  environmentSelector()
+end
+
+function fourByFour()
+  mapSize = 'fourByFour'
+  environmentSelector()
+end
+
+function fourBySix()
+  mapSize = 'fourBySix'
+  environmentSelector()
+end
+
+function newFourBySix()
+  mapSize = 'newFourBySix'
+  environmentSelector()
+end
+
+function environmentSelector()
+  self.clearButtons()
+  self.createButton({click_function = 'setDesert', function_owner = self, label = 'Desert', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'setCountry', function_owner = self, label = 'Country', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'setUrban', function_owner = self, label = 'Urban', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function setDesert()
+  environmentType = 'Desert'
+  TableMaker()
+end
+
+function setCountry()
+  environmentType = 'Country'
+  TableMaker()
+end
+
+function setUrban()
+  environmentType = 'Urban'
+  TableMaker()
+end
+
+function TableMaker()
+  self.clearButtons()
+  self.createButton({click_function = 'randomScenery', function_owner = self, label = 'Random Scenery', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'manualScenery', function_owner = self, label = 'Manual Scenery', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+end
+
+function randomScenery()
+  sceneryPicker = true
+  makeATable()
+end
+
+function manualScenery()
+  sceneryPicker = false
+  makeATable()
+end
+
+function makeATable()
+  self.clearButtons()
+  initializeHaro()
 end
 
 function createScenery()
   self.clearButtons()
+  self.createButton({click_function = 'makeATree', function_owner = self, label = 'Tree', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'makeABuilding', function_owner = self, label = 'Building', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+function makeATree()
+  MSPosAdjustment(MSPosOffset)
+  local randomX = MSPos.x + 1 - math.random() * 2
+  local randomZ = MSPos.z + 1 - math.random() * 2
+  local randomYRot = 360 * math.random()
+  local randLoopEffect = math.random(1,22)
+  spawnParams = {
+      type = 'Custom_Assetbundle',
+      position = {randomX, MSPos.y, randomZ},
+      rotation = {x=0, y=randomYRot, z=0},
+      scale = {scaler, scaler, scaler},
+      sound = false,
+      snap_to_grid = false,
+  }
+  customParams = {
+      assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/' .. universe .. '/' .. faction .. '/' .. unit .. '.unity3d?raw=true',
+      type = 1, --[[ figurine --]]
+      material = 2, --[[ metal --]]
+  }
+  local tree = spawnObject(spawnParams)
+  tree.setCustomObject(customParams)
+  tree.AssetBundle.playLoopingEffect(randLoopEffect)
+  createScenery()
 end
 
