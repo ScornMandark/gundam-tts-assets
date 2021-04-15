@@ -7,6 +7,8 @@ function loadHaroUpdate()
   self.clearButtons()
   HaroScripts = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroCreator.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
+  MapsScenery = [[  ]] WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/MapsScenery.ttslua",
+    function(request)      if request.is_error then        log(request.error)      else         MapsScenery = request.text      end    end)
   Books = [[  ]] WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/BookSelector.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         Books = request.text      end    end)
   EFF = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/EFFMenu.ttslua",
@@ -65,7 +67,7 @@ function loadHaroUpdate()
   local function ResetHaro()
     self.setName('Haro')
     local MegaScript = [[ ]]
-    MegaScript = HaroScripts .. Books .. EFF .. Zeon .. AEUG .. Titans .. LondoBell .. NeoZeon .. CelestialBeing .. ALAWS .. ZAFT .. OMNI .. ORB .. GTeam .. OZ .. WhiteFang .. Preventers .. Marimea .. Vultures .. NewUNE .. UNSpacy .. Zentraedi .. DeathArmy .. GFighters ..  CONSENT .. Illuminators .. Zanscare .. BuildFighters
+    MegaScript = HaroScripts .. MapsScenery .. Books .. EFF .. Zeon .. AEUG .. Titans .. LondoBell .. NeoZeon .. CelestialBeing .. ALAWS .. ZAFT .. OMNI .. ORB .. GTeam .. OZ .. WhiteFang .. Preventers .. Marimea .. Vultures .. NewUNE .. UNSpacy .. Zentraedi .. DeathArmy .. GFighters ..  CONSENT .. Illuminators .. Zanscare .. BuildFighters
     self.setLuaScript(MegaScript)
     self.reload()
     self.locked = true
