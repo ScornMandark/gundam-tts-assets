@@ -85,7 +85,7 @@ function makeATree()
     type = 'Custom_Tile',
     position = {MSPos.x, MSPos.y, MSPos.z},
     rotation = {x=0, y=0, z=0},
-    scale = {5*baseScaleMod,1,5*baseScaleMod},
+    scale = {8*baseScaleMod,1,8*baseScaleMod},
   }
   baseParams = {
     type = 2,
@@ -96,7 +96,7 @@ function makeATree()
   forest.setCustomObject(baseParams)
   forest.setColorTint({0,0.5,0})
   forest.locked = true
-  local randScale = scaler * (1.5-math.random())
+  local randScale = scaler --[[* (1.5-math.random())]]
   spawnParams = {
       type = 'Custom_Assetbundle',
       position = {MSPos.x, MSPos.y, MSPos.z},
@@ -114,21 +114,33 @@ function makeATree()
   tree.setCustomObject(customParams)
   tree.locked = true
   local function treeSetter()
-    tree.AssetBundle.playLoopingEffect(math.random(1,16))
+    tree.AssetBundle.playLoopingEffect(math.random(0,16))
   end
   Wait.frames(treeSetter, 30)
-  for xes = 1, 5 do
-    for zes = 1, 5 do
-      local treePos = { position = {MSPos.x - 2.5 + xes - math.random()/2 ,0, MSPos.z - 2.5 + zes -math.random()/2} }
-         local function cloneTreeFixer()
-           tree.AssetBundle.playLoopingEffect(math.random(1,16))
-           forest.addAttachment(tree.clone(treePos))
-         end
+  local function treeCloner()
+    for xes = 1, 5 do
+      for zes = 1, 5 do
+        local treePos = { position = {MSPos.x, MSPos.y+3, MSPos.z}}
+        local cloneTreePos = { MSPos.x - 3 + xes - math.random()/2, MSPos.y, MSPos.z - 3 + zes -math.random()/2 }
+        local treeSpin = {x=0, y=45 * math.random(), z=0}
+        local cloneTree = tree.clone(treePos)
+        cloneTree.locked = true
+        local function treeSpinner()
+          cloneTree.AssetBundle.playLoopingEffect(math.random(0,16))
+          cloneTree.rotate(treeSpin)
+        end
+        Wait.frames(treeSpinner, 30)
+        local function cloneTreeFixer()
+           cloneTree.setPosition(cloneTreePos)
+           forest.addAttachment(cloneTree)
+        end
          -- if (xes != 3 and zes != 3) then
-            Wait.frames(cloneTreeFixer, 30)
+        Wait.frames(cloneTreeFixer, 30)
          -- end
       end
+    end
   end
+  Wait.frames(treeCloner, 30)
 --  destroyObject(tree)
   local function forestUnlocker()
     forest.addAttachment(tree)
@@ -137,4 +149,3 @@ function makeATree()
   Wait.frames(forestUnlocker, 60)
   createScenery()
 end
-
