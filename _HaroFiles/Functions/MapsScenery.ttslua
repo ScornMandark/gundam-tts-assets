@@ -81,26 +81,60 @@ end
 
 function makeATree()
   MSPosAdjustment(MSPosOffset)
-  local randomX = MSPos.x + 1 - math.random() * 2
-  local randomZ = MSPos.z + 1 - math.random() * 2
-  local randomYRot = 360 * math.random()
-  local randLoopEffect = math.random(1,22)
+  forestParams = {
+    type = 'Custom_Tile',
+    position = {MSPos.x, MSPos.y, MSPos.z},
+    rotation = {x=0, y=0, z=0},
+    scale = {5*baseScaleMod,1,5*baseScaleMod},
+  }
+  baseParams = {
+    type = 2,
+    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png',
+    thickness = 0.05,
+  }
+  local forest = spawnObject(forestParams)
+  forest.setCustomObject(baseParams)
+  forest.setColorTint({0,0.5,0})
+  forest.locked = true
+  local randScale = scaler * (1.5-math.random())
   spawnParams = {
       type = 'Custom_Assetbundle',
-      position = {randomX, MSPos.y, randomZ},
-      rotation = {x=0, y=randomYRot, z=0},
-      scale = {scaler, scaler, scaler},
+      position = {MSPos.x, MSPos.y, MSPos.z},
+      rotation = {x=0, y=360 * math.random(), z=0},
+      scale = {randScale, randScale, randScale},
       sound = false,
       snap_to_grid = false,
   }
   customParams = {
-      assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/' .. universe .. '/' .. faction .. '/' .. unit .. '.unity3d?raw=true',
+      assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/trees.unity3d?raw=true',
       type = 1, --[[ figurine --]]
       material = 2, --[[ metal --]]
   }
   local tree = spawnObject(spawnParams)
   tree.setCustomObject(customParams)
-  tree.AssetBundle.playLoopingEffect(randLoopEffect)
+  tree.locked = true
+  local function treeSetter()
+    tree.AssetBundle.playLoopingEffect(math.random(1,16))
+  end
+  Wait.frames(treeSetter, 30)
+  for xes = 1, 5 do
+    for zes = 1, 5 do
+      local treePos = { position = {MSPos.x - 2.5 + xes - math.random()/2 ,0, MSPos.z - 2.5 + zes -math.random()/2} }
+         local function cloneTreeFixer()
+           tree.AssetBundle.playLoopingEffect(math.random(1,16))
+           forest.addAttachment(tree.clone(treePos))
+         end
+         -- if (xes != 3 and zes != 3) then
+            Wait.frames(cloneTreeFixer, 30)
+         -- end
+      end
+  end
+--  destroyObject(tree)
+  local function forestUnlocker()
+    forest.addAttachment(tree)
+    forest.locked = false
+  end
+  Wait.frames(forestUnlocker, 60)
   createScenery()
 end
 
