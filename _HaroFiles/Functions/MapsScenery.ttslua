@@ -1,3 +1,4 @@
+
 --[[Maps and Scenery]]
 
 function createMaps()
@@ -85,11 +86,11 @@ function makeATree()
     type = 'Custom_Tile',
     position = {MSPos.x, MSPos.y, MSPos.z},
     rotation = {x=0, y=0, z=0},
-    scale = {8*baseScaleMod,1,8*baseScaleMod},
+    scale = {6*baseScaleMod*scaler,1,6*baseScaleMod*scaler},
   }
   baseParams = {
-    type = 2,
-    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png',
+    type = 0,
+    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/clear.png',
     thickness = 0.05,
   }
   local forest = spawnObject(forestParams)
@@ -116,12 +117,12 @@ function makeATree()
   local function treeSetter()
     tree.AssetBundle.playLoopingEffect(math.random(0,16))
   end
-  Wait.frames(treeSetter, 30)
+  Wait.frames(treeSetter, 60)
   local function treeCloner()
     for xes = 1, 5 do
       for zes = 1, 5 do
         local treePos = { position = {MSPos.x, MSPos.y+3, MSPos.z}}
-        local cloneTreePos = { MSPos.x - 3 + xes - math.random()/2, MSPos.y, MSPos.z - 3 + zes -math.random()/2 }
+        local cloneTreePos = { MSPos.x + (xes - 3 - math.random()/2)*scaler, MSPos.y, MSPos.z + (zes - 3 - math.random()/2)*scaler }
         local treeSpin = {x=0, y=45 * math.random(), z=0}
         local cloneTree = tree.clone(treePos)
         cloneTree.locked = true
@@ -149,3 +150,4 @@ function makeATree()
   Wait.frames(forestUnlocker, 60)
   createScenery()
 end
+
