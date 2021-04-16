@@ -4,37 +4,46 @@
 function createMaps()
   self.clearButtons()
   self.createButton({click_function = 'fourByFour', function_owner = self, label = '48 x 48', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'twoByThree', function_owner = self, label = '24 x 36', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'fourBySix', function_owner = self, label = '48 x 72', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'newFourBySix', function_owner = self, label = '44 x 60', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'threeByTwo', function_owner = self, label = '36 x 24', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'sixByFour', function_owner = self, label = '72 x 48', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'sixByFourAlmost', function_owner = self, label = '60 x 44', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
-function twoByThree()
-  mapSize = 'twoByThree'
+function threeByTwo()
+  mapSize = 'ThreeByTwo'
+  mapX = 36
+  mapZ = 24
   environmentSelector()
 end
 
 function fourByFour()
-  mapSize = 'fourByFour'
+  mapSize = 'FourByFour'
+  mapX = 48
+  mapZ = 48
   environmentSelector()
 end
 
-function fourBySix()
-  mapSize = 'fourBySix'
+function sixByFour()
+  mapSize = 'SixByFour'
+  mapX = 72
+  mapZ = 48
   environmentSelector()
 end
 
-function newFourBySix()
-  mapSize = 'newFourBySix'
+function sixByFourAlmost()
+  mapSize = 'SixByFourAlmost'
+  mapX = 60
+  mapZ = 44
   environmentSelector()
 end
 
 function environmentSelector()
   self.clearButtons()
-  self.createButton({click_function = 'setDesert', function_owner = self, label = 'Desert', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'setCountry', function_owner = self, label = 'Country', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'setUrban', function_owner = self, label = 'Urban', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'setDesert', function_owner = self, label = 'Desert', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'setCountry', function_owner = self, label = 'Country', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'setUrban', function_owner = self, label = 'Urban', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'setSpace', function_owner = self, label = 'Space', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
 function setDesert()
@@ -49,6 +58,11 @@ end
 
 function setUrban()
   environmentType = 'Urban'
+  TableMaker()
+end
+
+function setSpace()
+  environmentType = 'Space'
   TableMaker()
 end
 
@@ -70,6 +84,23 @@ end
 
 function makeATable()
   self.clearButtons()
+  TableParams = {
+    type = 'Custom_Tile',
+    position = {0,0,0},
+    rotation = {x=0, y=0, z=0},
+    scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
+    sound = false,
+    snap_to_grid = false,
+  }
+  mapTileParams = {
+    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/' .. environmentType .. mapSize .. '.png',
+    type = 0, --[[ sharp corners --]]
+    thickness = 0.05, --[[ thin --]]
+  }
+  local tableMap = spawnObject(TableParams)
+  tableMap.setCustomObject(mapTileParams)
+  tableMap.locked = true
+  tableMap.interactable = false
   initializeHaro()
 end
 
