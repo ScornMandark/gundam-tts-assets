@@ -90,12 +90,12 @@ function makeATree()
   }
   baseParams = {
     type = 0,
-    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/clear.png',
+    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png',
     thickness = 0.05,
   }
   local forest = spawnObject(forestParams)
   forest.setCustomObject(baseParams)
-  forest.setColorTint({0,0.5,0})
+  forest.setColorTint({0,0.0,0})
   forest.locked = true
   local randScale = scaler --[[* (1.5-math.random())]]
   spawnParams = {
