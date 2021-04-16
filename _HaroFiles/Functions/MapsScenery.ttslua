@@ -84,23 +84,28 @@ end
 
 function makeATable()
   self.clearButtons()
+  Tables.setTable("Custom Rectangle")
+  Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
   TableParams = {
     type = 'Custom_Tile',
-    position = {0,0,0},
+    position = {0,0.1,0},
     rotation = {x=0, y=0, z=0},
     scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
     sound = false,
     snap_to_grid = false,
   }
   mapTileParams = {
-    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/' .. environmentType .. mapSize .. '.png',
+    image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/' .. environmentType .. mapSize .. '.png?raw=true',
     type = 0, --[[ sharp corners --]]
     thickness = 0.05, --[[ thin --]]
   }
   local tableMap = spawnObject(TableParams)
   tableMap.setCustomObject(mapTileParams)
-  tableMap.locked = true
-  tableMap.interactable = false
+  local function mapLocker()
+    tableMap.locked = true
+--    tableMap.interactable = false
+  end
+  Wait.frames(mapLocker, 240)
   initializeHaro()
 end
 
