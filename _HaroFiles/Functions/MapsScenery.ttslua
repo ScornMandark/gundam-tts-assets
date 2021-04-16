@@ -83,19 +83,20 @@ end
 function makeATree()
   MSPosAdjustment(MSPosOffset)
   forestParams = {
-    type = 'Custom_Tile',
+    type = 'Custom_AssetBundle',
     position = {MSPos.x, MSPos.y, MSPos.z},
     rotation = {x=0, y=0, z=0},
-    scale = {6*baseScaleMod*scaler,1,6*baseScaleMod*scaler},
+    scale = {baseScaleMod*scaler,1,baseScaleMod*scaler},
+    sound = false,
+    snap_to_grid = false,
   }
   baseParams = {
-    type = 0,
-    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png',
-    thickness = 0.05,
+    assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/treebase.unity3d?raw=true',
+    type = 1, --[[ figurine --]]
+    material = 2, --[[ metal --]]
   }
   local forest = spawnObject(forestParams)
   forest.setCustomObject(baseParams)
-  forest.setColorTint({0,0.0,0})
   forest.locked = true
   local randScale = scaler * (0.75+math.random()/2)
   spawnParams = {
