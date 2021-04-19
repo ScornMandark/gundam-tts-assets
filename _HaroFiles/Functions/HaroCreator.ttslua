@@ -303,10 +303,18 @@ function reinitializeHaro()
 
 function createRobot()
     self.clearButtons()
-    self.createButton({click_function = 'CE', function_owner = self, label = 'CE', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'UC', function_owner = self, label = 'UC', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'Macross', function_owner = self, label = 'Macross', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'CE', function_owner = self, label = 'CE', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'UC', function_owner = self, label = 'UC', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'AD', function_owner = self, label = 'AD', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function Macross()
+    self.clearButtons()
+    universe = 'Macross'
+    self.createButton({click_function = 'Zentradi', function_owner = self, label = 'Zentradi', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'UNSpacy', function_owner = self, label = 'UN Spacy', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+    self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function AD()
     self.clearButtons()
