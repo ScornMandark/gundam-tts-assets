@@ -1,2 +1,46 @@
 
+--[[Zentradi Faction]]
+function Zentradi()
+    self.clearButtons()
+    faction = 'Zentradi'
+    self.createButton({click_function = 'Reguld', function_owner = self, label = 'Reguld', position = {-6, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Reguld_Scout', function_owner = self, label = 'Reguld Scout', position = {-2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Reguld_Heavy', function_owner = self, label = 'Reguld Heavy', position = {2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Gnerl', function_owner = self, label = 'Gnerl', position = {6, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Glaug', function_owner = self, label = 'Glaug', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Nousjadeul_Ger', function_owner = self, label = 'Nousjadeul-Ger', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Queadlunn_Rau', function_owner = self, label = 'Queadlunn-Rau', position = {4, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Macross', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[Zentradi MS]]-----------------------------------------
+
+function Reguld()
+  unit = 'reguld'
+  getThatRobot()
+end
+function Reguld_Scout()
+  unit = 'reguld-scout'
+  getThatRobot()
+end
+function Reguld_Heavy()
+  unit = 'reguld-heavy'
+  getThatRobot()
+end
+function Glaug()
+  unit = 'glaug'
+  getThatRobot()
+end
+function Gnerl()
+  unit = 'gnerl'
+  getThatRobot()
+end
+function Nousjadeul_Ger()
+  unit = 'nousjadeul-ger'
+  getThatRobot()
+end
+function Queadlunn_Rau()
+  unit = 'queadlunn-rau'
+  getThatRobot()
+end
 
