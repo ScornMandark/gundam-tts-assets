@@ -8,8 +8,9 @@ function Zentradi()
     self.createButton({click_function = 'Reguld_Heavy', function_owner = self, label = 'Reguld Heavy', position = {2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'Gnerl', function_owner = self, label = 'Gnerl', position = {6, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'Glaug', function_owner = self, label = 'Glaug', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'Nousjadeul_Ger', function_owner = self, label = 'Nousjadeul-Ger', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'Queadlunn_Rau', function_owner = self, label = 'Queadlunn-Rau', position = {4, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Nousjadeul_Ger', function_owner = self, label = 'Nousjadeul-Ger', position = {-2, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+    self.createButton({click_function = 'Queadlunn_Rau', function_owner = self, label = 'Queadlunn-Rau', position = {2, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+    self.createButton({click_function = 'Queadlunn_Rau_Ace', function_owner = self, label = 'Milia and Moruk', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
     self.createButton({click_function = 'Macross', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
@@ -41,6 +42,10 @@ function Nousjadeul_Ger()
 end
 function Queadlunn_Rau()
   unit = 'queadlunn-rau'
+  getThatRobot()
+end
+function Queadlunn_Rau_Ace()
+  unit = 'queadlunn-rau-ace'
   getThatRobot()
 end
 
