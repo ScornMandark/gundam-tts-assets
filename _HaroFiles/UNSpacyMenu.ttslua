@@ -1,2 +1,16 @@
 
+--[[UN Spacy Faction]]
+function UNSpacy()
+    self.clearButtons()
+    faction = 'UNSpacy'
+    self.createButton({click_function = 'VF_1A', function_owner = self, label = 'VF-1A', position = {-6, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Macross', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[UN Spacy MS]]-----------------------------------------
+
+function VF_1A()
+  unit = 'vf-1a'
+  getThatRobot()
+end
 
