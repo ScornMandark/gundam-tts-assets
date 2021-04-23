@@ -4,6 +4,10 @@ function UNSpacy()
     self.clearButtons()
     faction = 'UNSpacy'
     self.createButton({click_function = 'VF_1A', function_owner = self, label = 'VF-1A', position = {-6, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'VF_1JMax', function_owner = self, label = 'VF-1J Max', position = {-2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'VF_1JMilia', function_owner = self, label = 'VF-1J Milia', position = {2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'VF_1JHikaru', function_owner = self, label = 'VF-1J Hikaru', position = {6, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'VF_1S', function_owner = self, label = 'VF-1S', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'Macross', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
@@ -11,6 +15,22 @@ end
 
 function VF_1A()
   unit = 'vf-1a'
+  getThatRobot()
+end
+function VF_1JMax()
+  unit = 'vf-1j_max'
+  getThatRobot()
+end
+function VF_1JMilia()
+  unit = 'vf-1j_milia'
+  getThatRobot()
+end
+function VF_1JHikaru()
+  unit = 'vf-1j_hikaru'
+  getThatRobot()
+end
+function VF_1S()
+  unit = 'vf-1s'
   getThatRobot()
 end
 
