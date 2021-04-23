@@ -6,7 +6,7 @@ function onLoad()
   faction = 'EFF'
   unit = 'fa-78-1'
   wargame = 'MSSk'
-  useBase = false
+  useBase = true
   baseSizeX = 4
   baseSizeZ = 4
   attached = nil
