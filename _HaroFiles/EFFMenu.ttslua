@@ -45,9 +45,10 @@ function EFF0083()
   self.createButton({click_function = 'RGC_83', function_owner = self, label = 'RGC-83', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RGM_79C', function_owner = self, label = 'RGM-79C', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RGM_79N', function_owner = self, label = 'RGM-79N', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'RX_78GP_01', function_owner = self, label = 'RX-78GP-01', position = {-4.5, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
-  self.createButton({click_function = 'RX_78GP_01FB', function_owner = self, label = 'RX-78GP-01FB', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
-  self.createButton({click_function = 'RX_78GP_03S', function_owner = self, label = 'RX-78GP-03S', position = {4.5, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78GP_01', function_owner = self, label = 'RX-78GP-01', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78GP_01FB', function_owner = self, label = 'RX-78GP-01FB', position = {-2, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78GP_03S', function_owner = self, label = 'RX-78GP-03S', position = {2, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'RX_78GP_04G', function_owner = self, label = 'RX-78GP-04G', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
   self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
@@ -151,6 +152,10 @@ function RX_78GP_01FB()
 end
 function RX_78GP_03S()
   unit = 'rx-78gp-03s'
+  getThatRobot()
+end
+function RX_78GP_04G()
+  unit = 'rx-78gp-04g'
   getThatRobot()
 end
 function RX_78NT_1()
