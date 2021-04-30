@@ -42,8 +42,9 @@ function EFF0080()
 end
 function EFF0083()
   self.clearButtons()
-  self.createButton({click_function = 'RGC_83', function_owner = self, label = 'RGC-83', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'RGM_79C', function_owner = self, label = 'RGM-79C', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGC_83', function_owner = self, label = 'RGC-83', position = {-6, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79C', function_owner = self, label = 'RGM-79C', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79_Powered', function_owner = self, label = 'RGM-79 Powered', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
   self.createButton({click_function = 'RGM_79N', function_owner = self, label = 'RGM-79N', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RX_78GP_01', function_owner = self, label = 'RX-78GP-01', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
   self.createButton({click_function = 'RX_78GP_01FB', function_owner = self, label = 'RX-78GP-01FB', position = {-2, 4, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
@@ -92,6 +93,10 @@ function RGM_79()
 end
 function RGM_79C()
   unit = 'rgm-79c'
+  getThatRobot()
+end
+function RGM_79_Powered()
+  unit = 'rgm-79_powered'
   getThatRobot()
 end
 function RGM_79D()
