@@ -16,8 +16,9 @@ function EFF0079()
   self.createButton({click_function = 'RX_75', function_owner = self, label = 'RX-75', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'FF_X7', function_owner = self, label = 'FF-X7', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'FF_X7_Bst', function_owner = self, label = 'FF-X7-Bst', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'RGM_79', function_owner = self, label = 'RGM-79', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'M1A61', function_owner = self, label = 'M1A61', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RB_79', function_owner = self, label = 'RB-79', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79', function_owner = self, label = 'RGM-79', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'M1A61', function_owner = self, label = 'M1A61', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function EFFMSV()
@@ -77,6 +78,10 @@ function FFB_7Bst()
 end
 function M1A61()
   unit = 'type61'
+  getThatRobot()
+end
+function RB_79()
+  unit = 'rb-79'
   getThatRobot()
 end
 function RGC_80()
