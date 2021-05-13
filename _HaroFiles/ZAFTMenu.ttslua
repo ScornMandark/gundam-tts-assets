@@ -7,10 +7,11 @@ function ZAFT()
     self.createButton({click_function = 'ZGMF_515', function_owner = self, label = 'ZGMF-515', position = {-2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'ZGMF_600', function_owner = self, label = 'ZGMF-600', position = {2, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'AMF_101', function_owner = self, label = 'AMF-101', position = {-6, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'TFA_02', function_owner = self, label = 'TFA-02', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'TMF_A_802', function_owner = self, label = 'TMF-A-802', position = {-2, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'TMF_A_803', function_owner = self, label = 'TMF-A-803', position = {2, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'ZGMF_1017', function_owner = self, label = 'ZGMF-1017', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'TFA_02', function_owner = self, label = 'TFA-02', position = {-8, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'TMF_A_802', function_owner = self, label = 'TMF-A-802', position = {-4, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'TMF_A_802_ACE', function_owner = self, label = 'TMF-A-802 Ace', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'TMF_A_803', function_owner = self, label = 'TMF-A-803', position = {4, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'ZGMF_1017', function_owner = self, label = 'ZGMF-1017', position = {8, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'CE', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
@@ -34,6 +35,10 @@ function TFA_02()
 end
 function TMF_A_802()
   unit = 'tmf-a-802'
+  getThatRobot()
+end
+function TMF_A_802_ACE()
+  unit = 'tmf-a-802_ace'
   getThatRobot()
 end
 function TMF_A_803()
