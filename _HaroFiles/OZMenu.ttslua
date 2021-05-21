@@ -1,2 +1,13 @@
 
+function OZ()
+    self.clearButtons()
+    faction = 'OZ'
+    self.createButton({click_function = 'OZ_06MS', function_owner = self, label = 'OZ-06MS', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'AC', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
 
+--[[OZ MS --]]
+function OZ_06MS()
+  unit = 'oz-06ms'
+  getThatRobot()
+end
