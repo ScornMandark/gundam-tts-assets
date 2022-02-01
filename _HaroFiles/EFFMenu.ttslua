@@ -2,8 +2,9 @@
 function EFF()
     self.clearButtons()
     faction = 'EFF'
-    self.createButton({click_function = 'EFF0079', function_owner = self, label = '0079', position = {-4.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'EFFMSV', function_owner = self, label = 'MSV', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'EFF0079', function_owner = self, label = '0079', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'EFF08TH', function_owner = self, label = '08th', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'EFFMSV', function_owner = self, label = 'MSV', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'EFF0080', function_owner = self, label = '0080', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'EFF0083', function_owner = self, label = '0083', position = {4.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'UC', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
@@ -19,6 +20,11 @@ function EFF0079()
   self.createButton({click_function = 'RB_79', function_owner = self, label = 'RB-79', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RGM_79', function_owner = self, label = 'RGM-79', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'M1A61', function_owner = self, label = 'M1A61', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function EFF08TH()
+  self.clearButtons()
+  self.createButton({click_function = 'RX_79G', function_owner = self, label = 'RX-79G', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function EFFMSV()
@@ -170,5 +176,9 @@ function RX_78GP_04G()
 end
 function RX_78NT_1()
   unit = 'rx-78nt-1'
+  getThatRobot()
+end
+function RX_79G()
+  unit = 'rx-79g'
   getThatRobot()
 end
