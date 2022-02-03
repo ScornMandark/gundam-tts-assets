@@ -24,7 +24,8 @@ function EFF0079()
 end
 function EFF08TH()
   self.clearButtons()
-  self.createButton({click_function = 'RX_79G', function_owner = self, label = 'RX-79G', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_79G', function_owner = self, label = 'RX-79G', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_79GEZ_08', function_owner = self, label = 'RX-79GEZ-08', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RGM_79G', function_owner = self, label = 'RGM-79G', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RGM_79G_S', function_owner = self, label = 'RGM-79G_Sniper', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
   self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
@@ -190,5 +191,9 @@ function RX_78NT_1()
 end
 function RX_79G()
   unit = 'rx-79g'
+  getThatRobot()
+end
+function RX_79GEZ_08()
+  unit = 'rx-79gez-08'
   getThatRobot()
 end
