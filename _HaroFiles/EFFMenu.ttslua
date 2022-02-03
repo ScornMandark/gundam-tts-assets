@@ -119,7 +119,8 @@ end
 function RGM_79G()
   unit = 'rgm-79g'
   getThatRobot()
-endfunction RGM_79G_S()
+end
+function RGM_79G_S()
   unit = 'rgm-79g-s'
   getThatRobot()
 end
