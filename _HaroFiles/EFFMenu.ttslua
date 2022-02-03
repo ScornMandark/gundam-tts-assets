@@ -24,8 +24,9 @@ function EFF0079()
 end
 function EFF08TH()
   self.clearButtons()
-  self.createButton({click_function = 'RX_79G', function_owner = self, label = 'RX-79G', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_79G', function_owner = self, label = 'RX-79G', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RGM_79G', function_owner = self, label = 'RGM-79G', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RGM_79G-S', function_owner = self, label = 'RGM-79G Sniper', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function EFFMSV()
@@ -117,6 +118,9 @@ function RGM_79D()
 end
 function RGM_79G()
   unit = 'rgm-79g'
+  getThatRobot()
+endfunction RGM_79G-S()
+  unit = 'rgm-79g-s'
   getThatRobot()
 end
 function RGM_79_G_Gs()
