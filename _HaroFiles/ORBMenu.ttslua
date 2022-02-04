@@ -1,12 +1,17 @@
 function ORB()
     self.clearButtons()
     faction = 'ORB'
-    self.createButton({click_function = 'ZGMF_X20A', function_owner = self, label = 'ZGMF-X20A', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'ORB_01', function_owner = self, label = 'ORB-01', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'ZGMF_X20A', function_owner = self, label = 'ZGMF-X20A', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'CE', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
 --[[ORB MS]]-----------------------------------------
 
+function ORB_01()
+  unit = 'orb-01'
+  getThatRobot()
+end
 function ZGMF_X20A()
   unit = 'zgmf-x20a'
   getThatRobot()
