@@ -185,9 +185,10 @@ end
 function UseABase()
   useBase = true
   self.clearButtons()
-  self.createButton({click_function = 'Base25mm', function_owner = self, label = '25mm', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base32mm', function_owner = self, label = '32mm', position = {0, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Base60mm', function_owner = self, label = '60mm', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base25mm', function_owner = self, label = '25mm', position = {-4.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base32mm', function_owner = self, label = '32mm', position = {-1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base40mm', function_owner = self, label = '40mm', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Base60mm', function_owner = self, label = '60mm', position = {4.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Base80mm', function_owner = self, label = '80mm', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Base100mm', function_owner = self, label = '100mm', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Base120mm', function_owner = self, label = '120mm', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
@@ -204,6 +205,11 @@ end
 function Base32mm()
   baseSizeX = 1.3
   baseSizeZ = 1.3
+  initializeHaro()
+end
+function Base40mm()
+  baseSizeX = 1.6
+  baseSizeZ = 1.6
   initializeHaro()
 end
 function Base60mm()
@@ -332,7 +338,8 @@ end
 function CE()
     self.clearButtons()
     universe = 'CosmicEra'
-    self.createButton({click_function = 'ZAFT', function_owner = self, label = 'ZAFT', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'ZAFT', function_owner = self, label = 'ZAFT', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'ORB', function_owner = self, label = 'ORB', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function UC()
