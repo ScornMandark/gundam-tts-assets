@@ -7,7 +7,7 @@ end
 
 --[[ORB MS]]-----------------------------------------
 
-function ZGMF-X20A()
+function ZGMF_X20A()
   unit = 'zgmf-x20a'
   getThatRobot()
 end
