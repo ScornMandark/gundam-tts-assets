@@ -78,7 +78,7 @@ end
 
 
 function SpawnUnitCard()
-  local tileScale = 3
+  local tileScale = 4
   tileParams = {
     type = 'Custom_Tile',
     position = {MSPos.x-4, MSPos.y+10, MSPos.z-2},
@@ -254,7 +254,7 @@ end
 
 function MSSk()
   wargame = 'MSSk'
-  CornerType = 3
+  CornerType = 0
   print(wargame)
   initializeHaro()
 end
