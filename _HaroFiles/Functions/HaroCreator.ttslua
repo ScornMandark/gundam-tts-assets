@@ -88,8 +88,9 @@ function SpawnUnitCard()
   customParams = {
     type = CornerType,
     image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_face.png',
-    image_bottom = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
-    thickness = 0.05,
+ --   image_bottom = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
+  image_bottom = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
+  thickness = 0.05,
   }
   local unitCard = spawnObject(tileParams)
   unitCard.setCustomObject(customParams)
