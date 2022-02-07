@@ -7,13 +7,13 @@
   checkbox = {
   --First pair of crits
   {
-      pos={0.5625,0.05,0.63},
-      size=50,
+      pos={0.575,0.05,-0.5},
+      size=25,
       state=false
   },
   {
-      pos={0.6625,0.05,0.63},
-      size=50,
+      pos={0.625,0.05,-0.5},
+      size=25,
       state=false
   },
   --Next pair of crits
