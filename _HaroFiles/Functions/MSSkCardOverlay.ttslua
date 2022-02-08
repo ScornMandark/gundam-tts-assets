@@ -5,242 +5,95 @@
 
   defaultButtonData = {
   textbox = {
-  --Unit's integrity
-  {
-      alignment=3,
-      pos={-0.675,0.05,-0.4625},
-      rotation={0,0,0},
-      height=60,
-      width=60,
-      font_size=32,
-      color={1,1,1},
-      font_color={0,0,0},
-      value=""
-  },
-  --Unit's dodge tokens
-  {
-      alignment=3,
-      pos={0.15,0.05,-0.4625},
-      rotation={0,0,0},
-      height=60,
-      width=50,
-      font_size=32,
-      color={1,1,1},
-      font_color={0,0,0},
-      value=""
-  },
-  --Unit's shield integrity
-  {
-      alignment=3,
-      pos={0.15,0.05,-0.7125},
-      rotation={0,0,0},
-      height=60,
-      width=50,
-      font_size=32,
-      color={1,1,1},
-      font_color={0,0,0},
-      value=""
-  },
   --Unit's cost sum
   {
       alignment=3,
-      pos={0.625,0.05,-0.87},
+      pos={0.747,1.001,-1.657},
       rotation={0,0,0},
-      height=55,
-      width=100,
-      font_size=32,
-      color={0.47,0.47,0.47},
-      font_color={0,0,0},
-      value=""
+      height=100,
+      width=400,
+      font_size=72,
+      color={0.15,0.15,0.15},
+      font_color={1,1,1},
+      value="PTS",
+      tooltip="Total Points"
   },
   --Unit's label
   {
       alignment=3,
-      pos={0,0,-1.10},
+      pos={0,1.001,-1.657},
       rotation={0,0,0},
       height=100,
-      width=200,
+      width=400,
       font_size=75,
       color={0.15,0.15,0.15},
       font_color={1,1,1},
-      value=""
-  },
-  --Pilot's name
-  {
-      alignment=2,
-      pos={0.4,-0.005,-0.95},
-      rotation={0,0,180},
-      height=50,
-      width=300,
-      font_size=26,
-      color={0.47,0.47,0.47},
-      font_color={0,0,0},
-      value=""
-  },
-  --Pilot's cost
-  {
-      alignment=2,
-      pos={-0.15,-0.005,-0.90},
-      rotation={0,0,180},
-      height=40,
-      width=80,
-      font_size=16,
-      color={0.47,0.47,0.47},
-      font_color={0,0,0},
-      value=""
-  },
-  --Pilot's XP
-  {
-      alignment=2,
-      pos={0.4875,-0.005,-0.85},
-      rotation={0,0,180},
-      height=40,
-      width=80,
-      font_size=16,
-      color={0.47,0.47,0.47},
-      font_color={0,0,0},
-      value=""
-  },
-  --Pilot's rank
-  {
-      alignment=2,
-      pos={0.4,-0.005,-0.775},
-      rotation={0,0,180},
-      height=40,
-      width=40,
-      font_size=16,
-      color={0.47,0.47,0.47},
-      font_color={0,0,0},
-      value=""
-  },
-  --Pilot's level
-  {
-      alignment=2,
-      pos={0.35,-0.005,-0.7125},
-      rotation={0,0,180},
-      height=40,
-      width=40,
-      font_size=16,
-      color={0.47,0.47,0.47},
-      font_color={0,0,0},
-      value=""
-  },
-  --Pilot's health
-  {
-      alignment=3,
-      pos={-0.02,-0.005,-0.825},
-      rotation={0,0,180},
-      height=40,
-      width=40,
-      font_size=16,
-      color={0.47,0.47,0.47},
-      font_color={0,0,0},
-      value=""
-  },
-  --Pilot's mind
-  {
-      alignment=3,
-      pos={-0.02,-0.005,-0.735},
-      rotation={0,0,180},
-      height=40,
-      width=40,
-      font_size=16,
-      color={0.47,0.47,0.47},
-      font_color={0,0,0},
-      value=""
+      value="MS ID",
+      tooltip = "MS ID"
   },
 
-  --First pair of traits
+  --Traits
   {
-      alignment=2,
-      pos={0.447,-0.005,-0.63},
-      rotation={0,0,180},
-      height=50,
-      width=205,
-      font_size=25,
+      alignment=1,
+      pos={-0.611,1.001,1.246},
+      rotation={0,0,0},
+      height=125,
+      width=350,
+      font_size=32,
       color={1,1,1},
       font_color={0,0,0},
-      value=""
+      value="",
+      tooltip="Traits"
+  },
+  --Modifications
+  {
+    alignment=1,
+    pos={0.159,1.001,1.246},
+    rotation={0,0,0},
+    height=125,
+    width=350,
+    font_size=32,
+    color={1,1,1},
+    font_color={0,0,0},
+    value="",
+    tooltip="Modifications"
+  },
+  --XP
+  {
+    alignment=3,
+    pos={0.770,1.001,1.246},
+    rotation={0,0,0},
+    height=125,
+    width=200,
+    font_size=72,
+    color={1,1,1},
+    font_color={0,0,0},
+    value="",
+    tooltip="Current EXP"
   },
   {
-      alignment=2,
-      pos={0.017,-0.005,-0.63},
-      rotation={0,0,180},
-      height=50,
-      width=205,
-      font_size=25,
+      alignment=1,
+      pos={-0.450,1.001,-1.200},
+      rotation={0,0,0},
+      height=65,
+      width=300,
+      font_size=40,
       color={1,1,1},
       font_color={0,0,0},
-      value=""
+      value="",
+      tooltip="Name"
   },
-  --Next pair of traits
   {
-      alignment=2,
-      pos={0.447,-0.005,-0.53},
-      rotation={0,0,180},
-      height=50,
-      width=205,
-      font_size=25,
+      alignment=1,
+      pos={0.550,1.001,-1.200},
+      rotation={0,0,0},
+      height=65,
+      width=300,
+      font_size=40,
       color={1,1,1},
       font_color={0,0,0},
-      value=""
-  },
-  {
-      alignment=2,
-      pos={0.017,-0.005,-0.53},
-      rotation={0,0,180},
-      height=50,
-      width=205,
-      font_size=25,
-      color={0.8,0.8,0.8},
-      font_color={0,0,0},
-      value=""
-  },
-  --Next pair of traits
-  {
-      alignment=2,
-      pos={0.447,-0.005,-0.43},
-      rotation={0,0,180},
-      height=50,
-      width=205,
-      font_size=25,
-      color={1,1,1},
-      font_color={0,0,0},
-      value=""
-  },
-  {
-      alignment=2,
-      pos={0.017,-0.005,-0.43},
-      rotation={0,0,180},
-      height=50,
-      width=205,
-      font_size=25,
-      color={0.8,0.8,0.8},
-      font_color={0,0,0},
-      value=""
-  },
-  --Next pair of traits
-  {
-      alignment=2,
-      pos={0.447,-0.005,-0.33},
-      rotation={0,0,180},
-      height=50,
-      width=205,
-      font_size=25,
-      color={1,1,1},
-      font_color={0,0,0},
-      value=""
-  },
-  {
-      alignment=2,
-      pos={0.017,-0.005,-0.33},
-      rotation={0,0,180},
-      height=50,
-      width=205,
-      font_size=25,
-      color={0.8,0.8,0.8},
-      font_color={0,0,0},
-      value=""
+      value="",
+      tooltip="Faction"
   },
   }
   }
@@ -262,7 +115,7 @@
 
   spawnedButtonCount = 2
 --  createCheckbox()
---  createTextbox()
+  createTextbox()
   createCritBoxes()
   createWeaponSliders()
   createShieldSliders()
@@ -328,6 +181,7 @@
               color = data.color,
               font_color = data.font_color,
               value = data.value,
+              tooltip = data.tooltip,
               })
       end
   end
@@ -370,21 +224,21 @@
 
     self.createButton({click_function='nothing',
     function_owner=self, label="►", position={-1.011,1.001,WeapPos},
-    height=60, width=60, font_size=60, color={0,0,0}, font_color={1,1,1}}) --button8
+    height=60, width=60, font_size=60, color={1,1,1}, font_color={0,0,0}}) --button8
   end
 
   function createShieldSliders()
     self.createButton({click_function="ShieldUp",
-    function_owner=self, label="►", position={0.974,1.001,.191}, rotation={0,0,0},
+    function_owner=self, label="►", position={0.974,1.001,0.200}, rotation={0,0,0},
     height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="ShieldDown",
-    function_owner=self, label="◄", position={0.674,1.001,0.191}, rotation={0,0,0},
+    function_owner=self, label="◄", position={0.674,1.001,0.200}, rotation={0,0,0},
     height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function='nothing',
-    function_owner=self, label="▲", position={ShieldPos,1.001,0.191},
-    height=35, width=35, font_size=35, color={0,0,0}, font_color={1,1,1}}) --button11
+    function_owner=self, label="▲", position={ShieldPos,1.001,0.200},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}}) --button11
 
   end
 
@@ -399,7 +253,7 @@
 
     self.createButton({click_function='nothing',
     function_owner=self, label="◄", position={0.926,1.001,MoralePos},
-    height=35, width=35, font_size=35, color={0,0,0}, font_color={1,1,1}}) --button14
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}}) --button14
   end
 
   function createIntegritySliders()
@@ -413,7 +267,7 @@
 
     self.createButton({click_function='nothing',
     function_owner=self, label="▼", position={IntegrityPos,1.001,0.556},
-    height=60, width=60, font_size=60, color={0,0,0}, font_color={1,1,1}}) --button17
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}}) --button17
 
   end
 
@@ -428,7 +282,7 @@
 
     self.createButton({click_function='nothing',
     function_owner=self, label="▼", position={HealthPos,1.001,0.705},
-    height=35, width=35, font_size=35, color={0,0,0}, font_color={1,1,1}}) --button20
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}}) --button20
 
   end
 
@@ -443,7 +297,7 @@
 
     self.createButton({click_function='nothing',
     function_owner=self, label="▼", position={MindPos,1.001,0.869},
-    height=35, width=35, font_size=35, color={0,0,0}, font_color={1,1,1}}) --button23
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}}) --button23
 
   end
 
@@ -883,7 +737,7 @@
 
   function updateDisplay()
     self.editButton({index=8, position={-1.011,1.001,WeapPos}})
-    self.editButton({index=11, position={ShieldPos,1.001,0.191}})
+    self.editButton({index=11, position={ShieldPos,1.001,0.200}})
     self.editButton({index=14, position={0.926,1.001,MoralePos}})
     self.editButton({index=17, position={IntegrityPos,1.001,0.556}})
     self.editButton({index=20, position={HealthPos,1.001,0.705}})
