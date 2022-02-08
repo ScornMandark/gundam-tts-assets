@@ -270,6 +270,7 @@
   createIntegritySliders()
   createHealthSliders()
   createMindSliders()
+  createXPBoxes()
   end
 
   function onLoad()
@@ -285,7 +286,26 @@
       LegCrit01 = false
       LegCrit02 = false
       TorsoCrit = false
-
+      XP01 = false
+      XP02 = false
+      XP03 = false
+      XP04 = false
+      XP05 = false
+      XP06 = false
+      XP07 = false
+      XP08 = false
+      XP09 = false
+      XP10 = false
+      XP11 = false
+      XP12 = false
+      XP13 = false
+      XP14 = false
+      XP15 = false
+      XP16 = false
+      XP17 = false
+      XP18 = false
+      XP19 = false
+      XP20 = false
   end
 
 
@@ -314,27 +334,27 @@
 
   function createCritBoxes()
     self.createButton({click_function="HeadCritToggle",
-    function_owner=self, label="", position={0.585,0.05,-0.57}, rotation={0,0,0},
+    function_owner=self, label="", position={0.585,0.06,-0.57}, rotation={0,0,0},
     height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}}) --button0
 
     self.createButton({click_function="ArmCritToggle01",
-    function_owner=self, label="", position={0.585,0.05,-0.495}, rotation={0,0,0},
+    function_owner=self, label="", position={0.585,0.06,-0.495}, rotation={0,0,0},
     height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="ArmCritToggle02",
-    function_owner=self, label="", position={0.6275,0.05,-0.495}, rotation={0,0,0},
+    function_owner=self, label="", position={0.6275,0.06,-0.495}, rotation={0,0,0},
     height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="LegCritToggle01",
-    function_owner=self, label="", position={0.585,0.05,-0.175}, rotation={0,0,0},
+    function_owner=self, label="", position={0.585,0.06,-0.175}, rotation={0,0,0},
     height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="LegCritToggle02",
-    function_owner=self, label="", position={0.6275,0.05,-0.175}, rotation={0,0,0},
+    function_owner=self, label="", position={0.6275,0.06,-0.175}, rotation={0,0,0},
     height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="TorsoCritToggle",
-    function_owner=self, label="", position={0.585,0.05,-0.075}, rotation={0,0,0},
+    function_owner=self, label="", position={0.585,0.06,-0.075}, rotation={0,0,0},
     height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
 
   end
@@ -424,6 +444,70 @@
     self.createButton({click_function='nothing',
     function_owner=self, label="▼", position={MindPos,0.06,0.569},
     height=20, width=20, font_size=20, color={0,0,0}, font_color={1,1,1}}) --button23
+
+  end
+
+  function createXPBoxes()
+    self.createButton({click_function="XP01Toggle",
+    function_owner=self, label="", position={-.512,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button24
+    self.createButton({click_function="XP02Toggle",
+    function_owner=self, label="", position={-.454,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button25
+    self.createButton({click_function="XP03Toggle",
+    function_owner=self, label="", position={-.395,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button26
+    self.createButton({click_function="XP04Toggle",
+    function_owner=self, label="", position={-.336,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button27
+    self.createButton({click_function="XP05Toggle",
+    function_owner=self, label="", position={-.277,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button28
+    self.createButton({click_function="XP06Toggle",
+    function_owner=self, label="", position={-.218,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button29
+    self.createButton({click_function="XP07Toggle",
+    function_owner=self, label="", position={-.159,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button30
+    self.createButton({click_function="XP08Toggle",
+    function_owner=self, label="", position={-.100,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button31
+    self.createButton({click_function="XP09Toggle",
+    function_owner=self, label="", position={-.041,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button32
+    self.createButton({click_function="XP10Toggle",
+    function_owner=self, label="", position={0.018,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button33
+    self.createButton({click_function="XP11Toggle",
+    function_owner=self, label="", position={0.077,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button34
+    self.createButton({click_function="XP12Toggle",
+    function_owner=self, label="", position={0.136,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button35
+    self.createButton({click_function="XP13Toggle",
+    function_owner=self, label="", position={0.195,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button36
+    self.createButton({click_function="XP14Toggle",
+    function_owner=self, label="", position={0.254,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button37
+    self.createButton({click_function="XP15Toggle",
+    function_owner=self, label="", position={0.313,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button38
+    self.createButton({click_function="XP16Toggle",
+    function_owner=self, label="", position={0.372,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button39
+    self.createButton({click_function="XP17Toggle",
+    function_owner=self, label="", position={0.431,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button40
+    self.createButton({click_function="XP18Toggle",
+    function_owner=self, label="", position={0.490,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button41
+    self.createButton({click_function="XP19Toggle",
+    function_owner=self, label="", position={0.549,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button42
+    self.createButton({click_function="XP20Toggle",
+    function_owner=self, label="", position={0.608,0.06,-0.696}, rotation={0,90,0},
+    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button43
 
   end
 
@@ -574,6 +658,226 @@
       if MindPos>-0.31 then
           MindPos=MindPos-.092
           updateDisplay()
+      end
+  end
+
+  function XP01Toggle()
+    if XP01 == true
+      then
+        XP01 = false
+        self.editButton({index=24, label=""})
+      else
+        XP01 = true
+        self.editButton({index=24, label="█"})
+      end
+  end
+
+  function XP02Toggle()
+    if XP02 == true
+      then
+        XP02 = false
+        self.editButton({index=25, label=""})
+      else
+        XP02 = true
+        self.editButton({index=25, label="█"})
+      end
+  end
+
+  function XP03Toggle()
+    if XP03 == true
+      then
+        XP03 = false
+        self.editButton({index=26, label=""})
+      else
+        XP03 = true
+        self.editButton({index=26, label="█"})
+      end
+  end
+
+  function XP04Toggle()
+    if XP04 == true
+      then
+        XP04 = false
+        self.editButton({index=27, label=""})
+      else
+        XP04 = true
+        self.editButton({index=27, label="█"})
+      end
+  end
+
+  function XP05Toggle()
+    if XP05 == true
+      then
+        XP05 = false
+        self.editButton({index=28, label=""})
+      else
+        XP05 = true
+        self.editButton({index=28, label="█"})
+      end
+  end
+
+  function XP06Toggle()
+    if XP06 == true
+      then
+        XP06 = false
+        self.editButton({index=29, label=""})
+      else
+        XP06 = true
+        self.editButton({index=29, label="█"})
+      end
+  end
+
+  function XP07Toggle()
+    if XP07 == true
+      then
+        XP07 = false
+        self.editButton({index=30, label=""})
+      else
+        XP07 = true
+        self.editButton({index=30, label="█"})
+      end
+  end
+
+  function XP08Toggle()
+    if XP08 == true
+      then
+        XP08 = false
+        self.editButton({index=31, label=""})
+      else
+        XP08 = true
+        self.editButton({index=31, label="█"})
+      end
+  end
+
+  function XP09Toggle()
+    if XP09 == true
+      then
+        XP09 = false
+        self.editButton({index=32, label=""})
+      else
+        XP09 = true
+        self.editButton({index=32, label="█"})
+      end
+  end
+
+  function XP10Toggle()
+    if XP10 == true
+      then
+        XP10 = false
+        self.editButton({index=33, label=""})
+      else
+        XP10 = true
+        self.editButton({index=33, label="█"})
+      end
+  end
+
+  function XP11Toggle()
+    if XP11 == true
+      then
+        XP11 = false
+        self.editButton({index=34, label=""})
+      else
+        XP11 = true
+        self.editButton({index=34, label="█"})
+      end
+  end
+
+  function XP12Toggle()
+    if XP12 == true
+      then
+        XP12 = false
+        self.editButton({index=35, label=""})
+      else
+        XP12 = true
+        self.editButton({index=35, label="█"})
+      end
+  end
+
+  function XP13Toggle()
+    if XP13 == true
+      then
+        XP13 = false
+        self.editButton({index=36, label=""})
+      else
+        XP13 = true
+        self.editButton({index=36, label="█"})
+      end
+  end
+
+  function XP14Toggle()
+    if XP14 == true
+      then
+        XP14 = false
+        self.editButton({index=37, label=""})
+      else
+        XP14 = true
+        self.editButton({index=37, label="█"})
+      end
+  end
+
+  function XP15Toggle()
+    if XP15 == true
+      then
+        XP15 = false
+        self.editButton({index=38, label=""})
+      else
+        XP15 = true
+        self.editButton({index=38, label="█"})
+      end
+  end
+
+  function XP16Toggle()
+    if XP16 == true
+      then
+        XP16 = false
+        self.editButton({index=39, label=""})
+      else
+        XP16 = true
+        self.editButton({index=39, label="█"})
+      end
+  end
+
+  function XP17Toggle()
+    if XP17 == true
+      then
+        XP17 = false
+        self.editButton({index=40, label=""})
+      else
+        XP17 = true
+        self.editButton({index=40, label="█"})
+      end
+  end
+
+  function XP18Toggle()
+    if XP18 == true
+      then
+        XP18 = false
+        self.editButton({index=41, label=""})
+      else
+        XP18 = true
+        self.editButton({index=41, label="█"})
+      end
+  end
+
+  function XP19Toggle()
+    if XP19 == true
+      then
+        XP19 = false
+        self.editButton({index=42, label=""})
+      else
+        XP19 = true
+        self.editButton({index=42, label="█"})
+      end
+  end
+
+  function XP20Toggle()
+    if XP20 == true
+      then
+        XP20 = false
+        self.editButton({index=43, label=""})
+      else
+        XP20 = true
+        self.editButton({index=43, label="█"})
       end
   end
 
