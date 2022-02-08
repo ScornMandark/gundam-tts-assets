@@ -78,22 +78,22 @@ end
 
 
 function SpawnUnitCard()
-  local tileScale = 6
-  tileParams = {
-    type = 'Custom_Tile',
-    position = {MSPos.x-4, MSPos.y+10, MSPos.z-2},
+  local cardScale = 3
+  cardParams = {
+    type = 'CardCustom',
+    position = {MSPos.x-2, MSPos.y+10, MSPos.z-2},
     rotation = {x=0, y=180, z=0},
-    scale = {tileScale,tileScale,tileScale},
+    scale = {cardScale,cardScale,cardScale},
   }
-  customParams = {
-    type = CornerType,
-    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_face.png',
- --   image_bottom = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
-  image_bottom = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
-  thickness = 0.05,
-  }
-  local unitCard = spawnObject(tileParams)
-  unitCard.setCustomObject(customParams)
+  customCardParams = {
+    type = CornerType, --[[Rectangle]]
+    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '.png',
+    back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
+ --   face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_face.png',
+ --   back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
+   }
+  local unitCard = spawnObject(cardParams)
+  unitCard.setCustomObject(customCardParams)
   unitCard.setName(unit:upper())
   WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/" .. wargame .. "CardOverlay.ttslua", function(request)
     if request.is_error then
@@ -255,25 +255,25 @@ end
 
 function MSSk()
   wargame = 'MSSk'
-  CornerType = 0
+  CornerType = 1 -- Rectangular
   print(wargame)
   initializeHaro()
 end
 function GH40k()
   wargame = 'GH40k'
-  CornerType = 0
+  CornerType = 1 -- Rectangular
   print(wargame)
   initializeHaro()
 end
 function GDF()
   wargame = 'GDF'
-  CornerType = 0
+  CornerType = 1 -- Rectangular
   print(wargame)
   initializeHaro()
 end
 function UCC()
   wargame = 'UCC'
-  CornerType = 3
+  CornerType = 0 -- Rounded
   print(wargame)
   initializeHaro()
 end
