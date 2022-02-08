@@ -274,12 +274,12 @@
   end
 
   function onLoad()
-      WeapPos=-0.220
-      ShieldPos=0.615
-      IntegrityPos = 0.621
-      HealthPos = 0.614
-      MindPos = 0.614
-      MoralePos = 0.223
+      WeapPos=-0.336
+      ShieldPos=0.930
+      IntegrityPos = 0.930
+      HealthPos = 0.920
+      MindPos = 0.920
+      MoralePos = 0.340
       HeadCrit = false
       ArmCrit01 = false
       ArmCrit02 = false
@@ -334,180 +334,180 @@
 
   function createCritBoxes()
     self.createButton({click_function="HeadCritToggle",
-    function_owner=self, label="", position={0.585,0.06,-0.57}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}}) --button0
+    function_owner=self, label="", position={0.882,1.001,-0.885}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}}) --button0
 
     self.createButton({click_function="ArmCritToggle01",
-    function_owner=self, label="", position={0.585,0.06,-0.495}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="", position={0.882,1.001,-0.766}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="ArmCritToggle02",
-    function_owner=self, label="", position={0.6275,0.06,-0.495}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="", position={0.945,1.001,-0.766}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="LegCritToggle01",
-    function_owner=self, label="", position={0.585,0.06,-0.175}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="", position={0.882,1.001,-0.280}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="LegCritToggle02",
-    function_owner=self, label="", position={0.6275,0.06,-0.175}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="", position={0.945,1.001,-0.280}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="TorsoCritToggle",
-    function_owner=self, label="", position={0.585,0.06,-0.075}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="", position={0.882,1.001,-0.130}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
   end
 
   function createWeaponSliders()
     self.createButton({click_function="WeapUp",
-    function_owner=self, label="▲", position={-0.675,0.06,-0.275}, rotation={0,0,0},
-    height=30, width=30, font_size=30, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="▲", position={-1.011,1.001,-0.420}, rotation={0,0,0},
+    height=50, width=50, font_size=50, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="WeapDown",
-    function_owner=self, label="▼", position={-0.675,0.06,0.045}, rotation={0,0,0},
-    height=30, width=30, font_size=30, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="▼", position={-1.011,1.001,0.069}, rotation={0,0,0},
+    height=50, width=50, font_size=50, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function='nothing',
-    function_owner=self, label="►", position={-0.675,0.06,WeapPos},
-    height=30, width=30, font_size=30, color={0,0,0}, font_color={1,1,1}}) --button8
+    function_owner=self, label="►", position={-1.011,1.001,WeapPos},
+    height=60, width=60, font_size=60, color={0,0,0}, font_color={1,1,1}}) --button8
   end
 
   function createShieldSliders()
     self.createButton({click_function="ShieldUp",
-    function_owner=self, label="►", position={0.65,0.06,.125}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="►", position={0.974,1.001,.191}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="ShieldDown",
-    function_owner=self, label="◄", position={0.45,0.06,0.125}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="◄", position={0.674,1.001,0.191}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function='nothing',
-    function_owner=self, label="▲", position={ShieldPos,0.06,0.125},
-    height=20, width=20, font_size=20, color={0,0,0}, font_color={1,1,1}}) --button11
+    function_owner=self, label="▲", position={ShieldPos,1.001,0.191},
+    height=35, width=35, font_size=35, color={0,0,0}, font_color={1,1,1}}) --button11
 
   end
 
   function createMoraleSliders()
     self.createButton({click_function="MoraleUp",
-    function_owner=self, label="▲", position={0.68,0.06,0.185}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="▲", position={1.019,1.001,0.282}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="MoraleDown",
-    function_owner=self, label="▼", position={0.68,0.06,0.300}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="▼", position={1.019,1.001,0.458}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function='nothing',
-    function_owner=self, label="◄", position={0.618,0.06,MoralePos},
-    height=20, width=20, font_size=20, color={0,0,0}, font_color={1,1,1}}) --button14
+    function_owner=self, label="◄", position={0.926,1.001,MoralePos},
+    height=35, width=35, font_size=35, color={0,0,0}, font_color={1,1,1}}) --button14
   end
 
   function createIntegritySliders()
     self.createButton({click_function="IntegrityUp",
-    function_owner=self, label="►", position={0.678,0.06,.364}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="►", position={1.016,1.001,.556}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="IntegrityDown",
-    function_owner=self, label="◄", position={-.43,0.06,0.364}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="◄", position={-.644,1.001,0.556}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function='nothing',
-    function_owner=self, label="▼", position={IntegrityPos,0.06,0.364},
-    height=30, width=30, font_size=30, color={0,0,0}, font_color={1,1,1}}) --button17
+    function_owner=self, label="▼", position={IntegrityPos,1.001,0.556},
+    height=60, width=60, font_size=60, color={0,0,0}, font_color={1,1,1}}) --button17
 
   end
 
   function createHealthSliders()
     self.createButton({click_function="HealthUp",
-    function_owner=self, label="►", position={0.678,0.06,.467}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="►", position={1.016,1.001,.713}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="HealthDown",
-    function_owner=self, label="◄", position={-.475,0.06,0.467}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="◄", position={-.712,1.001,0.713}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function='nothing',
-    function_owner=self, label="▼", position={HealthPos,0.06,0.462},
-    height=20, width=20, font_size=20, color={0,0,0}, font_color={1,1,1}}) --button20
+    function_owner=self, label="▼", position={HealthPos,1.001,0.705},
+    height=35, width=35, font_size=35, color={0,0,0}, font_color={1,1,1}}) --button20
 
   end
 
   function createMindSliders()
     self.createButton({click_function="MindUp",
-    function_owner=self, label="►", position={0.678,0.06,.574}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="►", position={1.016,1.001,.876}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="MindDown",
-    function_owner=self, label="◄", position={-.475,0.06,0.574}, rotation={0,0,0},
-    height=20, width=20, font_size=20, color={1,1,1}, font_color={0,0,0}})
+    function_owner=self, label="◄", position={-.712,1.001,0.876}, rotation={0,0,0},
+    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function='nothing',
-    function_owner=self, label="▼", position={MindPos,0.06,0.569},
-    height=20, width=20, font_size=20, color={0,0,0}, font_color={1,1,1}}) --button23
+    function_owner=self, label="▼", position={MindPos,1.001,0.869},
+    height=35, width=35, font_size=35, color={0,0,0}, font_color={1,1,1}}) --button23
 
   end
 
   function createXPBoxes()
     self.createButton({click_function="XP01Toggle",
-    function_owner=self, label="", position={-.512,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button24
+    function_owner=self, label="", position={-.770,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button24
     self.createButton({click_function="XP02Toggle",
-    function_owner=self, label="", position={-.454,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button25
+    function_owner=self, label="", position={-.680,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button25
     self.createButton({click_function="XP03Toggle",
-    function_owner=self, label="", position={-.395,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button26
+    function_owner=self, label="", position={-.592,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button26
     self.createButton({click_function="XP04Toggle",
-    function_owner=self, label="", position={-.336,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button27
+    function_owner=self, label="", position={-.503,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button27
     self.createButton({click_function="XP05Toggle",
-    function_owner=self, label="", position={-.277,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button28
+    function_owner=self, label="", position={-.415,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button28
     self.createButton({click_function="XP06Toggle",
-    function_owner=self, label="", position={-.218,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button29
+    function_owner=self, label="", position={-.327,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button29
     self.createButton({click_function="XP07Toggle",
-    function_owner=self, label="", position={-.159,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button30
+    function_owner=self, label="", position={-.238,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button30
     self.createButton({click_function="XP08Toggle",
-    function_owner=self, label="", position={-.100,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button31
+    function_owner=self, label="", position={-.150,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button31
     self.createButton({click_function="XP09Toggle",
-    function_owner=self, label="", position={-.041,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button32
+    function_owner=self, label="", position={-.061,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button32
     self.createButton({click_function="XP10Toggle",
-    function_owner=self, label="", position={0.018,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button33
+    function_owner=self, label="", position={0.027,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button33
     self.createButton({click_function="XP11Toggle",
-    function_owner=self, label="", position={0.077,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button34
+    function_owner=self, label="", position={0.115,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button34
     self.createButton({click_function="XP12Toggle",
-    function_owner=self, label="", position={0.136,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button35
+    function_owner=self, label="", position={0.204,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button35
     self.createButton({click_function="XP13Toggle",
-    function_owner=self, label="", position={0.195,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button36
+    function_owner=self, label="", position={0.292,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button36
     self.createButton({click_function="XP14Toggle",
-    function_owner=self, label="", position={0.254,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button37
+    function_owner=self, label="", position={0.381,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button37
     self.createButton({click_function="XP15Toggle",
-    function_owner=self, label="", position={0.313,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button38
+    function_owner=self, label="", position={0.469,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button38
     self.createButton({click_function="XP16Toggle",
-    function_owner=self, label="", position={0.372,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button39
+    function_owner=self, label="", position={0.557,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button39
     self.createButton({click_function="XP17Toggle",
-    function_owner=self, label="", position={0.431,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button40
+    function_owner=self, label="", position={0.646,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button40
     self.createButton({click_function="XP18Toggle",
-    function_owner=self, label="", position={0.490,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button41
+    function_owner=self, label="", position={0.734,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button41
     self.createButton({click_function="XP19Toggle",
-    function_owner=self, label="", position={0.549,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button42
+    function_owner=self, label="", position={0.823,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button42
     self.createButton({click_function="XP20Toggle",
-    function_owner=self, label="", position={0.608,0.06,-0.696}, rotation={0,90,0},
-    height=30, width=20, font_size=15, color={1,1,1}, font_color={0,0,0}}) --button43
+    function_owner=self, label="", position={0.911,1.001,-1.064}, rotation={0,90,0},
+    height=40, width=25, font_size=30, color={1,1,1}, font_color={0,0,0}}) --button43
 
   end
 
@@ -579,84 +579,84 @@
 
 
   function WeapUp()
-      if WeapPos>-0.168 then
-          WeapPos=WeapPos-0.0525
+      if WeapPos>-0.256 then
+          WeapPos=WeapPos-0.0801
           updateDisplay()
       end
   end
 
   function WeapDown()
-      if WeapPos<-0.011 then
-          WeapPos=WeapPos+0.0525
+      if WeapPos<-0.017 then
+          WeapPos=WeapPos+0.0801
           updateDisplay()
       end
   end
 
   function ShieldUp()
-      if ShieldPos<0.581 then
-          ShieldPos=ShieldPos+0.035
+      if ShieldPos<0.88 then
+          ShieldPos=ShieldPos+0.0524
           updateDisplay()
       end
   end
 
   function ShieldDown()
-      if ShieldPos>0.509 then
-          ShieldPos=ShieldPos-0.035
+      if ShieldPos>0.763 then
+          ShieldPos=ShieldPos-0.0524
           updateDisplay()
       end
   end
   function MoraleUp()
-      if MoralePos>0.255 then
-          MoralePos=MoralePos-0.038
+      if MoralePos>0.382 then
+          MoralePos=MoralePos-0.057
           updateDisplay()
       end
   end
 
   function MoraleDown()
-      if MoralePos<0.29 then
-          MoralePos=MoralePos+0.038
+      if MoralePos<0.435 then
+          MoralePos=MoralePos+0.057
           updateDisplay()
       end
   end
 
   function IntegrityUp()
-      if IntegrityPos<0.540 then
-          IntegrityPos=IntegrityPos+0.0825
+      if IntegrityPos<0.81 then
+          IntegrityPos=IntegrityPos+0.124
           updateDisplay()
       end
   end
 
   function IntegrityDown()
-      if IntegrityPos>-0.295 then
-          IntegrityPos=IntegrityPos-.0825
+      if IntegrityPos>-0.442 then
+          IntegrityPos=IntegrityPos-.124
           updateDisplay()
       end
   end
 
   function HealthUp()
-      if HealthPos<0.525 then
-          HealthPos=HealthPos+0.092
+      if HealthPos<0.787 then
+          HealthPos=HealthPos+0.14
           updateDisplay()
       end
   end
 
   function HealthDown()
-      if HealthPos>-0.31 then
-          HealthPos=HealthPos-.092
+      if HealthPos>-0.5 then
+          HealthPos=HealthPos-.14
           updateDisplay()
       end
   end
 
   function MindUp()
-      if MindPos<0.525 then
-          MindPos=MindPos+0.092
+      if MindPos<0.787 then
+          MindPos=MindPos+0.14
           updateDisplay()
       end
   end
 
   function MindDown()
-      if MindPos>-0.31 then
-          MindPos=MindPos-.092
+      if MindPos>-0.5 then
+          MindPos=MindPos-.14
           updateDisplay()
       end
   end
@@ -882,12 +882,12 @@
   end
 
   function updateDisplay()
-    self.editButton({index=8, position={-0.675,0.06,WeapPos}})
-    self.editButton({index=11, position={ShieldPos,0.06,0.125}})
-    self.editButton({index=14, position={0.618,0.06,MoralePos}})
-    self.editButton({index=17, position={IntegrityPos,0.06,0.364}})
-    self.editButton({index=20, position={HealthPos,0.06,0.462}})
-    self.editButton({index=23, position={MindPos,0.06,0.569}})
+    self.editButton({index=8, position={-1.011,1.001,WeapPos}})
+    self.editButton({index=11, position={ShieldPos,1.001,0.191}})
+    self.editButton({index=14, position={0.926,1.001,MoralePos}})
+    self.editButton({index=17, position={IntegrityPos,1.001,0.556}})
+    self.editButton({index=20, position={HealthPos,1.001,0.705}})
+    self.editButton({index=23, position={MindPos,1.001,0.869}})
   end
 
 
