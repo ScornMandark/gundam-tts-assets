@@ -52,7 +52,7 @@ function MSA_099S()
 end
 function MSN_00100()
   unit = 'msn-00100'
-  msAttachment = 'mega-bazooka-launcher"
+  msAttachment = 'mega-bazooka-launcher'
   getThatRobot()
 end
 function MSZ_006()
