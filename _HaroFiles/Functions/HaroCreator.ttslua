@@ -123,7 +123,7 @@ function SpawnUnitCard()
       customAttachParams = {
         type = CornerType, --[[Rectangle]]
         back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
-        face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. msAttachment .. '_face.png',
+        face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. msAttachment .. '.png',
        }
       local attachCard = spawnObject(attachParams)
       attachCard.setCustomObject(customAttachParams)
