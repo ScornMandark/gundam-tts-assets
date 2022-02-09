@@ -46,10 +46,20 @@ function TFA_02()
 end
 function TMF_A_802()
   unit = 'tmf-a-802'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function TMF_A_802_ACE()
   unit = 'tmf-a-802_ace'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function TMF_A_803()
@@ -58,6 +68,11 @@ function TMF_A_803()
 end
 function ZGMF_515()
   unit = 'zgmf-515'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function ZGMF_600()
@@ -66,9 +81,19 @@ function ZGMF_600()
 end
 function ZGMF_600_ACE()
   unit = 'zgmf-600_ace'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function ZGMF_1017()
   unit = 'zgmf-1017'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
