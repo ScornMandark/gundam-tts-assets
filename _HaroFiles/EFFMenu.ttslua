@@ -79,6 +79,11 @@ function FF_X7()
 end
 function FF_X7_Bst()
   unit = 'ff-x7-bst'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function FFB_7Bst()
@@ -99,18 +104,38 @@ function RGC_80()
 end
 function RGC_83()
   unit = 'rgc-83'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RGM_79()
   unit = 'rgm-79'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RGM_79C()
   unit = 'rgm-79c'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RGM_79_Powered()
   unit = 'rgm-79_powered'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RGM_79D()
@@ -119,6 +144,11 @@ function RGM_79D()
 end
 function RGM_79G()
   unit = 'rgm-79g'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RGM_79G_S()
@@ -131,6 +161,11 @@ function RGM_79_G_Gs()
 end
 function RGM_79N()
   unit = 'rgm-79n'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RGM_79Sp()
@@ -143,6 +178,11 @@ function RX_75()
 end
 function RX_77()
   unit = 'rx-77'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RX_77_4()
@@ -191,6 +231,11 @@ function RX_78NT_1()
 end
 function RX_79G()
   unit = 'rx-79g'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RX_79GEZ_08()
