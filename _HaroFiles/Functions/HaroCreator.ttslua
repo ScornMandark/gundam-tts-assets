@@ -87,14 +87,16 @@ function SpawnUnitCard()
     rotation = {x=0, y=180, z=0},
     scale = {cardScale,cardScale,cardScale},
   }
+  local cardBackChecker = nil
+  if hasCardBack != nil then
+    cardBackChecker = universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png'
+    else
+    cardBackChecker = 'white.png'
+  end
   customCardParams = {
     type = CornerType, 
     face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '.png',
-    if hasCardBack != nil then
-     back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
-    else 
-      back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
-    end
+    back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. cardBackChecker,
     }
   local unitCard = spawnObject(cardParams)
   unitCard.setCustomObject(customCardParams)
