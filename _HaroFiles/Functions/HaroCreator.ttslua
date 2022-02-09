@@ -12,6 +12,7 @@ function onLoad()
   attached = nil
   msAttachment = nil
   hasCardBack = nil
+  sheetAlt = nil
   CornerType = 3
   baseScaleMod = 0.505 --adjust base size to 1.0 units
   self.locked = true
@@ -87,20 +88,26 @@ function SpawnUnitCard()
     rotation = {x=0, y=180, z=0},
     scale = {cardScale,cardScale,cardScale},
   }
+  local statSheet = nil
+  if altSheet != nil then
+    statSheet = altSheet
+  else
+    statSheet = unit
+  end
   local cardBackChecker = nil
   if hasCardBack != nil then
-    cardBackChecker = universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png'
+    cardBackChecker = universe .. '/' .. faction .. '/' .. wargame .. '/' .. statSheet .. '_back.png'
     else
     cardBackChecker = 'white.png'
   end
   customCardParams = {
     type = CornerType, 
-    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '.png',
+    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. statSheet .. '.png',
     back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. cardBackChecker,
     }
   local unitCard = spawnObject(cardParams)
   unitCard.setCustomObject(customCardParams)
-  unitCard.setName(unit:upper())
+  unitCard.setName(statSheet:upper())
   WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/" .. wargame .. "CardOverlay.ttslua", function(request)
     if request.is_error then
       log(request.error)
