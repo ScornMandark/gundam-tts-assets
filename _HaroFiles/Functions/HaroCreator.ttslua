@@ -10,6 +10,8 @@ function onLoad()
   baseSizeX = 4
   baseSizeZ = 4
   attached = nil
+  msAttachment = nil
+  hasCardBack = nil
   CornerType = 3
   baseScaleMod = 0.505 --adjust base size to 1.0 units
   self.locked = true
@@ -77,7 +79,7 @@ function SpawnBase(ms)
 end
 
 
-function SpawnUnitCard(msAttachment)
+function SpawnUnitCard()
   local cardScale = 3
   cardParams = {
     type = 'CardCustom',
@@ -86,12 +88,14 @@ function SpawnUnitCard(msAttachment)
     scale = {cardScale,cardScale,cardScale},
   }
   customCardParams = {
-    type = CornerType, --[[Rectangle]]
-    back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
+    type = CornerType, 
     face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_face.png',
- --    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '.png',
- --   back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
-   }
+    if hasCardBack != nil then
+     back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
+    else 
+      back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
+    end
+    }
   local unitCard = spawnObject(cardParams)
   unitCard.setCustomObject(customCardParams)
   unitCard.setName(unit:upper())
@@ -117,7 +121,7 @@ function SpawnUnitCard(msAttachment)
       customAttachParams = {
         type = CornerType, --[[Rectangle]]
         back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
-        face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. msAttachment .. '_face.png',
+        face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. msAttachment .. '_face.png',
        }
       local attachCard = spawnObject(attachParams)
       attachCard.setCustomObject(customAttachParams)
@@ -163,6 +167,7 @@ function initializeHaro()
     faction = 'EFF'
     unit = 'fa-78-1'
     attached = nil
+    msAttachment = nil
     self.createButton({click_function = 'createSelector',function_owner = self,label = 'Create',position = {1.5, 3, 0},rotation = {-60, 0, 0},width = 1200,height = 400,font_size = 340})
     self.createButton({click_function = 'settings',function_owner = self,label = 'Settings',position = {-1.5, 3, 0},rotation = {-60, 0, 0},width = 1200,height = 400,font_size = 340})
 end
