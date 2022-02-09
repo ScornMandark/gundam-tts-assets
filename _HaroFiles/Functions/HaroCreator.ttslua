@@ -77,7 +77,7 @@ function SpawnBase(ms)
 end
 
 
-function SpawnUnitCard()
+function SpawnUnitCard(msAttachment)
   local cardScale = 3
   cardParams = {
     type = 'CardCustom',
@@ -107,6 +107,26 @@ function SpawnUnitCard()
       unitCard.reload()
     end
     Wait.frames(statCardOverlay, 60)
+    if msAttachment != nil then
+          attachParams = {
+        type = 'CardCustom',
+        position = {MSPos.x-4, MSPos.y+11, MSPos.z-2},
+        rotation = {x=0, y=180, z=0},
+        scale = {cardScale,cardScale,cardScale},
+      }
+      customAttachParams = {
+        type = CornerType, --[[Rectangle]]
+        back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
+        face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. msAttachment .. '_face.png',
+       }
+      local attachCard = spawnObject(attachParams)
+      attachCard.setCustomObject(customAttachParams)
+      attachCard.setName(msAttachment)
+      local function attachCardWait()
+        attachCard.reload() 
+      end
+      Wait.frames(attachCardWait, 60)
+    end
   initializeHaro()
 end
 
