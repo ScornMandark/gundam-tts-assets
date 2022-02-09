@@ -26,37 +26,37 @@ function OZ_06MS()
 end
 function OZ_06MS_CANNON()
   unit = 'oz-06ms'
-  msAttachment = 'oz-06ms-cannon'
+  sheetAlt = 'oz-06ms-cannon'
   getThatRobot()
 end
 function OZ_06MS_FLIGHT()
   unit = 'oz-06ms'
-  msAttachment = 'oz-06ms-flight'
+  sheetAlt = 'oz-06ms-flight'
   getThatRobot()
 end
 function OZ_06MS_SPACE()
   unit = 'oz-06ms'
-  msAttachment = 'oz-06ms-space'
+  sheetAlt = 'oz-06ms-space'
   getThatRobot()
 end
 function OZ_06MS_EWAC()
   unit = 'oz-06ms'
-  msAttachment = 'oz-06ms-ewac'
+  sheetAlt = 'oz-06ms-ewac'
   getThatRobot()
 end
 function OZ_06MS_N()
   unit = 'oz-06ms'
-  msAttachment = 'oz-06ms-n'
+  sheetAlt = 'oz-06ms-n'
   getThatRobot()
 end
 function OZ_06MS_R()
   unit = 'oz-06ms'
-  msAttachment = 'oz-06ms-r'
+  sheetAlt = 'oz-06ms-r'
   getThatRobot()
 end
 function OZ_06MS_S()
   unit = 'oz-06ms'
-  msAttachment = 'oz-06ms-s'
+  sheetAlt = 'oz-06ms-s'
   getThatRobot()
 end
 
