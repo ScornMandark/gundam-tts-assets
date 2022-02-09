@@ -47,7 +47,13 @@ function getThatRobot()
   end
   local robot = spawnObject(spawnParams)
   robot.setCustomObject(customParams)
-  robot.setName(unit:upper())
+  local robotNamer
+  if sheetAlt != nil then
+    robotNamer = sheetAlt
+  else
+    robotNamer = unit
+  end
+  robot.setName(robotNamer:upper())
   robot.measure_movement = true
   if useBase then SpawnBase(robot) end
   robot.createButton({click_function="spawnSightArc", function_owner=self, label="Sight Arc", position={0,0.05,-0.65}, rotation={0,180,0}, height=200, width=400, font_size=80, color={0.15,0.15,0.15}, font_color={1,1,1}})
