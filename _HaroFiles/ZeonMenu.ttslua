@@ -75,11 +75,21 @@ function HT_01B()
 end
 function MS_06()
   unit = 'ms-06'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function MS_06_Missiles()
   unit = 'ms-06'
   attached = 'ms-06_missile_pods'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function MS_06S()
@@ -96,6 +106,11 @@ function MS_06Fz()
 end
 function MS_07B_3()
   unit = 'ms-07b-3'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function MS_09F_trop()
@@ -112,10 +127,20 @@ function MS_14A()
 end
 function MS_14F()
   unit = 'ms-14f'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function MS_14FS()
   unit = 'ms-14fs'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function MS_14Jg()
