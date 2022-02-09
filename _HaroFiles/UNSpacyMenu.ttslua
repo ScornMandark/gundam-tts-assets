@@ -30,6 +30,11 @@ function Tomahawk()
 end
 function VF_1A()
   unit = 'vf-1a'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function VF_1JMax()
@@ -46,6 +51,11 @@ function VF_1JHikaru()
 end
 function VF_1S()
   unit = 'vf-1s'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 
