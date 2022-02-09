@@ -18,6 +18,11 @@ end
 
 function Reguld()
   unit = 'reguld'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function Reguld_Scout()
@@ -30,22 +35,47 @@ function Reguld_Heavy()
 end
 function Glaug()
   unit = 'glaug'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function Gnerl()
   unit = 'gnerl'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function Nousjadeul_Ger()
   unit = 'nousjadeul-ger'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function Queadlunn_Rau()
   unit = 'queadlunn-rau'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function Queadlunn_Rau_Ace()
   unit = 'queadlunn-rau-ace'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 
