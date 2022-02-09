@@ -89,7 +89,7 @@ function SpawnUnitCard()
   }
   customCardParams = {
     type = CornerType, 
-    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_face.png',
+    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '.png',
     if hasCardBack != nil then
      back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. unit .. '_back.png',
     else 
