@@ -89,8 +89,8 @@ function SpawnUnitCard()
     scale = {cardScale,cardScale,cardScale},
   }
   local statSheet = nil
-  if altSheet != nil then
-    statSheet = altSheet
+  if sheetAlt != nil then
+    statSheet = sheetAlt
   else
     statSheet = unit
   end
@@ -177,6 +177,7 @@ function initializeHaro()
     unit = 'fa-78-1'
     attached = nil
     msAttachment = nil
+    sheetAlt = nil
     self.createButton({click_function = 'createSelector',function_owner = self,label = 'Create',position = {1.5, 3, 0},rotation = {-60, 0, 0},width = 1200,height = 400,font_size = 340})
     self.createButton({click_function = 'settings',function_owner = self,label = 'Settings',position = {-1.5, 3, 0},rotation = {-60, 0, 0},width = 1200,height = 400,font_size = 340})
 end
