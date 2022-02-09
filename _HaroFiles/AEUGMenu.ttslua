@@ -25,26 +25,52 @@ function BaseJabber()
 end
 function MSA_003()
   unit = 'msa-003'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function MSA_099()
   unit = 'msa-099'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function MSA_099S()
   unit = 'msa-099s'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function MSN_00100()
   unit = 'msn-00100'
+  msAttachment = 'mega-bazooka-launcher"
   getThatRobot()
 end
 function MSZ_006()
   unit = 'msz-006'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 function RX_178()
   unit = 'rx-178'
+  if wargame != 'GH40k' then
+  hasCardBack = nil
+  else
+  hasCardBack = true
+  end
   getThatRobot()
 end
 
