@@ -15,7 +15,9 @@ end
 function ZGMF_X20A()
   unit = 'zgmf-x20a'
   msAttachment = 'zgmf-x20a-dragoon'
-  if wargame == 'GH40k'
+  if wargame != 'GH40k' then
+    hasCardBack = nil
+  else
     hasCardBack = 1
   end
   getThatRobot()
