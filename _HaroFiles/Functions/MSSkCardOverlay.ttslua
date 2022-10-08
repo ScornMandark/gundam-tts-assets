@@ -245,15 +245,15 @@
   function createMoraleSliders()
     self.createButton({click_function="MoraleUp",
     function_owner=self, label="▲", position={1.019,1.001,0.282}, rotation={0,0,0},
-    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
+    height=35, width=35, font_size=350, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function="MoraleDown",
     function_owner=self, label="▼", position={1.019,1.001,0.458}, rotation={0,0,0},
-    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}})
+    height=35, width=35, font_size=350, color={1,1,1}, font_color={0,0,0}})
 
     self.createButton({click_function='nothing',
     function_owner=self, label="◄", position={0.926,1.001,MoralePos},
-    height=35, width=35, font_size=35, color={1,1,1}, font_color={0,0,0}}) --button14
+    height=35, width=35, font_size=350, color={1,1,1}, font_color={0,0,0}}) --button14
   end
 
   function createIntegritySliders()
