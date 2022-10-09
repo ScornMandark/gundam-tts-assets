@@ -87,9 +87,9 @@ end
 
 
 function SpawnUnitCard()
-  local cardScale = 3
+  local cardScale = 8
   cardParams = {
-    type = 'CardCustom',
+    type = 'Custom_Tile',
     position = {MSPos.x-2, MSPos.y+10, MSPos.z-2},
     rotation = {x=0, y=180, z=0},
     scale = {cardScale,cardScale,cardScale},
@@ -107,9 +107,10 @@ function SpawnUnitCard()
     cardBackChecker = 'white.png'
   end
   customCardParams = {
-    type = CornerType, 
-    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. statSheet .. '.png',
-    back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. cardBackChecker,
+--    type = CornerType, 
+    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. statSheet .. '.png',
+--    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. statSheet .. '.png',
+--    back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. cardBackChecker,
     }
   local unitCard = spawnObject(cardParams)
   unitCard.setCustomObject(customCardParams)
@@ -128,15 +129,16 @@ function SpawnUnitCard()
     Wait.frames(statCardOverlay, 60)
     if msAttachment != nil then
           attachParams = {
-        type = 'CardCustom',
+        type = 'Custom_Tile',
         position = {MSPos.x-4, MSPos.y+11, MSPos.z-2},
         rotation = {x=0, y=180, z=0},
         scale = {cardScale,cardScale,cardScale},
       }
       customAttachParams = {
-        type = CornerType, --[[Rectangle]]
-        back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
-        face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. msAttachment .. '.png',
+--        type = CornerType, --[[Rectangle]]
+--        back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
+--        face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. msAttachment .. '.png',
+        image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. msAttachment .. '.png',
        }
       local attachCard = spawnObject(attachParams)
       attachCard.setCustomObject(customAttachParams)
