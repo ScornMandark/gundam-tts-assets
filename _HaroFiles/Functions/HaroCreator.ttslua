@@ -87,7 +87,7 @@ end
 
 
 function SpawnUnitCard()
-  local cardScale = 15
+  local cardScale = 4
   cardParams = {
     type = 'Custom_Tile',
     position = {MSPos.x-2, MSPos.y+10, MSPos.z-2},
