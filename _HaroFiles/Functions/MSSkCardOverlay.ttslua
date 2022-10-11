@@ -65,7 +65,7 @@ buttonScale = {0.1,0.1,0.1}
 textboxColor = {1,1,1,.5}
 textboxFontColor = {0,0,0,255}
 
-CCS = 1.189  -- scaler to adjust for character sheet creator to normalized token positions
+CCS = 1.2  -- scaler to adjust for character sheet creator to normalized token positions
 --This is the button placement information
 defaultButtonData = {
     --Add checkboxes
@@ -741,7 +741,7 @@ function createCheckbox()
         local label = ""
         if data.state==true then label= "●" end
         --Creates button and counts it
-        local CSS = 1.189 -- local vector scaler
+        local CSS = 1.2 -- local vector scaler
         local scaledSize = data.size
         local scaledPos = Vector(data.pos)
         local scalerVec = Vector(CSS,1,CSS)
@@ -823,7 +823,7 @@ function createTextbox()
         local funcName = "textbox"..i
         local func = function(_,_,val,sel) click_textbox(i,val,sel) end
         self.setVar(funcName, func)
-        local CSS = 1.189 -- local vector scaler
+        local CSS = 1.2 -- local vector scaler
         local scaledWidth = data.width
         local scaledPos = Vector(data.pos)
         local scalerVec = Vector(CSS,1,CSS)
