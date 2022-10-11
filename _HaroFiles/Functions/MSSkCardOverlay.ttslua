@@ -744,9 +744,9 @@ function createCheckbox()
         local CSS = 1.1875 -- local vector scaler
         local scaledSize = data.size
         local scaledPos = Vector(data.pos)
-        local scalerVec = Vector(CSS,2,CSS)
+        local scalerVec = Vector(CSS,1,CSS)
         scaledPos:scale(scalerVec)
-        scaledPos[2] = 0.2
+--        scaledPos[2] = 0.2
         scaledSize = scaledSize*CSS 
         --Creates button and counts it
         self.createButton({
@@ -826,10 +826,10 @@ function createTextbox()
         local CSS = 1.1875 -- local vector scaler
         local scaledWidth = data.width
         local scaledPos = Vector(data.pos)
-        local scalerVec = Vector(CSS,2,CSS)
+        local scalerVec = Vector(CSS,1,CSS)
         local scaledFont_size = data.font_size
         scaledPos:scale(scalerVec)
-        scaledPos[2] = 0.2
+--        scaledPos[2] = 0.2
         scaledWidth = scaledWidth*CSS 
         scaledFont_size = scaledFont_size*CSS 
         self.createInput({
