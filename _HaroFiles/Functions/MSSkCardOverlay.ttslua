@@ -744,7 +744,7 @@ function createCheckbox()
         local CSS = 0.53333333333333 -- local vector scaler
         local scaledSize = data.size
         local scaledPos = Vector(data.pos)
-        local scalerVec = Vector(CSS,1,CSS)
+        local scalerVec = Vector(CSS,2,CSS)
         scaledPos:scale(scalerVec)
         scaledSize = scaledSize*CCS
         --Creates button and counts it
