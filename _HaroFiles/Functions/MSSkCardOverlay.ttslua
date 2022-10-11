@@ -741,10 +741,10 @@ function createCheckbox()
         local label = ""
         if data.state==true then label= "●" end
         --Creates button and counts it
-        position=data.pos
-        height=data.size
-        width=data.size,
-        font_size=data.size
+        local position=data.pos
+        local height=data.size
+        local width=data.size,
+        local font_size=data.size
         position:scale(CCS)
         height:scale(CCS)
         width:scale(CCS)
