@@ -823,7 +823,17 @@ function createTextbox()
         local funcName = "textbox"..i
         local func = function(_,_,val,sel) click_textbox(i,val,sel) end
         self.setVar(funcName, func)
-
+        local CSS = 1.1873333333333333 -- local vector scaler
+        local scaledWidth = data.width
+        loacl scaledHeight = data.height
+        local scaledPos = Vector(data.pos)
+        local scalerVec = Vector(CSS,2,CSS)
+        local scaledFont_size = data.font_size
+        scaledPos:scale(scalerVec)
+        scaledPos[2] = 0.2
+        scaledWidth = scaledWidth*CSS 
+        scaledHeight = scaledHeight*CSS 
+        scaledFont_size = scaledFont_size*CSS 
         self.createInput({
             input_function = funcName,
             function_owner = self,
