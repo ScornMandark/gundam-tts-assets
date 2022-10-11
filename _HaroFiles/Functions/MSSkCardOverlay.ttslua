@@ -65,7 +65,7 @@ buttonScale = {0.1,0.1,0.1}
 textboxColor = {1,1,1,.5}
 textboxFontColor = {0,0,0,255}
 
-customCreatorScaler = 0.53333333  -- scaler to adjust for character sheet creator to spawned token positions
+CCS = 0.53333333  -- scaler to adjust for character sheet creator to normalized token positions
 --This is the button placement information
 defaultButtonData = {
     --Add checkboxes
@@ -743,10 +743,10 @@ function createCheckbox()
         --Creates button and counts it
         self.createButton({
             label=label, click_function=funcName, function_owner=self,
-            position=data.po, height=data.size, width=data.size,
+            position=data.pos[1]*CCS+data.pos[2]*CCS+data.pos[3]*CCS, height=data.size, width=data.size,
             font_size=data.size, scale=buttonScale,
-            position=position*customCreatorScaler, height=height*customCreatorScaler, width=height*customCreatorScaler,
-            font_size=font_size*customCreatorScaler, scale=scale*customCreatorScaler,
+--            position=position*customCreatorScaler, height=height*customCreatorScaler, width=height*customCreatorScaler,
+--            font_size=font_size*customCreatorScaler, scale=scale*customCreatorScaler,
             color=buttonColor, font_color=buttonFontColor
         })
         spawnedButtonCount = spawnedButtonCount + 1
