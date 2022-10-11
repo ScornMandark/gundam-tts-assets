@@ -739,12 +739,20 @@ function createCheckbox()
         self.setVar(funcName, func)
         --Sets up label
         local label = ""
-        if data.state==true then label= "●" end--string.char(10008) end
+        if data.state==true then label= "●" end
         --Creates button and counts it
+        position=data.pos
+        height=data.size
+        width=data.size,
+        font_size=data.size
+        position:scale(CCS)
+        height:scale(CCS)
+        width:scale(CCS)
+        font_size:scale(CCS)
         self.createButton({
             label=label, click_function=funcName, function_owner=self,
-            position=[data.pos[1]*CCS,data.pos[2]*CCS,data.pos[3]*CCS], height=data.size, width=data.size,
-            font_size=data.size, scale=buttonScale,
+            position=position, height=height, width=width,
+            font_size=font_size, scale=buttonScale,
 --            position=position*customCreatorScaler, height=height*customCreatorScaler, width=height*customCreatorScaler,
 --            font_size=font_size*customCreatorScaler, scale=scale*customCreatorScaler,
             color=buttonColor, font_color=buttonFontColor
