@@ -742,7 +742,7 @@ function createCheckbox()
         if data.state==true then label= "●" end
         --Creates button and counts it
         local CSS = 1.1873333333333333 -- local vector scaler
-        local size = data.size
+        local scaledSize = data.size
         local scaledPos = Vector(data.pos)
         local scalerVec = Vector(CSS,2,CSS)
         scaledPos:scale(scalerVec)
