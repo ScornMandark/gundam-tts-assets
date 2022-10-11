@@ -90,7 +90,7 @@ function SpawnUnitCard()
   local cardScale = 4
   cardParams = {
     type = 'Custom_Token',
-    position = {MSPos.x-2, MSPos.y+10, MSPos.z-2},
+    position = {MSPos.x-10, MSPos.y+10, MSPos.z-2},
     rotation = {x=0, y=180, z=0},
     scale = {cardScale,1,cardScale},
     thickness = 0.1,
