@@ -65,7 +65,7 @@ buttonScale = {0.1,0.1,0.1}
 textboxColor = {1,1,1,.5}
 textboxFontColor = {0,0,0,255}
 
---CCS = 0.53333333  -- scaler to adjust for character sheet creator to normalized token positions
+CCS = 1.1873333333  -- scaler to adjust for character sheet creator to normalized token positions
 --This is the button placement information
 defaultButtonData = {
     --Add checkboxes
@@ -741,18 +741,18 @@ function createCheckbox()
         local label = ""
         if data.state==true then label= "●" end
         --Creates button and counts it
---        local CSS = 0.53333333333333 -- local vector scaler
+        local CSS = 1.1873333333333333 -- local vector scaler
         local size = data.size
---[[        local scaledPos = Vector(data.pos)
+        local scaledPos = Vector(data.pos)
         local scalerVec = Vector(CSS,2,CSS)
         scaledPos:scale(scalerVec)
         scaledPos[2] = 0.2
-        scaledSize = scaledSize*CCS ]]--
+        scaledSize = scaledSize*CCS 
         --Creates button and counts it
         self.createButton({
             label=label, click_function=funcName, function_owner=self,
-            position=data.pos, height=size, width=size,
-            font_size = size, scale=buttonScale,
+            position=scaledPos, height=scaledSize, width=scaledSize,
+            font_size = scaledSize, scale=buttonScale,
             color=buttonColor, font_color=buttonFontColor
         })
         spawnedButtonCount = spawnedButtonCount + 1
