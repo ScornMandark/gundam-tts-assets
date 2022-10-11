@@ -741,20 +741,15 @@ function createCheckbox()
         local label = ""
         if data.state==true then label= "●" end
         --Creates button and counts it
-        local position=data.pos
-        local height=data.size
-        local width=data.size,
-        local font_size=data.size
-        position:scale(CCS)
-        height:scale(CCS)
-        width:scale(CCS)
-        font_size:scale(CCS)
+        local scaledSize = data.size
+        local scaledPos = data.pos
+        scaledPos:scale(CSS)
+        scaledSize = scaledSize*CCS
+        --Creates button and counts it
         self.createButton({
             label=label, click_function=funcName, function_owner=self,
-            position=position, height=height, width=width,
-            font_size=font_size, scale=buttonScale,
---            position=position*customCreatorScaler, height=height*customCreatorScaler, width=height*customCreatorScaler,
---            font_size=font_size*customCreatorScaler, scale=scale*customCreatorScaler,
+            position=scaledPos, height=scaledSize, width=scaledSize,
+            font_size = scaledSize, scale=buttonScale,
             color=buttonColor, font_color=buttonFontColor
         })
         spawnedButtonCount = spawnedButtonCount + 1
