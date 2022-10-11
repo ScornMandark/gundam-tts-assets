@@ -825,25 +825,23 @@ function createTextbox()
         self.setVar(funcName, func)
         local CSS = 1.1873333333333333 -- local vector scaler
         local scaledWidth = data.width
-        loacl scaledHeight = data.height
         local scaledPos = Vector(data.pos)
         local scalerVec = Vector(CSS,2,CSS)
         local scaledFont_size = data.font_size
         scaledPos:scale(scalerVec)
         scaledPos[2] = 0.2
         scaledWidth = scaledWidth*CSS 
-        scaledHeight = scaledHeight*CSS 
         scaledFont_size = scaledFont_size*CSS 
         self.createInput({
             input_function = funcName,
             function_owner = self,
             label          = data.label,
             alignment      = data.alignment,
-            position       = data.pos,
+            position       = scaledPos,
             scale          = buttonScale,
-            width          = data.width,
-            height         = (data.font_size*data.rows)+24,
-            font_size      = data.font_size,
+            width          = scaledWidth,
+            height         = (scaledFont_size*data.rows)+24,
+            font_size      = scaledFont_size,
             color          = textboxColor,
             font_color     = textboxFontColor,
             value          = data.value,
