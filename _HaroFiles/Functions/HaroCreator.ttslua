@@ -87,7 +87,7 @@ end
 
 
 function SpawnUnitCard()
-  local cardScale = 4
+  local cardScale = 1
   cardParams = {
     type = 'Custom_Token',
     position = {MSPos.x-2, MSPos.y+10, MSPos.z-2},
