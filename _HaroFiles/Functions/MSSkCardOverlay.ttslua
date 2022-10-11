@@ -743,7 +743,7 @@ function createCheckbox()
         --Creates button and counts it
         self.createButton({
             label=label, click_function=funcName, function_owner=self,
-            position=data.pos[1]*CCS+data.pos[2]*CCS+data.pos[3]*CCS, height=data.size, width=data.size,
+            position=[data.pos[1]*CCS,data.pos[2]*CCS,data.pos[3]*CCS], height=data.size, width=data.size,
             font_size=data.size, scale=buttonScale,
 --            position=position*customCreatorScaler, height=height*customCreatorScaler, width=height*customCreatorScaler,
 --            font_size=font_size*customCreatorScaler, scale=scale*customCreatorScaler,
