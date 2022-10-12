@@ -19,7 +19,7 @@ function EFF0079()
   self.createButton({click_function = 'FF_X7_Bst', function_owner = self, label = 'FF-X7-Bst', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RB_79', function_owner = self, label = 'RB-79', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'RGM_79', function_owner = self, label = 'RGM-79', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'M1A61', function_owner = self, label = 'M1A61', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'M61A5', function_owner = self, label = 'M61A5', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'EFF', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function EFF08TH()
@@ -90,8 +90,8 @@ function FFB_7Bst()
   unit = 'ffb-7bst'
   getThatRobot()
 end
-function M1A61()
-  unit = 'type61'
+function M61A5()
+  unit = 'm61a5'
   getThatRobot()
 end
 function RB_79()
