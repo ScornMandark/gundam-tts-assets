@@ -130,10 +130,10 @@ function SpawnUnitCard()
     Wait.frames(statCardOverlay, 60)
     if msAttachment != nil then
           attachParams = {
-        type = 'Custom_Tile',
-        position = {MSPos.x-4, MSPos.y+11, MSPos.z-2},
+        type = 'Custom_Token',
+        position = {MSPos.x-15, MSPos.y+11, MSPos.z-2},
         rotation = {x=0, y=180, z=0},
-        scale = {cardScale,cardScale,cardScale},
+        scale = {cardScale,1,cardScale},
       }
       customAttachParams = {
 --        type = CornerType, --[[Rectangle]]
