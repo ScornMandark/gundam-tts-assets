@@ -75,15 +75,13 @@ function loadHaroUpdate()
     function(request)      if request.is_error then        log(request.error)      else         CONSENT = request.text      end    end)
    Illuminators = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/IlluminatorsMenu.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         Illuminators = request.text      end    end)
-   Zanscare = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/ZanscareMenu.ttslua",
-    function(request)      if request.is_error then        log(request.error)      else         Zanscare = request.text      end    end)
    BuildFighters = [[  ]]  WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/BuildFightersMenu.ttslua",
     function(request)      if request.is_error then        log(request.error)      else         BuildFighters = request.text      end    end)
 
   local function ResetHaro()
     self.setName('Haro')
     local MegaScript = [[ ]]
-    MegaScript = HaroScripts .. MapsScenery .. Books .. EFF .. Zeon .. AEUG .. Titans .. LondoBell .. NeoZeon .. Crossbone .. LeagueMilitaire .. Zanscare .. OriginZeon .. OriginEFF .. ThunderboltEFF .. ThunderboltZeon .. ThunderboltSSA .. CelestialBeing .. ALAWS .. ZAFT .. OMNI .. ORB .. GTeam .. OZ .. WhiteFang .. Preventers .. Marimea .. Vultures .. NewUNE .. UNSpacy .. Zentraedi .. DeathArmy .. GFighters ..  CONSENT .. Illuminators .. Zanscare .. BuildFighters
+    MegaScript = HaroScripts .. MapsScenery .. Books .. EFF .. Zeon .. AEUG .. Titans .. LondoBell .. NeoZeon .. Crossbone .. LeagueMilitaire .. Zanscare .. OriginZeon .. OriginEFF .. ThunderboltEFF .. ThunderboltZeon .. ThunderboltSSA .. CelestialBeing .. ALAWS .. ZAFT .. OMNI .. ORB .. GTeam .. OZ .. WhiteFang .. Preventers .. Marimea .. Vultures .. NewUNE .. UNSpacy .. Zentraedi .. DeathArmy .. GFighters ..  CONSENT .. Illuminators .. BuildFighters
     self.setLuaScript(MegaScript)
     self.reload()
     self.locked = true
