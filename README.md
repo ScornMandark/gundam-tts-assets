@@ -16,4 +16,5 @@ Current feature list:
 If you'd like to contribute, I'd love that!  I'm putting some resources together to help people get the models set up.
 
 [Getting 3d models ready to bundle](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/3d%20Model%20Prep%20Instructions.md)
+
 [Bundling models](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Unity%20Asset%20Bundling.md)
