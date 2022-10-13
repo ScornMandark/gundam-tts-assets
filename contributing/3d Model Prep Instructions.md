@@ -17,7 +17,7 @@ Different models come in oriented differently, but usually aligned to the x-y-z 
 Many 3d models come in 1:1000 scale - that is, an 18m Gundam will be 18 Blender Units high (which is usually associated as mm).  Once the model is imported and reoriented, check the Z height of the model.  If it's about right, then we're good.  If not, then a quick scale will fix it.  Divide the suit height by the z height to find your new scaling factor.  e.g., if the imported height is 36, and the Gundam is 18, 18/36 = 0.5, and just scale all the imported models by 0.5.
 
 ### Step 3a: Posing.
-If you've got a single rigged model, you can duplicate it and pose each one separately.  I highly recommend this as opposed to posing, exporting, reposing, reexporting, etc.
+If you've got a single rigged model, you can either duplicate it and pose each one separately or keyframe your poses.  I highly recommend this as opposed to posing, exporting, reposing, reexporting, etc, because it's very hard to go back and adjust a pose this way.
 
 ## Step 4: Check the textures.
 Unity/TTS require each object to have a single texture map, preferably square.  If the model has separate color, bump, and emmissive maps, even better.  If not, you'll need to do some texture manipulation and remapping.  Usually it's combining the separate color textures into a bigger square one, then scaling the UV maps and shifting them around.  
