@@ -393,7 +393,7 @@ function CC()
     self.clearButtons()
     universe = 'CorrectCentury'
     self.createButton({click_function = 'Militia', function_owner = self, label = 'Militia', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'Ghingham', function_owner = self, label = 'Ghingham', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'GhinghamFleet', function_owner = self, label = 'Ghingham', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function UC()
