@@ -12,3 +12,7 @@ Current feature list:
 * Set Scale - defaults to 1/144 scale in game, but you can set it to whatever you want.
 * Set Game - affects how the unit cards are loaded and a few other things.
 * Create - begins the navigation tree for grabbing a unit!  Lots of units already, more to come.
+
+If you'd like to contribute, I'd love that!  I'm putting some resources together to help people get the models set up.
+
+(Getting 3d models ready to bundle)[/3d%20Model%20Prep%20Instructions.md]
