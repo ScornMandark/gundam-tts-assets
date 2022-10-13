@@ -2,7 +2,7 @@
 function Ghingham()
   self.clearButtons()
   faction = 'GhinghamFleet'
-  self.createButton({click_function = 'Mahiroo', function_owner = self, label = 'MAHIROO', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Mahiroo', function_owner = self, label = 'Mahiroo', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'CorrectCentury', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function Militia()
@@ -12,7 +12,7 @@ function Militia()
 end
 
 --[[Ghingham MS--]]
-function MAHIROO()
+function Mahiroo()
   unit = 'mahiroo'
   getThatRobot()
 end
