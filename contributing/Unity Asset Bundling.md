@@ -59,3 +59,5 @@ Now test it out!  It should just show one pose.  Right click on it, and check th
 
 After it's all set, [then it's time to get it into the repository.](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Adding%20Assets%20to%20the%20Repository)
 
+NOTE:  Unity Asset Bundles are intensely powerful tools, with motion triggered animations, looping idle poses, particle effects, and more.  I just scratched the surface here.
+
