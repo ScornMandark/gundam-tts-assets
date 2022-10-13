@@ -57,5 +57,5 @@ In your file structure, the new AssetBundle will be in the 'Tabletop-Simulator-M
 
 Now test it out!  It should just show one pose.  Right click on it, and check the 'Looping Effect' option.  It should show one or more options, with a mouseover tooltip.  Selecting each option should insta switch it to a different mode/equipment.  Hopefully it works the first time!  If not, my usual problem is assigning the wrong model in the Effects modifier.  Trace back to the step where you need to fix it, then repeat the rest of the steps to make sure it works again.
 
-After it's all set, then it's time to get it into the repository.
+After it's all set, [then it's time to get it into the repository.](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Adding%20Assets%20to%20the%20Repository)
 
