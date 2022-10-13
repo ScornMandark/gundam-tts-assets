@@ -1,20 +1,13 @@
-function CC()
-    self.clearButtons()
-    Universe = 'CorrectCentury'
-    self.createButton({click_function = 'Militia', function_owner = self, label = 'Militia', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'Ghingham', function_owner = self, label = 'Ghingham', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'Back', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-end
 
 function Ghingham()
   self.clearButtons()
-  Faction = 'GhinghamFleet'
+  faction = 'GhinghamFleet'
   self.createButton({click_function = 'Mahiroo', function_owner = self, label = 'MAHIROO', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'CorrectCentury', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function Militia()
   self.clearButtons()
-  Faction = 'Militia'
+  faction = 'Militia'
   self.createButton({click_function = 'CorrectCentury', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
