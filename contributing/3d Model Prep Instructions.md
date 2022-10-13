@@ -2,10 +2,10 @@
 
 If you want to add models to the repository, I'd love your help!  Here are the basics of getting some models ready to build into a Unity Asset Bundle, which will be a separate how to.
 
-Things you'll need:
-3d model of a mobile suit.  If it's got multiple weapon options or modes, having those as well will help!
-Blender (or other 3d modeling program, I'll use Blender as a reference though.)
-Patience...
+## Things you'll need:
+- 3d model of a mobile suit.  If it's got multiple weapon options or modes, having those as well will help!
+- Blender (or other 3d modeling program, I'll use Blender as a reference though.)
+- Patience...
 
 ## Step 1: Import your model into Blender.  
 Blender can import a wide variety of file types, and most of the 3d models you come across are either in .obj or .fbx format.  Blender can import these directly, just go to File -> Import -> [filetype]
