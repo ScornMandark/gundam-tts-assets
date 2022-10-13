@@ -29,4 +29,4 @@ Create a cube, then scale it until it's bottom is at z=0 and it covers the main 
 You can export as either .obj or .fbx, Unity can handle either.  I like using .obj, but it's up to you.  Export each model separately (don't forget the collider), naming each one so that you can tell what it is on import.  The important parts here are make sure 'Include -> Selection Only' is checked, and 'Transform -> Scale' is set to 0.273.  This will make sure you're only exporting one pose per .obj, and it is pre-scaled to 1/144 in inches in TTS.
 
 ## Step 7: Head to Unity.
-Head to Unity for the bundling process.
+Head to Unity for [the bundling process.](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Unity%20Asset%20Bundling.md)
