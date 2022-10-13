@@ -1,4 +1,4 @@
-function CorrectCentury()
+function CC()
     self.clearButtons()
     Universe = 'CorrectCentury'
     self.createButton({click_function = 'Militia', function_owner = self, label = 'Militia', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
