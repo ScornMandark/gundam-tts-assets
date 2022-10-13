@@ -15,4 +15,4 @@ Current feature list:
 
 If you'd like to contribute, I'd love that!  I'm putting some resources together to help people get the models set up.
 
-(Getting 3d models ready to bundle)[/3d%20Model%20Prep%20Instructions.md]
+[Getting 3d models ready to bundle](/contributing/3d Model Prep Instructions.md)
