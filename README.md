@@ -19,4 +19,6 @@ If you'd like to contribute, I'd love that!  I'm putting some resources together
 
 [Getting 3d models ready to bundle](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/3d%20Model%20Prep%20Instructions.md)
 
-[Bundling models](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Unity%20Asset%20Bundling.md)
+[Unity Asset Bundling](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Unity%20Asset%20Bundling.md)
+
+[Adding Assets to the Repository](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Adding%20Assets%20to%20the%20Repository)
