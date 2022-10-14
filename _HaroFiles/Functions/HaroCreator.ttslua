@@ -361,6 +361,7 @@ function createRobot()
     self.createButton({click_function = 'UC', function_owner = self, label = 'UC', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'AD', function_owner = self, label = 'AD', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'CC', function_owner = self, label = 'CC', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'AW', function_owner = self, label = 'AW', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function Macross()
@@ -394,6 +395,13 @@ function CC()
     universe = 'CorrectCentury'
     self.createButton({click_function = 'Militia', function_owner = self, label = 'Militia', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'GhinghamFleet', function_owner = self, label = 'Ghingham', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function AW()
+    self.clearButtons()
+    universe = 'AfterWar'
+    self.createButton({click_function = 'Vultures', function_owner = self, label = 'Vultures', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'NewUNE', function_owner = self, label = 'New UNE', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function UC()
