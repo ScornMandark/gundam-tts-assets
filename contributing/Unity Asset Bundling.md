@@ -79,7 +79,7 @@ Now it's ready to be imported to TTS!  Go ahead and open TTS, start a game.  Cli
 Now test it out!  It should just show one pose.  Right click on it, and check the 'Looping Effect' option.  It should show one or more options, with a mouseover tooltip.  Selecting each option should insta switch it to a different mode/equipment.  Hopefully it works the first time!  If not, my usual problem is assigning the wrong model in the Effects modifier.  Trace back to the step where you need to fix it, then repeat the rest of the steps to make sure it works again.
 ![Party on](Unity10PartyOn.png)
 
-After it's all set, [then it's time to get it into the repository.](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Adding%20Assets%20to%20the%20Repository)
+After it's all set, [then it's time to get it into the repository.](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Adding%20Assets%20to%20the%20Repository.md)
 
 NOTE:  Unity Asset Bundles are intensely powerful tools, with motion triggered animations, looping idle poses, particle effects, and more.  I just scratched the surface here.
 
