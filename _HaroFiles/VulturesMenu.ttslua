@@ -1,2 +1,18 @@
 
+function Vultures()
+  self.clearButtons()
+  faction = 'Vultures'
+  self.createButton({click_function = 'GX_9901_DX', function_owner = self, label = 'GX-9901-DX', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'AW', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function NewUNE()
+  self.clearButtons()
+  faction = 'NewUNE'
+  self.createButton({click_function = 'AW', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
 
+--[[Vultures MS--]]
+function GX_9901_DX()
+  unit = 'gx-9901-dx'
+  getThatRobot()
+end
