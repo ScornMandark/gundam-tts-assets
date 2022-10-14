@@ -21,4 +21,4 @@ If you'd like to contribute, I'd love that!  I'm putting some resources together
 
 [Unity Asset Bundling](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Unity%20Asset%20Bundling.md)
 
-[Adding Assets to the Repository](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Adding%20Assets%20to%20the%20Repository)
+[Adding Assets to the Repository](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Adding%20Assets%20to%20the%20Repository.)
