@@ -333,7 +333,7 @@ end
 
 function reinitializeHaro()
     self.clearButtons()
-    Concatenator = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroConcatenator.ttslua'
+    Concatenator = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroConcatenator.ttslua'
     HaroScripts = [[    ]]
     WebRequest.get(Concatenator,
       function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
