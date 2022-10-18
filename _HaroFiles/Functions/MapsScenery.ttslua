@@ -1,26 +1,47 @@
-
 --[[Maps and Scenery]]
 
 function createMaps()
   self.clearButtons()
-  self.createButton({click_function = 'twoUrbanMapTiles', function_owner = self, label = '4x4 Urban Tiles', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'threeUrbanMapTiles', function_owner = self, label = '6x4 Urban Tiles', position = {-1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'tileMaps', function_owner = self, label = 'Randomized Tiles', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'matMaps', function_owner = self, label = 'Background Maps', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function tileMaps()
+  self.clearButtons()
+  self.createButton({click_function = 'twoUrbanMapTiles', function_owner = self, label = '4x4 Urban Tiles Vertical', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'threeUrbanMapTiles', function_owner = self, label = '6x4 Urban Tiles Vertical', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'twoUrbanMapTilesRot', function_owner = self, label = '4x4 Urban Tiles Horizontal', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'threeUrbanMapTilesRot', function_owner = self, label = '6x4 Urban Tiles Horizontal mix', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'createMaps', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function matMaps()
+  self.clearButtons()
   self.createButton({click_function = 'fourByFour', function_owner = self, label = '48 x 48', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'threeByTwo', function_owner = self, label = '36 x 24', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'sixByFour', function_owner = self, label = '72 x 48', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'sixByFourAlmost', function_owner = self, label = '60 x 44', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'createMaps', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
 function twoUrbanMapTiles()
-  mapX = 24
-  mapZ = 48
-  makeATiledTable(2)
+  mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
+  mapZ = 17.97
+  makeATiledTable(1,0)
 end
 function threeUrbanMapTiles()
-  mapX = 24
-  mapZ = 48
-  makeATiledTable(3)
+  mapX = 17.97
+  mapZ = 17.97
+  makeATiledTable(2,0)
+end
+function twoUrbanMapTilesRot()
+  mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
+  mapZ = 17.97
+  makeATiledTable(1,1)
+end
+function threeUrbanMapTilesRot()
+  mapX = 17.97
+  mapZ = 17.97
+  makeATiledTable(2,1)
 end
 function threeByTwo()
   mapSize = 'ThreeByTwo'
@@ -121,72 +142,118 @@ function makeATable()
   initializeHaro()
 end
 
-function makeATiledTable(tileNum)
+function makeATiledTable(tileNum,rotNum)
   self.clearButtons()
   Tables.setTable("Custom Rectangle")
   Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
-  TableParamsOne = {
-    type = 'Custom_Tile',
-    position = {-6*tileNum,0.1,0},
-    rotation = {x=0, y=0, z=0},
-    scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
-    sound = false,
-    snap_to_grid = false,
-  }
-  TableParamsTwo = {
-    type = 'Custom_Tile',
-    position = {6*tileNum,0.1,0},
-    rotation = {x=0, y=0, z=0},
-    scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
-    sound = false,
-    snap_to_grid = false,
-  }
-  TableParamsThree = {
-    type = 'Custom_Tile',
-    position = {0,0.1,0},
-    rotation = {x=0, y=0, z=0},
-    scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
-    sound = false,
-    snap_to_grid = false,
-  }
-  local mapRandOne = math.rand(1,2)
-  local mapRandTwo = math.rand(1,2)
-  local mapRandThree = math.rand(1,2)
-  
-  mapTileParamsOne = {
-    image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/MapTile0' .. mapRandOne .. '.png?raw=true',
-    type = 0, --[[ sharp corners --]]
-    thickness = 0.05, --[[ thin --]]
-  }
-  local tableMapOne = spawnObject(TableParamsOne)
-  tableMapOne.setCustomObject(mapTileParamsOne)
-  
-  mapTileParamsTwo = {
-    image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/MapTile0' .. mapRandTwo .. '.png?raw=true',
-    type = 0, --[[ sharp corners --]]
-    thickness = 0.05, --[[ thin --]]
-  }
-  local tableMapTwo = spawnObject(TableParamsTwo)
-  tableMapTwo.setCustomObject(mapTileParamsTwo)
-  
-  if tileNum > 2 then
-    mapTileParamsThree
-      image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/MapTile0' .. mapRandThree .. '.png?raw=true',
-     type = 0, --[[ sharp corners --]]
-     thickness = 0.05, --[[ thin --]]
-   }
-   local tableMapThree = spawnObject(TableParamsThree)
-   tableMapThree.setCustomObject(mapTileParamsThree)
+  local seed = os.time()
+  math.randomseed(seed)
+  local tileShift = math.random(0,1)
+  if rotNum then
+    TableParamsOne = {
+      type = 'Custom_Token',
+      position = {(tileNum-1)*(-12.01+tileShift*24.02),1,-12.01},
+      rotation = {x=0, y=90, z=0},
+      scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
+      sound = false,
+      snap_to_grid = true,
+    }
+    TableParamsTwo = {
+      type = 'Custom_Token',
+      position = {(tileNum-1)*(-12.01+tileShift*24.02),1,12.01},
+      rotation = {x=0, y=90, z=0},
+      scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
+      sound = false,
+      snap_to_grid = true,
+    }
+    TableParamsThree = {
+      type = 'Custom_Token',
+      position = {(24.01-tileShift*48.02),1,0},
+      rotation = {x=0, y=0, z=0},
+      scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
+      sound = false,
+      snap_to_grid = true,
+    }
+  else
+    TableParamsOne = {
+      type = 'Custom_Token',
+      position = {-12.01*tileNum,1,0},
+      rotation = {x=0, y=0, z=0},
+      scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
+      sound = false,
+      snap_to_grid = true,
+    }
+    TableParamsTwo = {
+      type = 'Custom_Token',
+      position = {12.01*tileNum,1,0},
+      rotation = {x=0, y=0, z=0},
+      scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
+      sound = false,
+      snap_to_grid = true,
+    }
+    TableParamsThree = {
+      type = 'Custom_Token',
+      position = {0,1,0},
+      rotation = {x=0, y=0, z=0},
+      scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
+      sound = false,
+      snap_to_grid = true,
+    }
   end
-  
-  local function mapLocker()
-    tableMapOne.locked = true
-    tableMapTwo.locked = true
-    if tileNum > 2 then
+
+  local mapRandOne = math.random(1,2)
+  local mapRandTwo = math.random(1,2)
+  local mapRandThree = math.random(1,2)
+  local imageOne = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/MapTile0' .. mapRandOne .. '.png?raw=true'
+  local imageTwo = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/MapTile0' .. mapRandTwo .. '.png?raw=true'
+  local imageThree = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/MapTile0' .. mapRandThree .. '.png?raw=true'
+
+  mapTileParamsOne = {
+    image = imageOne,
+    thickness = 0.05, --[[ thin --]]
+    merge_distance = 1 --[[ accurate ]]
+  }
+  mapTileParamsTwo = {
+    image = imageTwo,
+    thickness = 0.05, --[[ thin --]]
+    merge_distance = 1 --[[ accurate ]]
+  }
+  mapTileParamsThree = {
+      image = imageThree,
+      thickness = 0.05, --[[ thin --]]
+      merge_distance = 1 --[[ accurate ]]
+    }
+  local tileCounter = 0
+  if tileCounter <= tileNum and tileCounter == 0 then
+    tileCounter = tileCounter +1
+    local tableMapOne = spawnObject(TableParamsOne)
+    tableMapOne.setCustomObject(mapTileParamsOne)
+    local function mapLockerOne()
+      tableMapOne.locked = true
+    end
+    Wait.frames(mapLockerOne, 120)
+  end
+
+  if tileCounter <= tileNum and tileCounter == 1 then
+    tileCounter = tileCounter +1
+    local tableMapTwo = spawnObject(TableParamsTwo)
+    tableMapTwo.setCustomObject(mapTileParamsTwo)
+    local function mapLockerTwo()
+      tableMapTwo.locked = true
+    end
+    Wait.frames(mapLockerTwo, 120)
+  end
+
+  if tileCounter <= tileNum and tileCounter == 2 then
+    tileCounter = tileCounter +1
+    local tableMapThree = spawnObject(TableParamsThree)
+    tableMapThree.setCustomObject(mapTileParamsThree)
+    local function mapLockerThree()
       tableMapThree.locked = true
     end
+    Wait.frames(mapLockerThree, 120)
   end
-  Wait.frames(mapLocker, 240)
+
   initializeHaro()
 end
 
