@@ -37,13 +37,13 @@ function getThatRobot()
       snap_to_grid = false,
   }
   customParams = {
-      assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/' .. universe .. '/' .. faction .. '/' .. unit .. '.unity3d?raw=true',
+      assetbundle = '{verifycache}https://github.com/ScornMandark/gundam-tts-assets/blob/main/' .. universe .. '/' .. faction .. '/' .. unit .. '.unity3d?raw=true',
       assetbundle_secondary = nil,
       type = 1, --[[ figurine --]]
       material = 2, --[[ metal --]]
   }
   if attached != nil then
-    customParams.assetbundle_secondary = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/' .. universe .. '/' .. faction .. '/' .. attached .. '.unity3d?raw=true'
+    customParams.assetbundle_secondary = '{verifycache}https://github.com/ScornMandark/gundam-tts-assets/blob/main/' .. universe .. '/' .. faction .. '/' .. attached .. '.unity3d?raw=true'
   end
   local robot = spawnObject(spawnParams)
   robot.setCustomObject(customParams)
@@ -76,7 +76,7 @@ function SpawnBase(ms)
   }
   customParams = {
     type = 2,
-    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png',
+    image = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png',
     thickness = 0.05,
   }
   local base = spawnObject(tileParams)
@@ -108,15 +108,12 @@ function SpawnUnitCard()
     cardBackChecker = 'white.png'
   end
   customCardParams = {
---    type = CornerType, 
-    image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. statSheet .. '.png',
---    face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. statSheet .. '.png',
---    back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. cardBackChecker,
+    image = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. statSheet .. '.png',
     }
   local unitCard = spawnObject(cardParams)
   unitCard.setCustomObject(customCardParams)
   unitCard.setName(statSheet:upper())
-  WebRequest.get("{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/" .. wargame .. "CardOverlay.ttslua", function(request)
+  WebRequest.get('{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/' .. wargame .. 'CardOverlay.ttslua', function(request)
     if request.is_error then
       log(request.error)
     else
@@ -136,10 +133,7 @@ function SpawnUnitCard()
         scale = {cardScale,1,cardScale},
       }
       customAttachParams = {
---        type = CornerType, --[[Rectangle]]
---        back = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/white.png',
---        face = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. msAttachment .. '.png',
-        image = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. msAttachment .. '.png',
+        image = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/' .. universe .. '/' .. faction .. '/' .. wargame .. '/' .. msAttachment .. '.png',
        }
       local attachCard = spawnObject(attachParams)
       attachCard.setCustomObject(customAttachParams)
@@ -339,7 +333,7 @@ end
 function reinitializeHaro()
     self.clearButtons()
     HaroScripts = [[    ]]
-    WebRequest.get("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroConcatenator.ttslua",
+    WebRequest.get('{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroConcatenator.ttslua',
       function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
     local function ResetHaro()
       self.setName('Haro')
