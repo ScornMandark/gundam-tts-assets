@@ -5,7 +5,7 @@ end
 
 function loadHaroUpdate()
   self.clearButtons()
-  HaroScripts = [[  ]]  WebRequest.get('{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroCreator.ttslua,
+  HaroScripts = [[  ]]  WebRequest.get('{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/HaroCreator.ttslua',
     function(request)      if request.is_error then        log(request.error)      else         HaroScripts = request.text      end    end)
   MapsScenery = [[  ]] WebRequest.get('{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/MapsScenery.ttslua',
     function(request)      if request.is_error then        log(request.error)      else         MapsScenery = request.text      end    end)
