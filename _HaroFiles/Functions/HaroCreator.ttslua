@@ -116,7 +116,7 @@ function SpawnUnitCard()
   local unitCard = spawnObject(cardParams)
   unitCard.setCustomObject(customCardParams)
   unitCard.setName(statSheet:upper())
-  WebRequest.get({verifycache}"https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/" .. wargame .. "CardOverlay.ttslua", function(request)
+  WebRequest.get{verifycache}("https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/Functions/" .. wargame .. "CardOverlay.ttslua", function(request)
     if request.is_error then
       log(request.error)
     else
