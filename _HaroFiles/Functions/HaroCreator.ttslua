@@ -47,6 +47,7 @@ function getThatRobot()
   end
   local robot = spawnObject(spawnParams)
   robot.setCustomObject(customParams)
+  robot.use_grid = false
   local robotNamer
   if sheetAlt != nil then
     robotNamer = sheetAlt
