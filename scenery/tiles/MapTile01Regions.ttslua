@@ -189,7 +189,7 @@ function createBuildings()
         self.createObject({
             type='BlockRectangle',
             position=scaledPos,  scale=BuildingScale,
-            color=buttonColor,]]
+            color=buttonColor,
         })
         spawnedBuildingCount = spawnedBuildingCount + 1
         print('Made Building #' .. spawnedBuildingCount .. ".")
