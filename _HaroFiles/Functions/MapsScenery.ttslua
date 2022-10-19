@@ -239,6 +239,7 @@ function makeATiledTable(tileNum)
 
   if tileCounter <= tileNum and tileCounter == 2 then
     tileCounter = tileCounter +1
+    print('Made Tile ' ..  tileCounter .. '.')
     local tableMapThree = spawnObject(TableParamsThree)
     tableMapThree.setCustomObject(mapTileParamsThree)
     local function mapLockerThree()
