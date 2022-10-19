@@ -254,8 +254,6 @@ function generateBuildings(tableMap, mapNum)
         tableMap.reload()
       end
       Wait.frames(populate(tableMap), 120)
-  end
-
   initializeHaro()
 
 end
