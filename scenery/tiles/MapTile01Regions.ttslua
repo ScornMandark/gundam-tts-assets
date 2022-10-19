@@ -197,6 +197,7 @@ function createBuildings()
       scaleShifterX = 3*buildingScale*(math.random() + 0.25)  -- randomize building size with a minimum size
       scaleShifterY = 6*buildingScale*(math.random() + 0.25)
       scaleShifterZ = 2*buildingScale*(math.random() + 0.25)
+      buildingTint = vector(math.random(), math.random(), math.random())
        scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
        local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
        scaledPos:scale(baseAdjustY)
@@ -204,7 +205,7 @@ function createBuildings()
        local building = spawnObject({
            type='BlockRectangle',
            position=scaledPos,  scale=scaledSize,
-           color=buttonColor, rotation = {x=90, y=0, z=0},
+           color=buildingTint, rotation = {x=90, y=0, z=0},
        })
 --       print('Building '.. spawnedBuildingCount .. ' is ' .. building.getBounds().size.x .. "x" .. building.getbounds().size.y .. "x" .. building.getBounds().size.z .. ' inches.')
        building.setLock(true)
