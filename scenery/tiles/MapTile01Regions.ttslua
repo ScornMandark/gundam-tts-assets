@@ -180,26 +180,34 @@ function createBuildings()
        --Sets up reference function
        --Sets up label
        --Creates button and counts it
-       local scaledSize = data.size
-       local scaledPos = Vector(data.pos)
-       local scalerVec = Vector(incher,10.5,incher)
-       scaledPos:scale(scalerVec)
-       local tileOffset = self.getPosition()
-       local tileRotation = self.getRotation()
-       if tileRotation == vector(0,90,0) then
+local scaledSize = data.size
+local scaledPos = Vector(data.pos)
+local scaledPosX = data.pos[1]
+local scaledPosZ = data.pos[3]
+local tileOffset = self.getPosition()
+local tileRotation = self.getRotation()
+local scaleShifter = 1
+scaleShifterX = buildingScale*(3.333 + 0.8*math.random())  -- randomize building size with a minimum size
+scaleShifterY = buildingScale*(4+4*math.random(0,3))
+scaleShifterZ = buildingScale*(math.random(2,12))
+ scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
+ print(scaledSize)
+local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
+if tileRotation == vector(0,90,0) then
 --         scaledPos.setRotationSmooth(vector(0,90,0), false, true)
-
+scaledPos[1] = scaledPosZ
+scaledPos[3] = scaledPosX
+scaledSize = vector(scaleShifterY, scaleShifterX, scaleShifterZ)--scaledPos[1] =
 --         scaledPos.setRotation({0,90,0})
-       end
-       scaledPos = scaledPos + tileOffset
+print(scaledSize)
+end
+
+scaledPos:scale(vector(incher,10.5,incher))
+scaledPos = scaledPos + tileOffset
 --        scaledPos[2] = 0.2
-      local scaleShifter = 1
-      scaleShifterX = 3*buildingScale*(math.random() + 0.25)  -- randomize building size with a minimum size
-      scaleShifterY = 6*buildingScale*(math.random() + 0.25)
-      scaleShifterZ = 2*buildingScale*(math.random() + 0.25)
-        scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
-       local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
-       scaledPos:scale(baseAdjustY)
+
+scaledPos:scale(baseAdjustY)
+
        --Creates building and counts it
        local building = spawnObject({
            type='BlockRectangle',
