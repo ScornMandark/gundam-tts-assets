@@ -733,6 +733,7 @@ function createBuildings()
             color=buttonColor, --[[font_color=buttonFontColor--]]
         })
         spawnedBuildingCount = spawnedBuildingCount + 1
+        print('Made Building #' .. spawnedBuildingCount .. ".")
     end
 end
 --[[
