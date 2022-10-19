@@ -184,7 +184,7 @@ function createBuildings()
        local scalerVec = Vector(CCS,1,CCS)
        scaledPos:scale(scalerVec)
 --        scaledPos[2] = 0.2
-       scaledSize = scaledSize*CSS
+       scaledSize = scaledSize*CCS
        --Creates building and counts it
        self.createObject({
            type='BlockRectangle',
