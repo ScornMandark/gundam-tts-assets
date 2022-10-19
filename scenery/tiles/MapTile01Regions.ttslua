@@ -9,36 +9,7 @@ chara checker -> 0.75, -0.25
 
 13.5" x 16.5", +/- 6.75", 2.25" - 18.75"
 --]]
-  --[[    Character Sheet Template    by: MrStump
-
-You can set up your own character sheet if you follow these steps.
-
-Step 1) Change the character sheet image
-    -Right click on the character sheet, click Custom
-    -Replace the image URL with one for your character sheet
-    -Click import, make sure your sheet loads
-    -SAVE THE GAME (the table setup)
-    -LOAD FROM THAT SAVE YOU JUST MADE
-
-Step 2) Edit script to fit your character sheet
-    -Below you will see some general options, and then the big data table
-    -The data table is what determines how many of which buttons are made
-        -Checkboxes
-        -Counters
-        -Textboxes
-    -By default, there are 3 of each. You can add more or remove entries
-    -If you intend to add/remove, be sure only to add/remove ENTRIES
-        -This is what an entry looks like:
-            {
-                pos   = {-0.977,0.1,-0.589},
-                size  = 800,
-                state = false
-            },
-        -Deleting the whole thing would remove that specific item on the sheet
-        -Copy and pasting it after another entry would create another
-    -Each entry type has unique data points (pos, size, state, etc)
-        -Do not try to add in your own data points or remove them individually
-        -There is a summary of what each point does at the top of its category
+  --[[   based on Character Sheet Template    by: MrStump
 
 Step 3) Save and check script changes
     -Hit Save & Apply in the script window to save your code
@@ -522,7 +493,7 @@ defaultRegionData = {
             size   = 800,
             value  = 0,
             hideBG = true
-        },--]]
+        },
         --End of counters
     },
     --Add editable text boxes
@@ -536,7 +507,7 @@ defaultRegionData = {
         value     = text entered into box. "" = nothing
         alignment = Number to indicate how you want text aligned
                     (1=Automatic, 2=Left, 3=Center, 4=Right, 5=Justified)
-        ]]
+
         --First textbox
         {
             pos       = {-0.539,0.1,-1.42}, --name
@@ -605,7 +576,7 @@ defaultRegionData = {
 
 --Save function
 function updateSave()
-    saved_data = JSON.encode(ref_buttonData)
+    saved_data = JSON.encode(ref_regionData)
     if disableSave==true then saved_data="" end
     self.script_state = saved_data
 end
@@ -855,3 +826,4 @@ function createTextbox()
     end
 end
 --]]
+
