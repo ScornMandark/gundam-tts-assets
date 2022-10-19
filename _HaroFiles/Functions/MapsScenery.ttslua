@@ -215,6 +215,7 @@ function makeATiledTable(tileNum)
   local tileCounter = 0
   if tileCounter <= tileNum and tileCounter == 0 then
     tileCounter = tileCounter +1
+    print('Made Tile' ..  tileCounter .. '.')
     local tableMapOne = spawnObject(TableParamsOne)
     tableMapOne.setCustomObject(mapTileParamsOne)
     local function mapLockerOne()
@@ -226,12 +227,14 @@ function makeATiledTable(tileNum)
 
   if tileCounter <= tileNum and tileCounter == 1 then
     tileCounter = tileCounter +1
+    print('Made Tile ' ..  tileCounter .. '.')
     local tableMapTwo = spawnObject(TableParamsTwo)
     tableMapTwo.setCustomObject(mapTileParamsTwo)
     local function mapLockerTwo()
       tableMapTwo.locked = true
     end
     Wait.frames(mapLockerTwo, 120)
+    generateBuildings(tableMapTwo, mapRandTwo)
   end
 
   if tileCounter <= tileNum and tileCounter == 2 then
@@ -242,21 +245,36 @@ function makeATiledTable(tileNum)
       tableMapThree.locked = true
     end
     Wait.frames(mapLockerThree, 120)
+    generateBuildings(tableMapThree, mapRandThree)
   end
-
+--]]
 --  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
 end
 
 function generateBuildings(tableMap, mapNum)
-      local buildingRegions = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapTile0' .. mapNum .. 'Regions.ttslua?raw=true'
-      local function populate(tableMap)
+      print('Building for Urban Map 0' .. mapNum .. '.')
+      local mapRegions = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/MapTile0' .. mapNum .. 'Regions.ttslua'
+      print(mapRegions)
+      WebRequest.get(mapRegions, function(request)
+        if request.is_error then
+          log(request.error)
+          print(':( no map data')
+        else
+          buildingRegions = request.text
+          print('Got map data.')
+--          print(request.text)
+        end
+        end)
+      local function populate()
         tableMap.setLuaScript(buildingRegions)
         tableMap.reload()
+        print('Populating...')
       end
-      Wait.frames(populate(tableMap), 120)
+      Wait.frames(populate, 120)
   initializeHaro()
 
 end
+
 
 function createScenery()
   self.clearButtons()
