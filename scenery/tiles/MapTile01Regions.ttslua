@@ -1,4 +1,4 @@
-Primary Upper area (162 x 198 scale feet) 
+ --[[ Primary Upper area (162 x 198 scale feet) 
 image is 2048 x 4096
 center is 1024,2048
 
@@ -8,3 +8,4 @@ px LR 1600,1856 -> 575,-192 -> 0.2876, 0.09375 -> 9",3"
 chara checker -> 0.75, -0.25
 
 13.5" x 16.5", +/- 6.75", 2.25" - 18.75"
+--]]
