@@ -33,7 +33,7 @@ Bonus) Finding/Editing Positions for elements
 Begin editing below:    ]]
 
 --Set this to true while editing and false when you have finished
-disableSave = true
+disableSave = false
 --Remember to set this to false once you are done making changes
 --Then, after you save & apply it, save your game too
 
@@ -42,7 +42,7 @@ buttonFontColor = {0,0,0}
 --Color information for button background
 buttonColor = {1,1,1}
 --Change scale of button (Avoid changing if possible)
-buttonScale = {0.1,0.1,0.1}
+buildingScale = {0.1,0.1,0.1}
 
 textboxColor = {1,1,1,.5}
 textboxFontColor = {0,0,0,255}
@@ -61,511 +61,86 @@ defaultRegionData = {
         { -- #1 XP1-20
             pos   = {-.96,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #2
             pos   = {-.8497,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #3
             pos   = {-.7394,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #4
             pos   = {-.6291,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #5
             pos   = {-.5188,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #6
             pos   = {-.4085,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #7
             pos   = {-.2982,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #8
             pos   = {-.1879,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #9
             pos   = {-.0776,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #10
             pos   = {.0327,0.1,-1.303},
             size  = 350,
-            state = false
-        },
+         },
         { -- #11
             pos   = {.143,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #12
             pos   = {.2533,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #13
             pos   = {.3636,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #14
             pos   = {.4739,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #15
             pos   = {.5842,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #16
             pos   = {.6945,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #17
             pos   = {.8048,0.1,-1.303},
             size  = 350,
-            state = false
-        },
+       },
         { -- #18
             pos   = {.9151,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #19
             pos   = {1.0254,0.1,-1.303},
             size  = 350,
-            state = false
         },
         { -- #20
             pos   = {1.1357,0.1,-1.303},
             size  = 350,
-            state = false
         },
-        { -- #21 crits 21-26
-            pos   = {1.099,0.1,-1.083},
-            size  = 350,
-            state = false
-        },
-        { -- #22 crits 21-26
-            pos   = {1.099,0.1,-0.935},
-            size  = 350,
-            state = false
-        },
-        { -- #23 crits 21-26
-            pos   = {1.178,0.1,-0.935},
-            size  = 350,
-            state = false
-        },
-        { -- #24 crits 21-26
-            pos   = {1.099,0.1,-0.34},
-            size  = 350,
-            state = false
-        },
-        { -- #25 crits 21-26
-            pos   = {1.178,0.1,-0.34},
-            size  = 350,
-            state = false
-        },
-        { -- #26 crits 21-26
-            pos   = {1.099,0.1,-0.152},
-            size  = 350,
-            state = false
-        },
-        { -- #27 Weap Select 27-31
-            pos   = {-1.261,0.1,-0.406},
-            size  = 350,
-            state = true
-        },
-        { -- #28 Weap Select 27-31
-            pos   = {-1.261,0.1,-0.31},
-            size  = 350,
-            state = false
-        },
-        { -- #29 Weap Select 27-31
-            pos   = {-1.261,0.1,-0.214},
-            size  = 350,
-            state = false
-        },
-        { -- #30 Weap Select 27-31
-            pos   = {-1.261,0.1,-0.118},
-            size  = 350,
-            state = false
-        },
-        { -- #31 Weap Select 27-31
-            pos   = {-1.261,0.1,-0.022},
-            size  = 350,
-            state = false
-        },
-        { -- #32 Weap equip 32-36
-            pos   = {-.535,0.1,-0.406},
-            size  = 175,
-            state = false
-        },
-        { -- #33 Weap equip 32-36
-            pos   = {-.535,0.1,-0.31},
-            size  = 175,
-            state = false
-        },
-        { -- #34 Weap equip 32-36
-            pos   = {-.535,0.1,-0.214},
-            size  = 175,
-            state = false
-        },
-        { -- #35 Weap equip 32-36
-            pos   = {-.535,0.1,-0.118},
-            size  = 175,
-            state = false
-        },
-        { -- #36 Weap equip 32-36
-            pos   = {-.535,0.1,-0.022},
-            size  = 175,
-            state = false
-        },
-        { -- #37 morale 37-39
-            pos   = {1.159,0.1,0.415},
-            size  = 350,
-            state = true
-        },
-        { -- #38 morale 37-39
-            pos   = {1.159,0.1,0.49},
-            size  = 350,
-            state = false
-        },
-        { -- #39 morale 37-39
-            pos   = {1.159,0.1,0.565},
-            size  = 350,
-            state = false
-        },
-        { -- #40 shield 40-44
-            pos   = {0.886,0.1,0.138},
-            size  = 175,
-            state = true
-        },
-        { -- #41 shield 40-44
-            pos   = {0.9505,0.1,0.138},
-            size  = 175,
-            state = false
-        },
-        { -- #42 shield 40-44
-            pos   = {1.015,0.1,0.138},
-            size  = 175,
-            state = false
-        },
-        { -- #40 shield 40-44
-            pos   = {1.0795,0.1,0.138},
-            size  = 175,
-            state = false
-        },
-        { -- #40 shield 40-44
-            pos   = {1.144,0.1,0.138},
-            size  = 175,
-            state = false
-        },
-        { -- #45 integrity 45-57
-            pos   = {-0.725,0.1,0.715},
-            size  = 275,
-            state = true
-        },
-        { -- #46 integrity 45-57
-            pos   = {-0.57125,0.1,0.715},
-            size  = 275,
-            state = true
-        },
-        { -- #47 integrity 45-57
-            pos   = {-0.4175,0.1,0.715},
-            size  = 275,
-            state = true
-        },
-        { -- #48 integrity 45-57
-            pos   = {-0.26375,0.1,0.715},
-            size  = 275,
-            state = true
-        },
-        { -- #49 integrity 45-57
-            pos   = {-0.11,0.1,0.715},
-            size  = 275,
-            state = true
-        },
-        { -- #50 integrity 45-57
-            pos   = {0.04375,0.1,0.715},
-            size  = 275,
-            state = true
-        },
-        { -- #51 integrity 45-57
-            pos   = {0.1975,0.1,0.715},
-            size  = 275,
-            state = true
-        },
-        { -- #52 integrity 45-57
-            pos   = {0.35125,0.1,0.715},
-            size  = 275,
-            state = false
-        },
-        { -- #53 integrity 45-57
-            pos   = {0.505,0.1,0.715},
-            size  = 275,
-            state = false
-        },
-        { -- #54 integrity 45-57
-            pos   = {0.65875,0.1,0.715},
-            size  = 275,
-            state = false
-        },
-        { -- #55 integrity 45-57
-            pos   = {0.8125,0.1,0.715},
-            size  = 275,
-            state = false
-        },
-        { -- #56 integrity 45-57
-            pos   = {0.96625,0.1,0.715},
-            size  = 275,
-            state = false
-        },
-        { -- #57 integrity 45-57
-            pos   = {1.12,0.1,0.715},
-            size  = 275,
-            state = false
-        },
-        { -- #58 health 58-69
-            pos   = {-.764,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #59 health 58-69
-            pos   = {-.5898,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #60 health 58-69
-            pos   = {-.4156,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #61 health 58-69
-            pos   = {-.2414,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #62 health 58-69
-            pos   = {-.0672,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #63 health 58-69
-            pos   = {0.107,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #64 health 58-69
-            pos   = {0.2812,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #65 health 58-69
-            pos   = {0.4554,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #66 health 58-69
-            pos   = {0.6296,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #67 health 58-69
-            pos   = {0.8038,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #68 health 58-69
-            pos   = {0.978,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #69 health 58-69
-            pos   = {1.1522,0.1,0.965},
-            size  = 275,
-            state = true
-        },
-        { -- #70 mind 70-81
-            pos   = {-.764,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #71 mind 70-81
-            pos   = {-.5898,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #72 mind 70-81
-            pos   = {-.4156,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #73 mind 70-81
-            pos   = {-.2414,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #74 mind 70-81
-            pos   = {-.0672,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #75 mind 70-81
-            pos   = {0.107,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #76 mind 70-81
-            pos   = {0.2812,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #77 mind 70-81
-            pos   = {0.4554,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #78 mind 70-81
-            pos   = {0.6296,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #79 mind 70-81
-            pos   = {0.8038,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #80 mind 70-81
-            pos   = {0.978,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        { -- #81 mind 70-81
-            pos   = {1.1522,0.1,1.16},
-            size  = 275,
-            state = true
-        },
-        --End of checkboxes
-    },--[[
-    --Add counters that have a + and - button
-    counter = {
-        --[[
-        pos    = the position (pasted from the helper tool)
-        size   = height/width/font_size for counter
-        value  = default starting value for counter
-        hideBG = if background of counter is hidden (true=hidden, false=not)
-        ]]
-        --First counter
---[[        {
-            pos    = {-0.996,0.1,0.057},
-            size   = 800,
-            value  = 0,
-            hideBG = true
-        },
-        --Second counter
-        {
-            pos    = {-0.151,0.1,0.043},
-            size   = 800,
-            value  = 0,
-            hideBG = false
-        },
-        --Third counter
-        {
-            pos    = {0.736,0.1,0.051},
-            size   = 800,
-            value  = 0,
-            hideBG = true
-        },
-        --End of counters
+ 
+        --End of regions
     },
-    --Add editable text boxes
-    textbox = {
-        --[[
-        pos       = the position (pasted from the helper tool)
-        rows      = how many lines of text you want for this box
-        width     = how wide the text box is
-        font_size = size of text. This and "rows" effect overall height
-        label     = what is shown when there is no text. "" = nothing
-        value     = text entered into box. "" = nothing
-        alignment = Number to indicate how you want text aligned
-                    (1=Automatic, 2=Left, 3=Center, 4=Right, 5=Justified)
-
-        --First textbox
-        {
-            pos       = {-0.539,0.1,-1.42}, --name
-            rows      = 1,
-            width     = 4000,
-            font_size = 300,
-            label     = "",
-            value     = "",
-            color={1,1,1,0.25},
-            font_color={0,0,0,255},
-            alignment = 2
-        },
-        {
-            pos       = {0.641,0.1,-1.42}, --faction
-            rows      = 1,
-            width     = 3200,
-            font_size = 300,
-            label     = "",
-            value     = "",
-            color={1,1,1,0.25},
-            font_color={0,0,0,255},
-            alignment = 2
-        },
-        {
-            pos       = {-0.758,0.1,1.525}, --traits
-            rows      = 5,
-            width     = 4200,
-            font_size = 300,
-            label     = "",
-            value     = "",
-            color={1,1,1,0.25},
-            font_color={0,0,0,255},
-            alignment = 2
-        },
-        {
-            pos       = {0.209,0.1,1.525}, --mods
-            rows      = 5,
-            width     = 4200,
-            font_size = 300,
-            label     = "",
-            value     = "",
-            color={1,1,1,0.25},
-            font_color={0,0,0,255},
-            alignment = 2
-        },
-        {
-            pos       = {0.966,0.1,1.525}, --current xp
-            rows      = 5,
-            width     = 2000,
-            font_size = 300,
-            label     = "",
-            value     = "",
-            color={1,1,1,0.25},
-            font_color={0,0,0,255},
-            alignment = 2
-        },
-        --End of textboxes
-    }--]]
 }
 
 
@@ -595,128 +170,12 @@ function onload(saved_data)
     createBuildings()
 end
 
+--Building creation
 
-
---Click functions for buttons
-
-
---[[
---Checks or unchecks the given box
-function click_checkbox(tableIndex, buttonIndex)
-    if ref_buttonData.checkbox[tableIndex].state == true then
-        ref_buttonData.checkbox[tableIndex].state = false
-        self.editButton({index=buttonIndex, label=""})
-        if buttonIndex >= 0 and buttonIndex <= 19 then
-          ref_buttonData.checkbox[buttonIndex+1].state = true
-          self.editButton({index=buttonIndex, label="●"})
-          select_clear(buttonIndex,0,19,1) -- set xp clearing special
-        end
-        if buttonIndex >= 39 and buttonIndex <= 43 then
-          ref_buttonData.checkbox[buttonIndex+1].state = true
-          self.editButton({index=buttonIndex, label="●"})
-          select_clear(buttonIndex,39,43,1) -- set shield clearing special
-        end
-        if buttonIndex >= 44 and buttonIndex <= 56 then
-          ref_buttonData.checkbox[buttonIndex+1].state = true
-          self.editButton({index=buttonIndex, label="●"})
-          select_clear(buttonIndex,44,56,1) -- set integrity clearing special
-        end
-        if buttonIndex >= 57 and buttonIndex <= 68 then
-          ref_buttonData.checkbox[buttonIndex+1].state = true
-          self.editButton({index=buttonIndex, label="●"})
-          select_clear(buttonIndex,57,68,1) -- set health clearing special
-        end
-        if buttonIndex >= 69 and buttonIndex <= 80 then
-          ref_buttonData.checkbox[buttonIndex+1].state = true
-          self.editButton({index=buttonIndex, label="●"})
-          select_clear(buttonIndex,69,80,1) -- set health clearing special
-        end
-    else
-        ref_buttonData.checkbox[tableIndex].state = true
-        self.editButton({index=buttonIndex, label="●"}) --script x = 10008
-        if buttonIndex >=0 and buttonIndex<=19 then  -- xp
-          select_clear(buttonIndex,0,19,1)
-        end
-        if buttonIndex >= 26 and buttonIndex<= 30 then -- weap select
-          select_clear(buttonIndex,26,30,0)
-        end
-        if buttonIndex >= 36 and buttonIndex<= 38 then  -- morale
-          select_clear(buttonIndex,36,38,0)
-        end
-        if buttonIndex >= 39 and buttonIndex<= 43 then  -- shield
-          select_clear(buttonIndex,39,43,1)
-        end
-        if buttonIndex >= 44 and buttonIndex<= 56 then  -- integrity
-          select_clear(buttonIndex,44,56,1)
-        end
-        if buttonIndex >= 57 and buttonIndex<= 68 then  -- health
-          select_clear(buttonIndex,57,68,1)
-        end
-        if buttonIndex >= 69 and buttonIndex<= 80 then  -- mind
-          select_clear(buttonIndex,69,80,1)
-        end
-
-    end
-    updateSave()
-end
-
---Applies value to given counter display
-function click_counter(tableIndex, buttonIndex, amount)
-    ref_buttonData.counter[tableIndex].value = ref_buttonData.counter[tableIndex].value + amount
-    self.editButton({index=buttonIndex, label=ref_buttonData.counter[tableIndex].value})
-    updateSave()
-end
-
--- clears other weapon select boxes
-function select_clear(buttonIndex, minIndex, maxIndex, minFill)
-  if minFill == 1 then
-    minState = true
-    minLabel = "●"
-  else
-    minState = false
-    minLabel = ""
-  end
-  maxState = false
-  maxLabel = ""
-  if buttonIndex > minIndex then
-    for minI = minIndex, buttonIndex-1 do
-      ref_buttonData.checkbox[minI+1].state = minState
-      self.editButton({index=minI, label=minLabel})
---      print "minclear"
-    end
-  end
-  if buttonIndex < maxIndex then
-    for maxI = buttonIndex+1, maxIndex do
-      ref_buttonData.checkbox[maxI+1].state = maxState
-      self.editButton({index=maxI, label=maxLabel})
---      print "maxclear"
-    end
-  end
-end
-
---Updates saved value for given text box
-function click_textbox(i, value, selected)
-    if selected == false then
-        ref_buttonData.textbox[i].value = value
-        updateSave()
-    end
-end
-
---Dud function for if you have a background on a counter
-function click_none() end
---]]
-
-
---Button creation
-
---Makes checkboxes
+--Makes buildings
 function createBuildings()
     for i, data in ipairs(ref_regionData.regions) do
         --Sets up reference function
-        local BuildingNumber = spawnedButtonCount
-        local funcName = "checkbox"..i
-        local func = function() click_checkbox(i, buttonNumber) end
-        self.setVar(funcName, func)
         --Sets up label
         --Creates button and counts it
         local scaledSize = data.size
@@ -725,106 +184,15 @@ function createBuildings()
         scaledPos:scale(scalerVec)
 --        scaledPos[2] = 0.2
         scaledSize = scaledSize*CSS
-        --Creates button and counts it
+        --Creates building and counts it
         self.createObject({
             type='BlockRectangle',
-            position=scaledPos, --[[height=scaledSize, width=scaledSize,
-            font_size = scaledSize,--]] scale=buttonScale,
-            color=buttonColor, --[[font_color=buttonFontColor--]]
+            position=scaledPos,  scale=BuildingScale,
+            color=buttonColor,]]
         })
         spawnedBuildingCount = spawnedBuildingCount + 1
         print('Made Building #' .. spawnedBuildingCount .. ".")
     end
 end
---[[
---Makes counters
-function createCounter()
-    for i, data in ipairs(ref_buttonData.counter) do
-        --Sets up display
-        local displayNumber = spawnedButtonCount
-        --Sets up label
-        local label = data.value
-        --Sets height/width for display
-        local size = data.size
-        if data.hideBG == true then size = 0 end
-        --Creates button and counts it
-        self.createButton({
-            label=label, click_function="click_none", function_owner=self,
-            position=data.pos, height=size, width=size,
-            font_size=data.size, scale=buttonScale,
-            color=buttonColor, font_color=buttonFontColor
-        })
-        spawnedButtonCount = spawnedButtonCount + 1
 
-        --Sets up add 1
-        local funcName = "counterAdd"..i
-        local func = function() click_counter(i, displayNumber, 1) end
-        self.setVar(funcName, func)
-        --Sets up label
-        local label = "+"
-        --Sets up position
-        local offsetDistance = (data.size/2 + data.size/4) * (buttonScale[1] * 0.002)
-        local pos = {data.pos[1] + offsetDistance, data.pos[2], data.pos[3]}
-        --Sets up size
-        local size = data.size / 2
-        --Creates button and counts it
-        self.createButton({
-            label=label, click_function=funcName, function_owner=self,
-            position=pos, height=size, width=size,
-            font_size=size, scale=buttonScale,
-            color=buttonColor, font_color=buttonFontColor
-        })
-        spawnedButtonCount = spawnedButtonCount + 1
-
-        --Sets up subtract 1
-        local funcName = "counterSub"..i
-        local func = function() click_counter(i, displayNumber, -1) end
-        self.setVar(funcName, func)
-        --Sets up label
-        local label = "-"
-        --Set up position
-        local pos = {data.pos[1] - offsetDistance, data.pos[2], data.pos[3]}
-        --Creates button and counts it
-        self.createButton({
-            label=label, click_function=funcName, function_owner=self,
-            position=pos, height=size, width=size,
-            font_size=size, scale=buttonScale,
-            color=buttonColor, font_color=buttonFontColor
-        })
-        spawnedButtonCount = spawnedButtonCount + 1
-    end
-end
-
-function createTextbox()
-    for i, data in ipairs(ref_buttonData.textbox) do
-        --Sets up reference function
-        local funcName = "textbox"..i
-        local func = function(_,_,val,sel) click_textbox(i,val,sel) end
-        self.setVar(funcName, func)
-        local CSS = CCS -- local vector scaler
-        local scaledWidth = data.width
-        local scaledPos = Vector(data.pos)
-        local scalerVec = Vector(CSS,1,CSS)
-        local scaledFont_size = data.font_size
-        scaledPos:scale(scalerVec)
---        scaledPos[2] = 0.2
-        scaledWidth = scaledWidth*CSS
-        scaledFont_size = scaledFont_size*CSS
-        self.createInput({
-            input_function = funcName,
-            function_owner = self,
-            label          = data.label,
-            alignment      = data.alignment,
-            position       = scaledPos,
-            scale          = buttonScale,
-            width          = scaledWidth,
-            height         = (scaledFont_size*data.rows)+24,
-            font_size      = scaledFont_size,
-            color          = textboxColor,
-            font_color     = textboxFontColor,
-            value          = data.value,
-        })
-    end
-end
---]]
 
