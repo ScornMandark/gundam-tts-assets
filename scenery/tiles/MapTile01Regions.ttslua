@@ -33,7 +33,7 @@ Bonus) Finding/Editing Positions for elements
 Begin editing below:    ]]
 
 --Set this to true while editing and false when you have finished
-disableSave = false
+disableSave = true
 --Remember to set this to false once you are done making changes
 --Then, after you save & apply it, save your game too
 
