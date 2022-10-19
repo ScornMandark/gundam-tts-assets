@@ -194,9 +194,9 @@ function createBuildings()
        scaledPos = scaledPos + tileOffset
 --        scaledPos[2] = 0.2
       local scaleShifter = 1
-      scaleShifterX = 3*buildingScale*math.random()
-      scaleShifterY = 6*buildingScale*math.random()
-      scaleShifterZ = 2*buildingScale*math.random()
+      scaleShifterX = 3*buildingScale*(math.random() + 0.25)  -- randomize building size with a minimum size
+      scaleShifterY = 6*buildingScale*(math.random() + 0.25)
+      scaleShifterZ = 2*buildingScale*(math.random() + 0.25)
        scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
        local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
        scaledPos:scale(baseAdjustY)
