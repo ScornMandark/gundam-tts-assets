@@ -209,6 +209,7 @@ function createBuildings()
        })
 --       print('Building '.. spawnedBuildingCount .. ' is ' .. building.getBounds().size.x .. "x" .. building.getbounds().size.y .. "x" .. building.getBounds().size.z .. ' inches.')
        building.setLock(true)
+       building.setColorTint(buildingTint)
        spawnedBuildingCount = spawnedBuildingCount + 1
    end
 end
