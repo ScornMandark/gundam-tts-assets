@@ -47,7 +47,8 @@ buildingScale = {0.1,0.1,0.1}
 textboxColor = {1,1,1,.5}
 textboxFontColor = {0,0,0,255}
 
-CCS = 1.195  -- scaler to adjust for character sheet creator to normalized token positions
+incher = 12  -- scaler to adjust for relative position on board to game world inches
+buildingScale = 1 -- adjust model scale
 --This is the button placement information
 defaultRegionData = {
    --Add checkboxes
@@ -59,58 +60,58 @@ defaultRegionData = {
        ]]
        --First checkbox
        { -- #1 XP1-20
-           pos   = {-.96,0.1,-1.303},
+           pos   = {0,0.1,0},
            size  = 350,
        },
        { -- #2
-           pos   = {-.8497,0.1,-1.303},
+           pos   = {1,0.1,1},
            size  = 350,
        },
        { -- #3
-           pos   = {-.7394,0.1,-1.303},
+           pos   = {1,0.1,-1},
            size  = 350,
        },
        { -- #4
-           pos   = {-.6291,0.1,-1.303},
+           pos   = {-1,0.1,-1},
            size  = 350,
        },
        { -- #5
-           pos   = {-.5188,0.1,-1.303},
+           pos   = {-1,0.1,1},
            size  = 350,
        },
        { -- #6
-           pos   = {-.4085,0.1,-1.303},
+           pos   = {-1,0.1,0},
            size  = 350,
        },
        { -- #7
-           pos   = {-.2982,0.1,-1.303},
+           pos   = {1,0.1,0},
            size  = 350,
        },
        { -- #8
-           pos   = {-.1879,0.1,-1.303},
+           pos   = {0,0.1,-1},
            size  = 350,
        },
        { -- #9
-           pos   = {-.0776,0.1,-1.303},
+           pos   = {0,0.1,1},
            size  = 350,
        },
        { -- #10
-           pos   = {.0327,0.1,-1.303},
+           pos   = {0,0.1,-.5},
            size  = 350,
         },
        { -- #11
-           pos   = {.143,0.1,-1.303},
+           pos   = {0,0.1,.5},
            size  = 350,
        },
        { -- #12
-           pos   = {.2533,0.1,-1.303},
+           pos   = {.5,0.1,0},
            size  = 350,
        },
        { -- #13
-           pos   = {.3636,0.1,-1.303},
+           pos   = {-.5,0.1,0},
            size  = 350,
        },
-       { -- #14
+--[[       { -- #14
            pos   = {.4739,0.1,-1.303},
            size  = 350,
        },
@@ -137,7 +138,7 @@ defaultRegionData = {
        { -- #20
            pos   = {1.1357,0.1,-1.303},
            size  = 350,
-       },
+       }, --]]
 
        --End of regions
    },
@@ -181,17 +182,32 @@ function createBuildings()
        --Creates button and counts it
        local scaledSize = data.size
        local scaledPos = Vector(data.pos)
-       local scalerVec = Vector(CCS,1,CCS)
+       local scalerVec = Vector(incher,10.5,incher)
        scaledPos:scale(scalerVec)
+       local tileOffset = self.getPosition()
+       local tileRotation = self.getRotation()
+       if tileRotation == vector(0,90,0) then
+--         scaledPos.setRotationSmooth(vector(0,90,0), false, true)
+
+--         scaledPos.setRotation({0,90,0})
+       end
+       scaledPos = scaledPos + tileOffset
 --        scaledPos[2] = 0.2
-       scaledSize = scaledSize*CCS
+      local scaleShifter = 1
+      scaleShifterX = 3*buildingScale*math.random()
+      scaleShifterY = 6*buildingScale*math.random()
+      scaleShifterZ = 2*buildingScale*math.random()
+       scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
+       local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
+       scaledPos:scale(baseAdjustY)
        --Creates building and counts it
-       self.createObject({
+       local building = spawnObject({
            type='BlockRectangle',
-           position=scaledPos,  scale=BuildingScale,
-           color=buttonColor,
+           position=scaledPos,  scale=scaledSize,
+           color=buttonColor, rotation = {x=90, y=0, z=0},
        })
+--       print('Building '.. spawnedBuildingCount .. ' is ' .. building.getBounds().size.x .. "x" .. building.getbounds().size.y .. "x" .. building.getBounds().size.z .. ' inches.')
+       building.setLock(true)
        spawnedBuildingCount = spawnedBuildingCount + 1
-       print('Made Building #' .. spawnedBuildingCount .. ".")
    end
 end
