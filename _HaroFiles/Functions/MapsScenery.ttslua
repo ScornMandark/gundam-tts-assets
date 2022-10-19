@@ -6,14 +6,7 @@ function createMaps()
   self.createButton({click_function = 'matMaps', function_owner = self, label = 'Background Maps', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
   self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
-function tileMaps()
-  self.clearButtons()
-  self.createButton({click_function = 'twoUrbanMapTiles', function_owner = self, label = '4x4 Urban Tiles Vertical', position = {4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
-  self.createButton({click_function = 'threeUrbanMapTiles', function_owner = self, label = '6x4 Urban Tiles Vertical', position = {-4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
-  self.createButton({click_function = 'twoUrbanMapTilesRot', function_owner = self, label = '4x4 Urban Tiles Horizontal', position = {4.5, 5, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
-  self.createButton({click_function = 'threeUrbanMapTilesRot', function_owner = self, label = '6x4 Urban Tiles Horizontal mix', position = {-4.5, 5, 0},  rotation = {-60, 0, 0}, width=3600, height=400, font_size=250})
-  self.createButton({click_function = 'createMaps', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-end
+
 function matMaps()
   self.clearButtons()
   self.createButton({click_function = 'fourByFour', function_owner = self, label = '48 x 48', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
@@ -23,26 +16,6 @@ function matMaps()
   self.createButton({click_function = 'createMaps', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
-function twoUrbanMapTiles()
-  mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
-  mapZ = 17.97
-  makeATiledTable(1,0)
-end
-function threeUrbanMapTiles()
-  mapX = 17.97
-  mapZ = 17.97
-  makeATiledTable(2,0)
-end
-function twoUrbanMapTilesRot()
-  mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
-  mapZ = 17.97
-  makeATiledTable(1,1)
-end
-function threeUrbanMapTilesRot()
-  mapX = 17.97
-  mapZ = 17.97
-  makeATiledTable(2,1)
-end
 function threeByTwo()
   mapSize = 'ThreeByTwo'
   mapX = 36
@@ -141,14 +114,30 @@ function makeATable()
   Wait.frames(mapLocker, 240)
   initializeHaro()
 end
-
-function makeATiledTable(tileNum,rotNum)
+function tileMaps()
+  self.clearButtons()
+  self.createButton({click_function = 'twoUrbanMapTiles', function_owner = self, label = '4x4 Urban Tiles', position = {4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
+  self.createButton({click_function = 'threeUrbanMapTiles', function_owner = self, label = '6x4 Urban Tiles', position = {-4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
+  self.createButton({click_function = 'createMaps', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function twoUrbanMapTiles()
+  mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
+  mapZ = 17.97
+  makeATiledTable(1)
+end
+function threeUrbanMapTiles()
+  mapX = 17.97
+  mapZ = 17.97
+  makeATiledTable(2)
+end
+function makeATiledTable(tileNum)
   self.clearButtons()
   Tables.setTable("Custom Rectangle")
   Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
   local seed = os.time()
   math.randomseed(seed)
   local tileShift = math.random(0,1)
+  local rotNum = math.random(0,1)
   if rotNum then
     TableParamsOne = {
       type = 'Custom_Token',
@@ -232,6 +221,7 @@ function makeATiledTable(tileNum,rotNum)
       tableMapOne.locked = true
     end
     Wait.frames(mapLockerOne, 120)
+    generateBuildings(tableMapOne, mapRandOne)
   end
 
   if tileCounter <= tileNum and tileCounter == 1 then
@@ -254,7 +244,20 @@ function makeATiledTable(tileNum,rotNum)
     Wait.frames(mapLockerThree, 120)
   end
 
-  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
+--  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
+end
+
+function generateBuildings(tableMap, mapNum)
+      local buildingRegions = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapTile0' .. mapNum .. 'Regions.ttslua?raw=true'
+      local function populate(tableMap)
+        tableMap.setLuaScript(buildingRegions)
+        tableMap.reload()
+      end
+      Wait.frames(populate(tableMap), 120)
+  end
+
+  initializeHaro()
+
 end
 
 function createScenery()
