@@ -137,8 +137,8 @@ function makeATiledTable(tileNum)
   local seed = os.time()
   math.randomseed(seed)
   local tileShift = math.random(0,1)
-  local rotNum = math.random(0,1)
-  if rotNum then
+  local rotNum = math.random(1,10)
+  if rotNum >= 6 then
     TableParamsOne = {
       type = 'Custom_Token',
       position = {(tileNum-1)*(-12.01+tileShift*24.02),1,-12.01},
