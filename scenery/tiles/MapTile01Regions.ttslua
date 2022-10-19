@@ -1,4 +1,4 @@
- --[[ Primary Upper area (162 x 198 scale feet) 
+--[[ Primary Upper area (162 x 198 scale feet)
 image is 2048 x 4096
 center is 1024,2048
 
@@ -9,26 +9,26 @@ chara checker -> 0.75, -0.25
 
 13.5" x 16.5", +/- 6.75", 2.25" - 18.75"
 --]]
-  --[[   based on Character Sheet Template    by: MrStump
+ --[[   based on Character Sheet Template    by: MrStump
 
 Step 3) Save and check script changes
-    -Hit Save & Apply in the script window to save your code
-    -You can edit your code as needed and Save+Apply as often as needed
-    -When you are finished, make disableSave = false below then Save+apply
-        -This enables saving, so your sheet will remember whats on it.
+   -Hit Save & Apply in the script window to save your code
+   -You can edit your code as needed and Save+Apply as often as needed
+   -When you are finished, make disableSave = false below then Save+apply
+       -This enables saving, so your sheet will remember whats on it.
 
 Bonus) Finding/Editing Positions for elements
-    I have included a tool to get positions for buttons in {x,y,z} form
-    Place it where you want the center of your element to be
-    Then copy the table from the notes (lower right of screen)
-        You can highlight it and CTRL+C
-    Paste it into the data table where needed (pos=)
-    If you want to manually tweek the values:
-        {0,0,0} is the center of the character sheet
-        {1,0,0} is right, {-1,0,0} is left
-        {0,0,-1} is up, {0,0,1} is down
-        0.1 for Y is the height off of the page.
-            If it was 0, it would be down inside the model of the sheet
+   I have included a tool to get positions for buttons in {x,y,z} form
+   Place it where you want the center of your element to be
+   Then copy the table from the notes (lower right of screen)
+       You can highlight it and CTRL+C
+   Paste it into the data table where needed (pos=)
+   If you want to manually tweek the values:
+       {0,0,0} is the center of the character sheet
+       {1,0,0} is right, {-1,0,0} is left
+       {0,0,-1} is up, {0,0,1} is down
+       0.1 for Y is the height off of the page.
+           If it was 0, it would be down inside the model of the sheet
 
 Begin editing below:    ]]
 
@@ -47,100 +47,101 @@ buildingScale = {0.1,0.1,0.1}
 textboxColor = {1,1,1,.5}
 textboxFontColor = {0,0,0,255}
 
-CCS = 1.195  -- scaler to adjust for character sheet creator to normalized token positions
+incher = 12  -- scaler to adjust for relative position on board to game world inches
+buildingScale = 1 -- adjust model scale
 --This is the button placement information
 defaultRegionData = {
-    --Add checkboxes
-    regions = {
-        --[[
-        pos   = the position (pasted from the helper tool)
-        size  = height/width/font_size for checkbox
-        state = default starting value for checkbox (true=checked, false=not)
-        ]]
-        --First checkbox
-        { -- #1 XP1-20
-            pos   = {-.96,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #2
-            pos   = {-.8497,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #3
-            pos   = {-.7394,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #4
-            pos   = {-.6291,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #5
-            pos   = {-.5188,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #6
-            pos   = {-.4085,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #7
-            pos   = {-.2982,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #8
-            pos   = {-.1879,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #9
-            pos   = {-.0776,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #10
-            pos   = {.0327,0.1,-1.303},
-            size  = 350,
-         },
-        { -- #11
-            pos   = {.143,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #12
-            pos   = {.2533,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #13
-            pos   = {.3636,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #14
-            pos   = {.4739,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #15
-            pos   = {.5842,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #16
-            pos   = {.6945,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #17
-            pos   = {.8048,0.1,-1.303},
-            size  = 350,
+   --Add checkboxes
+   regions = {
+       --[[
+       pos   = the position (pasted from the helper tool)
+       size  = height/width/font_size for checkbox
+       state = default starting value for checkbox (true=checked, false=not)
+       ]]
+       --First checkbox
+       { -- #1 XP1-20
+           pos   = {0,0.1,0},
+           size  = 350,
        },
-        { -- #18
-            pos   = {.9151,0.1,-1.303},
-            size  = 350,
+       { -- #2
+           pos   = {1,0.1,1},
+           size  = 350,
+       },
+       { -- #3
+           pos   = {1,0.1,-1},
+           size  = 350,
+       },
+       { -- #4
+           pos   = {-1,0.1,-1},
+           size  = 350,
+       },
+       { -- #5
+           pos   = {-1,0.1,1},
+           size  = 350,
+       },
+       { -- #6
+           pos   = {-1,0.1,0},
+           size  = 350,
+       },
+       { -- #7
+           pos   = {1,0.1,0},
+           size  = 350,
+       },
+       { -- #8
+           pos   = {0,0.1,-1},
+           size  = 350,
+       },
+       { -- #9
+           pos   = {0,0.1,1},
+           size  = 350,
+       },
+       { -- #10
+           pos   = {0,0.1,-.5},
+           size  = 350,
         },
-        { -- #19
-            pos   = {1.0254,0.1,-1.303},
-            size  = 350,
-        },
-        { -- #20
-            pos   = {1.1357,0.1,-1.303},
-            size  = 350,
-        },
- 
-        --End of regions
-    },
+       { -- #11
+           pos   = {0,0.1,.5},
+           size  = 350,
+       },
+       { -- #12
+           pos   = {.5,0.1,0},
+           size  = 350,
+       },
+       { -- #13
+           pos   = {-.5,0.1,0},
+           size  = 350,
+       },
+--[[       { -- #14
+           pos   = {.4739,0.1,-1.303},
+           size  = 350,
+       },
+       { -- #15
+           pos   = {.5842,0.1,-1.303},
+           size  = 350,
+       },
+       { -- #16
+           pos   = {.6945,0.1,-1.303},
+           size  = 350,
+       },
+       { -- #17
+           pos   = {.8048,0.1,-1.303},
+           size  = 350,
+      },
+       { -- #18
+           pos   = {.9151,0.1,-1.303},
+           size  = 350,
+       },
+       { -- #19
+           pos   = {1.0254,0.1,-1.303},
+           size  = 350,
+       },
+       { -- #20
+           pos   = {1.1357,0.1,-1.303},
+           size  = 350,
+       }, --]]
+
+       --End of regions
+   },
 }
 
 
@@ -151,49 +152,62 @@ defaultRegionData = {
 
 --Save function
 function updateSave()
-    saved_data = JSON.encode(ref_regionData)
-    if disableSave==true then saved_data="" end
-    self.script_state = saved_data
+   saved_data = JSON.encode(ref_regionData)
+   if disableSave==true then saved_data="" end
+   self.script_state = saved_data
 end
 
 --Startup procedure
 function onload(saved_data)
-  print('Made it.')
-    if disableSave==true then saved_data="" end
-    if saved_data ~= "" then
-        local loaded_data = JSON.decode(saved_data)
-        ref_regionData = loaded_data
-    else
-        ref_regionData = defaultRegionData
-    end
+ print('Made it.')
+   if disableSave==true then saved_data="" end
+   if saved_data ~= "" then
+       local loaded_data = JSON.decode(saved_data)
+       ref_regionData = loaded_data
+   else
+       ref_regionData = defaultRegionData
+   end
 
-    spawnedBuildingCount = 0
-    createBuildings()
+   spawnedBuildingCount = 0
+   createBuildings()
 end
 
 --Building creation
 
 --Makes buildings
 function createBuildings()
-    for i, data in ipairs(ref_regionData.regions) do
-        --Sets up reference function
-        --Sets up label
-        --Creates button and counts it
-        local scaledSize = data.size
-        local scaledPos = Vector(data.pos)
-        local scalerVec = Vector(CCS,1,CCS)
-        scaledPos:scale(scalerVec)
+   for i, data in ipairs(ref_regionData.regions) do
+       --Sets up reference function
+       --Sets up label
+       --Creates button and counts it
+       local scaledSize = data.size
+       local scaledPos = Vector(data.pos)
+       local scalerVec = Vector(incher,10.5,incher)
+       scaledPos:scale(scalerVec)
+       local tileOffset = self.getPosition()
+       local tileRotation = self.getRotation()
+       if tileRotation == vector(0,90,0) then
+--         scaledPos.setRotationSmooth(vector(0,90,0), false, true)
+
+--         scaledPos.setRotation({0,90,0})
+       end
+       scaledPos = scaledPos + tileOffset
 --        scaledPos[2] = 0.2
-        scaledSize = scaledSize*CCS
-        --Creates building and counts it
-        self.createObject({
-            type='BlockRectangle',
-            position=scaledPos,  scale=BuildingScale,
-            color=buttonColor,
-        })
-        spawnedBuildingCount = spawnedBuildingCount + 1
-        print('Made Building #' .. spawnedBuildingCount .. ".")
-    end
+      local scaleShifter = 1
+      scaleShifterX = 3*buildingScale*math.random()
+      scaleShifterY = 6*buildingScale*math.random()
+      scaleShifterZ = 2*buildingScale*math.random()
+       scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
+       local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
+       scaledPos:scale(baseAdjustY)
+       --Creates building and counts it
+       local building = spawnObject({
+           type='BlockRectangle',
+           position=scaledPos,  scale=scaledSize,
+           color=buttonColor, rotation = {x=90, y=0, z=0},
+       })
+--       print('Building '.. spawnedBuildingCount .. ' is ' .. building.getBounds().size.x .. "x" .. building.getbounds().size.y .. "x" .. building.getBounds().size.z .. ' inches.')
+       building.setLock(true)
+       spawnedBuildingCount = spawnedBuildingCount + 1
+   end
 end
-
-
