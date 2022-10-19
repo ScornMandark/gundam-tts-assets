@@ -274,43 +274,6 @@ function createScenery()
   self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
-function generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
-  local tileCounter = 0
---[[  if tileCounter <= tileNum and tileCounter == 0 then
-    tileCounter = tileCounter +1
-    local buildingsMapOne = spawnObject(TableParamsOne)
-    tableMapOne.setCustomObject(mapTileParamsOne)
-    local function mapLockerOne()
-      tableMapOne.locked = true
-    end
-    Wait.frames(mapLockerOne, 120)
-  end
---[[
-  if tileCounter <= tileNum and tileCounter == 1 then
-    tileCounter = tileCounter +1
-    local tableMapTwo = spawnObject(TableParamsTwo)
-    tableMapTwo.setCustomObject(mapTileParamsTwo)
-    local function mapLockerTwo()
-      tableMapTwo.locked = true
-    end
-    Wait.frames(mapLockerTwo, 120)
-  end
-
-  if tileCounter <= tileNum and tileCounter == 2 then
-    tileCounter = tileCounter +1
-    local tableMapThree = spawnObject(TableParamsThree)
-    tableMapThree.setCustomObject(mapTileParamsThree)
-    local function mapLockerThree()
-      tableMapThree.locked = true
-    end
-    Wait.frames(mapLockerThree, 120)
-  end
---]]
-  
-  initializeHaro()
-
-end
-
 function makeATree()
   MSPosAdjustment(MSPosOffset)
   forestParams = {
