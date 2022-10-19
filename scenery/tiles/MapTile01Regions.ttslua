@@ -158,6 +158,7 @@ end
 
 --Startup procedure
 function onload(saved_data)
+  print('Made it.')
     if disableSave==true then saved_data="" end
     if saved_data ~= "" then
         local loaded_data = JSON.decode(saved_data)
