@@ -231,12 +231,7 @@ scaledPos:scale(baseAdjustY)
         -- Apply the color to object
        building.setColorTint(color)
        spawnedBuildingCount = spawnedBuildingCount + 1
-       building.jointTo(self, {
-    ["type"]        = "Fixed",
-    ["collision"]   = true,
-    ["break_force"]  = 1000.0,
-    ["break_torgue"] = 1000.0,
-})
+       self.addAttachment(building)
    end
 end
 
