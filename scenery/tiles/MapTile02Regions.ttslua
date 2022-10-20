@@ -187,8 +187,8 @@ local scaledPosZ = data.pos[3]
 local tileOffset = self.getPosition()
 local tileRotation = self.getRotation()
 local scaleShifter = 1
-scaleShifterX = buildingScale*(3.333 + 0.8*math.random())  -- randomize building size with a minimum size
-scaleShifterY = buildingScale*(4+4*math.random(0,3))
+scaleShifterX = buildingScale*(2 + 0.8*math.random())  -- randomize building size with a minimum size
+scaleShifterY = buildingScale*(2+math.random(0,3))
 scaleShifterZ = buildingScale*(math.random(2,12))
  scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
  print(scaledSize)
