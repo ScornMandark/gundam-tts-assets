@@ -201,7 +201,7 @@ scaleShifterX = buildingScale*(3.333 + 0.8*math.random())  -- randomize building
 scaleShifterY = buildingScale*(4+4*math.random(0,3))
 scaleShifterZ = buildingScale*(math.random(2,12))
  scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
- print(scaledSize)
+-- print(scaledSize)
 local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
 if tileRotation == vector(0,90,0) then
 --         scaledPos.setRotationSmooth(vector(0,90,0), false, true)
@@ -209,7 +209,7 @@ scaledPos[1] = scaledPosZ
 scaledPos[3] = scaledPosX
 scaledSize = vector(scaleShifterY, scaleShifterX, scaleShifterZ)--scaledPos[1] =
 --         scaledPos.setRotation({0,90,0})
-print(scaledSize)
+--print(scaledSize)
 end
 
 scaledPos:scale(vector(incher,10.5,incher))
