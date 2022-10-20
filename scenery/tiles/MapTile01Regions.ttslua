@@ -2,35 +2,40 @@
 image is 2048 x 4096
 center is 1024,2048
 
-px UL 449,449 -> -575,-1599 ->-0.2876, -0.7808 -> -9",25"
-chara checker -> -0.75, -2.075
-px LR 1600,1856 -> 575,-192 -> 0.2876, 0.09375 -> 9",3"
-chara checker -> 0.75, -0.25
+px UL 448,448 -> -.5625,-.78125
+px LR 1600,1856 -> .5625,-0.9375
+
+
+lower region similar
+UL 448	2240	 -> -0.5625,0.09375
+LL 1600	3648 ->0.5625,0.78125
+
 
 13.5" x 16.5", +/- 6.75", 2.25" - 18.75"
 --]]
- --[[   based on Character Sheet Template    by: MrStump
 
-Step 3) Save and check script changes
-   -Hit Save & Apply in the script window to save your code
-   -You can edit your code as needed and Save+Apply as often as needed
-   -When you are finished, make disableSave = false below then Save+apply
-       -This enables saving, so your sheet will remember whats on it.
+--[[
+Map 1 has two big open regions in the middle, top and bottom.  3 ways to fill it -
+1: All individual buildings.  3 across and 4 down, ranging in size from ~30 feet to ~50 feet, 2-12 stories.
+    The bigger ones will be right against the edge of the zone, so need to account for that.  12 points available, no merging
+2: Bigger block chunks.  Maybe 4 quadrants, ~40' x 50'.  Bigger buildings here, 6-20 stories. Intentional merging?
+3: Massive complex with small buildings around.  Could take up 120 x 170, with 20' buildings around.  Should be proper massive, minimum 20 stories, up to 100
 
-Bonus) Finding/Editing Positions for elements
-   I have included a tool to get positions for buttons in {x,y,z} form
-   Place it where you want the center of your element to be
-   Then copy the table from the notes (lower right of screen)
-       You can highlight it and CTRL+C
-   Paste it into the data table where needed (pos=)
-   If you want to manually tweek the values:
-       {0,0,0} is the center of the character sheet
-       {1,0,0} is right, {-1,0,0} is left
-       {0,0,-1} is up, {0,0,1} is down
-       0.1 for Y is the height off of the page.
-           If it was 0, it would be down inside the model of the sheet
+1: X centers for 3x4 region: -.375, 0, 0.375
+  Y Centers for 3x4 Region (top): -0.6953125, -0.5234375, -0.3515625, -0.1796875
+  (Bottom X is same as top, bottom Y is inv top)
 
-Begin editing below:    ]]
+2: x centers for 2x2 region: -0.1875, 0.1875
+  y centers for 2x2 region: -0.552083333, -0.322916667
+  (bottom x same as top, bottom y is inv top)
+
+3: X center for 1x1 region: 0
+  y center for 1x1 region: -0.4375
+  (bottom x same as top, bottom y is inv top)
+
+Access roads/alleys should be available, so maybe some kind of reference chart?
+
+--]]
 
 --Set this to true while editing and false when you have finished
 disableSave = false
@@ -50,7 +55,7 @@ textboxFontColor = {0,0,0,255}
 incher = 12  -- scaler to adjust for relative position on board to game world inches
 buildingScale = 1 -- adjust model scale
 --This is the button placement information
-defaultRegionData = {
+local defaultRegionData = {
    --Add checkboxes
    regions = {
        --[[
@@ -169,6 +174,11 @@ function onload(saved_data)
    end
 
    spawnedBuildingCount = 0
+   local blocktype = {
+     [1] = ref_regionData.smallBlock,
+     [2] = ref_regionData.medBlock,
+     [3] = ref_regionData.largeBlock
+   }
    createBuildings()
 end
 
@@ -221,6 +231,12 @@ scaledPos:scale(baseAdjustY)
         -- Apply the color to object
        building.setColorTint(color)
        spawnedBuildingCount = spawnedBuildingCount + 1
+       building.jointTo(self, {
+    ["type"]        = "Fixed",
+    ["collision"]   = true,
+    ["break_force"]  = 1000.0,
+    ["break_torgue"] = 1000.0,
+})
    end
 end
 
