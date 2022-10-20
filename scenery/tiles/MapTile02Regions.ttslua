@@ -221,6 +221,7 @@ scaledPos:scale(baseAdjustY)
         -- Apply the color to object
        building.setColorTint(color)
        spawnedBuildingCount = spawnedBuildingCount + 1
+       self.addAttachment(building)
    end
 end
 
