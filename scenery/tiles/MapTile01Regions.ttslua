@@ -190,23 +190,23 @@ function createBuildings()
        --Sets up reference function
        --Sets up label
        --Creates button and counts it
-local scaledSize = data.size
+--local scaledSize = data.size
 local scaledPos = Vector(data.pos)
 local scaledPosX = data.pos[1]
-local scaledPosZ = data.pos[3]
+local scaledPosY = data.pos[2]
 local tileOffset = self.getPosition()
 local tileRotation = self.getRotation()
 local scaleShifter = 1
-scaleShifterX = buildingScale*(3.333 + 0.8*math.random())  -- randomize building size with a minimum size
-scaleShifterY = buildingScale*(4+4*math.random(0,3))
-scaleShifterZ = buildingScale*(math.random(2,12))
+scaleShifterX = buildingScale--*(3.333 + 0.8*math.random())  -- randomize building size with a minimum size
+scaleShifterY = buildingScale--*(4+4*math.random(0,3))
+scaleShifterZ = buildingScale--*(math.random(2,12))
  scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
 -- print(scaledSize)
 local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
 if tileRotation == vector(0,90,0) then
 --         scaledPos.setRotationSmooth(vector(0,90,0), false, true)
-scaledPos[1] = scaledPosZ
-scaledPos[3] = scaledPosX
+scaledPos[1] = scaledPosY
+scaledPos[2] = scaledPosX
 scaledSize = vector(scaleShifterY, scaleShifterX, scaleShifterZ)--scaledPos[1] =
 --         scaledPos.setRotation({0,90,0})
 --print(scaledSize)
@@ -217,18 +217,32 @@ scaledPos = scaledPos + tileOffset
 --        scaledPos[2] = 0.2
 
 scaledPos:scale(baseAdjustY)
-
-       --Creates building and counts it
-       local building = spawnObject({
-           type='BlockRectangle',
-           position=scaledPos,  scale=scaledSize,
+       local buildingParams = {
+           type='Custom_Assetbundle',
+           position=scaledPos,
+           scale=scaledSize,
            rotation = {x=90, y=0, z=0},
-       })
+           sound = false,
+            snapToGrid = false,
+       }
+       local buildingArtParams = {
+           assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/kenney_comm.unity3d?raw=true',
+           assetbundle_secondary = nil,
+           type = 1, --[[ figurine --]]
+           material = 2, --[[ metal --]]
+       }
 --       print('Building '.. spawnedBuildingCount .. ' is ' .. building.getBounds().size.x .. "x" .. building.getbounds().size.y .. "x" .. building.getBounds().size.z .. ' inches.')
-     building.setLock(true)
-          local color = getRandomColor()
+      local building = spawnObject(buildingParams)
+      building.setCustomObject(buildingArtParams)
+      local buildRand = math.random(0,18)
+      building.AssetBundle.playLoopingEffect(buildRand)
+      local function buildingLocker()
+        building.setLock(true)
+      end
+--      Wait.frames(buildingLocker,60)
+      local color = getRandomColor()
 
-        -- Apply the color to object
+          -- Apply the color to object
        building.setColorTint(color)
        spawnedBuildingCount = spawnedBuildingCount + 1
        self.addAttachment(building)
