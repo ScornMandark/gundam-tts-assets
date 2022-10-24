@@ -61,7 +61,7 @@ buildingScale = {0.1,0.1,0.1}
 textboxColor = {1,1,1,.5}
 textboxFontColor = {0,0,0,255}
 
-incher = 12  -- scaler to adjust for relative position on board to game world inches
+incher = 24  -- scaler to adjust for relative position on board to game world inches
 buildingScale = 1 -- adjust model scale
 --This is the button placement information
 local defaultRegionData = {
