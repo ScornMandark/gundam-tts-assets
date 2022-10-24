@@ -216,7 +216,7 @@ scaledPos:scale(baseAdjustY)
             snapToGrid = false,
        }
        local buildingArtParams = {
-           assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/kenney_building_comm.unity3d?raw=true',
+           assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/kenney_buildings_comm.unity3d?raw=true',
            assetbundle_secondary = nil,
            type = 1, --[[ figurine --]]
            material = 2, --[[ metal --]]
