@@ -211,7 +211,7 @@ scaledPos:scale(baseAdjustY)
            type='Custom_Assetbundle',
            position=scaledPos,
            scale=scaledSize,
-           rotation = {x=90, y=0, z=0},
+           rotation = {x=0, y=0, z=0},
            sound = false,
             snapToGrid = false,
        }
@@ -221,7 +221,6 @@ scaledPos:scale(baseAdjustY)
            type = 1, --[[ figurine --]]
            material = 2, --[[ metal --]]
        }
---       print('Building '.. spawnedBuildingCount .. ' is ' .. building.getBounds().size.x .. "x" .. building.getbounds().size.y .. "x" .. building.getBounds().size.z .. ' inches.')
       local building = spawnObject(buildingParams)
       building.setCustomObject(buildingArtParams)
       local buildRand = math.random(0,18)
@@ -229,7 +228,7 @@ scaledPos:scale(baseAdjustY)
       local function buildingLocker()
         building.setLock(true)
       end
---      Wait.frames(buildingLocker,60)
+      Wait.frames(buildingLocker,60)
       local color = getRandomColor()
 
           -- Apply the color to object
