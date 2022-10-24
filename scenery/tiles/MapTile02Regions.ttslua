@@ -1,4 +1,6 @@
---[[ Primary Upper area (162 x 198 scale feet)
+--[[ Map Tile 02 Regions
+
+Primary Upper area (162 x 198 scale feet)
 image is 2048 x 4096
 center is 1024,2048
 
@@ -187,9 +189,9 @@ local scaledPosZ = data.pos[3]
 local tileOffset = self.getPosition()
 local tileRotation = self.getRotation()
 local scaleShifter = 1
-scaleShifterX = buildingScale*(2 + 0.8*math.random())  -- randomize building size with a minimum size
-scaleShifterY = buildingScale*(2+math.random(0,3))
-scaleShifterZ = buildingScale*(math.random(2,12))
+scaleShifterX = buildingScale--*(2 + 0.8*math.random())  -- randomize building size with a minimum size
+scaleShifterY = buildingScale--*(2+math.random(0,3))
+scaleShifterZ = buildingScale--*(math.random(2,12))
  scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
 -- print(scaledSize)
 local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
