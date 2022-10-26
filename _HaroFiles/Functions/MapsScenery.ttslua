@@ -269,8 +269,8 @@ function makeATiledTable(tileNum)
   end
   Wait.frames(destroyDummyBuilding,300)
 --  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
+  Wait.frames(  initializeHaro, 360)
 end
-
 
 function generateBuildings(tableMap, mapNum)
       local mapRegions = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/MapTile0' .. mapNum .. 'Regions.ttslua'
@@ -281,14 +281,21 @@ function generateBuildings(tableMap, mapNum)
           buildingRegions = request.text
         end
         end)
+        local builder = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/builder.ttslua'
+        WebRequest.get(builder, function(request)
+          if request.is_error then
+            log(request.error)
+          else
+            buildingRegions = buildingRegions .. request.text
+          end
+          end)
       local function populate()
         tableMap.setLuaScript(buildingRegions)
         tableMap.reload()
       end
-      Wait.frames(populate, 120)
-  initializeHaro()
-
+      Wait.frames(populate, 60)
 end
+
 
 function createScenery()
   self.clearButtons()
