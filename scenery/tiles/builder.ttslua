@@ -64,10 +64,13 @@ scaledPos = scaledPos + tileOffset
 
       local buildRand = math.random(0,18)
       if blocktype[blockRand] == blocktype[1] then
-      buildRand = ((math.random(1,2) - 1.5) *2) * math.random(3,9)+9
+      buildRand = ((math.random(1,2) - 1.5) *2) * math.random(3,9)+9 -- 0-6, 12-18
       end
       if blocktype[blockRand] == blocktype[2] then
-      buildRand = math.random(0,12)
+      buildRand = math.random(1,12)
+        if buildRand == 6 then
+          buildRand = math.random(1,5) -- don't like the wide ones for here
+        end
       cloneBuilding.setScale({x=2,y=1,z=2})
       end
       if blocktype[blockRand] == blocktype[3] then
