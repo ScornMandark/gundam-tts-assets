@@ -207,64 +207,69 @@ local buildingArtParams = {
 }
 local building = spawnObject(buildingParams)
 building.setCustomObject(buildingArtParams)
-
-for i, data in ipairs(blocktype[blockRand]) do
-       --Sets up reference function
-       --Sets up label
-       --Creates button and counts it
---local scaledSize = data.size
-local scaledPos = Vector(data.pos)
-if region == 2 then
-scaledPos:scale(vector(1,1,-1))
+local timer = 0
+local function setTimer()
+  timer = 1
 end
-local scaledPosX = data.pos[1]
-local scaledPosY = data.pos[2]
-local tileOffset = self.getPosition()
-local tileRotation = self.getRotation()
-local scaleShifter = 1
-scaleShifterX = buildingScale--*(3.333 + 0.8*math.random())  -- randomize building size with a minimum size
-scaleShifterY = buildingScale--*(4+4*math.random(0,3))
-scaleShifterZ = buildingScale--*(math.random(2,12))
- scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
--- print(scaledSize)
-local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
-if tileRotation == vector(0,90,0) then
---         scaledPos.setRotationSmooth(vector(0,90,0), false, true)
-scaledPos[1] = scaledPosY
-scaledPos[2] = scaledPosX
-scaledSize = vector(scaleShifterY, scaleShifterX, scaleShifterZ)--scaledPos[1] =
---         scaledPos.setRotation({0,90,0})
---print(scaledSize)
-end
+Wait.frames(setTimer,5) -- hopefully this gives us a little breathing room
+if timer then
+    for i, data in ipairs(blocktype[blockRand]) do
+           --Sets up reference function
+           --Sets up label
+           --Creates button and counts it
+    --local scaledSize = data.size
+    local scaledPos = Vector(data.pos)
+    if region == 2 then
+    scaledPos:scale(vector(1,1,-1))
+    end
+    local scaledPosX = data.pos[1]
+    local scaledPosY = data.pos[2]
+    local tileOffset = self.getPosition()
+    local tileRotation = self.getRotation()
+    local scaleShifter = 1
+    scaleShifterX = buildingScale--*(3.333 + 0.8*math.random())  -- randomize building size with a minimum size
+    scaleShifterY = buildingScale--*(4+4*math.random(0,3))
+    scaleShifterZ = buildingScale--*(math.random(2,12))
+     scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
+    -- print(scaledSize)
+    local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
+    if tileRotation == vector(0,90,0) then
+    --         scaledPos.setRotationSmooth(vector(0,90,0), false, true)
+    scaledPos[1] = scaledPosY
+    scaledPos[2] = scaledPosX
+    scaledSize = vector(scaleShifterY, scaleShifterX, scaleShifterZ)--scaledPos[1] =
+    --         scaledPos.setRotation({0,90,0})
+    --print(scaledSize)
+    end
 
-scaledPos:scale(vector(incher,0,incher))
-scaledPos = scaledPos + tileOffset
---        scaledPos[2] = 0.2
+    scaledPos:scale(vector(incher,0,incher))
+    scaledPos = scaledPos + tileOffset
+    --        scaledPos[2] = 0.2
 
---scaledPos:scale(baseAdjustY)
+    --scaledPos:scale(baseAdjustY)
 
-      local cloneBuilding = building.clone()
-      cloneBuilding.setPosition(scaledPos)
+          local cloneBuilding = building.clone({position = scaledPos})
+      
+          local buildRand = math.random(0,18)
+          if blocktype[blockRand] == blocktype[1] then
+          buildRand = ((math.random(1,2) - 1.5) *2) * math.random(3,9)+9
+          end
+          if blocktype[blockRand] == blocktype[2] then
+          buildRand = math.random(0,12)
+          end
+          if blocktype[blockRand] == blocktype[3] then
+          buildRand = math.random(7,12)
+          end
 
-      local buildRand = math.random(0,18)
-      if blocktype[blockRand] == blocktype[1] then
-      buildRand = ((math.random(1,2) - 1.5) *2) * math.random(3,9)+9
-      end
-      if blocktype[blockRand] == blocktype[2] then
-      buildRand = math.random(0,12)
-      end
-      if blocktype[blockRand] == blocktype[3] then
-      buildRand = math.random(7,12)
-      end
+          cloneBuilding.AssetBundle.playLoopingEffect(buildRand)
+          local color = getRandomColor()
 
-      cloneBuilding.AssetBundle.playLoopingEffect(buildRand)
-      local color = getRandomColor()
-
-          -- Apply the color to object
-       cloneBuilding.setColorTint(color)
-       spawnedBuildingCount = spawnedBuildingCount + 1
-       self.addAttachment(cloneBuilding)
-   end
+              -- Apply the color to object
+           cloneBuilding.setColorTint(color)
+           spawnedBuildingCount = spawnedBuildingCount + 1
+           self.addAttachment(cloneBuilding)
+       end
+     end
       building.destruct()
 end
 
