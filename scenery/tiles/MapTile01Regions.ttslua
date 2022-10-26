@@ -237,7 +237,7 @@ scaledSize = vector(scaleShifterY, scaleShifterX, scaleShifterZ)--scaledPos[1] =
 --print(scaledSize)
 end
 
-scaledPos:scale(vector(incher,10.5,incher))
+scaledPos:scale(vector(incher,0,incher))
 scaledPos = scaledPos + tileOffset
 --        scaledPos[2] = 0.2
 
