@@ -68,9 +68,11 @@ scaledPos = scaledPos + tileOffset
       end
       if blocktype[blockRand] == blocktype[2] then
       buildRand = math.random(0,12)
+      cloneBuilding.setScale({x=2,y=1,z=2})
       end
       if blocktype[blockRand] == blocktype[3] then
       buildRand = math.random(7,12)
+      cloneBuilding.setScale({x=3,y=2,z=3})
       end
 
       cloneBuilding.AssetBundle.playLoopingEffect(buildRand)
