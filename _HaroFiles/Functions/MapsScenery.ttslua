@@ -274,11 +274,13 @@ end
 
 function generateBuildings(tableMap, mapNum)
       local mapRegions = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/MapTile0' .. mapNum .. 'Regions.ttslua'
+      local tileSet = ""
+      local builderSet = ""
       WebRequest.get(mapRegions, function(request)
         if request.is_error then
           log(request.error)
         else
-          buildingRegions = request.text
+          tileSet = request.text
         end
         end)
         local builder = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/builder.ttslua'
@@ -286,11 +288,11 @@ function generateBuildings(tableMap, mapNum)
           if request.is_error then
             log(request.error)
           else
-            buildingRegions = buildingRegions .. request.text
+            builderSet = request.text
           end
           end)
       local function populate()
-        tableMap.setLuaScript(buildingRegions)
+        tableMap.setLuaScript(tileSet .. builderSet)
         tableMap.reload()
       end
       Wait.frames(populate, 60)
