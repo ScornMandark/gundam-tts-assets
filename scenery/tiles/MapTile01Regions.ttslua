@@ -191,7 +191,23 @@ function createBuildings(region)
      [3] = ref_regionData.largeBlock
    }
    local blockRand = math.random(1,3)
-print(blocktype[blockRand])
+local buildingParams = {
+    type='Custom_Assetbundle',
+    position= {x=0,y=100,z=0},
+    scale= {x=1,y=1,z=1},
+    rotation = {x=0, y=0, z=0},
+    sound = false,
+     snapToGrid = false,
+}
+local buildingArtParams = {
+    assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/kenney_buildings_comm.unity3d?raw=true',
+    assetbundle_secondary = nil,
+    type = 1, --[[ figurine --]]
+    material = 2, --[[ metal --]]
+}
+local building = spawnObject(buildingParams)
+building.setCustomObject(buildingArtParams)
+
 for i, data in ipairs(blocktype[blockRand]) do
        --Sets up reference function
        --Sets up label
@@ -225,24 +241,10 @@ scaledPos:scale(vector(incher,10.5,incher))
 scaledPos = scaledPos + tileOffset
 --        scaledPos[2] = 0.2
 
-scaledPos:scale(baseAdjustY)
-       local buildingParams = {
-           type='Custom_Assetbundle',
-           position=scaledPos,
-           scale=scaledSize,
-           rotation = {x=0, y=0, z=0},
-           sound = false,
-            snapToGrid = false,
-       }
-       local buildingArtParams = {
-           assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/kenney_buildings_comm.unity3d?raw=true',
-           assetbundle_secondary = nil,
-           type = 1, --[[ figurine --]]
-           material = 2, --[[ metal --]]
-       }
-      local building = spawnObject(buildingParams)
-      building.setCustomObject(buildingArtParams)
+--scaledPos:scale(baseAdjustY)
 
+      local cloneBuilding = building.clone()
+      cloneBuilding.setPosition(scaledPos)
 
       local buildRand = math.random(0,18)
       if blocktype[blockRand] == blocktype[1] then
@@ -255,19 +257,17 @@ scaledPos:scale(baseAdjustY)
       buildRand = math.random(7,12)
       end
 
-      building.AssetBundle.playLoopingEffect(buildRand)
-      local function buildingLocker()
-        building.setLock(true)
-      end
-      Wait.frames(buildingLocker,60)
+      cloneBuilding.AssetBundle.playLoopingEffect(buildRand)
       local color = getRandomColor()
 
           -- Apply the color to object
-       building.setColorTint(color)
+       cloneBuilding.setColorTint(color)
        spawnedBuildingCount = spawnedBuildingCount + 1
-       self.addAttachment(building)
+       self.addAttachment(cloneBuilding)
    end
+      building.destruct()
 end
+
 
 function getRandomColor()
     local buildingColorTable = {
