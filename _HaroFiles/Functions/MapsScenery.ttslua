@@ -212,12 +212,30 @@ function makeATiledTable(tileNum)
       thickness = 0.05, --[[ thin --]]
       merge_distance = 1 --[[ accurate ]]
     }
+    
+    local buildingParams = {
+        type='Custom_Assetbundle',
+        position= {x=0,y=100,z=0},
+        scale= {x=1,y=1,z=1},
+        rotation = {x=0, y=0, z=0},
+        sound = false,
+         snapToGrid = false,
+    }
+    local buildingArtParams = {
+        assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/kenney_buildings_comm.unity3d?raw=true',
+        assetbundle_secondary = nil,
+        type = 1, --[[ figurine --]]
+        material = 2, --[[ metal --]]
+    }
+    local building = spawnObject(buildingParams)
+    building.setCustomObject(buildingArtParams)
+    building.setLock(true)
   local tileCounter = 0
   if tileCounter <= tileNum and tileCounter == 0 then
     tileCounter = tileCounter +1
-    local tableMapOne = spawnObject(TableParamsOne)
-    tableMapOne.setCustomObject(mapTileParamsOne)
     local function mapLockerOne()
+      local tableMapOne = spawnObject(TableParamsOne)
+      tableMapOne.setCustomObject(mapTileParamsOne)
       tableMapOne.locked = true
       generateBuildings(tableMapOne, mapRandOne)
     end
@@ -226,28 +244,33 @@ function makeATiledTable(tileNum)
 
   if tileCounter <= tileNum and tileCounter == 1 then
     tileCounter = tileCounter +1
-    local tableMapTwo = spawnObject(TableParamsTwo)
-    tableMapTwo.setCustomObject(mapTileParamsTwo)
     local function mapLockerTwo()
+      local tableMapTwo = spawnObject(TableParamsTwo)
+      tableMapTwo.setCustomObject(mapTileParamsTwo)
       tableMapTwo.locked = true
       generateBuildings(tableMapTwo, mapRandTwo)
     end
-    Wait.frames(mapLockerTwo, 120)
+    Wait.frames(mapLockerTwo, 180)
   end
 
   if tileCounter <= tileNum and tileCounter == 2 then
     tileCounter = tileCounter +1
-    local tableMapThree = spawnObject(TableParamsThree)
-    tableMapThree.setCustomObject(mapTileParamsThree)
     local function mapLockerThree()
+      local tableMapThree = spawnObject(TableParamsThree)
+      tableMapThree.setCustomObject(mapTileParamsThree)
       tableMapThree.locked = true
       generateBuildings(tableMapThree, mapRandThree)
     end
-    Wait.frames(mapLockerThree, 120)
+    Wait.frames(mapLockerThree, 240)
   end
 --]]
+  local function destroyDummyBuilding()
+    building.destruct()
+  end
+  Wait.frames(destroyDummyBuilding,300)
 --  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
 end
+
 
 function generateBuildings(tableMap, mapNum)
       local mapRegions = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/MapTile0' .. mapNum .. 'Regions.ttslua'
