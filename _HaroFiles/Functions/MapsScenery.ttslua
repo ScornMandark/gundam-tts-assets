@@ -88,58 +88,15 @@ function manualScenery()
   makeATable()
 end
 
-function makeATable()
-  self.clearButtons()
-  Tables.setTable("Custom Rectangle")
-  Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
-  TableParams = {
-    type = 'Custom_Tile',
-    position = {0,0.1,0},
-    rotation = {x=0, y=0, z=0},
-    scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
-    sound = false,
-    snap_to_grid = false,
-  }
-  mapTileParams = {
-    image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/maps/' .. environmentType .. mapSize .. '.png?raw=true',
-    type = 0, --[[ sharp corners --]]
-    thickness = 0.05, --[[ thin --]]
-  }
-  local tableMap = spawnObject(TableParams)
-  tableMap.setCustomObject(mapTileParams)
-  local function mapLocker()
-    tableMap.locked = true
---    tableMap.interactable = false
-  end
-  Wait.frames(mapLocker, 240)
-  initializeHaro()
-end
-function tileMaps()
-  self.clearButtons()
-  self.createButton({click_function = 'twoUrbanMapTiles', function_owner = self, label = '4x4 Urban Tiles', position = {4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
-  self.createButton({click_function = 'threeUrbanMapTiles', function_owner = self, label = '6x4 Urban Tiles', position = {-4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
-  self.createButton({click_function = 'createMaps', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-end
-function twoUrbanMapTiles()
-  mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
-  mapZ = 17.97
-  makeATiledTable(1)
-end
-function threeUrbanMapTiles()
-  mapX = 17.97
-  mapZ = 17.97
-  makeATiledTable(2)
-end
 function makeATiledTable(tileNum)
   self.clearButtons()
   tileDestructor = 1
-  for i, data in ipairs(tableTiles) do
-    if tableTiles[tileDestructor] != nil then
-      local tileBreaker = getObjectFromGUID(tableTiles[tileDestructor])
-      destroyObject(tileBreaker)
-      tableTiles[tileDestructor] = ''
-    end
-    tileDestructor = tileDestructor + 1
+  if tilesPresent == true then
+    for i, data in ipairs(tableTiles) do
+        destroyObject(getObjectFromGUID(tableTiles[tileDestructor]))
+        tableTiles[tileDestructor] = 0
+        tileDestructor = tileDestructor + 1
+      end
   end
   Tables.setTable("Custom Rectangle")
   Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
@@ -246,10 +203,10 @@ function makeATiledTable(tileNum)
       local tileBuilderOne = spawnObject(TableParamsOne)
       tileBuilderOne.setCustomObject(mapTileParamsOne)
       tileBuilderOne.locked = true
+      tableTiles[1] = tileBuilderOne.getGUID()
       generateBuildings(tileBuilderOne, mapRandOne)
     end
     Wait.frames(mapLockerOne, 120)
-    tableTiles[1] = tileBuilderOne.getGUID()
   end
 
   if tileCounter <= tileNum and tileCounter == 1 then
@@ -258,10 +215,10 @@ function makeATiledTable(tileNum)
       local tileBuilderTwo = spawnObject(TableParamsTwo)
       tileBuilderTwo.setCustomObject(mapTileParamsTwo)
       tileBuilderTwo.locked = true
+      tableTiles[2] = tileBuilderTwo.getGUID()
       generateBuildings(tileBuilderTwo, mapRandTwo)
     end
     Wait.frames(mapLockerTwo, 180)
-    tableTiles[2] = tileBuilderTwo.getGUID()
   end
 
   if tileCounter <= tileNum and tileCounter == 2 then
@@ -270,16 +227,17 @@ function makeATiledTable(tileNum)
       local tileBuilderThree = spawnObject(TableParamsThree)
       tileBuilderThree.setCustomObject(mapTileParamsThree)
       tileBuilderThree.locked = true
+      tableTiles[3] = tileBuilderThree.getGUID()
       generateBuildings(tileBuilderThree, mapRandThree)
     end
     Wait.frames(mapLockerThree, 240)
-    tableTiles[r3] = tileBuilderThree.getGUID()
   end
 --]]
   local function destroyDummyBuilding()
     building.destruct()
   end
   Wait.frames(destroyDummyBuilding,300)
+  tilesPresent = true
 --  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
   Wait.frames(  initializeHaro, 360)
 end
