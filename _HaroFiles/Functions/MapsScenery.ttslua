@@ -132,6 +132,15 @@ function threeUrbanMapTiles()
 end
 function makeATiledTable(tileNum)
   self.clearButtons()
+  tileDestructor = 1
+  for i, data in ipairs(tableTiles) do
+    if tableTiles[tileDestructor] != nil then
+      local tileBreaker = getObjectFromGUID(tableTiles[tileDestructor])
+      destroyObject(tileBreaker)
+      tableTiles[tileDestructor] = ''
+    end
+    tileDestructor = tileDestructor + 1
+  end
   Tables.setTable("Custom Rectangle")
   Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
   local seed = os.time()
@@ -212,7 +221,7 @@ function makeATiledTable(tileNum)
       thickness = 0.05, --[[ thin --]]
       merge_distance = 1 --[[ accurate ]]
     }
-    
+
     local buildingParams = {
         type='Custom_Assetbundle',
         position= {x=0,y=100,z=0},
@@ -234,34 +243,37 @@ function makeATiledTable(tileNum)
   if tileCounter <= tileNum and tileCounter == 0 then
     tileCounter = tileCounter +1
     local function mapLockerOne()
-      local tableMapOne = spawnObject(TableParamsOne)
-      tableMapOne.setCustomObject(mapTileParamsOne)
-      tableMapOne.locked = true
-      generateBuildings(tableMapOne, mapRandOne)
+      local tileBuilderOne = spawnObject(TableParamsOne)
+      tileBuilderOne.setCustomObject(mapTileParamsOne)
+      tileBuilderOne.locked = true
+      generateBuildings(tileBuilderOne, mapRandOne)
     end
     Wait.frames(mapLockerOne, 120)
+    tableTiles[1] = tileBuilderOne.getGUID()
   end
 
   if tileCounter <= tileNum and tileCounter == 1 then
     tileCounter = tileCounter +1
     local function mapLockerTwo()
-      local tableMapTwo = spawnObject(TableParamsTwo)
-      tableMapTwo.setCustomObject(mapTileParamsTwo)
-      tableMapTwo.locked = true
-      generateBuildings(tableMapTwo, mapRandTwo)
+      local tileBuilderTwo = spawnObject(TableParamsTwo)
+      tileBuilderTwo.setCustomObject(mapTileParamsTwo)
+      tileBuilderTwo.locked = true
+      generateBuildings(tileBuilderTwo, mapRandTwo)
     end
     Wait.frames(mapLockerTwo, 180)
+    tableTiles[2] = tileBuilderTwo.getGUID()
   end
 
   if tileCounter <= tileNum and tileCounter == 2 then
     tileCounter = tileCounter +1
     local function mapLockerThree()
-      local tableMapThree = spawnObject(TableParamsThree)
-      tableMapThree.setCustomObject(mapTileParamsThree)
-      tableMapThree.locked = true
-      generateBuildings(tableMapThree, mapRandThree)
+      local tileBuilderThree = spawnObject(TableParamsThree)
+      tileBuilderThree.setCustomObject(mapTileParamsThree)
+      tileBuilderThree.locked = true
+      generateBuildings(tileBuilderThree, mapRandThree)
     end
     Wait.frames(mapLockerThree, 240)
+    tableTiles[r3] = tileBuilderThree.getGUID()
   end
 --]]
   local function destroyDummyBuilding()
