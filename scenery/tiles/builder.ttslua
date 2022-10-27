@@ -30,9 +30,6 @@ for i, data in ipairs(blocktype[blockRand]) do
        --Creates button and counts it
 --local scaledSize = data.size
 local scaledPos = Vector(data.pos)
-if region == 2 then
-scaledPos:scale(vector(1,1,-1))
-end
 local scaledPosX = data.pos[1]
 local scaledPosZ = data.pos[3]
 local tileOffset = self.getPosition()
