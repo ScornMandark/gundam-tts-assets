@@ -311,6 +311,7 @@ function clearTiles()
         tileDestructor = tileDestructor + 1
       end
   end
+  tilesPresent = false
 end
 
 function generateBuildings(tableMap, mapNum)
