@@ -143,6 +143,7 @@ function makeATiledTable(tileNum)
   Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
   local seed = os.time()
   math.randomseed(seed)
+  print("Random Seed used is " .. seed)
   local tileShift = math.random(0,1)
   local rotNum = math.random(1,10)
   if rotNum >= 6 then
@@ -279,8 +280,37 @@ function makeATiledTable(tileNum)
   end
   Wait.frames(destroyDummyBuilding,300)
   tilesPresent = true
+  
 --  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
-  Wait.frames(  initializeHaro, 360)
+  Wait.frames(  clearSaveTiles, 360)
+end
+function clearSaveTiles()
+  self.clearButtons()
+  self.createButton({click_function = 'freezeTiles', function_owner = self, label = 'Freeze Tiles', position = {4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
+  self.createButton({click_function = 'clearTiles', function_owner = self, label = 'Clear Tiles', position = {-4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
+  self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Done', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+fuction freezeTiles()
+  tileFreezer = 1
+  if tilesPresent == true then
+    for i, data in ipairs(tableTiles) do
+        local freezer = getObjectFromGUID(tableTiles[tileFreezer])
+        freezer.setLuaScript = ''
+        tileFreezer = tileFreezer + 1
+      end
+  end
+end
+
+function clearTiles()
+  tileDestructor = 1
+  if tilesPresent == true then
+    for i, data in ipairs(tableTiles) do
+        destroyObject(getObjectFromGUID(tableTiles[tileDestructor]))
+        tableTiles[tileDestructor] = 0
+        tileDestructor = tileDestructor + 1
+      end
+  end
 end
 
 function generateBuildings(tableMap, mapNum)
