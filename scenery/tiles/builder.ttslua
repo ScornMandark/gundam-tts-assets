@@ -39,22 +39,19 @@ scaleShifterX = buildingScale--*(3.333 + 0.8*math.random())  -- randomize buildi
 scaleShifterY = buildingScale--*(4+4*math.random(0,3))
 scaleShifterZ = buildingScale--*(math.random(2,12))
  scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
--- print(scaledSize)
-local baseAdjustY = vector(1,scaleShifterY/(buildingScale*6),1)
+local boardFlipper = vector(1,1,-1)
 if tileRotation == vector(0,90,0) then
 scaledPos[1] = scaledPosZ
 scaledPos[3] = -scaledPosX
+boardFlipper = vector(-1,1,1)
 end
-if region == 2 then
-scaledPos:scale(vector(1,1,-1))
+if region == 2 then --bottom half of board
+scaledPos:scale(boardFlipper)
 end
 
 
 scaledPos:scale(vector(incher,0,incher))
 scaledPos = scaledPos + tileOffset
---        scaledPos[2] = 0.2
-
---scaledPos:scale(baseAdjustY)
 
       local cloneBuilding = building.clone()
       cloneBuilding.setPosition(scaledPos)
