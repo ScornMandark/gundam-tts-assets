@@ -16,6 +16,19 @@ function onLoad()
   CornerType = 3
   baseScaleMod = 0.505 --adjust base size to 1.0 units
   self.locked = true
+  tileDestructor = 0
+  tableTiles = {
+    [0] = '',
+    [1] = '',
+    [2] = '',
+    [3] = '',
+    [4] = '',
+    [5] = '',
+    [6] = '',
+    [7] = '',
+    [8] = '',
+    [9] = '',
+  }
   SetGame()
 end
 
