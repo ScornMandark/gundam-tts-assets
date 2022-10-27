@@ -291,7 +291,7 @@ function clearSaveTiles()
   self.createButton({click_function = 'initializeHaro', function_owner = self, label = 'Done', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
-fuction freezeTiles()
+function freezeTiles()
   tileFreezer = 1
   if tilesPresent == true then
     for i, data in ipairs(tableTiles) do
