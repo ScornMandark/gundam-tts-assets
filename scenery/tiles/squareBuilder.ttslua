@@ -61,7 +61,7 @@ scaledPos = scaledPos + tileOffset
       buildRand = math.random(25,52)-- 0-6, 12-18
       end
       if blocktype[blockRand] == blocktype[2] then
-      buildRand = math.random(5,52)
+      buildRand = math.random(5,24)
       end
       if blocktype[blockRand] == blocktype[3] then
       buildRand = math.random(0,4)
