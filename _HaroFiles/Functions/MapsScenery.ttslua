@@ -343,18 +343,19 @@ function generateBuildings(tableMap, mapNum)
 end
 
 function twoByTwoUrbanMapTiles()
-  mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
-  mapZ = 17.97
+  mapX = 12.685 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
+  mapZ = 12.685
   makeASquareTiledTable(4)
 end
 function threeByTwoUrbanMapTiles()
-  mapX = 17.97
-  mapZ = 17.97
+  mapX = 12.685
+  mapZ = 12.685
   makeASquareTiledTable(6)
 end
+
 function makeASquareTiledTable(tileNum)
   self.clearButtons()
-  tileDestructor = 1
+tileDestructor = 1
   if tilesPresent == true then
     for i, data in ipairs(tableTiles) do
         destroyObject(getObjectFromGUID(tableTiles[tileDestructor]))
@@ -379,8 +380,8 @@ function makeASquareTiledTable(tileNum)
 
   mapSquareTileParams = {
     image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapSquare01.png?raw=true',
-    thickness = 0.05, --[[ thin --]]
-    merge_distance = 1 --[[ accurate ]]
+    thickness = 0.05,
+    merge_distance = 1
   }
 
     local buildingParams = {
@@ -394,8 +395,8 @@ function makeASquareTiledTable(tileNum)
     local buildingArtParams = {
         assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/urban_buildings.unity3d?raw=true',
         assetbundle_secondary = nil,
-        type = 1, --[[ figurine --]]
-        material = 2, --[[ metal --]]
+        type = 1,
+        material = 2,
     }
     local building = spawnObject(buildingParams) --preload for cloning
     building.setCustomObject(buildingArtParams)
@@ -403,52 +404,70 @@ function makeASquareTiledTable(tileNum)
     local tileTemplate = spawnObject(SquareTileParams) --preload for cloning
     tileTemplate.setCustomObject(mapSquareTileParams)
     tileTemplate.setLock(true)
-    local squareLocFourbyFour = {
-      first = {-12.01,1,-12.01},
-      second = {-12.01,1,12.01},
-      third = {12.01,1,-12.01},
-      fourth = {12.01,1,12.01},
+   squareLocFourbyFour = {
+      [1] = {-12.01,1,-12.01},
+      [2] = {-12.01,1,12.01},
+      [3] = {12.01,1,-12.01},
+      [4] = {12.01,1,12.01},
     }
-    local squareLocSixbyFour = {
-      first = {0,1,-12.01},
-      second = {0,1,12.01},
-      third = {24.01,1,-12.01},
-      fourth = {24.01,1,12.01},
-      fifth = {-24.01,1,-12.01},
-      sixth = {-24.01,1,12.01},
+     squareLocSixbyFour = {
+      [1] = {0,1,-12.01},
+      [2] = {0,1,12.01},
+      [3] = {24.01,1,-12.01},
+      [4] = {24.01,1,12.01},
+      [5] = {-24.01,1,-12.01},
+      [6] = {-24.01,1,12.01},
     }
   local tileCounter = 1
-  local setSquarePos = vector(x=0, y=0, z=0)
-  if tileCounter <= tileNum then
-    local squareRand = math.random(1,8)
-    local function mapLocker()
-      local squareBuilder = tileTemplate.clone()
-      if tileNum == 4 then
-        squareBuilder.setPosition(squareLocFourbyFour[tileCounter])
-      else
-        squareBuilder.setPosition(squareLocSixbyFour[tileCounter])
+  if tileNum == 4 then
+    for i, data in ipairs(squareLocFourbyFour) do
+      local squareRand = math.random(1,8)
+      print(squareLocSixbyFour[tileCounter])
+      local function mapLocker()
+        local squareBuilder = tileTemplate.clone()
+        local squareLocator = squareLocFourbyFour[tileCounter]
+--        print(squareLocator)
+        squareBuilder.setPosition(squareLocator)
+        squareBuilder.setCustomObject({image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapSquare0' .. squareRand .. '.png?raw=true'})
+        squareBuilder.locked = true
+        tableTiles[tileCounter] = squareBuilder.getGUID()
+        generateBuildingsSquare(squareBuilder, squareRand)
+        tileCounter = tileCounter +1
       end
-      squareBuilder.image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapSquare0' .. squareRand .. '.png?raw=true'
-      squareBuilder.locked = true
-      tableTiles[tileCounter] = squareBuilder.getGUID()
-      generateBuildingsSquare(squareBuilder, squareRand)
-      tileCounter = tileCounter +1
+      Wait.frames(mapLocker, 120)
     end
-    Wait.frames(mapLocker, 120)
+     else if tileNum == 6 then
+      for i, data in ipairs(squareLocSixbyFour) do
+        local squareRand = math.random(1,8)
+        print(squareLocSixbyFour[tileCounter])
+        local function mapLocker()
+          local squareBuilder = tileTemplate.clone()
+          local squareLocator = squareLocSixbyFour[tileCounter]
+--          print(squareLocator)
+          squareBuilder.setPosition(squareLocator)
+          squareBuilder.setCustomObject({image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapSquare0' .. squareRand .. '.png?raw=true'})
+          squareBuilder.locked = true
+          tableTiles[tileCounter] = squareBuilder.getGUID()
+          generateBuildingsSquare(squareBuilder, squareRand)
+          tileCounter = tileCounter +1
+        end
+        Wait.frames(mapLocker, 120)
+      end
+      end
   end
 
 
---]]
   local function destroyDummyBuilding()
     building.destruct()
     tileTemplate.destruct()
   end
   Wait.frames(destroyDummyBuilding,300)
   tilesPresent = true
-  
+
 --  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
   Wait.frames(  clearSaveTiles, 360)
 end
+
 function generateBuildingsSquare(tableMap, mapNum)
       local mapRegions = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/MapSquare0' .. mapNum .. 'Regions.ttslua'
       local tileSet = ""
