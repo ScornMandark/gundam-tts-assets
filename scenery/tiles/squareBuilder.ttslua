@@ -34,11 +34,11 @@ local scaledPosX = data.pos[1]
 local scaledPosZ = data.pos[3]
 local tileOffset = self.getPosition()
 local tileRotation = self.getRotation()
-local scaleShifter = 1
+--[[local scaleShifter = 1
 scaleShifterX = buildingScale--*(3.333 + 0.8*math.random())  -- randomize building size with a minimum size
 scaleShifterY = buildingScale--*(4+4*math.random(0,3))
 scaleShifterZ = buildingScale--*(math.random(2,12))
- scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)
+ scaledSize = vector(scaleShifterX,scaleShifterY,scaleShifterZ)--]]
 local boardFlipper = vector(1,1,-1)
 if tileRotation == vector(0,90,0) then
 scaledPos[1] = scaledPosZ
@@ -56,27 +56,22 @@ scaledPos = scaledPos + tileOffset
       local cloneBuilding = building.clone()
       cloneBuilding.setPosition(scaledPos)
 
-      local buildRand = math.random(0,18)
+      local buildRand = math.random(0,52)
       if blocktype[blockRand] == blocktype[1] then
-      buildRand = ((math.random(1,2) - 1.5) *2) * math.random(3,9)+9 -- 0-6, 12-18
+      buildRand = math.random(25,52)-- 0-6, 12-18
       end
       if blocktype[blockRand] == blocktype[2] then
-      buildRand = math.random(1,12)
-        if buildRand == 6 then
-          buildRand = math.random(1,5) -- don't like the wide ones for here
-        end
-      cloneBuilding.setScale({x=2,y=1,z=2})
+      buildRand = math.random(5,52)
       end
       if blocktype[blockRand] == blocktype[3] then
-      buildRand = math.random(7,12)
-      cloneBuilding.setScale({x=3,y=2,z=3})
+      buildRand = math.random(0,4)
       end
 
       cloneBuilding.AssetBundle.playLoopingEffect(buildRand)
-      local color = getRandomColor()
+--[[      local color = getRandomColor()
 
           -- Apply the color to object
-       cloneBuilding.setColorTint(color)
+       cloneBuilding.setColorTint(color) --]]
        spawnedBuildingCount = spawnedBuildingCount + 1
        self.addAttachment(cloneBuilding)
    end
