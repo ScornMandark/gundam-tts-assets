@@ -63,6 +63,13 @@ textboxFontColor = {0,0,0,255}
 
 incher = 24  -- scaler to adjust for relative position on board to game world inches
 buildingScale = 1 -- adjust model scale
+blocktype = {
+     [1] = ref_regionData.smallBlock,
+     [2] = ref_regionData.medBlock,
+     [3] = ref_regionData.largeBlock
+   }
+blockMax = 3
+
 --This is the button placement information
 local defaultRegionData = {
    --Add checkboxes
