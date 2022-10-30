@@ -117,7 +117,9 @@ function tileMaps()
   self.clearButtons()
   self.createButton({click_function = 'twoUrbanMapTiles', function_owner = self, label = '4x4 Urban Tiles', position = {4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
   self.createButton({click_function = 'threeUrbanMapTiles', function_owner = self, label = '6x4 Urban Tiles', position = {-4.5, 6, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
-  self.createButton({click_function = 'createMaps', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+   self.createButton({click_function = 'twoByTwoUrbanMapTiles', function_owner = self, label = '4x4 Urban Squares', position = {4.5, 5, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
+  self.createButton({click_function = 'threeByTwoUrbanMapTiles', function_owner = self, label = '6x4 Urban Squares', position = {-4.5, 5, 0},  rotation = {-60, 0, 0}, width=3000, height=400, font_size=250})
+ self.createButton({click_function = 'createMaps', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function twoUrbanMapTiles()
   mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
@@ -340,6 +342,138 @@ function generateBuildings(tableMap, mapNum)
       Wait.frames(populate, 60)
 end
 
+function twoByTwoUrbanMapTiles()
+  mapX = 17.97 -- TTS assumes 4000 pixels for scaling, 4096 needs shrunk slightly, and tokens are off from that
+  mapZ = 17.97
+  makeASquareTiledTable(4)
+end
+function threeByTwoUrbanMapTiles()
+  mapX = 17.97
+  mapZ = 17.97
+  makeASquareTiledTable(6)
+end
+function makeASquareTiledTable(tileNum)
+  self.clearButtons()
+  tileDestructor = 1
+  if tilesPresent == true then
+    for i, data in ipairs(tableTiles) do
+        destroyObject(getObjectFromGUID(tableTiles[tileDestructor]))
+        tableTiles[tileDestructor] = 0
+        tileDestructor = tileDestructor + 1
+      end
+  end
+  Tables.setTable("Custom Rectangle")
+  Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
+  local seed = os.time()
+  math.randomseed(seed)
+  print("Random Seed used is " .. seed)
+
+    SquareTileParams = {
+      type = 'Custom_Token',
+      position = {0,100,0},
+      rotation = {x=0, y=0, z=0},
+      scale = {baseScaleMod*mapX,1,baseScaleMod*mapZ},
+      sound = false,
+      snap_to_grid = true,
+    }
+
+  mapSquareTileParams = {
+    image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapSquare01.png?raw=true',
+    thickness = 0.05, --[[ thin --]]
+    merge_distance = 1 --[[ accurate ]]
+  }
+
+    local buildingParams = {
+        type='Custom_Assetbundle',
+        position= {x=0,y=100,z=0},
+        scale= {x=1,y=1,z=1},
+        rotation = {x=0, y=0, z=0},
+        sound = false,
+         snapToGrid = false,
+    }
+    local buildingArtParams = {
+        assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/urban_buildings.unity3d?raw=true',
+        assetbundle_secondary = nil,
+        type = 1, --[[ figurine --]]
+        material = 2, --[[ metal --]]
+    }
+    local building = spawnObject(buildingParams) --preload for cloning
+    building.setCustomObject(buildingArtParams)
+    building.setLock(true)
+    local tileTemplate = spawnObject(SquareTileParams) --preload for cloning
+    tileTemplate.setCustomObject(mapSquareTileParams)
+    tileTemplate.setLock(true)
+    local squareLocFourbyFour = {
+      first = {-12.01,1,-12.01},
+      second = {-12.01,1,12.01},
+      third = {12.01,1,-12.01},
+      fourth = {12.01,1,12.01},
+    }
+    local squareLocSixbyFour = {
+      first = {0,1,-12.01},
+      second = {0,1,12.01},
+      third = {24.01,1,-12.01},
+      fourth = {24.01,1,12.01},
+      fifth = {-24.01,1,-12.01},
+      sixth = {-24.01,1,12.01},
+    }
+  local tileCounter = 1
+  local setSquarePos = vector(x=0, y=0, z=0)
+  if tileCounter <= tileNum then
+    local squareRand = math.random(1,8)
+    local function mapLocker()
+      local squareBuilder = tileTemplate.clone()
+      if tileNum == 4 then
+        squareBuilder.setPosition(squareLocFourbyFour[tileCounter])
+      else
+        squareBuilder.setPosition(squareLocSixbyFour[tileCounter])
+      end
+      squareBuilder.image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapSquare0' .. squareRand .. '.png?raw=true'
+      squareBuilder.locked = true
+      tableTiles[tileCounter] = squareBuilder.getGUID()
+      generateBuildingsSquare(squareBuilder, squareRand)
+      tileCounter = tileCounter +1
+    end
+    Wait.frames(mapLocker, 120)
+  end
+
+
+--]]
+  local function destroyDummyBuilding()
+    building.destruct()
+    tileTemplate.destruct()
+  end
+  Wait.frames(destroyDummyBuilding,300)
+  tilesPresent = true
+  
+--  generateBuildings(tileNum, rotNum, tileShift, mapRandOne, mapRandTwo, mapRandThree)
+  Wait.frames(  clearSaveTiles, 360)
+end
+function generateBuildingsSquare(tableMap, mapNum)
+      local mapRegions = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/MapSquare0' .. mapNum .. 'Regions.ttslua'
+      local tileSet = ""
+      local builderSet = ""
+      WebRequest.get(mapRegions, function(request)
+        if request.is_error then
+          log(request.error)
+        else
+          tileSet = request.text
+        end
+        end)
+        local builder = 'https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/scenery/tiles/squareBuilder.ttslua'
+        WebRequest.get(builder, function(request)
+          if request.is_error then
+            log(request.error)
+          else
+            builderSet = request.text
+          end
+          end)
+      local function populate()
+        tableMap.setLuaScript(tileSet .. builderSet)
+        tableMap.reload()
+      end
+      Wait.frames(populate, 60)
+end
 
 function createScenery()
   self.clearButtons()
