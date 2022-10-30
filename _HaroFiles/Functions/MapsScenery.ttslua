@@ -422,7 +422,7 @@ tileDestructor = 1
   if tileNum == 4 then
     for i, data in ipairs(squareLocFourbyFour) do
       local squareRand = math.random(1,2)
-      print(squareLocSixbyFour[tileCounter])
+ --     print(squareLocSixbyFour[tileCounter])
       local function mapLocker()
         local squareBuilder = tileTemplate.clone()
         local squareLocator = squareLocFourbyFour[tileCounter]
@@ -439,7 +439,7 @@ tileDestructor = 1
      else if tileNum == 6 then
       for i, data in ipairs(squareLocSixbyFour) do
         local squareRand = math.random(1,2)
-        print(squareLocSixbyFour[tileCounter])
+--        print(squareLocSixbyFour[tileCounter])
         local function mapLocker()
           local squareBuilder = tileTemplate.clone()
           local squareLocator = squareLocSixbyFour[tileCounter]
