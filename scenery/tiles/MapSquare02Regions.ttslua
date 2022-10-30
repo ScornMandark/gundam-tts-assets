@@ -1,4 +1,4 @@
---[[ Map Square 01 Regions
+--[[ Map Square 02 Regions
 
 Primary Upper area (162 x 198 scale feet)
 image is 2048 x 4096
@@ -75,51 +75,51 @@ local defaultRegionData = {
        ]]
        --small buildings locations, 12x, top
        { -- #1
-           pos   = {-0.1875,1,-0.6953125},
+           pos   = {-0.25,1,-0.125},
            size  = 350,
        },
        { -- #2
-           pos   = {0,1,-0.6953125},
+           pos   = {0,1,-0.125},
            size  = 350,
        },
        { -- #3
-           pos   =  {0.1875,1,-0.6953125},
+           pos   =  {0.25,1,-0.125},
            size  = 350,
        },
        { -- #4
-           pos   =  {-0.1875,1,-0.5234375},
+           pos   =  {-0.25,1,-0.25},
            size  = 350,
        },
        { -- #5
-           pos   = {0,1,-0.5234375},
+           pos   = {0,1,-0.25},
            size  = 350,
        },
        { -- #6
-           pos   = {0.1875,1,-0.5234375},
+           pos   = {0.25,1,-0.25},
            size  = 350,
        },
        { -- #7
-           pos   = {-0.1875,1,-0.3515625},
+           pos   = {-0.25,1,0.25},
            size  = 350,
        },
        { -- #8
-           pos   = {0,1,-0.3515625},
+           pos   = {0,1,0.25},
            size  = 350,
        },
        { -- #9
-           pos   = {0.1875,1,-0.3515625},
+           pos   = {0.25,1,0.25},
            size  = 350,
        },
        { -- #10
-           pos   = {-0.1875,1,-0.1796875},
+           pos   = {-0.25,1,0.125},
            size  = 350,
         },
        { -- #11
-           pos   = {0,1,-0.1796875},
+           pos   = {0,1,0.125},
            size  = 350,
        },
        { -- #12
-           pos   = {0.1875,1,-0.1796875},
+           pos   = {0.25,1,0.125},
            size  = 350,
        },
 
@@ -127,26 +127,26 @@ local defaultRegionData = {
    },
    medBlock ={ --medium sized buildings, 4 x
        { -- #1
-           pos   = {-0.15,1,-0.6},
+           pos   = {-0.3,1,-0.25},
            size  = 350,
        },
        { -- #2
-           pos   = {0.15,1,-0.6},
+           pos   = {0.3,1,-0.25},
            size  = 350,
        },
        { -- #3
-           pos   =  {-0.15,1,-0.3},
+           pos   =  {-0.3,1,0.25},
            size  = 350,
        },
        { -- #4
-           pos   =  {0.15,1,-0.3},
+           pos   =  {0.3,1,0.25},
            size  = 350,
        },
 
    }, -- end med block
    largeBlock ={
           { -- #1
-           pos   = {0,1,-0.4375},
+           pos   = {0,1,0},
            size  = 350,
        },
    },
@@ -167,7 +167,7 @@ end
 
 --Startup procedure
 function onload(saved_data)
- print('Made it.')
+-- print('Made it.')
    if disableSave==true then saved_data="" end
    if saved_data ~= "" then
        local loaded_data = JSON.decode(saved_data)
