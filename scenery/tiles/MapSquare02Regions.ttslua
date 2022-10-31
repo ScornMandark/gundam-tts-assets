@@ -71,58 +71,44 @@ local defaultRegionData = {
    smallBlock = {
        --[[
        pos   = the position (pasted from the helper tool)
-       rot  = height/width/font_size for checkbox
+       rot   = which direction it should face
        min range = beginning of buildings approved for that zone
        max range = end of range of buildings approved for that zone
        ]]
        --small buildings locations, 12x, top
        { -- #1
            pos   = {-0.25,1,-0.125},
-           size  = 350,
+           rot   = 0,
        },
-       { -- #2
-           pos   = {0,1,-0.125},
-           size  = 350,
-       },
+       
        { -- #3
            pos   =  {0.25,1,-0.125},
-           size  = 350,
+           rot   = 0,
        },
        { -- #4
            pos   =  {-0.25,1,-0.25},
-           size  = 350,
+           rot   = 180,
        },
-       { -- #5
-           pos   = {0,1,-0.25},
-           size  = 350,
-       },
+ 
        { -- #6
            pos   = {0.25,1,-0.25},
-           size  = 350,
+           rot   = 180,
        },
        { -- #7
            pos   = {-0.25,1,0.25},
-           size  = 350,
-       },
-       { -- #8
-           pos   = {0,1,0.25},
-           size  = 350,
+           rot   = 0,
        },
        { -- #9
            pos   = {0.25,1,0.25},
-           size  = 350,
+           rot   = 0,
        },
        { -- #10
            pos   = {-0.25,1,0.125},
-           size  = 350,
+           rot   = 180,
         },
-       { -- #11
-           pos   = {0,1,0.125},
-           size  = 350,
-       },
        { -- #12
            pos   = {0.25,1,0.125},
-           size  = 350,
+           rot   = 180,
        },
 
        --End of smallBlock (top)
@@ -130,26 +116,26 @@ local defaultRegionData = {
    medBlock ={ --medium sized buildings, 4 x
        { -- #1
            pos   = {-0.3,1,-0.25},
-           size  = 350,
+           rot   = 0,
        },
        { -- #2
            pos   = {0.3,1,-0.25},
-           size  = 350,
+           rot   = 0,
        },
        { -- #3
            pos   =  {-0.3,1,0.25},
-           size  = 350,
+           rot   = 180,
        },
        { -- #4
            pos   =  {0.3,1,0.25},
-           size  = 350,
+           rot   = 180,
        },
 
    }, -- end med block
    largeBlock ={
-          { -- #1
+          { -- not used for this map
            pos   = {0,1,0},
-           size  = 350,
+           rot   = 0,
        },
    },
 }
