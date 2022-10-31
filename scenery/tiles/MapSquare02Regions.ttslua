@@ -118,8 +118,8 @@ local defaultRegionData = {
        { -- #10
            pos   = {-0.25,1,0.14},
            rot   = 0,
-           minRange = 1,
-           maxRange = 52,        },
+           minRange = 26,
+           maxRange = 53,        },
        { -- #12
            pos   = {0.25,1,0.14},
            rot   = 0,
