@@ -75,15 +75,22 @@ local defaultRegionData = {
        min range = beginning of buildings approved for that zone
        max range = end of range of buildings approved for that zone
        ]]
+       --[[
+            ranges in urban_buildings:
+            massive skyscraper: 1-5
+            skyscrapers: 6-25
+            wide residential: 26-39
+            squareish residential: 40-53
+       ]]
        --small buildings locations, 12x, top
        { -- #1
-           pos   = {-0.25,1,-0.135},
+           pos   = {-0.25,1,-0.14},
            rot   = 180,
            minRange = 26,
            maxRange = 53,       },
        
        { -- #3
-           pos   =  {0.25,1,-0.135},
+           pos   =  {0.25,1,-0.14},
            rot   = 180,
            minRange = 26,
            maxRange = 53,       },
@@ -109,12 +116,12 @@ local defaultRegionData = {
            minRange = 26,
            maxRange = 53,       },
        { -- #10
-           pos   = {-0.25,1,0.135},
+           pos   = {-0.25,1,0.14},
            rot   = 0,
            minRange = 1,
            maxRange = 52,        },
        { -- #12
-           pos   = {0.25,1,0.135},
+           pos   = {0.25,1,0.14},
            rot   = 0,
            minRange = 26,
            maxRange = 53,       },
