@@ -79,54 +79,66 @@ local defaultRegionData = {
        { -- #1
            pos   = {-0.25,1,-0.135},
            rot   = 180,
-       },
+           minRange = 1,
+           maxRange = 52,       },
        
        { -- #3
            pos   =  {0.25,1,-0.135},
            rot   = 180,
-       },
+           minRange = 1,
+           maxRange = 52,       },
        { -- #4
            pos   =  {-0.25,1,-0.25},
            rot   = 0,
-       },
+           minRange = 1,
+           maxRange = 52,       },
  
        { -- #6
            pos   = {0.25,1,-0.25},
            rot   = 0,
-       },
+           minRange = 1,
+           maxRange = 52,       },
        { -- #7
            pos   = {-0.25,1,0.25},
            rot   = 180,
-       },
+           minRange = 1,
+           maxRange = 52,       },
        { -- #9
            pos   = {0.25,1,0.25},
            rot   = 180,
-       },
+           minRange = 1,
+           maxRange = 52,       },
        { -- #10
            pos   = {-0.25,1,0.135},
            rot   = 0,
-        },
+           minRange = 1,
+           maxRange = 52,        },
        { -- #12
            pos   = {0.25,1,0.135},
            rot   = 0,
-       },
+           minRange = 1,
+           maxRange = 52,       },
        { -- #4
            pos   =  {-0.25,1,-0.4},
            rot   = 0,
-       },
+           minRange = 1,
+           maxRange = 52,       },
  
        { -- #6
            pos   = {0.25,1,-0.4},
            rot   = 0,
-       },
+           minRange = 1,
+           maxRange = 52,       },
        { -- #7
            pos   = {-0.25,1,0.4},
            rot   = 180,
-       },
+           minRange = 1,
+           maxRange = 52,       },
        { -- #9
            pos   = {0.25,1,0.4},
            rot   = 180,
-       },
+           minRange = 1,
+           maxRange = 52,       },
 
        --End of smallBlock (top)
    },
@@ -134,26 +146,31 @@ local defaultRegionData = {
        { -- #1
            pos   = {-0.3,1,-0.25},
            rot   = 180,
-       },
+           minRange = 6,
+           maxRange = 25,       },
        { -- #2
            pos   = {0.3,1,-0.25},
            rot   = 180,
-       },
+           minRange = 6,
+           maxRange = 25,       },
        { -- #3
            pos   =  {-0.3,1,0.25},
            rot   = 0,
-       },
+           minRange = 6,
+           maxRange = 25,       },
        { -- #4
            pos   =  {0.3,1,0.25},
            rot   = 0,
-       },
+            minRange = 6,
+           maxRange = 25,       },
 
    }, -- end med block
    largeBlock ={
           { -- not used for this map
            pos   = {0,1,0},
            rot   = 0,
-       },
+           minRange = 1,
+           maxRange = 5,       },
    },
 }
 

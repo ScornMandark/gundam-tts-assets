@@ -62,17 +62,9 @@ scaledPos = scaledPos + tileOffset
       local cloneBuilding = building.clone()
       cloneBuilding.setPosition(scaledPos)
       cloneBuilding.setRotation(vector(0,buildingRotation,0))
-
-      local buildRand = math.random(0,52)
-      if blocktype[blockRand] == blocktype[1] then
-      buildRand = math.random(25,52)-- 0-6, 12-18
-      end
-      if blocktype[blockRand] == blocktype[2] then
-      buildRand = math.random(5,24)
-      end
-      if blocktype[blockRand] == blocktype[3] then
-      buildRand = math.random(0,4)
-      end
+      local buildRandMin = data.minRange
+      local buildRandMax = data.maxRange
+      local buildRand = math.random(buildRandMin,buildRandMax)
 
       cloneBuilding.AssetBundle.playLoopingEffect(buildRand)
 --[[      local color = getRandomColor()
