@@ -176,30 +176,3 @@ local defaultRegionData = {
 
 
 
---Lua beyond this point, I recommend doing something more fun with your life
-
-
-
---Save function
-function updateSave()
-   saved_data = JSON.encode(ref_regionData)
-   if disableSave==true then saved_data="" end
-   self.script_state = saved_data
-end
-
---Startup procedure
-function onload(saved_data)
--- print('Made it.')
-   if disableSave==true then saved_data="" end
-   if saved_data ~= "" then
-       local loaded_data = JSON.decode(saved_data)
-       ref_regionData = loaded_data
-   else
-       ref_regionData = defaultRegionData
-   end
-
-   spawnedBuildingCount = 0
-   createBuildings()
-end
-
---Building creation
