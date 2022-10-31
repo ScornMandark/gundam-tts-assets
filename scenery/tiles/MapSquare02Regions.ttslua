@@ -79,35 +79,35 @@ local defaultRegionData = {
        { -- #1
            pos   = {-0.25,1,-0.135},
            rot   = 180,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
        
        { -- #3
            pos   =  {0.25,1,-0.135},
            rot   = 180,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
        { -- #4
            pos   =  {-0.25,1,-0.25},
            rot   = 0,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
  
        { -- #6
            pos   = {0.25,1,-0.25},
            rot   = 0,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
        { -- #7
            pos   = {-0.25,1,0.25},
            rot   = 180,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
        { -- #9
            pos   = {0.25,1,0.25},
            rot   = 180,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
        { -- #10
            pos   = {-0.25,1,0.135},
            rot   = 0,
@@ -116,29 +116,29 @@ local defaultRegionData = {
        { -- #12
            pos   = {0.25,1,0.135},
            rot   = 0,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
        { -- #4
            pos   =  {-0.25,1,-0.4},
            rot   = 0,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
  
        { -- #6
            pos   = {0.25,1,-0.4},
            rot   = 0,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
        { -- #7
            pos   = {-0.25,1,0.4},
            rot   = 180,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
        { -- #9
            pos   = {0.25,1,0.4},
            rot   = 180,
-           minRange = 1,
-           maxRange = 52,       },
+           minRange = 26,
+           maxRange = 53,       },
 
        --End of smallBlock (top)
    },
