@@ -210,18 +210,18 @@ function makeATiledTable(tileNum)
 
   mapTileParamsOne = {
     image = imageOne,
-    thickness = 0.05, --[[ thin --]]
-    merge_distance = 1 --[[ accurate ]]
+    thickness = 0.05, -- thin 
+    merge_distance = 1 -- accurate 
   }
   mapTileParamsTwo = {
     image = imageTwo,
-    thickness = 0.05, --[[ thin --]]
-    merge_distance = 1 --[[ accurate ]]
+    thickness = 0.05,  --thin 
+    merge_distance = 1 -- accurate 
   }
   mapTileParamsThree = {
       image = imageThree,
-      thickness = 0.05, --[[ thin --]]
-      merge_distance = 1 --[[ accurate ]]
+      thickness = 0.05, -- thin 
+      merge_distance = 1 -- accurate 
     }
 
     local buildingParams = {
@@ -235,8 +235,8 @@ function makeATiledTable(tileNum)
     local buildingArtParams = {
         assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/kenney_buildings_comm.unity3d?raw=true',
         assetbundle_secondary = nil,
-        type = 1, --[[ figurine --]]
-        material = 2, --[[ metal --]]
+        type = 1, -- figurine 
+        material = 2, -- metal
     }
     local building = spawnObject(buildingParams)
     building.setCustomObject(buildingArtParams)
@@ -277,7 +277,7 @@ function makeATiledTable(tileNum)
     end
     Wait.frames(mapLockerThree, 240)
   end
---]]
+--
   local function destroyDummyBuilding()
     building.destruct()
   end
