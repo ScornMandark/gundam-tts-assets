@@ -4,7 +4,9 @@ function createBuildings(region)
    local blocktype = {
      [1] = ref_regionData.smallBlock,
      [2] = ref_regionData.medBlock,
-     [3] = ref_regionData.largeBlock
+     [3] = ref_regionData.smallBlock,
+     [4] = ref_regionData.medBlock,
+     [5] = ref_regionData.largeBlock
    }
    local blockRand = math.random(1,randMax)
 local buildingParams = {

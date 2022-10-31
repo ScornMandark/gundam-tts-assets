@@ -64,7 +64,7 @@ textboxFontColor = {0,0,0,255}
 incher = 24  -- scaler to adjust for relative position on board to game world inches
 buildingScale = 1 -- adjust model scale
 
-randMax = 3 -- all building types ok
+randMax = 5 -- all building types ok
 --This is the button placement information
 local defaultRegionData = {
    --Add checkboxes
