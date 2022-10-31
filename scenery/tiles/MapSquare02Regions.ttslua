@@ -78,37 +78,37 @@ local defaultRegionData = {
        --small buildings locations, 12x, top
        { -- #1
            pos   = {-0.25,1,-0.125},
-           rot   = 0,
+           rot   = 180,
        },
        
        { -- #3
            pos   =  {0.25,1,-0.125},
-           rot   = 0,
+           rot   = 180,
        },
        { -- #4
            pos   =  {-0.25,1,-0.25},
-           rot   = 180,
+           rot   = 0,
        },
  
        { -- #6
            pos   = {0.25,1,-0.25},
-           rot   = 180,
+           rot   = 0,
        },
        { -- #7
            pos   = {-0.25,1,0.25},
-           rot   = 0,
+           rot   = 180,
        },
        { -- #9
            pos   = {0.25,1,0.25},
-           rot   = 0,
+           rot   = 180,
        },
        { -- #10
            pos   = {-0.25,1,0.125},
-           rot   = 180,
+           rot   = 0,
         },
        { -- #12
            pos   = {0.25,1,0.125},
-           rot   = 180,
+           rot   = 0,
        },
 
        --End of smallBlock (top)
@@ -116,19 +116,19 @@ local defaultRegionData = {
    medBlock ={ --medium sized buildings, 4 x
        { -- #1
            pos   = {-0.3,1,-0.25},
-           rot   = 0,
+           rot   = 180,
        },
        { -- #2
            pos   = {0.3,1,-0.25},
-           rot   = 0,
+           rot   = 180,
        },
        { -- #3
            pos   =  {-0.3,1,0.25},
-           rot   = 180,
+           rot   = 0,
        },
        { -- #4
            pos   =  {0.3,1,0.25},
-           rot   = 180,
+           rot   = 0,
        },
 
    }, -- end med block
