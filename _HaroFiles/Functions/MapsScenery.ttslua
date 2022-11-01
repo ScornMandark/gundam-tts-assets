@@ -151,6 +151,7 @@ function clearTiles()
         object.destruct()
     end
   end
+  end
   tilesPresent = false
 end
 
