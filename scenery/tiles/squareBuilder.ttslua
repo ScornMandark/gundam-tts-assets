@@ -81,6 +81,7 @@ function createBuildings(ref_regionData,quarter)
     if quarter == 0 then
         buildingRotation = buildingRotation + math.random(0,3)*90   -- for massive tile, random orientation
     end
+--[[
    if tileRotation == vector(0,90,0) then
     scaledPos[1] = scaledPos[3]
     scaledPos[3] = -scaledPos[1]
@@ -96,7 +97,7 @@ function createBuildings(ref_regionData,quarter)
     scaledPos[3] = scaledPos[1]
     buildingRotation = buildingRotation + 270
     end
-
+--]]
 
     scaledPos:scale(vector(incher,0,incher))
     scaledPos = scaledPos + tileOffset
