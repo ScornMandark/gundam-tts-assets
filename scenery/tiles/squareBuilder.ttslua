@@ -89,21 +89,15 @@ function createBuildings(ref_regionData,quarter)
     end
 
     if quarter == 2 then    --flip locations around for different quarters - quarter 1 default
-        scaledPos[1] = -scaledPos[1]
-        if data.rot == 90 or data.rot == 270 then
-            buildingRotation = buildingRotation + 180   -- if flipped X axis, reverse buildings facing +/- X
+        scaledPos[1] = scaledPos[1] + 0.5
         end
     end
     if quarter == 3 then
-        scaledPos[1] = -scaledPos[1]
-        scaledPos[3] = -scaledPos[3]
-        buildingRotation = buildingRotation + 180   -- flipped both axes, reverse all buildings
+        scaledPos[1] = scaledPos[1] + 0.5
+        scaledPos[3] = scaledPos[3] + 0.5
     end
     if quarter == 4 then
-        scaledPos[3] = -scaledPos[3]
-        if data.rot == 0 or data.rot == 180 then
-            buildingRotation = buildingRotation + 180   -- flipped Z axis, reverse buildings facing +/- Z
-        end
+        scaledPos[3] = scaledPos[3] +0.5
     end
     if quarter == 0 then
         buildingRotation = buildingRotation + math.random(0,3)*90   -- for massive tile, random orientation
