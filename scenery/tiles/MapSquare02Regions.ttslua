@@ -147,37 +147,52 @@ local defaultRegionData = {
            maxRange = 52,       },
 
 
-       { -- #7
-           pos   = {-0.25,1,0.25},
-           rot   = 180,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #9
-           pos   = {0.25,1,0.25},
-           rot   = 180,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #10
-           pos   = {-0.25,1,0.14},
-           rot   = 0,
-           minRange = 26,
-           maxRange = 53,        },
-       { -- #12
-           pos   = {0.25,1,0.14},
+       { -- #3
+           pos   = {0.35,1,0.14}, -- one long down Q2-Q3 road, Q3
            rot   = 0,
            minRange = 25,
-           maxRange = 52,       },
+           maxRange = 38,       },
+       { -- #3
+           pos   = {0.15,1,0.34}, -- one short 1 long down Q3-Q4 road, Q3
+           rot   = 90,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #3
+           pos   = {0.15,1,0.14},
+           rot   = 90,
+           minRange = 39,
+           maxRange = 52,        },
+       { -- #3
+           pos   = {0.35,1,0.27}, -- one long center Q3 facing down
+           rot   = 180,
+           minRange = 25,
+           maxRange = 38,       },
 
-       { -- #7
-           pos   = {-0.25,1,0.4},
-           rot   = 180,
+       { -- #4
+           pos   = {-0.285,1,0.14},  -- one long Q1-Q4 road, Q4, centered
+           rot   = 0,
            minRange = 25,
-           maxRange = 52,       },
-       { -- #9
-           pos   = {0.25,1,0.4},
-           rot   = 180,
+           maxRange = 38,       },
+       { -- #4
+           pos   = {-0.42,1,0.34}, --  one long Q4 side,
+           rot   = 90,
            minRange = 25,
+           maxRange = 38,       },
+       { -- #4
+           pos   = {-0.15,1,0.4}, -- 2 short down Q3-Q4 road, Q4
+           rot   = 270,
+           minRange = 39,
            maxRange = 52,       },
+       { -- #4
+           pos   = {-0.15,1,0.27},
+           rot   = 270,
+           minRange = 39,
+           maxRange = 52,        },
+       { -- #4
+           pos   = {-0.285,1,0.27},
+           rot   = 180,
+           minRange = 39,
+           maxRange = 52,        },
        --End of smallBlock (top)
    },
    medBlock ={ --medium sized buildings, 4 x
