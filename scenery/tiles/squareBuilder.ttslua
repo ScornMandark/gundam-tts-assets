@@ -73,14 +73,14 @@ function createBuildings(ref_regionData,quarter)
     local tileRotation = self.getRotation()
     local buildingRotation = data.rot
      if quarter == 2 then    --flip locations around for different quarters - quarter 1 default, -x -y
-        scaledPos[1] = scaledPos[1] + 0.5
+        scaledPos[1] = scaledPos[1] + 0.6
     end
     if quarter == 3 then
-        scaledPos[1] = scaledPos[1] + 0.5
-        scaledPos[3] = scaledPos[3] + 0.5
+        scaledPos[1] = scaledPos[1] + 0.6
+        scaledPos[3] = scaledPos[3] + 0.6
     end
     if quarter == 4 then
-        scaledPos[3] = scaledPos[3] +0.5
+        scaledPos[3] = scaledPos[3] + 0.6
     end
     if quarter == 0 then
         buildingRotation = buildingRotation + math.random(0,3)*90   -- for massive tile, random orientation
