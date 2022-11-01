@@ -131,12 +131,12 @@ local defaultRegionData = {
            minRange = 25,
            maxRange = 38,       },
        { -- #2
-           pos   = {-0.285,1,-0.27},   -- 1 short center Q2 facing top edge
+           pos   = {0.285,1,-0.27},   -- 1 short center Q2 facing top edge
            rot   = 0,
            minRange = 39,
            maxRange = 52,       },
        { -- #2
-           pos   =  {0.42,1,-0.27},  -- 2 short down Q2 side edge
+           pos   =  {0.42,1,-0.26},  -- 2 short down Q2 side edge
            rot   = 270,
            minRange = 39,
            maxRange = 52,       },
