@@ -21,8 +21,8 @@ textboxFontColor = {0,0,0,255}
 incher = 24  -- scaler to adjust for relative position on board to game world inches
 buildingScale = 1 -- adjust model scale
 local centerOpen = true
-local quarterShiftX = 0.55
-local quarterShiftZ = 0.575
+local quarterShiftX = 0.35
+local quarterShiftZ = 0.375
 
 randMax = 7 -- all building types ok
 --This is the button placement information
