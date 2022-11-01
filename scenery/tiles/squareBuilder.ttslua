@@ -90,7 +90,6 @@ function createBuildings(ref_regionData,quarter)
 
     if quarter == 2 then    --flip locations around for different quarters - quarter 1 default
         scaledPos[1] = scaledPos[1] + 0.5
-        end
     end
     if quarter == 3 then
         scaledPos[1] = scaledPos[1] + 0.5
