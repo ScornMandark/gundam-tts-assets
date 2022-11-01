@@ -4,7 +4,7 @@
 --]]
 
 --Set this to true while editing and false when you have finished
-disableSave = true
+disableSave = false
 --Remember to set this to false once you are done making changes
 --Then, after you save & apply it, save your game too
 

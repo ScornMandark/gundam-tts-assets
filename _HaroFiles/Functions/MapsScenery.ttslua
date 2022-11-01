@@ -256,9 +256,10 @@ function makeASquareTiledTable(tileNum)
 --          print(squareLocator)
           squareBuilder.setPosition(squareLocator)
           squareBuilder.setCustomObject({image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapSquare0' .. squareRand .. '.png?raw=true'})
-         squareBuilder.setRotation(vector(0,rotRand,0))
-         squareBuilder.locked = true
+          squareBuilder.setRotation(vector(0,rotRand,0))
+          squareBuilder.locked = true
           tableTiles[tileCounter] = squareBuilder.getGUID()
+          squareBuilder.addTag('mapTile')
           generateBuildingsSquare(squareBuilder, squareRand)
           tileCounter = tileCounter +1
         end
