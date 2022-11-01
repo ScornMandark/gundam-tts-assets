@@ -42,32 +42,32 @@ local defaultRegionData = {
        ]]
    smallQuarter1 = {
         { -- #1
-           pos   = {-0.15,1,-0.14}, -- 3 square along Q1-Q4 road, Q1
+           pos   = {-0.10,1,-0.10}, -- 3 square along Q1-Q4 road, Q1
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
        { -- #1
-           pos   = {-0.285,1,-0.14},
+           pos   = {-0.235,1,-0.10},
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
        { -- #1
-           pos   = {-0.42,1,-0.14},
+           pos   = {-0.38,1,-0.10},
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
        { -- #1
-           pos   =  {-0.15,1,-0.34},  -- 1 long down Q1-Q2 road, Q1
+           pos   =  {-0.10,1,-0.30},  -- 1 long down Q1-Q2 road, Q1
            rot   = 270,
            minRange = 25,
            maxRange = 38,       },
        { -- #1
-           pos   =  {-0.35,1,-0.4},  -- 1 long down Q1 top edge, Q1
+           pos   =  {-0.30,1,-0.36},  -- 1 long down Q1 top edge, Q1
            rot   = 0,
            minRange = 25,
            maxRange = 38,       },
        { -- #1
-           pos   =  {-0.42,1,-0.27},  -- 1 short down Q1 side edge, Q1
+           pos   =  {-0.38,1,-0.23},  -- 1 short down Q1 side edge, Q1
            rot   = 90,
            minRange = 39,
            maxRange = 52,       },
@@ -76,32 +76,32 @@ local defaultRegionData = {
    smallQuarter2 = {
 
        { -- #2
-           pos   =  {-0.21,1,-0.14}, -- 1 long and 1 short along road Q2
+           pos   =  {-0.16,1,-0.10}, -- 1 long and 1 short along road Q2
            rot   = 180,
            minRange = 25,
            maxRange = 38,       },
        { -- #2
-           pos   = {-0.41,1,-0.14},
+           pos   = {-0.36,1,-0.10},
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
        { -- #2
-           pos   =  {-0.15,1,-0.34},  -- 1 long down Q1-Q2 road, Q2
+           pos   =  {-0.10,1,-0.30},  -- 1 long down Q1-Q2 road, Q2
            rot   = 270,
            minRange = 25,
            maxRange = 38,       },
        { -- #2
-           pos   = {-0.285,1,-0.27},   -- 1 short center Q2 facing top edge
+           pos   = {-0.235,1,-0.23},   -- 1 short center Q2 facing top edge
            rot   = 0,
            minRange = 39,
            maxRange = 52,       },
        { -- #2
-           pos   =  {-0.42,1,-0.26},  -- 2 short down Q2 side edge
+           pos   =  {-0.38,1,-0.22},  -- 2 short down Q2 side edge
            rot   = 90,
            minRange = 39,
            maxRange = 52,       },
        { -- #2
-           pos   =  {-0.42,1,-0.4},
+           pos   =  {-0.38,1,-0.36},
            rot   = 90,
            minRange = 39,
            maxRange = 52,       },
@@ -111,22 +111,22 @@ local defaultRegionData = {
    smallQuarter3 = {
 
        { -- #3
-           pos   = {-0.35,1,-0.14}, -- one long down Q2-Q3 road, Q3
+           pos   = {-0.30,1,-0.10}, -- one long down Q2-Q3 road, Q3
            rot   = 180,
            minRange = 25,
            maxRange = 38,       },
        { -- #3
-           pos   = {-0.15,1,-0.34}, -- one short 1 long down Q3-Q4 road, Q3
+           pos   = {-0.10,1,-0.30}, -- one short 1 long down Q3-Q4 road, Q3
            rot   = 270,
            minRange = 25,
            maxRange = 38,       },
        { -- #3
-           pos   = {-0.15,1,-0.14},
+           pos   = {-0.10,1,-0.10},
            rot   = 270,
            minRange = 39,
            maxRange = 52,        },
        { -- #3
-           pos   = {-0.35,1,-0.27}, -- one long center Q3 facing down
+           pos   = {-0.30,1,-0.23}, -- one long center Q3 facing down
            rot   = 0,
            minRange = 25,
            maxRange = 38,       },
@@ -135,27 +135,27 @@ local defaultRegionData = {
    smallQuarter4 = {
 
        { -- #4
-           pos   = {-0.285,1,-0.14},  -- one long Q1-Q4 road, Q4, centered
+           pos   = {-0.235,1,-0.10},  -- one long Q1-Q4 road, Q4, centered
            rot   = 180,
            minRange = 25,
            maxRange = 38,       },
        { -- #4
-           pos   = {-0.42,1,-0.34}, --  one long Q4 side,
+           pos   = {-0.38,1,-0.30}, --  one long Q4 side,
            rot   = 90,
            minRange = 25,
            maxRange = 38,       },
        { -- #4
-           pos   = {-0.15,1,-0.4}, -- 2 short down Q3-Q4 road, Q4
+           pos   = {-0.10,1,-0.36}, -- 2 short down Q3-Q4 road, Q4
            rot   = 270,
            minRange = 39,
            maxRange = 52,       },
        { -- #4
-           pos   = {-0.15,1,-0.27},
+           pos   = {-0.10,1,-0.23},
            rot   = 270,
            minRange = 39,
            maxRange = 52,        },
        { -- #4
-           pos   = {-0.285,1,-0.27},
+           pos   = {-0.235,1,-0.23},
            rot   = 0,
            minRange = 39,
            maxRange = 52,        },
@@ -164,7 +164,7 @@ local defaultRegionData = {
 
    medQuarter1 ={ --medium sized building
        { -- #1
-           pos   = {-0.3,1,-0.25},
+           pos   = {-0.25,1,-0.20},
            rot   = 180,
            minRange = 5,
            maxRange = 24,       },
@@ -172,7 +172,7 @@ local defaultRegionData = {
    }, -- end med quarter 1
   medQuarter2 ={ --park or whatever
        { -- #1
-           pos   = {-0.3,1,-0.25},
+           pos   = {-0.25,1,-0.20},
            rot   = 180,
            minRange = 5,
            maxRange = 24,       },
@@ -180,7 +180,7 @@ local defaultRegionData = {
    }, -- end med quarter 1
 
    largeBlock ={
-          { -- not used for this map
+          { 
            pos   = {0,1,0},
            rot   = 0,
            minRange = 0,
