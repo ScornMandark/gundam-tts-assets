@@ -76,7 +76,7 @@ function createBuildings(ref_regionData,quarter)
         scaledPos[1] = scaledPos[1] + quarterShiftX
     end
      if quarter == 4 or quarter == 3 then
-        scaledPos[3] = scaledPos[3] + qurterShiftZ
+        scaledPos[3] = scaledPos[3] + quarterShiftZ
     end
     if quarter == 0 then
         buildingRotation = buildingRotation + math.random(0,3)*90   -- for massive tile, random orientation
