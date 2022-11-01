@@ -146,6 +146,10 @@ function clearTiles()
         tableTiles[tileDestructor] = 0
         tileDestructor = tileDestructor + 1
       end
+    for i, object in ipairs(getObjects()) do
+      if object.hastag('building') then
+        object.destruct()
+    end
   end
   tilesPresent = false
 end

@@ -101,7 +101,8 @@ scaledPos = scaledPos + tileOffset
           -- Apply the color to object
        cloneBuilding.setColorTint(color) --]]
        spawnedBuildingCount = spawnedBuildingCount + 1
-       self.addAttachment(cloneBuilding)
+       cloneBuilding.locked = true
+       cloneBuilding.addTag('building')
    end
       building.destruct()
 end
