@@ -19,74 +19,105 @@ function onload(saved_data)
    else
        ref_regionData = defaultRegionData
    end
-
    spawnedBuildingCount = 0
-   createBuildings()
+
+   if centerOpen == true then
+    local bigRegion = math.random(1,10)
+    if bigRegion >7 then
+        createBuildings(0)
+    else
+       createBuildings(1)
+       createBuildings(2)
+       createBuildings(3)
+       createBuildings(4)
+   end
 end
 
 --Building creation
 
 --Makes buildings
-function createBuildings(region)
+function createBuildings(region, quarter)
    local blocktype = {
-     [1] = ref_regionData.smallBlock,
-     [2] = ref_regionData.medBlock,
-     [3] = ref_regionData.smallBlock,
-     [4] = ref_regionData.medBlock,
-     [5] = ref_regionData.largeBlock
+     [1] = ref_regionData.smallQuarter1,
+     [2] = ref_regionData.smallQuarter2,
+     [3] = ref_regionData.smallQuarter3,
+     [4] = ref_regionData.smallQuarter4,
+     [5] = ref_regionData.medQuarter1,
+     [6] = ref_regionData.medQuarter2,
+     [7] = ref_regionData.largeBlock
    }
-   local blockRand = math.random(1,randMax)
-local buildingParams = {
-    type='Custom_Assetbundle',
-    position= {x=0,y=100,z=0},
-    scale= {x=1,y=1,z=1},
-    rotation = {x=0, y=0, z=0},
-    sound = false,
-     snapToGrid = false,
-}
-local buildingArtParams = {
-    assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/urban_buildings.unity3d?raw=true',
-    assetbundle_secondary = nil,
-    type = 1, --[[ figurine --]]
-    material = 2, --[[ metal --]]
-}
-local building = spawnObject(buildingParams)
-building.setCustomObject(buildingArtParams)
+   if quarter == 0 then
+    local blockRand = 7
+    else 
+    local blockRand = math.random(1,6)
+    end
+    local buildingParams = {
+        type='Custom_Assetbundle',
+        position= {x=0,y=100,z=0},
+        scale= {x=1,y=1,z=1},
+        rotation = {x=0, y=0, z=0},
+        sound = false,
+         snapToGrid = false,
+    }
+    local buildingArtParams = {
+        assetbundle = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/buildings/urban_buildings.unity3d?raw=true',
+        assetbundle_secondary = nil,
+        type = 1, --[[ figurine --]]
+        material = 2, --[[ metal --]]
+    }
+    local building = spawnObject(buildingParams)
+    building.setCustomObject(buildingArtParams)
 
-for i, data in ipairs(blocktype[blockRand]) do
-       --Sets up reference function
-       --Sets up label
-       --Creates button and counts it
---local scaledSize = data.size
-local scaledPos = Vector(data.pos)
-local scaledPosX = data.pos[1]
-local scaledPosZ = data.pos[3]
-local tileOffset = self.getPosition()
-local tileRotation = self.getRotation()
-local buildingRotation = data.rot
-local boardFlipper = vector(1,1,-1)
-if tileRotation == vector(0,90,0) then
-scaledPos[1] = scaledPosZ
-scaledPos[3] = -scaledPosX
-boardFlipper = vector(-1,1,1)
-buildingRotation = buildingRotation + 90
-end
-if tileRotation == vector(0,180,0) then
-scaledPos[1] = -scaledPosX
-scaledPos[3] = -scaledPosZ
-boardFlipper = vector(-1,1,1)
-buildingRotation = buildingRotation + 180
-end
-if tileRotation == vector(0,270,0) then
-scaledPos[1] = -scaledPosZ
-scaledPos[3] = scaledPosX
-boardFlipper = vector(-1,1,1)
-buildingRotation = buildingRotation + 270
-end
+    for i, data in ipairs(blocktype[blockRand]) do
+           --Sets up reference function
+           --Sets up label
+           --Creates button and counts it
+    --local scaledSize = data.size
+    local scaledPos = Vector(data.pos)
+--    local scaledPosX = data.pos[1]
+--    local scaledPosZ = data.pos[3]
+    local tileOffset = self.getPosition()
+    local tileRotation = self.getRotation()
+    local buildingRotation = data.rot
+    if tileRotation == vector(0,90,0) then
+    scaledPos[1] = scaledPos[3]
+    scaledPos[3] = -scaledPos[1]
+    buildingRotation = buildingRotation + 90
+    end
+    if tileRotation == vector(0,180,0) then
+    scaledPos[1] = -scaledPos[1]
+    scaledPos[3] = -scaledPos[3]
+    buildingRotation = buildingRotation + 180
+    end
+    if tileRotation == vector(0,270,0) then
+    scaledPos[1] = -scaledPos[3]
+    scaledPos[3] = scaledPos[1]
+    buildingRotation = buildingRotation + 270
+    end
 
+    if quarter == 2 then    --flip locations around for different quarters - quarter 1 default
+        scaledPos[1] = -scaledPos[1]
+        if data.rot == 90 or data.rot == 270 then
+            buildingRotation = buildingRotation + 180   -- if flipped X axis, reverse buildings facing +/- X
+        end
+    end
+    if quarter == 3 then
+        scaledPos[1] = -scaledPos[1]
+        scaledPos[3] = -scaledPos[3]
+        buildingRotation = buildingRotation + 180   -- flipped both axes, reverse all buildings
+    end
+    if quarter == 4 then
+        scaledPos[3] = -scaledPos[3]
+        if data.rot == 0 or data.rot == 180 then
+            buildingRotation = buildingRotation + 180   -- flipped Z axis, reverse buildings facing +/- Z
+        end
+    end
+    if quarter == 0 then
+        buildingRotation = buildingRotation + math.random(0,3)*90   -- for massive tile, random orientation
+    end
 
-scaledPos:scale(vector(incher,0,incher))
-scaledPos = scaledPos + tileOffset
+    scaledPos:scale(vector(incher,0,incher))
+    scaledPos = scaledPos + tileOffset
 
       local cloneBuilding = building.clone()
       cloneBuilding.setPosition(scaledPos)

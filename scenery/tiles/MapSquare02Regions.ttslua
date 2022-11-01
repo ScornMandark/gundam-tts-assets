@@ -63,12 +63,11 @@ textboxFontColor = {0,0,0,255}
 
 incher = 24  -- scaler to adjust for relative position on board to game world inches
 buildingScale = 1 -- adjust model scale
+local centerOpen = false
 
-randMax = 4 -- no giant buildings here
+randMax = 6 -- no giant buildings here
 --This is the button placement information
 local defaultRegionData = {
-   --Add checkboxes
-   smallBlock = {
        --[[
        pos   = the position (pasted from the helper tool)
        rot   = which direction it should face
@@ -82,8 +81,8 @@ local defaultRegionData = {
             wide residential: 25-38 (7 color variations per building, 2 heights per building, 1 building)
             squareish residential: 39-52 (7 color variations per building, 2 heights per building, 1 building)
        ]]
-       --small buildings locations, 12x, top
-       { -- #1
+   smallQuarter1 = {
+        { -- #1
            pos   = {-0.15,1,-0.14}, -- 3 square along Q1-Q4 road, Q1
            rot   = 180,
            minRange = 39,
@@ -113,7 +112,9 @@ local defaultRegionData = {
            rot   = 90,
            minRange = 39,
            maxRange = 52,       },
+       },   --  end of small quarter 1
 
+   smallQuarter2 = {
 
        { -- #2
            pos   =  {0.21,1,-0.14}, -- 1 long and 1 short along road Q2
@@ -146,6 +147,9 @@ local defaultRegionData = {
            minRange = 39,
            maxRange = 52,       },
 
+       },   --  end of small quarter 2
+
+   smallQuarter3 = {
 
        { -- #3
            pos   = {0.35,1,0.14}, -- one long down Q2-Q3 road, Q3
@@ -167,6 +171,9 @@ local defaultRegionData = {
            rot   = 180,
            minRange = 25,
            maxRange = 38,       },
+       },   --  end of small quarter 3
+
+   smallQuarter4 = {
 
        { -- #4
            pos   = {-0.285,1,0.14},  -- one long Q1-Q4 road, Q4, centered
@@ -193,31 +200,25 @@ local defaultRegionData = {
            rot   = 180,
            minRange = 39,
            maxRange = 52,        },
-       --End of smallBlock (top)
-   },
-   medBlock ={ --medium sized buildings, 4 x
+   },   -- end of small quarter 4
+
+   medQuarter1 ={ --medium sized building
        { -- #1
            pos   = {-0.3,1,-0.25},
            rot   = 180,
            minRange = 5,
            maxRange = 24,       },
-       { -- #2
-           pos   = {0.3,1,-0.25},
-           rot   = 180,
-           minRange = 5,
-           maxRange = 24,       },
-       { -- #3
-           pos   =  {-0.3,1,0.25},
-           rot   = 0,
-           minRange = 5,
-           maxRange = 24,       },
-       { -- #4
-           pos   =  {0.3,1,0.25},
-           rot   = 0,
-            minRange = 5,
-           maxRange = 24,       },
 
-   }, -- end med block
+   }, -- end med quarter 1
+  medQuarter2 ={ --park or whatever
+       { -- #1
+           pos   = {-0.3,1,-0.25},
+           rot   = 180,
+           minRange = 53,
+           maxRange = 54,       },
+
+   }, -- end med quarter 1
+
    largeBlock ={
           { -- not used for this map
            pos   = {0,1,0},

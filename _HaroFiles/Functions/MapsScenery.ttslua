@@ -147,7 +147,7 @@ function clearTiles()
         tileDestructor = tileDestructor + 1
       end
     for i, object in ipairs(getObjects()) do
-      if object.hastag('building') then
+      if object.hasTag('building') then
         object.destruct()
     end
   end

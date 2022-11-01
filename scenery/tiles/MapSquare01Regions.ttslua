@@ -63,15 +63,13 @@ textboxFontColor = {0,0,0,255}
 
 incher = 24  -- scaler to adjust for relative position on board to game world inches
 buildingScale = 1 -- adjust model scale
-
-randMax = 5 -- all building types ok
+local centerOpen = true
+randMax = 7 -- all building types ok
 --This is the button placement information
 local defaultRegionData = {
-   --Add checkboxes
-   smallBlock = {
        --[[
        pos   = the position (pasted from the helper tool)
-       rot  = height/width/font_size for checkbox
+       rot   = which direction it should face
        min range = beginning of buildings approved for that zone
        max range = end of range of buildings approved for that zone
        ]]
@@ -82,99 +80,149 @@ local defaultRegionData = {
             wide residential: 25-38 (7 color variations per building, 2 heights per building, 1 building)
             squareish residential: 39-52 (7 color variations per building, 2 heights per building, 1 building)
        ]]
-       --small buildings locations, 12x, top
+   smallQuarter1 = {
+        { -- #1
+           pos   = {-0.15,1,-0.14}, -- 3 square along Q1-Q4 road, Q1
+           rot   = 180,
+           minRange = 39,
+           maxRange = 52,       },
        { -- #1
-           pos   = {-0.25,1,-0.125},
+           pos   = {-0.285,1,-0.14},
+           rot   = 180,
+           minRange = 39,
+           maxRange = 52,       },
+       { -- #1
+           pos   = {-0.42,1,-0.14},
+           rot   = 180,
+           minRange = 39,
+           maxRange = 52,       },
+       { -- #1
+           pos   =  {-0.15,1,-0.34},  -- 1 long down Q1-Q2 road, Q1
+           rot   = 270,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #1
+           pos   =  {-0.35,1,-0.4},  -- 1 long down Q1 top edge, Q1
+           rot   = 0,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #1
+           pos   =  {-0.42,1,-0.27},  -- 1 short down Q1 side edge, Q1
+           rot   = 90,
+           minRange = 39,
+           maxRange = 52,       },
+       },   --  end of small quarter 1
+
+   smallQuarter2 = {
+
+       { -- #2
+           pos   =  {0.21,1,-0.14}, -- 1 long and 1 short along road Q2
            rot   = 180,
            minRange = 25,
+           maxRange = 38,       },
+       { -- #2
+           pos   = {0.41,1,-0.14},
+           rot   = 180,
+           minRange = 39,
            maxRange = 52,       },
        { -- #2
-           pos   = {0,1,-0.125},
-           rot   = 180,
+           pos   =  {0.15,1,-0.34},  -- 1 long down Q1-Q2 road, Q2
+           rot   = 90,
            minRange = 25,
-           maxRange = 52,       },
-       { -- #3
-           pos   =  {0.25,1,-0.125},
-           rot   = 180,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #4
-           pos   =  {-0.25,1,-0.25},
-           rot   = 0,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #5
-           pos   = {0,1,-0.25},
-           rot   = 0,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #6
-           pos   = {0.25,1,-0.25},
-           rot   = 0,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #7
-           pos   = {-0.25,1,0.25},
-           rot   = 180,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #8
-           pos   = {0,1,0.25},
-           rot   = 180,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #9
-           pos   = {0.25,1,0.25},
-           rot   = 180,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #10
-           pos   = {-0.25,1,0.125},
-           rot   = 0,
-           minRange = 26,
-           maxRange = 53,        },
-       { -- #11
-           pos   = {0,1,0.125},
-           rot   = 0,
-           minRange = 25,
-           maxRange = 52,       },
-       { -- #12
-           pos   = {0.25,1,0.125},
-           rot   = 0,
-           minRange = 25,
-           maxRange = 52,       },
-
-       --End of smallBlock (top)
-   },
-   medBlock ={ --medium sized buildings, 4 x
-       { -- #1
-           pos   = {-0.2,1,-0.1875},
-           rot   = 0,
-           minRange = 5,
-           maxRange = 24,       },
+           maxRange = 38,       },
        { -- #2
-           pos   = {0.2,1,-0.1875},
+           pos   = {0.285,1,-0.27},   -- 1 short center Q2 facing top edge
            rot   = 0,
-           minRange = 5,
-           maxRange = 24,       },
+           minRange = 39,
+           maxRange = 52,       },
+       { -- #2
+           pos   =  {0.42,1,-0.26},  -- 2 short down Q2 side edge
+           rot   = 270,
+           minRange = 39,
+           maxRange = 52,       },
+       { -- #2
+           pos   =  {0.42,1,-0.4},
+           rot   = 270,
+           minRange = 39,
+           maxRange = 52,       },
+
+       },   --  end of small quarter 2
+
+   smallQuarter3 = {
+
        { -- #3
-           pos   =  {-0.2,1,0.1875},
+           pos   = {0.35,1,0.14}, -- one long down Q2-Q3 road, Q3
+           rot   = 0,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #3
+           pos   = {0.15,1,0.34}, -- one short 1 long down Q3-Q4 road, Q3
+           rot   = 90,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #3
+           pos   = {0.15,1,0.14},
+           rot   = 90,
+           minRange = 39,
+           maxRange = 52,        },
+       { -- #3
+           pos   = {0.35,1,0.27}, -- one long center Q3 facing down
            rot   = 180,
-           minRange = 5,
-           maxRange = 24,       },
+           minRange = 25,
+           maxRange = 38,       },
+       },   --  end of small quarter 3
+
+   smallQuarter4 = {
+
        { -- #4
-           pos   =  {0.2,1,0.1875},
+           pos   = {-0.285,1,0.14},  -- one long Q1-Q4 road, Q4, centered
+           rot   = 0,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #4
+           pos   = {-0.42,1,0.34}, --  one long Q4 side,
+           rot   = 90,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #4
+           pos   = {-0.15,1,0.4}, -- 2 short down Q3-Q4 road, Q4
+           rot   = 270,
+           minRange = 39,
+           maxRange = 52,       },
+       { -- #4
+           pos   = {-0.15,1,0.27},
+           rot   = 270,
+           minRange = 39,
+           maxRange = 52,        },
+       { -- #4
+           pos   = {-0.285,1,0.27},
+           rot   = 180,
+           minRange = 39,
+           maxRange = 52,        },
+   },   -- end of small quarter 4
+
+   medQuarter1 ={ --medium sized building
+       { -- #1
+           pos   = {-0.3,1,-0.25},
            rot   = 180,
            minRange = 5,
            maxRange = 24,       },
 
-   }, -- end med block
+   }, -- end med quarter 1
+  medQuarter2 ={ --park or whatever
+       { -- #1
+           pos   = {-0.3,1,-0.25},
+           rot   = 180,
+           minRange = 53,
+           maxRange = 54,       },
+
+   }, -- end med quarter 1
+
    largeBlock ={
-          { -- #1
+          { -- not used for this map
            pos   = {0,1,0},
            rot   = 0,
            minRange = 0,
            maxRange = 4,       },
    },
 }
-
