@@ -213,8 +213,8 @@ local defaultRegionData = {
        { -- #1
            pos   = {-0.3,1,-0.25},
            rot   = 180,
-           minRange = 53,
-           maxRange = 54,       },
+           minRange = 5,
+           maxRange = 24,       },
 
    }, -- end med quarter 1
 
