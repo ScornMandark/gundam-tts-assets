@@ -130,27 +130,26 @@ end
 function freezeTiles()
   tileFreezer = 1
   if tilesPresent == true then
-    for i, data in ipairs(tableTiles) do
-        local freezer = getObjectFromGUID(tableTiles[tileFreezer])
-        freezer.setLuaScript = ''
-        tileFreezer = tileFreezer + 1
+    for i, object in ipairs(getObjects()) do
+      if object.hasTag('mapTile') then
+        object.setLuaScript("")
       end
+    end
   end
 end
 
 function clearTiles()
-  tileDestructor = 1
   if tilesPresent == true then
-    for i, data in ipairs(tableTiles) do
-        destroyObject(getObjectFromGUID(tableTiles[tileDestructor]))
-        tableTiles[tileDestructor] = 0
-        tileDestructor = tileDestructor + 1
+    for i, object in ipairs(getObjects()) do
+      if object.hasTag('mapTile') then
+        object.destruct()
       end
+    end
     for i, object in ipairs(getObjects()) do
       if object.hasTag('building') then
         object.destruct()
+      end
     end
-  end
   end
   tilesPresent = false
 end
@@ -169,14 +168,7 @@ end
 
 function makeASquareTiledTable(tileNum)
   self.clearButtons()
-tileDestructor = 1
-  if tilesPresent == true then
-    for i, data in ipairs(tableTiles) do
-        destroyObject(getObjectFromGUID(tableTiles[tileDestructor]))
-        tableTiles[tileDestructor] = 0
-        tileDestructor = tileDestructor + 1
-      end
-  end
+  clearTiles()
   Tables.setTable("Custom Rectangle")
   Tables.setCustomURL('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/blank.png')
   local seed = os.time()
@@ -246,6 +238,7 @@ tileDestructor = 1
         squareBuilder.setCustomObject({image = 'https://github.com/ScornMandark/gundam-tts-assets/blob/main/scenery/tiles/MapSquare0' .. squareRand .. '.png?raw=true'})
         squareBuilder.setRotation(vector(0,rotRand,0))
         squareBuilder.locked = true
+        squareBuilder.addTag('mapTile')
         tableTiles[tileCounter] = squareBuilder.getGUID()
         generateBuildingsSquare(squareBuilder, squareRand)
         tileCounter = tileCounter +1
@@ -338,6 +331,7 @@ function makeABuilding()
   local building = spawnObject(buildingParams)
   building.setCustomObject(buildingArtParams)
   building.setLock(true)
+  building.addTag('mapTile')
   createScenery()
 end
 
