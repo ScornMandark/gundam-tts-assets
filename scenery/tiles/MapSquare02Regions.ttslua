@@ -84,17 +84,17 @@ local defaultRegionData = {
        ]]
        --small buildings locations, 12x, top
        { -- #1
-           pos   = {-0.14,1,-0.14}, -- 3 square along road, Q1
+           pos   = {-0.13,1,-0.14}, -- 3 square along road, Q1
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
        { -- #1
-           pos   = {-0.29,1,-0.14},
+           pos   = {-0.35,1,-0.14},
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
        { -- #1
-           pos   = {-0.44,1,-0.14},
+           pos   = {-0.5,1,-0.14},
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
