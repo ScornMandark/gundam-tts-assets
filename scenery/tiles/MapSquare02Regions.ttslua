@@ -84,37 +84,69 @@ local defaultRegionData = {
        ]]
        --small buildings locations, 12x, top
        { -- #1
-           pos   = {-0.13,1,-0.14}, -- 3 square along road, Q1
+           pos   = {-0.15,1,-0.14}, -- 3 square along Q1-Q4 road, Q1
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
        { -- #1
-           pos   = {-0.35,1,-0.14},
+           pos   = {-0.285,1,-0.14},
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
        { -- #1
-           pos   = {-0.5,1,-0.14},
+           pos   = {-0.42,1,-0.14},
            rot   = 180,
            minRange = 39,
            maxRange = 52,       },
-       
-       { -- #3
-           pos   =  {0.25,1,-0.14},
+       { -- #1
+           pos   =  {-0.15,1,-0.34},  -- 1 long down Q1-Q2 road, Q1
+           rot   = 270,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #1
+           pos   =  {-0.35,1,-0.4},  -- 1 long down Q1 top edge, Q1
+           rot   = 0,
+           minRange = 25,
+           maxRange = 38,       },
+       { -- #1
+           pos   =  {-0.42,1,-0.27},  -- 1 short down Q1 side edge, Q1
+           rot   = 90,
+           minRange = 39,
+           maxRange = 52,       },
+
+
+       { -- #2
+           pos   =  {0.21,1,-0.14}, -- 1 long and 1 short along road Q2
            rot   = 180,
            minRange = 25,
+           maxRange = 38,       },
+       { -- #2
+           pos   = {0.41,1,-0.14},
+           rot   = 180,
+           minRange = 39,
            maxRange = 52,       },
-       { -- #4
-           pos   =  {-0.25,1,-0.25},
-           rot   = 0,
+       { -- #2
+           pos   =  {0.15,1,-0.34},  -- 1 long down Q1-Q2 road, Q2
+           rot   = 90,
            minRange = 25,
-           maxRange = 52,       },
- 
-       { -- #6
-           pos   = {0.25,1,-0.25},
+           maxRange = 38,       },
+       { -- #2
+           pos   = {-0.285,1,-0.27},   -- 1 short center Q2 facing top edge
            rot   = 0,
-           minRange = 25,
+           minRange = 39,
            maxRange = 52,       },
+       { -- #2
+           pos   =  {0.42,1,-0.27},  -- 2 short down Q2 side edge
+           rot   = 270,
+           minRange = 39,
+           maxRange = 52,       },
+       { -- #2
+           pos   =  {0.42,1,-0.4},
+           rot   = 270,
+           minRange = 39,
+           maxRange = 52,       },
+
+
        { -- #7
            pos   = {-0.25,1,0.25},
            rot   = 180,
@@ -135,17 +167,7 @@ local defaultRegionData = {
            rot   = 0,
            minRange = 25,
            maxRange = 52,       },
-       { -- #4
-           pos   =  {-0.25,1,-0.4},
-           rot   = 0,
-           minRange = 25,
-           maxRange = 52,       },
- 
-       { -- #6
-           pos   = {0.25,1,-0.4},
-           rot   = 0,
-           minRange = 25,
-           maxRange = 52,       },
+
        { -- #7
            pos   = {-0.25,1,0.4},
            rot   = 180,
@@ -156,7 +178,6 @@ local defaultRegionData = {
            rot   = 180,
            minRange = 25,
            maxRange = 52,       },
-
        --End of smallBlock (top)
    },
    medBlock ={ --medium sized buildings, 4 x
