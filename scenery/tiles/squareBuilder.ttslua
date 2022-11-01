@@ -11,39 +11,32 @@ end
 
 --Startup procedure
 function onload(saved_data)
--- print('Made it.')
-   if disableSave==true then saved_data="" end
-   if saved_data ~= "" then
-       local loaded_data = JSON.decode(saved_data)
-       ref_regionData = loaded_data
-   else
-       ref_regionData = defaultRegionData
-   end
+   local ref_regionData = defaultRegionData
    spawnedBuildingCount = 0
 
    local bigRegion = math.random(1,10)
    if centerOpen == true and bigRegion >7 then
-        createBuildings(0)
+        createBuildings(ref_regionData,0)
     else
-      createBuildings(1)
-      createBuildings(2)
-      createBuildings(3)
-      createBuildings(4)
+      createBuildings(ref_regionData,1)
+      createBuildings(ref_regionData,2)
+      createBuildings(ref_regionData,3)
+      createBuildings(ref_regionData,4)
    end
 end
 
 --Building creation
 
 --Makes buildings
-function createBuildings(quarter)
+function createBuildings(ref_regionData,quarter)
    local blocktype = {
-     [1] = defaultRegionData.smallQuarter1,
-     [2] = defaultRegionData.smallQuarter2,
-     [3] = defaultRegionData.smallQuarter3,
-     [4] = defaultRegionData.smallQuarter4,
-     [5] = defaultRegionData.medQuarter1,
-     [6] = defaultRegionData.medQuarter2,
-     [7] = defaultRegionData.largeBlock
+     [1] = ref_regionData.smallQuarter1,
+     [2] = ref_regionData.smallQuarter2,
+     [3] = ref_regionData.smallQuarter3,
+     [4] = ref_regionData.smallQuarter4,
+     [5] = ref_regionData.medQuarter1,
+     [6] = ref_regionData.medQuarter2,
+     [7] = ref_regionData.largeBlock
    }
    local blockRand = 1
    if quarter == 0 then
