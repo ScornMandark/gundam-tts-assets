@@ -129,11 +129,22 @@ end
 
 function freezeTiles()
   tileFreezer = 1
-  if tilesPresent == true then
-    for i, object in ipairs(getObjects()) do
-      if object.hasTag('mapTile') then
-        object.setLuaScript("")
-      end
+  for i, object in ipairs(getObjects()) do
+    if object.hasTag('mapTile') then
+      object.setLuaScript([[
+        function onLoad()
+          self.setTag('mapTile')
+        end
+        ]])
+    end
+  end
+  for i, object in ipairs(getObjects()) do
+    if object.hasTag('building') then
+      object.setLuaScript([[
+        function onLoad()
+          self.setTag('building')
+        end
+        ]])
     end
   end
 end
