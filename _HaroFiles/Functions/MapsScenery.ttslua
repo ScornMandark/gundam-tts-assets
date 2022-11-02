@@ -136,7 +136,6 @@ function freezeTiles()
       log(request.error)
     else
       buildingClear = request.text
-      print('Building Freeze Script Acquired')
     end
   end)
   local tileClear = ''
@@ -146,25 +145,23 @@ function freezeTiles()
       log(request.error)
     else
       tileClear = request.text
-      print('Tile Freeze Script Acquired')
     end
   end)
-
-  for i, object in ipairs(getObjects()) do
-    if object.hasTag('mapTile') then
-      object.setLuaScript(tileClear)
-      object.reload()
-      print('Tile Frozen')
+  local function freezyYard()
+    for i, object in ipairs(getObjects()) do
+      if object.hasTag('mapTile') then
+        object.setLuaScript(tileClear)
+        object.reload()
+      end
+    end
+    for i, object in ipairs(getObjects()) do
+      if object.hasTag('building') then
+        object.setLuaScript(buildingClear)
+        object.reload()
+      end
     end
   end
-  for i, object in ipairs(getObjects()) do
-    if object.hasTag('building') then
-      object.setLuaScript(buildingClear)
-      object.reload()
-      buildFreezer = 1
-    end
-  end
-  print(buildFreezer)
+  Wait.frames(freezyYard,30)
 end
 
 function clearTiles()
