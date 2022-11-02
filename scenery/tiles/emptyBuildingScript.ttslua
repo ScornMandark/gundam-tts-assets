@@ -1,0 +1,20 @@
+function onLoad(script_state)
+    -- JSON decode our saved state
+    local state = JSON.decode(script_state)
+    local building = getObjectFromGUID(state.guids.building)
+    building.playLoopingEffect(state.loopIndex.loop)
+    building.setTag('building')
+    return JSON.encode(state)
+end
+
+function onSave()
+    local state = {
+        guids = {
+            building = self.getGUID() -- GUID (a string)
+        },
+        loopIndex = {
+            loop = self.getLoopingEffectIndex()
+        }
+    }
+    return JSON.encode(state)
+end        
