@@ -117,6 +117,12 @@ function createBuildings(ref_regionData,quarter)
        spawnedBuildingCount = spawnedBuildingCount + 1
        cloneBuilding.locked = true
        cloneBuilding.addTag('building')
+       self.jointTo(cloneBuilding, {
+            ["type"]        = "Fixed",
+            ["collision"]   = true,
+            ["break_force"]  = 1000.0,
+            ["break_torgue"] = 1000.0,
+        })
    end
       building.destruct()
 end
