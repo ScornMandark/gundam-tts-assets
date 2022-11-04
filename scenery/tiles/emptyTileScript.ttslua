@@ -1,9 +1,14 @@
 function onLoad(script_state)
     -- JSON decode our saved state
-    local state = JSON.decode(script_state)
-    local tile = getObjectFromGUID(state.guids.tile)
-    tile.setTag('mapTile')
-    return JSON.encode(state)
+    if saved_data != '' then
+        local state = JSON.decode(script_state)
+        tile = getObjectFromGUID(state.guids.tile)
+        tile.setTag('mapTile')
+        tile.setLock = true
+    else
+        print('No save data found.')
+    end
+
 end
 
 function onSave()
@@ -12,5 +17,6 @@ function onSave()
             tile = self.getGUID() -- GUID (a string)
         },
     }
-    return JSON.encode(state)
+    script_state = JSON.encode(state)
+    return script_state
 end        
