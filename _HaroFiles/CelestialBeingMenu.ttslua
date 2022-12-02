@@ -29,7 +29,7 @@ function GNT_0000()
   unit = 'gnt-0000'
   getThatRobot()
 end
-function GN_Bits()
+function GNT_0000_Bits()
   unit = 'gnt-0000-bits'
   getThatRobot()
 end
