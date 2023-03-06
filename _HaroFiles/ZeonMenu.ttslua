@@ -11,18 +11,20 @@ end
 
 function Zeon0079()
   self.clearButtons()
-  self.createButton({click_function = 'MS_14A', function_owner = self, label = 'MS-14A', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Zaku0079', function_owner = self, label = 'Zakus', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_14A', function_owner = self, label = 'MS-14A', position = {-3, 7, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Zaku0079', function_owner = self, label = 'Zakus', position = {3, 7, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 
-  self.createButton({click_function = 'DFA_03', function_owner = self, label = 'DFA-03', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Dodai', function_owner = self, label = 'Dodai', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'HT_01B', function_owner = self, label = 'HT-01B', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_03', function_owner = self, label = 'MSM-03', position = {-6, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_04', function_owner = self, label = 'MSM-04', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_07', function_owner = self, label = 'MSM-07', position = {0, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_07S', function_owner = self, label = 'MSM-07S', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_10', function_owner = self, label = 'MSM-10', position = {6, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 
-  self.createButton({click_function = 'MSM_03', function_owner = self, label = 'MSM-03', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'MSM_04', function_owner = self, label = 'MSM-04', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'MSM_07', function_owner = self, label = 'MSM-07', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'MSM_07S', function_owner = self, label = 'MSM-07S', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'MSM_10', function_owner = self, label = 'MSM-10', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_04G', function_owner = self, label = 'MSM-04G', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+
+  self.createButton({click_function = 'DFA_03', function_owner = self, label = 'DFA-03', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Dodai', function_owner = self, label = 'Dodai', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'HT_01B', function_owner = self, label = 'HT-01B', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 
   self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
@@ -32,9 +34,13 @@ function Zaku0079()
   self.createButton({click_function = 'MS_06S', function_owner = self, label = 'MS-06S', position = {-1.5, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'MS_06', function_owner = self, label = 'MS-06', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
   self.createButton({click_function = 'MS_06_Missiles', function_owner = self, label = 'MS-06+Missiles', position = {4.5, 6, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
-
-  self.createButton({click_function = 'MS_05L', function_owner = self, label = 'MS-05L', position = {1.5, 5, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
-  self.createButton({click_function = 'MS_05B', function_owner = self, label = 'MS-05B', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
+  
+  self.createButton({click_function = 'MS_06D', function_owner = self, label = 'MS-06D', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
+  self.createButton({click_function = 'MS_06K', function_owner = self, label = 'MS-06K', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
+  self.createButton({click_function = 'MSM_01', function_owner = self, label = 'MSM-01', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
+ 
+  self.createButton({click_function = 'MS_05L', function_owner = self, label = 'MS-05L', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
+  self.createButton({click_function = 'MS_05B', function_owner = self, label = 'MS-05B', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
 
 self.createButton({click_function = 'Zeon0079', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 
@@ -110,6 +116,18 @@ function MS_06_Missiles()
   end
   getThatRobot()
 end
+function MS_06D()
+  unit = 'ms-06d'
+  getThatRobot()
+end
+function MS_06K()
+  unit = 'ms-06k'
+  getThatRobot()
+end
+function MSM_01()
+  unit = 'msm-01'
+  getThatRobot()
+end
 function MS_06S()
   unit = 'ms-06s'
   getThatRobot()
@@ -183,6 +201,10 @@ function MSM_03C()
 end
 function MSM_04()
   unit = 'msm-04'
+  getThatRobot()
+end
+function MSM_04G()
+  unit = 'msm-04g'
   getThatRobot()
 end
 function MSM_07()
