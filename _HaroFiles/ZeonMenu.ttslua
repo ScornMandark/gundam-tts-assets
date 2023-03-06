@@ -11,8 +11,9 @@ end
 
 function Zeon0079()
   self.clearButtons()
-  self.createButton({click_function = 'MS_14A', function_owner = self, label = 'MS-14A', position = {-3, 7, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Zaku0079', function_owner = self, label = 'Zakus', position = {3, 7, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_14A', function_owner = self, label = 'MS-14A', position = {-4.5, 7, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MobileArmorZ0079', function_owner = self, label = 'Mobile Armors', position = {0, 7, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
+  self.createButton({click_function = 'Zaku0079', function_owner = self, label = 'Zakus', position = {4.5, 7, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 
   self.createButton({click_function = 'MSM_03', function_owner = self, label = 'MSM-03', position = {-6, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'MSM_04', function_owner = self, label = 'MSM-04', position = {-3, 6, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
@@ -50,6 +51,12 @@ function Zeon08th()
   self.createButton({click_function = 'MS_07B_3', function_owner = self, label = 'MS-07B-3', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
+function MobileArmnorZ0079()
+  self.clearButtons()
+  self.createButton({click_function = 'MA_08', function_owner = self, label = 'MA-08', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'APSALUS_II', function_owner = self, label = 'Apsalus II', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
 function Zeon0080()
   self.clearButtons()
   self.createButton({click_function = 'MS_06Fz', function_owner = self, label = 'MS-06Fz', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
@@ -73,6 +80,14 @@ function Zeon0083()
 end
 
 --[[ZEON MS]] --------------------------------------------------
+function MA_08()
+  unit = 'ma-08'
+  getThatRobot()
+end
+function APSALUS_II()
+  unit = 'apsalus-ii'
+  getThatRobot()
+end
 function AGX_04()
   unit = 'agx-04'
   getThatRobot()
