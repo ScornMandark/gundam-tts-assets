@@ -48,13 +48,14 @@ self.createButton({click_function = 'Zeon0079', function_owner = self, label = '
 end
 function Zeon08th()
   self.clearButtons()
-  self.createButton({click_function = 'MS_07B_3', function_owner = self, label = 'MS-07B-3', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MS_07B_3', function_owner = self, label = 'MS-07B-3', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'APSALUS_II', function_owner = self, label = 'Apsalus II', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function MobileArmorZ0079()
   self.clearButtons()
   self.createButton({click_function = 'MA_08', function_owner = self, label = 'MA-08', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'APSALUS_II', function_owner = self, label = 'Apsalus II', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'MAN_03', function_owner = self, label = 'MAN-03', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function Zeon0080()
@@ -82,6 +83,10 @@ end
 --[[ZEON MS]] --------------------------------------------------
 function MA_08()
   unit = 'ma-08'
+  getThatRobot()
+end
+function MAN_03()
+  unit = 'mam-03'
   getThatRobot()
 end
 function APSALUS_II()
