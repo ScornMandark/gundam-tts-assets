@@ -54,7 +54,7 @@ end
 function MobileArmorZ0079()
   self.clearButtons()
   self.createButton({click_function = 'MA_08', function_owner = self, label = 'MA-08', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'APSALUS_II', function_owner = self, label = 'Apsalus II', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'APSALUS_II', function_owner = self, label = 'Apsalus II', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function Zeon0080()
