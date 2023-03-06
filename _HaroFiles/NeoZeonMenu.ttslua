@@ -15,9 +15,6 @@ function NeoZeonCCA()
   self.createButton({click_function = 'NZ_333_A', function_owner = self, label = 'NZ-333-A', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'NeoZeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
-  self.createButton({click_function = 'YMS_16M', function_owner = self, label = 'YMS-16M', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-  self.createButton({click_function = 'Zeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-end
 
 --[[NEO ZEON CCA MS]] --------------------------------------------------
 function NZ_333_A()
