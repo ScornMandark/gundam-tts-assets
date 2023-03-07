@@ -8,7 +8,6 @@ end
 function Militia()
   self.clearButtons()
   faction = 'Militia'
-  self.createButton({click_function = 'AMX_109', function_owner = self, label = 'AMX-109', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'CC', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
