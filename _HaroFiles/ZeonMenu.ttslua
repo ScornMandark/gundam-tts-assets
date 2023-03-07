@@ -86,7 +86,7 @@ function MA_08()
   getThatRobot()
 end
 function MAN_03()
-  unit = 'mam-03'
+  unit = 'man-03'
   getThatRobot()
 end
 function APSALUS_II()
