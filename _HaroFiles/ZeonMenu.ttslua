@@ -36,7 +36,7 @@ function Zaku0079()
   self.createButton({click_function = 'MS_06', function_owner = self, label = 'MS-06', position = {1.5, 6, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
   self.createButton({click_function = 'MS_06_Missiles', function_owner = self, label = 'MS-06+Missiles', position = {4.5, 6, 0},  rotation = {-60, 0, 0}, width=1800, height=400, font_size=250})
   
-  self.createButton({click_function = 'MS_06D', function_owner = self, label = 'MS-06D', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
+  
   self.createButton({click_function = 'MS_06K', function_owner = self, label = 'MS-06K', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
   self.createButton({click_function = 'MSM_01', function_owner = self, label = 'MSM-01', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1000, height=400, font_size=250})
  
