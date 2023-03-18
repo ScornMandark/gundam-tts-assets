@@ -18,6 +18,7 @@ function NeoZeonCCA()
 end
 function NeoZeonZZ()
   self.clearButtons()
+  self.createButton({click_function = 'MS_06D', function_owner = self, label = 'MS-06D', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'AMX_109', function_owner = self, label = 'AMX-109', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'NeoZeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
@@ -30,5 +31,9 @@ end
 --[[NEO ZEON ZZ MS]] --------------------------------------------------
 function AMX_109()
   unit = 'amx-109'
+  getThatRobot()
+end
+function MS_06D()
+  unit = 'ms-06d'
   getThatRobot()
 end
