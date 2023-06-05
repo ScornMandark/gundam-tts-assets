@@ -9,7 +9,8 @@ end
 
 function LondoBellUC()
   self.clearButtons()
-  self.createButton({click_function = 'RX_0', function_owner = self, label = 'RX-0', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'RX_0', function_owner = self, label = 'RX-0', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'D_50C', function_owner = self, label = 'D-50C', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
   self.createButton({click_function = 'LondoBell', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function LondoBellCCA()
@@ -20,5 +21,9 @@ end
 --[[Londo Bell MS --]]
 function RX_0()
   unit = 'rx-0'
+  getThatRobot()
+end
+function D_50C()
+  unit = 'd-50c'
   getThatRobot()
 end
