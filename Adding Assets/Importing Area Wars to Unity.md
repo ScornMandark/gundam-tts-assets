@@ -131,6 +131,23 @@ Right click in the Prefab folder and select Build AssetBundles.  Unity only buil
 Before you close out Unity, fire up TTS and create a solo game.  Add a Game Object, Component, Custom, AssetBundle.  Navigate to the unit unity3d file, and choose local storage.  We're just making sure it works.  It should load to the table, with the looping effect options we specified in the unity file.  Make sure each one looks the way you expect.  If it got messed up, double check your game object assignments in the Effects Script.  Otherwise, nice one!  On to the GitHub Repo.
 ![030 TTS custom asset bundle test](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/d0f8212d-5b70-467f-b984-06f0a9d8aeb2)
 
+## Step 12: Optional Funnels, etc.
+Take the funnel/whatever file and bring it in.  Create an empty as above, making sure it's centered, then arrange the funnel until it's right about centered on the unit itself.  Duplicate it several times, however many you need in a single group.
+![031 Getting Funnels in place](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/53f55783-cad3-4e83-b172-1eba934135fd)
+
+Arrange them in an artistic manner, keeping in mind it should stay centered on the MS in general, not in front of it.
+![032 arranging](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/2bd8d871-39ac-4da7-adf3-cbadd62e8b9d)
+![032a arranging](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/466cefe3-9e23-4cf5-8f96-11ec07d00113)
+
+Add them to the empty, create a relatively small box collider, and create a script effect.  Make as many effects as you've got funnels, assuming you're using them as an HP counter or something.  I'd recommend starting with 1 funnel, then the second one being 2 funnels, etc.  It'll make it more natural when you're using the effects menu in game. Give each effect as many game objects as funnels, and then decide which ones go to which setting.
+![033 Effects](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/2a44eb3c-bef2-48aa-8d4b-2843eb161b60)
+
+Create and build a prefab, naming it [unit]-funnel.
+![034 naming](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/fa19e17a-a0fe-4b8a-8792-2f099731c3f7)
+
+Then test it in game.  You're done!
+![035 success](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/27a64f38-12e7-4acc-a39f-68d96beffd4c)
+
 
 [Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
 
