@@ -117,14 +117,15 @@ Almost there.  Add another component, this time a Script -> TTS Asset Bundle Eff
 Set the Trigger Effects to 0 for now, that's outside the scope of this tut.  Set Looping Effects to whatever number you plan on using - in this case, I'm using 3.  I name each one something meaningful, since that is what TTS will display as a tooltip when you hover over the options in game; Gun, Shield, Sword.  For each effect, I set the Game Objects Size to however many parts it uses.  Gun and Shield use 1 each, Sword uses 3 (I broke the blade up to use different texture maps).  Drag the appropriate child object of the game object from the heirarchy to the appropriate slot in the inspector.
 ![027 Parts](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/5f7952be-3eab-463c-b27a-4b189c53d475)
 
-In the project navigator on the bottom left, go to Assets -> Examples -> Prefabs.  Drag your GameObject to the folder, and it should pop right in.  Select it, then go to the AssetBundle dropdown on the bottom right and give it a new name.  The first time you click New, it'll give you a blank area to type but won't respond.  Click on a different one, then back, then name it.  I dunno.
+In the project navigator on the bottom left, go to Assets -> Examples -> Prefabs.  Drag your GameObject to the folder, and it should pop right in.  Select it, then go to the AssetBundle dropdown on the bottom right and give it a new name.  The first time you click New, it'll give you a blank area to type but won't respond.  Click on a different one, then back, then name it.  I dunno.  Make sure to use the unit serial number, all lowercase, dashes instead of spaces.  That'll make all of our lives easier later.
 ![028 Prefab Setup](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/70c8d8da-477e-4b53-87de-fa894a92c05c)
 
 ## Step 9: Save
 Just do it.
 
 ## Step 10: Build AssetBundles
-
+Right click in the Prefab folder and select Build AssetBundles.  Unity only builds the entire folder each time, so depending on how many you've made, it'll take some time.  Go to the TTS project folder, and go to AssetBundles.  It should be there, named msn-04-ii.unity3d (or whatever else, as appropriate).
+![029 Prefab Build](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/1f370267-bafd-4a1b-92ea-fc44d5b347cf)
 
 
 [Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
