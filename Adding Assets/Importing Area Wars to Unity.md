@@ -11,6 +11,8 @@ If you want to add models to the repository, I'd love your help!  Here are the b
 - [Berserk Games TTS project for Unity v3.0](https://github.com/Berserk-Games/Tabletop-Simulator-Modding/releases/tag/v3.0) (there's a newer update that I haven't tried yet, and I'll update this once I do), but this one works)
 - Patience...
 
+# Part 1: Area Wars to Blender
+
 ## Step 1: Pick a unit
 This seems kind of basic, but it can take time to find the model you're after, even with the spreadsheet unit name converter.  I have spent hours renaming folders and organizing them and I'm only maybe a third of the way through it.  Some units have lots of pose options, which makes getting a variety of poses easy.
 
@@ -49,4 +51,13 @@ The important parts here are make sure 'Include -> Selection Only' is checked, a
 
 Some meshes are rigged with animations.  I haven't cracked the animation code yet, but in blender you can scrub through the animation timeline by grabbing the little box down by the bottom of the screen and dragging it through the keyframes until you find one you like.  Then just export as .obj and it'll grab it from that timestamp pose.
 ![010 Mata Ikimashou](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/b5acc907-6e83-43f1-a28c-b5aa6d5d7bba)
+
+### Note on separated units like funnels
+For units with funnels and other sorts of separated objects, we need to treat them a little differently.
+![011 Funnel Pose](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/a4e4d874-ed40-42e7-956a-1a37a3641608)
+
+We just need to export one of them, not all of them, and we can bundle it directly in Unity.
+![012 Just one](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/5fe7a356-b292-4e30-8d02-b6fe46006017)
+
+# Part 2: Blender to Unity
 
