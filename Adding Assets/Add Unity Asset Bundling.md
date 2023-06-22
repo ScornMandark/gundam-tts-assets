@@ -22,23 +22,23 @@ On the right hand side, in the Inspector tab, reset the Position Transforms to X
 
 ![Unity03ResetTransforms](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/61897bc0-e8ef-47a6-ab15-897ab5a67842)
 
-# Step 5: Bring in the models
+# Step 3: Bring in the models
 Now that we've got the structure set up, we can bring in the models.  In the bottom left Project tab, scroll down to the 'Assets\Gundam' folder, then to the unit folder you copied in.  Each model in that folder will have a little thumbnail image with a small arrow pointing to the right.  That arrow expands the file structure to show the mesh, materials, etc.  
 ![Unity04LocateFiles](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/163040fc-bc78-48ff-b3eb-2664584cef52)
 
 Drag the main thumbnail of each model you want to use onto the GameObject Empty object you created in the last step.  You should see the name of the object pop into the window as a child object, and the mesh itself should show up in the Scene window.  Repeat for all models, but not the collider.
 
-# Step 6: Alignment
+# Step 4: Alignment
 Most of the time the objects you bring in aren't at 0,0,0 either, so for each model, select it in the Heirarchy tab, then in the Inspector tab reset the transforms like you did for the empty object.
 
-# Step 7: Collider
+# Step 5: Collider
 Select the parent empty object again and go to the Inspector tab.  Below the Transforms, click 'Add Component', select 'Physics' then 'Mesh Collider'.  
 ![Unity06Collider](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/2af7ce7d-f8dd-4b41-875a-591054c4e6af)
 
 In your project folder, expand the Collider box you made.  The third item in the list should look like a plain grey box with trianglulated sides, called 'default'.  Drag that object to the Mesh Collider tab and drop it in the box for the 'Mesh' (curretly labeled 'None (Mesh)').  (You can check Convex if you want - it speeds up colliding calculations, but it's not really necessary with a box collider.)  Alternately you can create a simple box in Unity itself.
 ![Unity06aColliderMesh](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/ab3e9667-86e2-4d60-8553-f21962e070d9)
 
-# Step 8: Textures (optional, or if illumination needed)
+# Step 6: Textures (optional, or if illumination needed)
 I often try to remap the objects to use a single material texture - it cuts down the file size pretty decently.  Also, if you want any kind of self illumination, you'll need to do this.  Create a new material in the project folder, call it whatever you want.
 ![015 NewMat create](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/d36392a8-73c7-4a95-ba72-1cfc4d29f980)
 
@@ -54,7 +54,7 @@ If it looks really dark, you may need to rotate the light in the scene from Y = 
 
 Here's where you can adjust options like metallic and smoothness to get the sheen and finish you want.  I tend to make it very low smoothness and metallic to get a nice matte finish, but up to you!  If you create a glow map (just isolate the glowing parts on the texture map and really darken the rest, save as a new file), then just select Emission active and use the glow texture as the map input to Emission.  There's some tricks to get transparency active, but short answer is that it's really tricky.
 
-# Step 9: The Options
+# Step 7: The Options
 Here's where we set up the model for use (and multi-pose if you've got it).  Under the 'Mesh Collider' box, click 'Add Component', select 'Scripts' then 'TTS Asset Bundle Effects'.  It will have 2 options - Bundle Effects and Trigger Effects.  
 ![Unity07ScriptEffects](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/04c86cd9-f78f-4c9a-97de-406b193f9168)
 
@@ -67,15 +67,15 @@ Here's where we set up the model for use (and multi-pose if you've got it).  Und
 
 ![Unity07aScriptEffectsExample](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/eab591d5-9f2d-4172-895d-4af15af91a18)
 
-# Step 10: Save
+# Step 8: Save
 If you haven't already, save the file.  (It'll be a .unity file.)
 
-# Step 11: Asset Bundle
+# Step 9: Asset Bundle
 In the Project tab, go to 'Assets\Examples\Prefabs'. Drag the parent GameObject into the Prefabs folder in the Projects tab, and you'll see an preview icon pop up there.  In the Inspector tab to the right, go to the bottom tab "Asset Label".  Open the AssetBundle dropdown under the 3d preview, and select 'New'.  Then, name it in numbers and lower case letters only, no spaces, only hyphens and underscores as special characters.  I tend to use serial numbers when available, like msn-03, gat-x-105, etc.  You can't use brackets or slashes, so I either just remove them or turn them into hyphens.  Then, right click in the Prefabs project window, and select 'Build AssetBundles'.  This can take a while, since you can't selectively build one asset, Unity rebuilds all the AssetBundles in the folder.  As far as I can tell, having them in sub folders doesn't help.  
 ![Unity08AssetBundle](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/ce1009e0-b969-4509-8692-135511ad912c)
 
 
-# Step 11: Fresh AssetBundle
+# Step 10: Fresh AssetBundle
 In your file structure, the new AssetBundle will be in the 'Tabletop-Simulator-Modding\AssetBundles' folder, named whatever you labeled the asset in the previous step.  Something like 'gx-9901-dx.unity3d'.  
 ![Unity09FreshAssetBundle](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/3451e44f-27f7-4b77-82f5-2e5a83e5939b)
 
