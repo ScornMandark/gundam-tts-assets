@@ -7,7 +7,7 @@ This should be pretty straightforward, since most factions should be set already
 
 ## Upload the Bundle
 Go to the universe/faction folder, then 'Add File -> Upload File'.  
-![Load it up](Add%20Assets$20To%20Repo/GitHub01Upload.png)
+![Load it up](Add%20Assets%20To%20Repo/GitHub01Upload.png)
 It will probably prompt you to create a Pull Request, which is what we want.
 ![Pull request](GitHub02PullRequest.png)
 
