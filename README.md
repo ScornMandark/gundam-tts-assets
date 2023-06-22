@@ -17,8 +17,17 @@ Current feature list:
 
 If you'd like to contribute, I'd love that!  I'm putting some resources together to help people get the models set up.
 
+[Area Wars to TTS - Main Tutorial](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md)
+
+<details open>
+<summary>Deprecated Tutorials</summary>
+<br>
+
 [Getting 3d models ready to bundle](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/3d%20Model%20Prep%20Instructions.md)
 
 [Unity Asset Bundling](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Unity%20Asset%20Bundling.md)
 
 [Adding Assets to the Repository](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/Adding%20Assets%20to%20the%20Repository.md)
+
+</details>
+
