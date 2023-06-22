@@ -127,6 +127,10 @@ Just do it.
 Right click in the Prefab folder and select Build AssetBundles.  Unity only builds the entire folder each time, so depending on how many you've made, it'll take some time.  Go to the TTS project folder, and go to AssetBundles.  It should be there, named msn-04-ii.unity3d (or whatever else, as appropriate).
 ![029 Prefab Build](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/1f370267-bafd-4a1b-92ea-fc44d5b347cf)
 
+## Step 11: TTS Test!
+Before you close out Unity, fire up TTS and create a solo game.  Add a Game Object, Component, Custom, AssetBundle.  Navigate to the unit unity3d file, and choose local storage.  We're just making sure it works.  It should load to the table, with the looping effect options we specified in the unity file.  Make sure each one looks the way you expect.  If it got messed up, double check your game object assignments in the Effects Script.  Otherwise, nice one!  On to the GitHub Repo.
+![030 TTS custom asset bundle test](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/d0f8212d-5b70-467f-b984-06f0a9d8aeb2)
+
 
 [Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
 
