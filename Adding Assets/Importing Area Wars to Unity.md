@@ -74,8 +74,31 @@ We just need to export one of them, not all of them, and we can bundle it direct
 ## Step 1: Organizing
 Now that the project opened nicely, we need to set up some files.  In the 'Tabletop-Simulator-Modding\Assets' folder, make a new folder called 'Gundam', and a subfolder named for the unit you're working on.  Take the folder with the clump of files, materials, and texture images you put together and copy it to the '\Tabletop-Simulator-Modding\Assets\Gundam\\[UNIT]' folder.  It's really important to keep the files for each unit separate, or it'll become a nightmare really quickly.
 
-## Step 2: Setup
-Go to the Assets folder in the project navigator on the bottom left and navigate to your project folder.
+## Step 2: Import Settings
+Go to the Assets folder in the project navigator on the bottom left and navigate to your unit folder.  Select each object you're planning to use, and make sure that the Read/Write Enabled option is checked in the inspector to the right.  If you click it on, make sure to Apply.  
+![013 Read Write](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/78bfcade-0818-4cec-864f-9d588681d559)
+
+## Step 3: Setup
+Drag each object you want to use to the heirarchy window on the left, and make sure each one is set to position 0,0,0 (back in the inspector on the right).  Don't worry if the texture looks like it didn't make it, we're getting there.
+![014 NewMat](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/b194fad1-d8fa-4dc4-a30a-a55a666c3f61)
+
+
+## Step 4: Materials
+Create a new material in the project folder.
+![015 NewMat create](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/3cc02c4f-8a52-45bb-8d2c-b71cf4a076bc)
+
+Name it something sensible, then drag your main texture map image to the Albedo map input (the little box to the left of Albedo in the inspector).  (If you've got emissive maps or bump maps or anything, here is where they get mapped as well.) 
+![016 Mat to Albedo](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/7fc1c3d0-e733-4844-b299-27704fa53dd3)
+
+Then drag the new material to each of the units you are using in the heirarchy.  If you don't like the shininess or glossiness or anything, here's where we can tweak some of those sliders to make it look how we like.  I tend to push metallic and smooth pretty down, I like the matte look it gets.
+![017 Applied](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/018ea248-0b29-43f3-a6d6-e8655c348ae0)
+
+## Step 5: Create Empty GameObject
+Right click in the heirarchy and Create Empty.  Name it something sensible here, like the name of the unit or a serial number.
+![021 Emptyness](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/77c339b1-b5de-4838-bec9-6c98c583182c)
+
+It often comes in off center, so make sure it's relocated in the inspector.
+![022 Centering](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/b6a93acb-8c31-4792-8177-1b6bb7d579e3)
 
 [Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
 
