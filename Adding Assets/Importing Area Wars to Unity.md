@@ -100,6 +100,33 @@ Right click in the heirarchy and Create Empty.  Name it something sensible here,
 It often comes in off center, so make sure it's relocated in the inspector.
 ![022 Centering](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/b6a93acb-8c31-4792-8177-1b6bb7d579e3)
 
+Drag the objects from the heirarchy to the GameObject, making them child objects of the object.
+![023 Together](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/6fb48747-6d33-4578-a813-cd95386b3e67)
+
+## Step 6: Save
+I tend to keep the save files in the Gundam folder rather than the asset folders, but it doesn't really matter.  Just save it.
+
+## Step 7: Collider
+With the GameObject selected, go to Add Component in the inspector, then pick Physics -> Box Collider.  I tend to get it pretty close to the body and legs sized, if you get too accurate it can slow things down and really make it hard to actually position the units.  In this case, I went with a 5x5x5 cube.  You need to make sure you shift the cube up to have the bottom at y=0 or you'll have all kinds of clipping headaches.  Just divide the Y height by 2 and move it up that much.
+![024 Collider](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/01fa1c63-91b7-4f6c-af96-f94d197e7179)
+
+## Step 8: Prefab
+Almost there.  Add another component, this time a Script -> TTS Asset Bundle Effects.
+![025 Bundle](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/9c9f93ac-d853-4e7f-a2a0-569c72395ea5)
+
+Set the Trigger Effects to 0 for now, that's outside the scope of this tut.  Set Looping Effects to whatever number you plan on using - in this case, I'm using 3.  I name each one something meaningful, since that is what TTS will display as a tooltip when you hover over the options in game; Gun, Shield, Sword.  For each effect, I set the Game Objects Size to however many parts it uses.  Gun and Shield use 1 each, Sword uses 3 (I broke the blade up to use different texture maps).  Drag the appropriate child object of the game object from the heirarchy to the appropriate slot in the inspector.
+![027 Parts](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/5f7952be-3eab-463c-b27a-4b189c53d475)
+
+In the project navigator on the bottom left, go to Assets -> Examples -> Prefabs.  Drag your GameObject to the folder, and it should pop right in.  Select it, then go to the AssetBundle dropdown on the bottom right and give it a new name.  The first time you click New, it'll give you a blank area to type but won't respond.  Click on a different one, then back, then name it.  I dunno.
+![028 Prefab Setup](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/70c8d8da-477e-4b53-87de-fa894a92c05c)
+
+## Step 9: Save
+Just do it.
+
+## Step 10: Build AssetBundles
+
+
+
 [Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
 
 # Part 3: Unity to GitHub
