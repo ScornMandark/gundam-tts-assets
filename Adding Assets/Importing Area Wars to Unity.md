@@ -5,45 +5,48 @@ If you want to add models to the repository, I'd love your help!  Here are the b
 
 ## Things you'll need:
 - For this tutorial, the Gundam Area Wars model repository, and a unit of your choosing.
-- Blender (or other 3d modeling program, I'll use Blender as a reference though.)
+- An FBX previewer is really helpful, as it will let you preview the models and sometimes animations if that's included.  I like Autodesk FBX Review, it's lightweight and stable.  [Get it here.](https://www.autodesk.com/products/fbx/fbx-review)
+- Blender (or other 3d modeling program, I'll use Blender as a reference though.) [Stable Release](https://www.blender.org/download/)
 - [Unity version 2019.1.14f1](https://unity3d.com/unity/whats-new/2019.1.14) (other 2019.1 releases may work with the 3.0 mod release, but this is the one that works for me)
 - [Berserk Games TTS project for Unity v3.0](https://github.com/Berserk-Games/Tabletop-Simulator-Modding/releases/tag/v3.0) (there's a newer update that I haven't tried yet, and I'll update this once I do), but this one works)
 - Patience...
 
-## Step 1: Import your model into Blender.  
+## Step 1: Pick a unit
+This seems kind of basic, but it can take time to find the model you're after, even with the spreadsheet unit name converter.  I have spent hours renaming folders and organizing them and I'm only maybe a third of the way through it.  Some units have lots of pose options, which makes getting a variety of poses easy.
+
+## Step 2: Import your model into Blender.  
 Open blender, and you'll be greeted with the standard Blender intro scene.  Hitting A, X, D (in that order) will clear the scene so you can get going on the good stuff.
+![001 Blender Blank](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/3bc64ea4-dfbe-41b1-9779-4ccfdf5e2cbc)
 
+We need to import the model(s) of your choosing, and Blender makes that very easy.  Import -> FBX
+![002 Import FBX](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/557a009a-c6a8-4e87-9483-09242812e132)
 
-## Step 2: Reorient.
-Different models come in oriented differently, but usually aligned to the x-y-z axes pretty well.  We need our models to have the top pointing at the Z+ axis, and facing the Y- axis, with the bottom of their feet at Z=0.  The basic grab and rotate functions will make this straightforward.  (if you have multiple poses, import them all before you reorient, then you can do them all at once.)  After it's oriented properly, Apply the transformations.
+You can even grab multiples if you already know which ones have the poses you want.
+![003 Import multiple FBX](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/b55976e5-0296-4f97-97c6-307fb4eb926b)
 
 ## Step 3: Check the scaling.
-Many 3d models come in 1:1000 scale - that is, an 18m Gundam will be 18 Blender Units high (which is usually associated as mm).  Once the model is imported and reoriented, check the Z height of the model.  If it's about right, then we're good.  If not, then a quick scale will fix it.  Divide the suit height by the z height to find your new scaling factor.  e.g., if the imported height is 36, and the Gundam is 18, 18/36 = 0.5, and just scale all the imported models by 0.5. (usually models imported from the same source have the same scaling)
-![Blender04HeightCheck](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/6fe2ebb5-6ead-4cc0-a7e5-4ac83f629967)
+Area Wars models come with the root node scaled down to 0.01 scale. Hit n to see the transform window pop up on the screen, and it'll show you the scale.
+![004 MS for ants](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/d21d9891-4693-4d44-ab50-9e59aef17c9c)
 
-Also, if you've got rigged models, make sure you're scaling from the root of the rig rather than all parts!
-![Blender06ScaleRoot](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/96d88627-a0df-4c63-a1f4-c8b1ae72d180)
+To scale it up properly, make sure you've got the top level of the model selected in the navigator, then hit S, 100.  That will bring it up to 1/1000 scale in mm in system units.  Do it to all of the models you've brought in.
+![005 woah](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/c360b74c-baed-40a9-869d-b7af1f5b3bb9)
 
-### Step 3a: Posing.
-If you've got a single rigged model, you can either duplicate it and pose each one separately or keyframe your poses.  I highly recommend this as opposed to posing, exporting, reposing, reexporting, etc, because it's very hard to go back and adjust a pose this way.  
-![Blender05AllModels](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/d085bff0-b182-4d59-b225-17d9abfc18ac)
+Do a sanity check the Z height of the model.  If it's about right, then we're good.  If not, then a quick scale will fix it.  Divide the suit height by the z height to find your new scaling factor.  e.g., if the imported height is 36, and the Gundam is 18, 18/36 = 0.5, and just scale all the imported models by 0.5. (usually models imported from the same source have the same scaling.
+
+Next, move your models (making sure you've still got the top level of the model selected in the navigator for each model).  Select one and hit G, Y, 30.  Then the next G, Y, 60, etc.
+![006 Closer](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/3480c63b-5e99-43f7-b6a3-96a89cf0e7ae)
 
 ## Step 4: Check the textures.
-Unity/TTS require each object to have a single texture map, preferably square.  If the model has separate color, bump, and emmissive maps, even better.  If not, you'll need to do some texture manipulation and remapping.  Usually it's combining the separate color textures into a bigger square one, then scaling the UV maps and shifting them around.  
-![UV mapping](Blender07UVRemap.png)
+One thing you may run into is textures looking backwards or otherwise weird. This is easily fixed with changing the texture blend mode to opaque - select a model itself, select the little globe icon tab on the right, and scroll down to Settings.  Change Blend Mode to Opaque, and it'll be just fine.
+![007 Inside Out](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/6d6c084e-35d3-45f0-97e6-9d9bc8f55791)
 
-One thing you may run into is textures looking backwards or otherwise weird.
-![Blender02TextureFix](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/b6fa1798-5517-432a-ae42-82df7c7a8575)
+## Step 5: Export.
+You can export as either .obj or .fbx, Unity can handle either.  I prefer using .obj if I'm not doing an animation, but it's up to you.  Select and export each model separately, naming each one so that you can tell what it is on import.  
+![008 Ikimasu](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/f0273319-54b0-49b0-b452-6022edd2d0e4)
 
-This is easily fixed with changing the texture blend mode to opaque.
-![Blender03BlendMode](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/991ebf8a-cf41-411c-ba36-65f21a037764)
+The important parts here are make sure 'Include -> Selection Only' is checked, and 'Transform -> Scale' is set to 0.273.  This will make sure you're only exporting one pose per .obj, and it is pre-scaled to 1/144 in inches in TTS.
+![009 Ikimashou](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/49fc4c60-3f25-4a6a-88d7-65caefb5075a)
 
-## Step 5: Make a basic collider box.
-Create a cube, then scale it until it's bottom is at z=0 and it covers the main part of the body.  You don't need to get too crazy here, just a basic block is fine.  In fact, the more accurate the collider is, the more trouble you'll probably have placing it on the board.  We just need something to keep it from falling throught the table.
+Some meshes are rigged with animations.  I haven't cracked the animation code yet, but in blender you can scrub through the animation timeline by grabbing the little box down by the bottom of the screen and dragging it through the keyframes until you find one you like.  Then just export as .obj and it'll grab it from that timestamp pose.
+![010 Mata Ikimashou](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/b5acc907-6e83-43f1-a28c-b5aa6d5d7bba)
 
-## Step 6: Export.
-You can export as either .obj or .fbx, Unity can handle either.  I prefer using .obj if I'm not doing an animation, but it's up to you.  Export each model separately (don't forget the collider), naming each one so that you can tell what it is on import.  The important parts here are make sure 'Include -> Selection Only' is checked, and 'Transform -> Scale' is set to 0.273.  This will make sure you're only exporting one pose per .obj, and it is pre-scaled to 1/144 in inches in TTS.
-![Blender08OBJXExport](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/49f6359d-aaa5-4bc4-a820-929c4027399d)
-
-## Step 7: Head to Unity.
-Head to Unity for [the bundling process.](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Add&20Unity%20Asset%20Bundling.md)
