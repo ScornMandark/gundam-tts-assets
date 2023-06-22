@@ -156,6 +156,6 @@ Thanks for all your help growing this tool into new places!
 ![GitHub04EventuallySuccess](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/a0ff8207-9438-4fe2-871a-4721a77d34de)
 
 ## Unit Sheets
-Make sure your unit sheet is padded with transparency to be square.  For MSSk sheets, for example, I export each PDF page to a .png at 300 dpi (2481 x 3508, A4), then pad the sides with transparent pixels so that each image is 3508 x 3508 (GIMP, ImageMagick, etc).  Then, go to the appropriate faction folder, go to the appropriate game folder, and add it as a file there.  As long as it's named exactly the same as the .unity3d model, no notes are needed.
+For MSSk sheets, I export each PDF page to a .png at 300 dpi (2481 x 3508, A4).  Then, go to the appropriate faction folder, go to the appropriate game folder, and add it as a file there.  As long as it's named exactly the same as the .unity3d model, no notes are needed, and I'll approve the merge request.
 
 [Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
