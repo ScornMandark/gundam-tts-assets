@@ -64,6 +64,8 @@ For units with funnels and other sorts of separated objects, we need to treat th
 We just need to export one of them, not all of them, and we can bundle it directly in Unity.
 ![012 Just one](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/5fe7a356-b292-4e30-8d02-b6fe46006017)
 
+[Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
+
 # Part 2: Blender to Unity
 
 ## Step 0: Follow the TTS Unity tutorial
@@ -75,4 +77,8 @@ Now that the project opened nicely, we need to set up some files.  In the 'Table
 ## Step 2: Setup
 Go to the Assets folder in the project navigator on the bottom left and navigate to your project folder.
 
+[Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
+
 # Part 3: Unity to GitHub
+
+[Back to top](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#navigator)
