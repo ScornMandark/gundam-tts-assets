@@ -61,3 +61,11 @@ We just need to export one of them, not all of them, and we can bundle it direct
 
 # Part 2: Blender to Unity
 
+## Step 0: Follow the TTS Unity tutorial
+[TTS Custom AssetBundle Walkthrough](https://kb.tabletopsimulator.com/custom-content/custom-assetbundle/) This will walk you through the whole process of installation, project folder finding, making a basic asset, and getting it into TTS.  If you can finish the tutorial, you'll be nearly there, honestly.
+
+## Step 1: Organizing
+Now that the project opened nicely, we need to set up some files.  In the 'Tabletop-Simulator-Modding\Assets' folder, make a new folder called 'Gundam', and a subfolder named for the unit you're working on.  Take the folder with the clump of files, materials, and texture images you put together and copy it to the '\Tabletop-Simulator-Modding\Assets\Gundam\\[UNIT]' folder.  It's really important to keep the files for each unit separate, or it'll become a nightmare really quickly.
+
+## Step 2: Setup
+Go to the Assets folder in the project navigator on the bottom left and navigate to your project folder.
