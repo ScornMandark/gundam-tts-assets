@@ -11,6 +11,11 @@ If you want to add models to the repository, I'd love your help!  Here are the b
 - [Berserk Games TTS project for Unity v3.0](https://github.com/Berserk-Games/Tabletop-Simulator-Modding/releases/tag/v3.0) (there's a newer update that I haven't tried yet, and I'll update this once I do), but this one works)
 - Patience...
 
+## Navigator
+- [Part 1: Area Wars to Blender](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#part-1-area-wars-to-blender)
+- [Part 2: Blender to Unity](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#part-2-blender-to-unity)
+- [Part 3: Unity to GitHub](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md#part-3-unity-to-github)
+
 # Part 1: Area Wars to Blender
 
 ## Step 1: Pick a unit
@@ -69,3 +74,5 @@ Now that the project opened nicely, we need to set up some files.  In the 'Table
 
 ## Step 2: Setup
 Go to the Assets folder in the project navigator on the bottom left and navigate to your project folder.
+
+# Part 3: Unity to GitHub
