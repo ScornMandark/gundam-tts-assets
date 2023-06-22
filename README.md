@@ -19,9 +19,7 @@ If you'd like to contribute, I'd love that!  I'm putting some resources together
 
 [Area Wars to TTS - Main Tutorial](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Importing%20Area%20Wars%20to%20Unity.md)
 
-<details open>
-<summary>Deprecated Tutorials</summary>
-<br>
+<details><summary>Deprecated Tutorials</summary>
 
 [Getting 3d models ready to bundle](https://github.com/ScornMandark/gundam-tts-assets/blob/main/contributing/3d%20Model%20Prep%20Instructions.md)
 
