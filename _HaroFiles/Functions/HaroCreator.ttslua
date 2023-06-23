@@ -396,8 +396,9 @@ end
 function CE()
     self.clearButtons()
     universe = 'CosmicEra'
-    self.createButton({click_function = 'ZAFT', function_owner = self, label = 'ZAFT', position = {-1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
-    self.createButton({click_function = 'ORB', function_owner = self, label = 'ORB', position = {1.5, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'ZAFT', function_owner = self, label = 'ZAFT', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'ORB', function_owner = self, label = 'ORB', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'OMNI', function_owner = self, label = 'OMNI', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function CC()
