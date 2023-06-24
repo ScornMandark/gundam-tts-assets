@@ -9,7 +9,9 @@ function NeoZeon()
 end
 function NeoZeonUC()
   self.clearButtons()
-  self.createButton({click_function = 'NZ_999', function_owner = self, label = 'NZ-999', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'NZ_999', function_owner = self, label = 'NZ-999', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'NZ_666', function_owner = self, label = 'NZ-666', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'NZ_666_FUNNELS', function_owner = self, label = 'NZ-666 Funnels', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
 self.createButton({click_function = 'NeoZeon', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 function NeoZeonCCA()
@@ -29,6 +31,14 @@ end
 --[[NEO ZEON UC MS]] --------------------------------------------------
 function NZ_999()
   unit = 'nz-999'
+  getThatRobot()
+end
+function NZ_666()
+  unit = 'nz-666'
+  getThatRobot()
+end
+function NZ_666_FUNNELS()
+  unit = 'nz-666-funnel'
   getThatRobot()
 end
 --[[NEO ZEON CCA MS]] --------------------------------------------------
