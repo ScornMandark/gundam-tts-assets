@@ -1,8 +1,9 @@
 function OMNI()
     self.clearButtons()
     faction = 'OMNI'
-    self.createButton({click_function = 'GAT_01', function_owner = self, label = 'GAT-01', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'GAT_X105E', function_owner = self, label = 'GAT-x105e', position = {-3, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_01', function_owner = self, label = 'GAT-01', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_X105E', function_owner = self, label = 'GAT-x105e', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GFAS_X1', function_owner = self, label = 'GFAS-X1', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'CE', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
@@ -15,6 +16,11 @@ end
 
 function GAT_X105E()
   unit = 'gat-x105e'
+  getThatRobot()
+end
+
+function GFAS_X1()
+  unit = 'gfas-x1'
   getThatRobot()
 end
 
