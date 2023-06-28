@@ -2,9 +2,20 @@ function OMNI()
     self.clearButtons()
     faction = 'OMNI'
     self.createButton({click_function = 'GAT_01', function_owner = self, label = 'GAT-01', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_X105_OMNI', function_owner = self, label = 'GAT-x105', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'GAT_X105E', function_owner = self, label = 'GAT-x105e', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'GFAS_X1', function_owner = self, label = 'GFAS-X1', position = {3, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'CE', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function GAT_X105_OMNI()
+    self.clearButtons()
+    unit = 'gat-x105'
+    self.createButton({click_function = 'GAT_X105_OMNI_NIL', function_owner = self, label = 'None', position = {3, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_X105_OMNI_AILE', function_owner = self, label = 'Aile', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_X105_OMNI_SWORD', function_owner = self, label = 'Sword', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_X105_OMNI_LAUNCHER', function_owner = self, label = 'Launcher', position = {3, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_X105_OMNI_PERFECT', function_owner = self, label = 'Perfect', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'OMNI', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
 
 --[[OMNI MS]]-----------------------------------------
@@ -14,8 +25,34 @@ function GAT_01()
   getThatRobot()
 end
 
+function GAT_X105_OMNI_NIL()
+  msAttachment = 'nil'
+  getThatRobot()
+end
+
+function GAT_X105_OMNI_AILE()
+  msAttachment = 'striker-aile'
+  getThatRobot()
+end
+
+function GAT_X105_OMNI_SWORD()
+  msAttachment = 'striker-sword'
+  getThatRobot()
+end
+
+function GAT_X105_OMNI_LAUNCHER()
+  msAttachment = 'striker-launcher'
+  getThatRobot()
+end
+
+function GAT_X105_OMNI_PERFECT()
+  msAttachment = 'striker-perfect'
+  getThatRobot()
+end
+
 function GAT_X105E()
   unit = 'gat-x105e'
+  msAttachment = 'striker-noir'
   getThatRobot()
 end
 
