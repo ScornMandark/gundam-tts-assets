@@ -1,0 +1,13 @@
+
+function EarthHouse()
+    self.clearButtons()
+    faction = 'EarthHouse'
+  self.createButton({click_function = 'XVX_016', function_owner = self, label = 'XVX-016', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+  self.createButton({click_function = 'AdStella', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+
+--[[Earth House MS --]]
+function XVX_016()
+  unit = 'xvx-016'
+  getThatRobot()
+end
