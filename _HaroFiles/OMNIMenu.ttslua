@@ -1,8 +1,9 @@
 function OMNI()
     self.clearButtons()
     faction = 'OMNI'
-    self.createButton({click_function = 'GAT_01', function_owner = self, label = 'GAT-01', position = {4, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
-    self.createButton({click_function = 'GAT_X105', function_owner = self, label = 'GAT-x105', position = {0, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_X105', function_owner = self, label = 'GAT-x105', position = {0, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_01', function_owner = self, label = 'GAT-01', position = {4, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'GAT_04', function_owner = self, label = 'GAT-04', position = {4, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'GAT_X105E', function_owner = self, label = 'GAT-x105e', position = {-4, 5, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'GFAS_X1', function_owner = self, label = 'GFAS-X1', position = {4, 4, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'CE', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
@@ -18,6 +19,11 @@ end
 function GAT_01()
   unit = 'gat-01'
   getThatRobot()
+end
+
+function GAT_04()
+  unit = 'gat-04'
+    STRIKER_SELECT()
 end
 
 function GAT_X105E()
