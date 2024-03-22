@@ -14,6 +14,185 @@ function createBook()
     if wargame == 'UCC' then
       UCCBookSelector()
     end
+    if wargaem == 'RRT' then
+        RRTBookSelector()
+    end
+end
+function RRTBookSelector()
+  self.clearButtons()
+  self.createButton({click_function = 'RRTRuleBook', function_owner = self, label = 'Rules', position = {4, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'RRTQuickRuleBook', function_owner = self, label = 'Quick Rules', position = {-4, 5, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'RRTMalcontentCards', function_owner = self, label = 'Malcontent', position = {6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'RRTUEDFCards', function_owner = self, label = 'UEDF', position = {0, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'RRTZentraediCards', function_owner = self, label = 'Zentraedi', position = {-6, 4, 0},  rotation = {-60, 0, 0}, width=2400, height=400, font_size=250})
+  self.createButton({click_function = 'createSelector', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
+function RRTRuleBook()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/RRT/RRT_Rules_Scan.pdf?raw=true", "Robotech RPG Tactics", "The core rules for Robotech RPG Tactics")
+  initializeHaro()
+end
+function RRTQuickRuleBook()
+  SpawnAPDF("https://github.com/ScornMandark/gundam-tts-assets/blob/main/StatBooks/RRT/Robotech_Quick_Start_Rules_v03.pdf?raw=true", "Robotech RPG Tactics Quick Start", "The Quick Start rules for Robotech RPG Tactics")
+  initializeHaro()
+end
+function RRTMalcontentCards()
+  RRTCardFaction = 'Malcontent'
+  RRTCharacterNum = 1
+  RRTCoreNum = 11
+  RRTStatNum = 0
+  RRTSupportNum = 13
+  RRTUpgradeNum = 2
+  RRTUnitCards()
+end
+function RRTUEDFCards()
+  RRTCardFaction = 'UEDF'
+  RRTCharacterNum = 9
+  RRTCoreNum = 13
+  RRTStatNum = 34
+  RRTSupportNum = 20
+  RRTUpgradeNum = 2
+  RRTUnitCards()
+end
+function RRTZentraediCards()
+  RRTCardFaction = 'Zentraedi'
+  RRTCharacterNum = 9
+  RRTCoreNum = 12
+  RRTStatNum = 15
+  RRTSupportNum = 14
+  RRTUpgradeNum = 1
+  RRTUnitCards()
+end
+
+
+function RRTUnitCards()
+  local cardScale = 4
+  local function characterCards()
+    for charCards = 1, RRTCharacterNum do
+       local charFaceNum = (charCards *2) -1
+       local charBackNum = charCards *2
+       local   cardParams = {
+            type = 'CardCustom',
+            position = {MSPos.x-10, MSPos.y+10+charCards, MSPos.z-2},
+            rotation = {x=0, y=180, z=0},
+            scale = {cardScale,1,cardScale},
+          }
+          customCardParams = {
+            type = 1, --square corner rectangle--
+            face = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Characters/' .. charFaceNum .. '.png',
+            back = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Characters/' .. charBackNum .. '.png',
+            sideways = 0, --not sideways--
+            }
+       local unitCard = spawnObject(cardParams)
+       unitCard.setCustomObject(customCardParams)
+    end
+  end
+  Wait.frames(characterCards, 30)
+  local function coreCards()
+    for coresCards = 1, RRTCoreNum do
+       local coreFaceNum = coresCards
+       local coreBackNum = RRTCoreNum +1
+       local   cardParams = {
+            type = 'CardCustom',
+            position = {MSPos.x-10, MSPos.y+10+coresCards, MSPos.z+2},
+            rotation = {x=0, y=180, z=0},
+            scale = {cardScale,1,cardScale},
+          }
+          customCardParams = {
+            type = 1, --square corner rectangle--
+            face = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Core/' .. coreFaceNum .. '.png',
+            back = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Core/' .. coreBackNum .. '.png',
+            sideways = 1, --sideways--
+            }
+       local unitCard = spawnObject(cardParams)
+       unitCard.setCustomObject(customCardParams)
+    end
+  end
+  Wait.frames(coreCards, 30)
+  local function statCards()
+    for statsCards = 1, RRTStatNum do
+       local statFaceNum = (statsCards *2)-1
+       local statBackNum = statsCards *2
+       local   cardParams = {
+            type = 'CardCustom',
+            position = {MSPos.x-10, MSPos.y+10+statsCards, MSPos.z+6},
+            rotation = {x=0, y=180, z=0},
+            scale = {cardScale,1,cardScale},
+          }
+          customCardParams = {
+            type = 1, --square corner rectangle--
+            face = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Stat/' .. statFaceNum .. '.png',
+            back = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Stat/' .. statBackNum .. '.png',
+            sideways = 0, --not sideways--
+            }
+       local unitCard = spawnObject(cardParams)
+       unitCard.setCustomObject(customCardParams)
+    end
+  end
+  if RRTStatNum ~= 0
+    Wait.frames(statCards, 30)
+  end
+  local function supportCards()
+    for supportsCards = 1, RRTSupportNum do
+       local supportFaceNum = supportsCards
+       local supportBackNum = RRTSupportNum +1
+       local   cardParams = {
+            type = 'CardCustom',
+            position = {MSPos.x-10, MSPos.y+10+supportsCards, MSPos.z+10},
+            rotation = {x=0, y=180, z=0},
+            scale = {cardScale,1,cardScale},
+          }
+          customCardParams = {
+            type = 1, --square corner rectangle--
+            face = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Support/' .. supportFaceNum .. '.png',
+            back = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Support/' .. supportBackNum .. '.png',
+            sideways = 1, --sideways--
+            }
+       local unitCard = spawnObject(cardParams)
+       unitCard.setCustomObject(customCardParams)
+    end
+  end
+  Wait.frames(supportCards, 30)
+  local function upgradeCards()
+    for upgradesCards = 1, RRTUpgradeNum do
+       local upgradeFaceNum = upgradesCards
+       local upgradeBackNum = RRTUpgradeNum +1
+       local   cardParams = {
+            type = 'CardCustom',
+            position = {MSPos.x-10, MSPos.y+10+upgradesCards, MSPos.z+14},
+            rotation = {x=0, y=180, z=0},
+            scale = {cardScale,1,cardScale},
+          }
+          customCardParams = {
+            type = 1, --square corner rectangle--
+            face = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Upgrade/' .. upgradeFaceNum .. '.png',
+            back = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/Upgrade/' .. upgradeBackNum .. '.png',
+            sideways = 1, --sideways--
+            }
+       local unitCard = spawnObject(cardParams)
+       unitCard.setCustomObject(customCardParams)
+    end
+  end
+  Wait.frames(upgradeCards, 30)
+  local function factionCard()
+       local   cardParams = {
+            type = 'CardCustom',
+            position = {MSPos.x-10, MSPos.y+10, MSPos.z-6},
+            rotation = {x=0, y=180, z=0},
+            scale = {cardScale,1,cardScale},
+          }
+          customCardParams = {
+            type = 1, --square corner rectangle--
+            face = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/1.png',
+            back = '{verifycache}https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/StatBooks/RRT/' .. RRTCardFaction .. '/2.png',
+            sideways = 1, --sideways--
+            }
+       local unitCard = spawnObject(cardParams)
+       unitCard.setCustomObject(customCardParams)
+  end
+  Wait.frames(factionCard, 30)
+
+
+  initializeHaro()
 end
 
 function MSSkBookSelector()
