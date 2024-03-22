@@ -29,6 +29,7 @@ function onLoad()
     guid8 = '',
     guid9 = '',
   }
+  RRTCardFaction = 'UEDF'
   SetGame()
 end
 
