@@ -128,7 +128,7 @@ function RRTUnitCards()
        unitCard.setCustomObject(customCardParams)
     end
   end
-  if RRTStatNum ~= 0
+  if RRTStatNum ~= 0 then
     Wait.frames(statCards, 30)
   end
   local function supportCards()
