@@ -30,6 +30,11 @@ function onLoad()
     guid9 = '',
   }
   RRTCardFaction = 'UEDF'
+  RRTCharacterNum = 9
+  RRTCoreNum = 13
+  RRTStatNum = 34
+  RRTSupportNum = 20
+  RRTUpgradeNum = 2
   SetGame()
 end
 
