@@ -14,7 +14,7 @@ function createBook()
     if wargame == 'UCC' then
       UCCBookSelector()
     end
-    if wargaem == 'RRT' then
+    if wargame == 'RRT' then
         RRTBookSelector()
     end
 end
