@@ -65,7 +65,7 @@ end
 
 
 function RRTUnitCards()
-  local cardScale = 4
+  local cardScale = 2
   local function characterCards()
     for charCards = 1, RRTCharacterNum do
        local charFaceNum = (charCards *2) -1
