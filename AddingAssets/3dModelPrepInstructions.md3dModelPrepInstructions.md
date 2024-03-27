@@ -44,4 +44,4 @@ You can export as either .obj or .fbx, Unity can handle either.  I prefer using 
 ![Blender08OBJXExport](https://github.com/ScornMandark/gundam-tts-assets/assets/7913700/49f6359d-aaa5-4bc4-a820-929c4027399d)
 
 ## Step 7: Head to Unity.
-Head to Unity for [the bundling process.](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Add&20Unity%20Asset%20Bundling.md)
+Head to Unity for [the bundling process.](https://github.com/ScornMandark/gundam-tts-assets/blob/main/AddingAssets/AddUnityAssetBundling.md)
