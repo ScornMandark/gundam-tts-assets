@@ -1,6 +1,6 @@
 # Adding Assets to the Repository
 
-Now that you've got your fresh and tested AssetBundle ( [detailed here](https://github.com/ScornMandark/gundam-tts-assets/blob/main/Adding%20Assets/Add%20Unity%20Asset%20Bundling.md) ), now it's time to get it into the repository for Haro to create.
+Now that you've got your fresh and tested AssetBundle ( [detailed here](https://github.com/ScornMandark/gundam-tts-assets/blob/main/AddingAssets/AddUnityAssetBundling.md) ), now it's time to get it into the repository for Haro to create.
 
 ## Make sure the faction has a folder
 This should be pretty straightforward, since most factions should be set already.  If not, flag it as an issue and I'll get it set up.
