@@ -1,0 +1,1222 @@
+{
+  "Generator": "OpenSceneGraph 3.1.4", 
+  "Version": 7, 
+  "osg.Node": {
+    "Children": [ {
+      "osg.Node": {
+        "UniqueID": 0, 
+        "Name": "Root", 
+        "Children": [ {
+          "osg.MatrixTransform": {
+            "UniqueID": 1, 
+            "Name": "Point.004", 
+            "Matrix": [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.28973, -0.02519, 5.13812, 1 ], 
+            "Children": [ {
+              "osg.LightSource": {
+                "UniqueID": 2, 
+                "Name": "Point.004", 
+                "Light": {
+                  "osg.Light": {
+                    "UniqueID": 3, 
+                    "Ambient": [ 1, 1, 1, 1], 
+                    "ConstantAttenuation": 0, 
+                    "Diffuse": [ 1, 1, 1, 1], 
+                    "Direction": [ 0, 0, -1], 
+                    "LightNum": 3, 
+                    "LinearAttenuation": 0, 
+                    "Position": [ 0, 0, 0, 1], 
+                    "QuadraticAttenuation": 0.04, 
+                    "Specular": [ 1, 1, 1, 1], 
+                    "SpotCutoff": 180, 
+                    "SpotExponent": 0, 
+                    "UserDataContainer": {
+                      "UniqueID": 4, 
+                      "Values": [ {
+                        "Name": "source", 
+                        "Value": "blender"
+                      },
+                      {
+                        "Name": "Energy", 
+                        "Value": "1.0"
+                      },
+                      {
+                        "Name": "Color", 
+                        "Value": "[ 1.000000, 1.000000, 1.000000 ]"
+                      },
+                      {
+                        "Name": "UseDiffuse", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "UseSpecular", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "Distance", 
+                        "Value": "25.0"
+                      },
+                      {
+                        "Name": "FalloffType", 
+                        "Value": "INVERSE_SQUARE"
+                      },
+                      {
+                        "Name": "UseSphere", 
+                        "Value": "false"
+                      },
+                      {
+                        "Name": "Type", 
+                        "Value": "POINT"
+                      } ]
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 5, 
+            "Name": "Plane.002", 
+            "Matrix": [ 1, 0, 0, 0, 0, -0, 1, 0, 0, -1, -0, 0, -0.39068, -3.26879, 0.08866, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 6, 
+                "Name": "GeodePlane.004", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 7, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 9, 
+                        "Count": 96, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 8, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 96,
+                            "Offset": 0
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 10, 
+            "Name": "Plane.001", 
+            "Matrix": [ 1, 0, 0, 0, 0, -0, 1, 0, 0, -1, -0, 0, -1.99846, 0.29096, -4.95346, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 11, 
+                "Name": "GeodePlane.003", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 12, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 14, 
+                        "Count": 96, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 13, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 96,
+                            "Offset": 1152
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 15, 
+            "Name": "Circle", 
+            "Matrix": [ 1, 0, 0, 0, 0, -0, 1, 0, 0, -1, -0, 0, -0.39068, 3.06964, 0.08866, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 16, 
+                "Name": "GeodeCircle.004", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 17, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 19, 
+                        "Count": 616, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 18, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 616,
+                            "Offset": 2304
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 20, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 22, 
+                        "Count": 4000, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 21, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 4000,
+                            "Offset": 9696
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 23, 
+            "Name": "Plane", 
+            "Matrix": [ 1, 0, 0, 0, 0, -0, 1, 0, 0, -1, -0, 0, -1.99846, 0.29096, -4.95346, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 24, 
+                "Name": "GeodePlane", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 25, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 27, 
+                        "Count": 96, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 26, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 96,
+                            "Offset": 57696
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 28, 
+            "Name": "Circle.002", 
+            "Matrix": [ 0.23424, 0, 0, 0, 0, -0, 0.23424, 0, 0, -0.23424, -0, 0, -0.44685, -0.9182, 1.20241, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 29, 
+                "Name": "GeodeCircle.003", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 30, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 32, 
+                        "Count": 412, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 31, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 412,
+                            "Offset": 58848
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 33, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 35, 
+                        "Count": 444, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 34, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 444,
+                            "Offset": 63792
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 36, 
+            "Name": "Circle.000", 
+            "Matrix": [ 0.1892, 0, 0, 0, 0, -0, 0.1892, 0, 0, -0.1892, -0, 0, 0.38201, -0.63715, 0.20622, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 37, 
+                "Name": "GeodeCircle.002", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 38, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 40, 
+                        "Count": 816, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 39, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 816,
+                            "Offset": 69120
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 41, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 43, 
+                        "Count": 40, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 42, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 40,
+                            "Offset": 78912
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 44, 
+            "Name": "Circle.001", 
+            "Matrix": [ 0.0693, 0.00418, 0.17601, 0, -0.17383, -0.02835, 0.06911, 0, 0.0279, -0.18702, -0.00654, 0, -0.49298, -0.6318, 0.22157, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 45, 
+                "Name": "GeodeCircle.001", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 46, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 48, 
+                        "Count": 816, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 47, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 816,
+                            "Offset": 79392
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 49, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 51, 
+                        "Count": 40, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 50, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 40,
+                            "Offset": 89184
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 52, 
+            "Name": "Text", 
+            "Matrix": [ 0.5288, 0, 0, 0, 0, -0, 0.5288, 0, 0, -0.5288, -0, 0, 0.1718, -3.89686, 1.36079, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 53, 
+                "Name": "GeodeMesh", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 54, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 56, 
+                        "Count": 7796, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 55, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 7796,
+                            "Offset": 89664
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 57, 
+            "Name": "Cube.001", 
+            "Matrix": [ 0.13778, -0.00293, 0.00204, 0, 0.00277, 0.13083, 0.00107, 0, -0.0021, -0.0011, 0.14037, 0, -0.04011, 0.55754, -0.71702, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 58, 
+                "Name": "GeodeMesh.001", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 59, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 61, 
+                        "Count": 1312, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 60, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 1312,
+                            "Offset": 183216
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 62, 
+            "Name": "Point.003", 
+            "Matrix": [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.78249, -0.87323, 0.43886, 1 ], 
+            "Children": [ {
+              "osg.LightSource": {
+                "UniqueID": 63, 
+                "Name": "Point.003", 
+                "Light": {
+                  "osg.Light": {
+                    "UniqueID": 64, 
+                    "Ambient": [ 1, 1, 1, 1], 
+                    "ConstantAttenuation": 0, 
+                    "Diffuse": [ 1, 1, 1, 1], 
+                    "Direction": [ 0, 0, -1], 
+                    "LightNum": 1, 
+                    "LinearAttenuation": 0, 
+                    "Position": [ 0, 0, 0, 1], 
+                    "QuadraticAttenuation": 0.04, 
+                    "Specular": [ 1, 1, 1, 1], 
+                    "SpotCutoff": 180, 
+                    "SpotExponent": 0, 
+                    "UserDataContainer": {
+                      "UniqueID": 65, 
+                      "Values": [ {
+                        "Name": "source", 
+                        "Value": "blender"
+                      },
+                      {
+                        "Name": "Energy", 
+                        "Value": "1.0"
+                      },
+                      {
+                        "Name": "Color", 
+                        "Value": "[ 1.000000, 1.000000, 1.000000 ]"
+                      },
+                      {
+                        "Name": "UseDiffuse", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "UseSpecular", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "Distance", 
+                        "Value": "25.0"
+                      },
+                      {
+                        "Name": "FalloffType", 
+                        "Value": "INVERSE_SQUARE"
+                      },
+                      {
+                        "Name": "UseSphere", 
+                        "Value": "false"
+                      },
+                      {
+                        "Name": "Type", 
+                        "Value": "POINT"
+                      } ]
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 66, 
+            "Name": "Point.002", 
+            "Matrix": [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -4.17122, -1.04323, 0.94142, 1 ], 
+            "Children": [ {
+              "osg.LightSource": {
+                "UniqueID": 67, 
+                "Name": "Point.002", 
+                "Light": {
+                  "osg.Light": {
+                    "UniqueID": 68, 
+                    "Ambient": [ 1, 1, 1, 1], 
+                    "ConstantAttenuation": 0, 
+                    "Diffuse": [ 1, 1, 1, 1], 
+                    "Direction": [ 0, 0, -1], 
+                    "LightNum": 2, 
+                    "LinearAttenuation": 0, 
+                    "Position": [ 0, 0, 0, 1], 
+                    "QuadraticAttenuation": 0.04, 
+                    "Specular": [ 1, 1, 1, 1], 
+                    "SpotCutoff": 180, 
+                    "SpotExponent": 0, 
+                    "UserDataContainer": {
+                      "UniqueID": 69, 
+                      "Values": [ {
+                        "Name": "source", 
+                        "Value": "blender"
+                      },
+                      {
+                        "Name": "Energy", 
+                        "Value": "1.0"
+                      },
+                      {
+                        "Name": "Color", 
+                        "Value": "[ 1.000000, 1.000000, 1.000000 ]"
+                      },
+                      {
+                        "Name": "UseDiffuse", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "UseSpecular", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "Distance", 
+                        "Value": "25.0"
+                      },
+                      {
+                        "Name": "FalloffType", 
+                        "Value": "INVERSE_SQUARE"
+                      },
+                      {
+                        "Name": "UseSphere", 
+                        "Value": "false"
+                      },
+                      {
+                        "Name": "Type", 
+                        "Value": "POINT"
+                      } ]
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 70, 
+            "Name": "Point.001", 
+            "Matrix": [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.01001, 4.46142, 0.51336, 1 ], 
+            "Children": [ {
+              "osg.LightSource": {
+                "UniqueID": 71, 
+                "Name": "Point.001", 
+                "Light": {
+                  "osg.Light": {
+                    "UniqueID": 72, 
+                    "Ambient": [ 1, 1, 1, 1], 
+                    "ConstantAttenuation": 0, 
+                    "Diffuse": [ 1, 1, 1, 1], 
+                    "Direction": [ 0, 0, -1], 
+                    "LightNum": 0, 
+                    "LinearAttenuation": 0, 
+                    "Position": [ 0, 0, 0, 1], 
+                    "QuadraticAttenuation": 0.04, 
+                    "Specular": [ 1, 1, 1, 1], 
+                    "SpotCutoff": 180, 
+                    "SpotExponent": 0, 
+                    "UserDataContainer": {
+                      "UniqueID": 73, 
+                      "Values": [ {
+                        "Name": "source", 
+                        "Value": "blender"
+                      },
+                      {
+                        "Name": "Energy", 
+                        "Value": "1.0"
+                      },
+                      {
+                        "Name": "Color", 
+                        "Value": "[ 1.000000, 1.000000, 1.000000 ]"
+                      },
+                      {
+                        "Name": "UseDiffuse", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "UseSpecular", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "Distance", 
+                        "Value": "25.0"
+                      },
+                      {
+                        "Name": "FalloffType", 
+                        "Value": "INVERSE_SQUARE"
+                      },
+                      {
+                        "Name": "UseSphere", 
+                        "Value": "false"
+                      },
+                      {
+                        "Name": "Type", 
+                        "Value": "POINT"
+                      } ]
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 74, 
+            "Name": "Point", 
+            "Matrix": [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.02672, -5.2385, -0.18939, 1 ], 
+            "Children": [ {
+              "osg.LightSource": {
+                "UniqueID": 75, 
+                "Name": "Point", 
+                "Light": {
+                  "osg.Light": {
+                    "UniqueID": 76, 
+                    "Ambient": [ 1, 1, 1, 1], 
+                    "ConstantAttenuation": 0, 
+                    "Diffuse": [ 1, 1, 1, 1], 
+                    "Direction": [ 0, 0, -1], 
+                    "LightNum": 4, 
+                    "LinearAttenuation": 0, 
+                    "Position": [ 0, 0, 0, 1], 
+                    "QuadraticAttenuation": 0.04, 
+                    "Specular": [ 1, 1, 1, 1], 
+                    "SpotCutoff": 180, 
+                    "SpotExponent": 0, 
+                    "UserDataContainer": {
+                      "UniqueID": 77, 
+                      "Values": [ {
+                        "Name": "source", 
+                        "Value": "blender"
+                      },
+                      {
+                        "Name": "Energy", 
+                        "Value": "1.0"
+                      },
+                      {
+                        "Name": "Color", 
+                        "Value": "[ 1.000000, 1.000000, 1.000000 ]"
+                      },
+                      {
+                        "Name": "UseDiffuse", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "UseSpecular", 
+                        "Value": "true"
+                      },
+                      {
+                        "Name": "Distance", 
+                        "Value": "25.0"
+                      },
+                      {
+                        "Name": "FalloffType", 
+                        "Value": "INVERSE_SQUARE"
+                      },
+                      {
+                        "Name": "UseSphere", 
+                        "Value": "false"
+                      },
+                      {
+                        "Name": "Type", 
+                        "Value": "POINT"
+                      } ]
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 78, 
+            "Name": "Cube.004", 
+            "Matrix": [ 0.46233, 0, 0, 0, 0, 0.46233, 0, 0, 0, 0, 0.46233, 0, 3e-05, 0.07146, -2.69387, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 79, 
+                "Name": "GeodeMesh.002", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 80, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 82, 
+                        "Count": 832, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 81, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 832,
+                            "Offset": 198960
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 83, 
+            "Name": "Cube", 
+            "Matrix": [ 0.29629, 0, 0, 0, 0, 0.29629, 0, 0, 0, 0, 0.29629, 0, -0.02173, 0, -0.57285, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 84, 
+                "Name": "GeodeMesh.003", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 85, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 87, 
+                        "Count": 1456, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 86, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 1456,
+                            "Offset": 208944
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 88, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 90, 
+                        "Count": 248, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 89, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 248,
+                            "Offset": 226416
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 91, 
+            "Name": "Cube.002", 
+            "Matrix": [ 0.34928, 0, 0, 0, 0, 0.4481, 0, 0, 0, 0, 0.79771, 0, -0.03946, -0.0764, 0.79723, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 92, 
+                "Name": "GeodeMesh.004", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 93, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 95, 
+                        "Count": 14348, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 94, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 14348,
+                            "Offset": 229392
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 96, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 98, 
+                        "Count": 1208, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 97, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 1208,
+                            "Offset": 401568
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 99, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 101, 
+                        "Count": 11918, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 100, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 11918,
+                            "Offset": 416064
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 102, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 104, 
+                        "Count": 16, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 103, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 16,
+                            "Offset": 559080
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 105, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 107, 
+                        "Count": 2092, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 106, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 2092,
+                            "Offset": 559272
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 108, 
+            "Name": "Cube.003", 
+            "Matrix": [ 0.20096, -0.00428, 0.00297, 0, 0.00404, 0.19083, 0.00156, 0, -0.00306, -0.00161, 0.20474, 0, -0.05427, -0.05179, -0.92788, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 109, 
+                "Name": "GeodeMesh.005", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 110, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 112, 
+                        "Count": 1312, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 111, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 1312,
+                            "Offset": 584376
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 113, 
+            "Name": "Cylinder", 
+            "Matrix": [ 0.02099, -0.00014, -0.00033, 0, 3e-05, 0.01723, -0.00569, 0, 0.00099, 0.01833, 0.05556, 0, -0.04216, 0.02681, 2.22989, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 114, 
+                "Name": "GeodeMesh.006", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 115, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 117, 
+                        "Count": 2768, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 116, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 2768,
+                            "Offset": 600120
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        },
+        {
+          "osg.MatrixTransform": {
+            "UniqueID": 118, 
+            "Name": "Sphere", 
+            "Matrix": [ 0.14877, 0, 0, 0, 0, 0.14877, 0, 0, 0, 0, 0.14877, 0, -0.04261, 0.10375, 2.1556, 1 ], 
+            "Children": [ {
+              "osg.Node": {
+                "UniqueID": 119, 
+                "Name": "GeodeMesh.007", 
+                "Children": [ {
+                  "osg.Geometry": {
+                    "UniqueID": 120, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 122, 
+                        "Count": 4160, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 121, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 4160,
+                            "Offset": 633336
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                },
+                {
+                  "osg.Geometry": {
+                    "UniqueID": 123, 
+                    "PrimitiveSetList": [ {
+                      "DrawArrays": {
+                        "UniqueID": 125, 
+                        "Count": 864, 
+                        "First": 0, 
+                        "Mode": "LINES"
+                      }
+                    } ], 
+                    "VertexAttributeList": {
+                      "Vertex": {
+                        "UniqueID": 124, 
+                        "Array": { 
+                          "Float32Array": { 
+                            "File": "model_wireframe.bin.gz",
+                            "Size": 864,
+                            "Offset": 683256
+                          }
+                        }, 
+                        "ItemSize": 3, 
+                        "Type": "ARRAY_BUFFER"
+                      }
+                    }
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      }
+    } ]
+  }
+}
