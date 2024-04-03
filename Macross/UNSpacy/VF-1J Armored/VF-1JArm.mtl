@@ -1,0 +1,22 @@
+# Blender 3.6.0 MTL File: 'VF-1J Armored by Marcos Gigena.blend'
+# www.blender.org
+
+newmtl White
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.086538 0.086538 0.086538
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd VF-1JArmored_diff.png
+
+newmtl White.001
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.086538 0.086538 0.086538
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd VF-1JArmored_diff.png
