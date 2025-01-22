@@ -444,5 +444,7 @@ function UC()
     self.createButton({click_function = 'AEUG', function_owner = self, label = 'AEUG', position = {-1.5, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
     self.createButton({click_function = 'LondoBell', function_owner = self, label = 'Londo Bell', position = {2, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'NeoZeon', function_owner = self, label = 'Neo Zeon', position = {-2, 6, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'Illuminati', function_owner = self, label = 'Illuminati', position = {2, 7, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
+    self.createButton({click_function = 'CONSENT', function_owner = self, label = 'CONSENT', position = {-2, 7, 0},  rotation = {-60, 0, 0}, width=1600, height=400, font_size=250})
     self.createButton({click_function = 'createRobot', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
 end
