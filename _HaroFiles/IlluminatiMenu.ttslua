@@ -1,2 +1,14 @@
+function Illuminati()
+    self.clearButtons()
+    faction = 'Illuminati'
+    self.createButton({click_function = 'G_SAVIOUR', function_owner = self, label = 'G-SAVIOUR', position = {-3, 5, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+    self.createButton({click_function = 'UC', function_owner = self, label = 'Back', position = {0, 3, 0},  rotation = {-60, 0, 0}, width=1200, height=400, font_size=250})
+end
 
+--[[Celestial Being MS ]] --------------------------------
+
+function G_SAVIOUR()
+  unit = 'g-saviour'
+  getThatRobot()
+end
 
