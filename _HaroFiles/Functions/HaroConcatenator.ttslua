@@ -77,7 +77,7 @@ function loadHaroUpdate()
     function(request)      if request.is_error then        log(request.error)      else         GFighters = request.text      end    end)
    CONSENT = [[  ]]  WebRequest.get('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/CONSENTMenu.ttslua',
     function(request)      if request.is_error then        log(request.error)      else         CONSENT = request.text      end    end)
-   Illuminators = [[  ]]  WebRequest.get('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/IlluminatorsMenu.ttslua',
+   Illuminati = [[  ]]  WebRequest.get('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/IlluminatiMenu.ttslua',
     function(request)      if request.is_error then        log(request.error)      else         Illuminators = request.text      end    end)
    BuildFighters = [[  ]]  WebRequest.get('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/BuildFightersMenu.ttslua',
     function(request)      if request.is_error then        log(request.error)      else         BuildFighters = request.text      end    end)
@@ -87,7 +87,7 @@ function loadHaroUpdate()
   local function ResetHaro()
     self.setName('Haro')
     local MegaScript = [[ ]]
-    MegaScript = HaroScripts .. MapsScenery .. Books .. EFF .. Zeon .. AEUG .. Titans .. LondoBell .. NeoZeon .. Crossbone .. LeagueMilitaire .. Zanscare .. CorrectCentury .. OriginZeon .. OriginEFF .. ThunderboltEFF .. ThunderboltZeon .. ThunderboltSSA .. CelestialBeing .. ALAWS .. ZAFT .. OMNI .. ORB .. STRIKER .. GTeam .. OZ .. WhiteFang .. Preventers .. Marimea .. Vultures .. NewUNE .. UNSpacy .. Zentraedi .. DeathArmy .. GFighters ..  CONSENT .. Illuminators .. BuildFighters .. EarthHouse
+    MegaScript = HaroScripts .. MapsScenery .. Books .. EFF .. Zeon .. AEUG .. Titans .. LondoBell .. NeoZeon .. Crossbone .. LeagueMilitaire .. Zanscare .. CorrectCentury .. OriginZeon .. OriginEFF .. ThunderboltEFF .. ThunderboltZeon .. ThunderboltSSA .. CelestialBeing .. ALAWS .. ZAFT .. OMNI .. ORB .. STRIKER .. GTeam .. OZ .. WhiteFang .. Preventers .. Marimea .. Vultures .. NewUNE .. UNSpacy .. Zentraedi .. DeathArmy .. GFighters ..  CONSENT .. Illuminati .. BuildFighters .. EarthHouse
     self.setLuaScript(MegaScript)
     self.reload()
     self.locked = true
