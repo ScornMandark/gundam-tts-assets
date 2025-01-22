@@ -78,7 +78,7 @@ function loadHaroUpdate()
    CONSENT = [[  ]]  WebRequest.get('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/CONSENTMenu.ttslua',
     function(request)      if request.is_error then        log(request.error)      else         CONSENT = request.text      end    end)
    Illuminati = [[  ]]  WebRequest.get('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/IlluminatiMenu.ttslua',
-    function(request)      if request.is_error then        log(request.error)      else         Illuminators = request.text      end    end)
+    function(request)      if request.is_error then        log(request.error)      else         Illuminati = request.text      end    end)
    BuildFighters = [[  ]]  WebRequest.get('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/BuildFightersMenu.ttslua',
     function(request)      if request.is_error then        log(request.error)      else         BuildFighters = request.text      end    end)
    EarthHouse = [[  ]]  WebRequest.get('https://raw.githubusercontent.com/ScornMandark/gundam-tts-assets/main/_HaroFiles/EarthHouseMenu.ttslua',
